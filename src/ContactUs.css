@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary: #1a3a6e;
+  --primary-light: #2e55a0;
+  --secondary: #cc2229;
+  --secondary-light: #e54b51;
+
+  --white: #ffffff;
+  --dark: #111827;
+  --text: #4b5563;
+
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --border: #e5e7eb;
+
+  --shadow-sm: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 15px 35px rgba(26, 58, 110, 0.12);
+  --shadow-lg: 0 25px 60px rgba(26, 58, 110, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+}
+
+.contact-page {
+  overflow-x: hidden;
+}
+
+
+
+
+.location-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #1a3a6e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.location-btn:hover {
+  background: #cc2229;
+}
+
+.map-card {
+  width: 100%;
+  height: 400px;   /* set the desired height */
+  position: relative;
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 100%;    /* fill the parent height */
+  border: none;
+}
+
+
+
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.contact-hero {
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 8%;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 58, 110, 0.75),
+    rgba(46, 85, 160, 0.65)
+  );
+  z-index: 1;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  top: -150px;
+  right: -150px;
+}
+
+.contact-hero-content {
+  max-width: 850px;
+  position: relative;
+  z-index: 3;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.contact-hero h1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.contact-hero h1 span {
+  color: #ffd166;
+}
+
+.contact-hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  padding: 100px 8%;
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.contact-form-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 45px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.section-heading {
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  border-radius: 15px;
+  padding: 16px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: 0.35s ease;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 4px rgba(46, 85, 160, 0.12);
+  background: white;
+}
+
+.submit-btn {
+  background: linear-gradient(
+    135deg,
+    var(--secondary),
+    var(--secondary-light)
+  );
+  color: white;
+  border: none;
+  padding: 16px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 12px 30px rgba(204, 34, 41, 0.25);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgba(204, 34, 41, 0.3);
+}
+
+/* =========================
+   INFO SECTION
+========================= */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+   min-height: 500px; 
+}
+
+.contact-card {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-light)
+  );
+  color: white;
+  padding: 35px;
+  border-radius: 30px;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.info-item span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.info-item p {
+  font-size: 1.05rem;
+  margin-top: 5px;
+}
+
+/* =========================
+   MINI CARDS
+========================= */
+
+.mini-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.mini-card {
+  background: white;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: var(--shadow-sm);
+  transition: 0.3s ease;
+}
+
+.mini-card:hover {
+  transform: translateY(-6px);
+}
+
+.mini-card h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.mini-card p {
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+/* =========================
+   MAP CARD
+========================= */
+
+.map-card {
+  height: 320px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.map-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s ease;
+}
+
+.map-card:hover img {
+  transform: scale(1.08);
+}
+
+.map-overlay {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  background: rgba(255,255,255,0.95);
+  color: var(--primary);
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+/* =========================
+   STATS SECTION
+========================= */
+
+.stats-section {
+  background: #eef4ff;
+  padding: 90px 8%;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.stats-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.stats-heading h2 {
+  color: var(--primary);
+  font-size: 2.3rem;
+}
+
+.stats-heading p {
+  color: var(--text);
+  margin-top: 10px;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  color: var(--secondary);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.stat span {
+  color: var(--primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero h1 {
+    font-size: 3rem;
+  }
+
+  .contact-form-card {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    min-height: 60vh;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-row,
+  .mini-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    gap: 35px;
+  }
+
+  .contact-form-card,
+  .contact-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-section {
+    padding: 70px 5%;
+  }
+
+  .stats-section {
+    padding: 70px 5%;
+  }
+
+  .stat h3 {
+    font-size: 2.2rem;
+  }
+}
