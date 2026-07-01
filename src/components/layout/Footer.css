@@ -17,21 +17,15 @@
   margin-bottom: 48px;
 }
 
-.footer-logo {
-  display: flex;
-  align-items: baseline;
+.footer-logo-link {
+  display: inline-block;
   margin-bottom: 16px;
 }
 
-.footer-logo .t1 {
-  font-weight: 700;
-  font-size: 1.75rem;
-  color: #ffffff;
-  letter-spacing: -1px;
-}
-
-.footer-logo .t1 span {
-  color: var(--red, #CC2229);
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
 }
 
 .footer-desc {
