@@ -5,7 +5,7 @@ const featuresData = [
   {
     id: "01",
     title: "Dedicated Experts",
-    description: "Our team consists of highly qualified professionals with decades of combined experience in legal, tax, and compliance matters."
+    description: "Our multidisciplinary team comprises Chartered Accountants, Company Secretaries, and Advocates with decades of collective experience across tax, legal, regulatory, and compliance matters."
   },
   {
     id: "02",
@@ -14,13 +14,13 @@ const featuresData = [
   },
   {
     id: "03",
-    title: "Global Reach",
-    description: "With a presence across multiple jurisdictions, we assist businesses in navigating complex international regulations."
+    title: "Pan-India Services",
+    description: "Our professionals deliver consistent, high-quality end-to-end solutions tailored to the evolving business and compliance needs of businesses and individuals across India."
   },
   {
     id: "04",
     title: "End-to-End Solutions",
-    description: "From company incorporation to ongoing tax filings, we provide a unified platform for all your compliance requirements."
+    description: "Integrated accounting, audit, tax, legal, and regulatory solutions under one roof.Delivering seamless support from strategy to execution across every stage of your business journey."
   }
 ];
 

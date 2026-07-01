@@ -15,7 +15,8 @@ const HeaderPlaceholder = () => (
     &lt;Header /&gt; Placeholder
   </header>
 );
-
+import Topbar from '../../components/layout/Topbar';
+import Navbar from '../../components/layout/Navbar';
 import HeroSection from '../../components/HomePage/HeroSection';
 import LogosSection from '../../components/HomePage/LogosSection';
 import AboutSection from '../../components/HomePage/AboutSection';
@@ -30,7 +31,8 @@ const Home = () => {
   return (
     <div className="home-page-container">
       {/* Replace this with your actual Header component */}
-      <Header />
+      <Topbar />
+      <Navbar />
       <main>
         <HeroSection />
         <LogosSection />
