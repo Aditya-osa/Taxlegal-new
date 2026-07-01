@@ -6,7 +6,7 @@ import "./Services.css";
 const services = [
   {
     id: 1,
-    title: "",
+    title: "Incorporation and Startup",
     image: "/assets/Services/Startup.jpeg",
     description:
       "",
@@ -32,7 +32,7 @@ const services = [
   },
   {
     id: 3,
-    title: "Trademark & Intellectual Property",
+    title: "Trademark & IPR",
     image: "/assets/team/Corporate.png",
     description:
       "Protect your brand identity with our expert trademark registration and objection handling services.",
