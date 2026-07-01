@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Header from "./Header";
+import Footer from "./components/Footer";
 import Services from "./Component/Services.jsx";
 
 const Home = () => {
@@ -449,45 +450,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="tl-footer">
-        <div className="container">
-          <div className="tl-footer-grid">
-            <div style={{ marginLeft: '80px' }}>
-              <a href="#top" className="tl-logo" aria-label="TaxLegal home">
-                <img src="/assets/logo.png" alt="TaxLegal Logo" className="tl-logo-img tl-logo-img--footer" />
-              </a>
-              <p className="desc">A multidisciplinary firm of Advocates, Chartered Accountants, and Company Secretaries, established 1996.</p>
-            </div>
-            <div>
-              <h5>Reach Us</h5>
-              <p style={{ lineHeight: '1.9' }}>401–404, Prabhat Center<br />CBD-Belapur, Navi Mumbai<br />+91-9819705068<br />info@taxlegal.in</p>
-            </div>
-            <div>
-              <h5>Services</h5>
-              <ul>
-                <li><a href="#services">Company Formation</a></li>
-                <li><a href="#services">Statutory Registrations</a></li>
-                <li><a href="#services">Audit Services</a></li>
-                <li><a href="#services">Tax Litigation</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5>Links</h5>
-              <ul>
-                <li><a href="#services">NCLT Matters</a></li>
-                <li><a href="#services">Tax Advisory</a></li>
-                <li><a href="#services">Compliance</a></li>
-                <li><a href="#services">GST Litigation</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="tl-footer-bottom">
-            <span>© 2026 TaxLegal. All rights reserved.</span>
-            <span>CBD-Belapur, Navi Mumbai</span>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
-import Footer from "./components/HomePage/Footer";
+import Footer from "./components/Footer";
 import "./ContactUs.css";
 
 const ContactUs = () => {
@@ -224,7 +224,7 @@ const ContactUs = () => {
 
       </main>
 
-      <Footer hideContactSection={true} />
+      <Footer />
     </div>
   );
 };

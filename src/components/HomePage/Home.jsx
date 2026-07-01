@@ -24,7 +24,7 @@ import FeaturesSection from './FeaturesSection';
 import TeamSection from './TeamSection';
 import TestimonialsSection from './TestimonialsSection';
 import CareerSection from './CareerSection';
-import Footer from './Footer';
+import Footer from '../Footer';
 
 const Home = () => {
   return (

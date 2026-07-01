@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
-import Footer from "./components/HomePage/Footer";
+import Footer from "./components/Footer";
 import AboutHeroSection from "./components/AboutPage/AboutHeroSection";
 import WhoWeAre from "./components/AboutPage/WhoWeAre";
 import VisionMission from "./components/AboutPage/VisionMission";
@@ -28,7 +28,7 @@ const AboutUs = () => {
         <LeadershipTeam />
       </main>
 
-      <Footer hideContactSection={true} />
+      <Footer />
     </div>
   );
 };
