@@ -60,10 +60,10 @@ const ContactUs = () => {
             <div className="contact-hero-content">
               <span className="contact-badge-simple">Contact Us</span>
               <h1 className="contact-hero-title">
-                Let's Discuss Your Business Needs
+                Let's Start the Conversation
               </h1>
               <p className="contact-hero-description">
-                Whether you need expert taxation, legal advisory, compliance support, company registration, or business consulting, our experienced team is ready to assist you. Get in touch with us today.
+                Whether you're seeking tax, legal, regulatory, or business advisory services, our multidisciplinary team is here to help. Connect with us to discuss your requirements and explore the right solutions for your business.
               </p>
             </div>
           </div>
@@ -79,13 +79,13 @@ const ContactUs = () => {
           <div className="contact-container" style={{ position: 'relative', zIndex: 10 }}>
 
             {/* Section Header */}
-            <div className="contact-form-header">
+            {/* <div className="contact-form-header">
               <span className="contact-badge-simple contact-badge-dark">Contact Us</span>
               <h2 className="form-title">Let's Start a Conversation</h2>
               <p className="form-description">
                 Please fill out the contact form with your name, email address, phone number, and your query. Our team will respond as soon as possible.
               </p>
-            </div>
+            </div> */}
 
             <div className="contact-grid-main">
 
@@ -99,7 +99,7 @@ const ContactUs = () => {
                     </div>
                     <div className="info-text">
                       <h4>Our Office</h4>
-                      <p>401–404, Prabhat Center<br />CBD Belapur<br />Navi Mumbai – 400614<br />Maharashtra, India</p>
+                      <p>Address - 401-406 Prabhat Centre Annex, Sector 1A , CBD-Belapur , Navi Mumbai 400614</p>
                     </div>
                   </div>
 
@@ -109,7 +109,7 @@ const ContactUs = () => {
                     </div>
                     <div className="info-text">
                       <h4>Call Us</h4>
-                      <p>+91 98765 43210<br />+91 99887 66554</p>
+                      <p>+91-9819705068<br />+91-9869005068</p>
                     </div>
                   </div>
 
@@ -211,9 +211,9 @@ const ContactUs = () => {
                         <svg className="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                       )}
                     </button>
-                    <p className="form-disclaimer">
+                    {/* <p className="form-disclaimer">
                       By submitting this form, you acknowledge that you are seeking information of your own accord. No lawyer-client relationship is created by this communication. © {new Date().getFullYear()} TaxLegal. <br />All rights reserved.
-                    </p>
+                    </p> */}
                   </form>
                 </div>
               </div>

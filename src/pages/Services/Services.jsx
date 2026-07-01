@@ -6,40 +6,7 @@ import "./Services.css";
 const services = [
   {
     id: 1,
-    title: "Tax Litigation",
-    image: "/assets/team/Tax-litigation.png",
-    description:
-      "Expert representation and advisory services in direct and indirect tax matters, including litigation, arbitration, and regulatory proceedings.",
-    tags: [
-      "Income Tax",
-      "GST",
-      "MVAT & Professional Tax",
-      "Service Tax",
-      "LBT",
-      "EOW Matters",
-      "Arbitration",
-      "Cyber Fraud",
-    ],
-  },
-
-  {
-    id: 2,
-    title: "Accounts & Audit Support",
-    image: "/assets/team/banner-about.jpg",
-    description:
-      "Structured accounting and audit support services focused on statutory compliance, financial accuracy, and business efficiency.",
-    tags: [
-      "Accounts Outsourcing",
-      "Computerized Accounting",
-      "Statutory Compliance",
-      "Tax Compliance",
-      "Audit Support",
-    ],
-  },
-
-  {
-    id: 3,
-    title: "Startup Company Formation",
+    title: "Business Incorporation & Startup Services",
     image: "/assets/team/bacck.png",
     description:
       "Comprehensive business setup solutions for startups, entrepreneurs, and growing organizations.",
@@ -47,98 +14,112 @@ const services = [
       "Proprietorship Registration",
       "Partnership Firm Registration",
       "LLP Registration",
-      "Nidhi Company",
-      "Producer Company",
-      "Trust Registration",
-      "Section 8 Company",
+      "Private Limited Company",
     ],
   },
-
   {
-    id: 4,
-    title: "Registration Services",
+    id: 2,
+    title: "Registrations & Licenses",
     image: "/assets/team/Registeration.png",
     description:
       "Fast and hassle-free registration services for businesses, professionals, and organizations.",
     tags: [
       "MSME Registration",
-      "TAN Registration",
       "GST Registration",
       "FSSAI Registration",
-      "IEC Code",
-      "Digital Signature",
-      "Udyog Aadhaar",
       "Trade License",
     ],
   },
-
   {
-    id: 5,
-    title: "Direct Taxation",
-    image: "/assets/team/Direct-tax.png",
-    description:
-      "End-to-end direct tax advisory and compliance services for individuals, professionals, and corporate entities.",
-    tags: [
-      "Income Tax",
-      "TAN Registration",
-      "IT Returns",
-      "TDS Returns",
-      "Assessment & Audit",
-      "Capital Gains",
-      "Government Liaisoning",
-    ],
-  },
-
-  {
-    id: 6,
-    title: "Indirect Taxation",
-    image: "/assets/team/Indirect-tax.png",
-    description:
-      "Comprehensive GST and indirect tax services to ensure compliance, risk mitigation, and operational efficiency.",
-    tags: [
-      "GST Registration",
-      "GST Returns",
-      "GST Payments",
-      "Impact Analysis",
-      "GST Audit",
-      "Assessments",
-      "Legal Opinions",
-      "Consultancy",
-    ],
-  },
-
-  {
-    id: 7,
-    title: "Corporate Compliance",
+    id: 3,
+    title: "Trademark & Intellectual Property",
     image: "/assets/team/Corporate.png",
     description:
-      "Corporate secretarial and compliance services to keep businesses aligned with statutory requirements.",
+      "Protect your brand identity with our expert trademark registration and objection handling services.",
     tags: [
-      "Registered Office Change",
-      "Add Director",
-      "Remove Director",
-      "Authorized Capital Increase",
-      "Share Transfer",
-      "MOA Amendment",
-      "Company Winding Up",
-      "LLP Winding Up",
+      "Trademark Search",
+      "Registration",
+      "Objection Reply",
+      "Renewal",
     ],
   },
-
+  {
+    id: 4,
+    title: "Accounting & Audit",
+    image: "/assets/Services/Accounts-Audit.jpeg",
+    description:
+      "Structured accounting and audit support services focused on statutory compliance and financial accuracy.",
+    tags: [
+      "Accounts Outsourcing",
+      "Statutory Audit",
+      "Tax Audit",
+      "Internal Audit",
+    ],
+  },
+  {
+    id: 5,
+    title: "GST Advisory & Compliance",
+    image: "/assets/team/Indirect-tax.png",
+    description:
+      "Comprehensive GST services to ensure compliance, risk mitigation, and operational efficiency.",
+    tags: [
+      "Registration",
+      "Returns",
+      "Audit",
+      "Assessments",
+    ],
+  },
+  {
+    id: 6,
+    title: "Income Tax Advisory & Compliance",
+    image: "/assets/team/Direct-tax.png",
+    description:
+      "End-to-end direct tax advisory and compliance services for individuals and corporate entities.",
+    tags: [
+      "IT Returns",
+      "Tax Planning",
+      "Assessments",
+      "TDS",
+    ],
+  },
+  {
+    id: 7,
+    title: "Corporate Law & MCA Services",
+    image: "/assets/team/Corporate.png",
+    description:
+      "Expert assistance with Ministry of Corporate Affairs filings and compliance requirements.",
+    tags: [
+      "Annual Filings",
+      "DIN Registration",
+      "Director Changes",
+      "Compliance",
+    ],
+  },
   {
     id: 8,
-    title: "Payroll Compliance",
+    title: "Regulatory & Secretarial Compliance",
     image: "/assets/team/Payroll.png",
     description:
-      "Payroll and employee compliance services covering statutory registrations, filings, and advisory support.",
+      "Holistic compliance management services covering statutory, corporate, and payroll needs.",
     tags: [
-      "Payroll Advisory",
-      "PF Registration",
-      "PF Return Filing",
-      "ESIC Registration",
-      "ESIC Return Filing",
+      "PF & ESIC",
+      "Secretarial Audit",
+      "Due Diligence",
+      "Advisory",
     ],
   },
+  /*{
+    id: 9,
+    title: "Consultation & Advisory",
+    image: "/assets/team/bacck.png",
+    description:
+      "Strategic business and financial consultation tailored to your unique operational goals.",
+    tags: [
+      "Financial Advisory",
+      "Business Strategy",
+      "Risk Management",
+    ],
+  },*/
 ];
 
 const Services = () => {
@@ -150,21 +131,21 @@ const Services = () => {
       <section className="services-banner">
         <div className="banner-content">
           <div className="services-intro-copy">
-          <h1>
-  Three Decades  <br />Tax 
-  and of <span><br /> Practice.</span>
-</h1>
+            <h1>
+              Three Decades  <br />Tax
+              and of <span><br /> Practice.</span>
+            </h1>
 
             <p>
-Matters relating to taxation, regulatory compliance, and legal proceedings. Including advisory, compliance, and representation before appropriate authorities.            </p>
+              Matters relating to taxation, regulatory compliance, and legal proceedings. Including advisory, compliance, and representation before appropriate authorities.            </p>
             <div className="services-hero-actions">
               <a href="#services" className="services-btn services-btn--primary">
                 Explore All Domains
               </a>
-              
+
             </div>
           </div>
-          
+
 
           <div className="services-intro-visual">
             <div className="intro-visual-card">
@@ -179,7 +160,7 @@ Matters relating to taxation, regulatory compliance, and legal proceedings. Incl
         </div>
       </section>
 
-  <h1 className="section-heading">Our Services</h1>
+      <h1 className="section-heading">Our Services</h1>
 
 
       {/* ================= SERVICES GRID ================= */}

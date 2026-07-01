@@ -92,7 +92,7 @@ const InternshipPage = () => {
       title: "Legal Internship",
       description: "Work with advocates on legal research, drafting, and case summaries. Learn litigation procedures, court filings, and contract review.",
       eligibility: "Pursuing LL.B (3-year or 5-year course) from a recognized university.",
-      image: "/assets/Internships/Legal.jpg"
+      image: "/assets/Internships/Legal.jpeg"
 
     },
     {
@@ -155,7 +155,7 @@ const InternshipPage = () => {
         </div>
       </section>
 
-      {/* Why Choose Section */}
+
 
       {/* Domains Section */}
       <section className="internship-domains">
@@ -206,6 +206,8 @@ const InternshipPage = () => {
         </div>
       </section>
 
+
+      {/* Why Choose Section */}
       <section className="internship-why">
         <div className="internship-container">
           <div className="section-header-center">

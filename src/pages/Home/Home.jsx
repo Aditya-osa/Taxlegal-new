@@ -31,8 +31,7 @@ const Home = () => {
   return (
     <div className="home-page-container">
       {/* Replace this with your actual Header component */}
-      <Topbar />
-      <Navbar />
+      <Header />
       <main>
         <HeroSection />
         <LogosSection />

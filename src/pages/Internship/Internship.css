@@ -96,7 +96,7 @@
 
 /* Why Choose Section */
 .internship-why {
-  padding: var(--section-py) 0;
+  padding: 40px 0 var(--section-py) 0;
   background-color: var(--white);
 }
 
@@ -117,7 +117,7 @@
 
 .why-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(28, 37, 53, 0.08);
+  box-shadow: 0 16px 36px rgba(28, 37, 53, 0.08), inset 0 4px 0 0 var(--navy);
 }
 
 .why-icon-wrap {
@@ -152,7 +152,7 @@
 
 /* Program Overview Section */
 .internship-overview {
-  padding: var(--section-py) 0;
+  padding: var(--section-py) 0 20px 0;
   background-color: var(--white);
 }
 
