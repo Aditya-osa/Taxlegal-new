@@ -71,7 +71,7 @@ const services = [
   },
   {
     id: 6,
-    title: "Income Tax Advisory & Compliance",
+    title: "IT Advisory & Compliance",
     image: "/assets/team/Direct-tax.png",
     description:
       "End-to-end direct tax advisory and compliance services for individuals and corporate entities.",
@@ -97,7 +97,7 @@ const services = [
   },
   {
     id: 8,
-    title: "Regulatory & Secretarial Compliance",
+    title: "Compliance",
     image: "/assets/team/Payroll.png",
     description:
       "Holistic compliance management services covering statutory, corporate, and payroll needs.",
