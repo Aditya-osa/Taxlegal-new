@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
-import Home from './components/HomePage/Home'
-import AboutUs from './AboutUs'
-import Services from './Services'
+import Home from './pages/Home/Home'
+import AboutUs from './pages/AboutUs/AboutUs'
+import Services from './pages/Services/Services'
 import './App.css'
-import ContactUs from "./ContactUs";
-import InternshipPage from "./InternshipPage";
+import ContactUs from './pages/ContactUs/ContactUs';
+import InternshipPage from './pages/Internship/InternshipPage';
 
 function App() {
   return (

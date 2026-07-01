@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Header from "../../Header";
+import Header from '../../components/layout/Header';
 
 // Placeholder Header as requested
 const HeaderPlaceholder = () => (
@@ -16,15 +16,15 @@ const HeaderPlaceholder = () => (
   </header>
 );
 
-import HeroSection from './HeroSection';
-import LogosSection from './LogosSection';
-import AboutSection from './AboutSection';
-import ServicesSection from './ServicesSection';
-import FeaturesSection from './FeaturesSection';
-import TeamSection from './TeamSection';
-import TestimonialsSection from './TestimonialsSection';
-import CareerSection from './CareerSection';
-import Footer from '../Footer';
+import HeroSection from '../../components/HomePage/HeroSection';
+import LogosSection from '../../components/HomePage/LogosSection';
+import AboutSection from '../../components/HomePage/AboutSection';
+import ServicesSection from '../../components/HomePage/ServicesSection';
+import FeaturesSection from '../../components/HomePage/FeaturesSection';
+import TeamSection from '../../components/HomePage/TeamSection';
+import TestimonialsSection from '../../components/HomePage/TestimonialsSection';
+import CareerSection from '../../components/HomePage/CareerSection';
+import Footer from '../../components/layout/Footer';
 
 const Home = () => {
   return (
