@@ -29,7 +29,6 @@
 .tl-topbar .tl-contacts {
   display: flex;
   align-items: center;
-  font-family: "Inter", sans-serif;
 }
 
 @media (min-width: 993px) {
@@ -38,7 +37,7 @@
     left: 50%;
     top: 50%;
     transform: translate(calc(-50% + 100px), -50%);
-    width: 645px;
+    width: 640px;
     display: flex;
     justify-content: center;
     gap: 20px;

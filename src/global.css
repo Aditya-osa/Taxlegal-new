@@ -23,6 +23,7 @@
   --container-px: 5%;
   --container-max-width: 1440px;
   --card-padding: 32px;
+  --font-head: Georgia, 'Times New Roman', Times, serif;
 }
 
 @media (max-width: 992px) {
@@ -50,7 +51,7 @@ html {
 }
 
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--font-head);
   color: var(--body-text);
   background: var(--white);
   line-height: 1.6;

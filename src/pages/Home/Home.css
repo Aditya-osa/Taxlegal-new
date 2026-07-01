@@ -19,7 +19,6 @@
   --navy: var(--navy-primary);
   --red: var(--red-accent);
   --mid-gray: var(--body-text);
-  --font-head: Georgia, 'Times New Roman', Times, serif;
 
   /* Theme Gradient */
   --theme-gradient: linear-gradient(135deg, #173B78 0%, #102B5C 70%, #C62828 100%);
