@@ -1,0 +1,33 @@
+.who-we-are-section {
+  background-color: var(--white);
+}
+
+.who-we-are-content {
+  max-width: 900px;
+}
+
+.who-we-are-content .section-title {
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.who-we-are-text p {
+  color: var(--body-text);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.who-we-are-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Animations */
+.who-we-are-section {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

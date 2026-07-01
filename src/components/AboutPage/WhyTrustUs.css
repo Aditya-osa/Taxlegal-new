@@ -1,0 +1,64 @@
+.why-trust-us-section {
+  background-color: var(--white);
+  padding-bottom: 80px;
+}
+
+/* Inherits .features-grid, .feature-card, etc. from Home CSS or its own scope if not present globally.
+   I'll provide specific definitions to ensure it looks perfect even if standalone. */
+
+.why-trust-us-section .features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.why-trust-us-section .feature-card {
+  background-color: var(--white);
+  padding: 32px 24px;
+  border-radius: var(--r-card);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--light-gray);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.why-trust-us-section .feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(230, 57, 70, 0.3);
+}
+
+.why-trust-us-section .feature-number {
+  font-family: var(--font-head);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgba(230, 57, 70, 0.1); /* faded red */
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.why-trust-us-section .feature-title {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.why-trust-us-section .feature-description {
+  font-size: 0.9rem;
+  color: var(--mid-gray);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .why-trust-us-section .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .why-trust-us-section .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

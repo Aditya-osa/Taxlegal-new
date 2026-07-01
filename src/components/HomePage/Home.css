@@ -1,0 +1,216 @@
+:root {
+  /* Premium Corporate Colors */
+  --navy-primary: #173B78;
+  --navy-dark: #102B5C;
+  --navy-secondary: #234B8E;
+  --red-accent: #E53935;
+  --red-dark: #C62828;
+  --white: #FFFFFF;
+  --bg-light: #F5F7FB;
+  --bg-section: #EEF2F7;
+  --border-color: #E5E7EB;
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --body-text: #475569;
+
+  /* Aliases for backwards compatibility with ServicesSection */
+  --off-white: var(--bg-light);
+  --light-gray: var(--border-color);
+  --navy: var(--navy-primary);
+  --red: var(--red-accent);
+  --mid-gray: var(--body-text);
+  --font-head: Georgia, 'Times New Roman', Times, serif;
+
+  /* Theme Gradient */
+  --theme-gradient: linear-gradient(135deg, #173B78 0%, #102B5C 70%, #C62828 100%);
+}
+
+.home-page-container {
+  width: 100%;
+  overflow-x: clip;
+  background-color: var(--bg-light);
+  font-family: var(--font-head);
+  color: var(--text-primary);
+}
+
+/* Reset basic styles for the home page scope */
+.home-page-container * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Buttons */
+.btn-primary {
+  background-color: var(--red-accent);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+.btn-primary:hover {
+  background-color: var(--red-dark);
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--navy-primary);
+  border: 1px solid var(--navy-primary);
+  border-radius: 6px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+.btn-secondary:hover {
+  background-color: var(--navy-primary);
+  color: var(--white);
+  transform: scale(1.02);
+}
+
+.btn-navy {
+  background-color: var(--navy-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+.btn-navy:hover {
+  background-color: var(--navy-dark);
+  transform: scale(1.02);
+}
+
+/* Global Section Titles & Subtitles */
+.section-title {
+  font-size: 2.5rem;
+  color: var(--navy-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.section-eyebrow {
+  color: var(--red-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.subtitle-wrapper {
+  margin-bottom: 20px;
+}
+
+.subtitle-wrapper .section-eyebrow {
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.subtitle-line {
+  width: 40px;
+  height: 3px;
+  background-color: var(--red-accent);
+  border-radius: 2px;
+}
+
+/* Center the line for centered headers */
+.features-header .subtitle-line,
+.services-header .subtitle-line,
+.team-header .subtitle-line,
+.testimonials-header .subtitle-line,
+.calculator-header .subtitle-line {
+  margin: 0 auto;
+}
+
+/* =========================================================
+   GLOBAL ALIGNMENT & PADDING RULES
+   ========================================================= */
+
+/* 1. Consistent Top and Bottom Spacing */
+.about-section, .career-section, .features-section, .hero-section, .logos-section, .services-section, .team-section, .testimonials-section, .calculator-section, .footer-contact-section {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+.cta-strip {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+@media (max-width: 768px) {
+  .about-section, .career-section, .features-section, .hero-section, .logos-section, .services-section, .team-section, .testimonials-section, .calculator-section, .footer-contact-section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-section, .career-section, .features-section, .hero-section, .logos-section, .services-section, .team-section, .testimonials-section, .calculator-section, .footer-contact-section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+}
+
+/* Strip left/right padding from sections so containers handle it exclusively */
+section {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* 2. Single Centered Container (Max-Width 1280px) */
+.about-container, .career-container, .features-container, .hero-container, .logos-container, .services-component .container, .team-container, .testimonials-container, .cta-container, .footer-container {
+  width: 100% !important;
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+  box-sizing: border-box;
+}
+
+/* Calculator container needs smaller max-width to look good, but we ensure its padding */
+.calculator-container {
+  width: 100% !important;
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+  box-sizing: border-box;
+}
+
+/* 3. Responsive Horizontal Padding */
+@media (max-width: 992px) {
+  .about-container, .career-container, .features-container, .hero-container, .logos-container, .services-component .container, .team-container, .testimonials-container, .calculator-container, .cta-container, .footer-container {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-container, .career-container, .features-container, .hero-container, .logos-container, .services-component .container, .team-container, .testimonials-container, .calculator-container, .cta-container, .footer-container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}

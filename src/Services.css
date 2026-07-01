@@ -210,11 +210,11 @@ body{
 /* ================= INTRO ================= */
 
 .services-section {
-  padding: 80px 5%;
+  padding: var(--section-py) var(--container-px);
 }
 
 .services-intro {
-  padding: 60px 20px;
+  padding: var(--section-py) var(--container-px);
   background: var(--white);
   text-align: center;
 }
@@ -486,7 +486,7 @@ body{
 
 @media(max-width:768px){
   .services-section{
-    padding:70px 20px;
+    padding: var(--section-py) var(--container-px);
   }
 
   .services-grid{

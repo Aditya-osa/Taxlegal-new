@@ -1,0 +1,48 @@
+.about-cta-section {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: var(--section-py) var(--container-px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-cta-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-cta-title {
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-cta-desc {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Background graphics similar to Home CTA */
+.about-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(230, 57, 70, 0.15), transparent 50%);
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-cta-title {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,196 @@
+.career-section {
+  padding: var(--section-py) 0;
+  background: var(--theme-gradient);
+  color: var(--white);
+  font-family: var(--font-head);
+}
+
+.career-container {
+  max-width: 1440px;
+  padding: 0 var(--container-px);
+  margin: 0 auto;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.career-content-column {
+  flex: 1.2;
+}
+
+.career-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.career-title {
+  color: var(--white);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.career-italic {
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.career-desc {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.internship-badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.intern-badge {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.intern-badge:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.intern-badge .dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--red-accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.career-criteria-column {
+  flex: 1;
+}
+
+.criteria-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 40px;
+  color: var(--text-primary);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.criteria-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: var(--navy-primary);
+}
+
+.criteria-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.criteria-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.check-icon-wrapper {
+  width: 22px;
+  height: 22px;
+  background-color: rgba(229, 57, 53, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.criteria-list span {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.criteria-info-box {
+  background-color: var(--bg-light);
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.criteria-info-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.criteria-info-box strong {
+  color: var(--navy-primary);
+  font-weight: 700;
+}
+
+.btn-primary-full {
+  background-color: var(--red-accent);
+  color: var(--white);
+  border: none;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-primary-full:hover {
+  background-color: var(--red-dark);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .career-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .career-content-column, .career-criteria-column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .internship-badges {
+    grid-template-columns: 1fr;
+  }
+  
+  .career-title {
+    font-size: 2rem;
+  }
+  
+  .criteria-card {
+    padding: 24px;
+  }
+}

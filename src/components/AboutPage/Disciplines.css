@@ -1,0 +1,30 @@
+.disciplines-section {
+  background-color: var(--white);
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.disciplines-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.discipline-card {
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .disciplines-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .disciplines-grid {
+    grid-template-columns: 1fr;
+  }
+}

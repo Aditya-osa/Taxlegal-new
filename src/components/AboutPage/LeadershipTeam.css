@@ -1,0 +1,40 @@
+.leadership-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.leadership-intro {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  color: var(--body-text);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.leadership-profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.leadership-profile-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .leadership-profiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .leadership-profiles {
+    grid-template-columns: 1fr;
+  }
+}

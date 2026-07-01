@@ -43,7 +43,9 @@ const Header = () => {
   }, [isHomePage]);
 
   return (
-    <header className="tl-header">
+    <>
+      <div className="header-spacer" style={{ height: '110px' }}></div>
+      <header className="tl-header">
       {/* Topbar */}
       <div className="tl-topbar">
         <div className="container">
@@ -53,6 +55,12 @@ const Header = () => {
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
               +91-9819705068
+            </a>
+            <a href="tel:+919982003040">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              +91-9982003040
             </a>
             <a href="mailto:info@taxlegal.in">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -109,22 +117,27 @@ const Header = () => {
             ) : (
               <Link to="/">Home</Link>
             )}
-            <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>Services</Link>
             <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>About</Link>
-            <a href="https://www.incometaxindia.gov.in/income-tax-calculator" target="_blank" rel="noopener noreferrer">Tax Calculator</a>
-            <a href="https://taxlegal.bitrix24.site/" target="_blank" rel="noopener noreferrer">Careers</a>
-            <a href="https://advocatevarunsharma.com/blogs.html" target="_blank" rel="noopener noreferrer">Insights</a>
+            <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>Services</Link>
+
             {isHomePage ? (
-              <a href="#contact" className={activeNavLink === "#contact" ? "active" : ""}>Contact Us</a>
+              <a href="#industries" className={activeNavLink === "#industries" ? "active" : ""}>Clients</a>
             ) : (
-              <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>Contact Us</Link>
+              <a href="/#industries">Clients</a>
+            )}
+            <Link to="/internship" className={location.pathname === "/internship" ? "active" : ""}>Internship</Link>
+            <a href="https://www.incometaxindia.gov.in/income-tax-calculator" target="_blank" rel="noopener noreferrer">Tax Calculator</a>
+            {isHomePage ? (
+              <a href="#contact" className={activeNavLink === "#contact" ? "active" : ""}>Contact</a>
+            ) : (
+              <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>Contact</Link>
             )}
           </nav>
           <div className="tl-nav-cta">
             {isHomePage ? (
-              <a href="#contact" className="tl-btn tl-btn--primary">Schedule Consultation</a>
+              <a href="#contact" className="tl-btn tl-btn--primary">Connect With Our Team</a>
             ) : (
-              <a href="/#contact" className="tl-btn tl-btn--primary">Schedule Consultation</a>
+              <a href="/#contact" className="tl-btn tl-btn--primary">Connect With Our Team</a>
             )}
             <button 
               className="tl-burger" 
@@ -137,27 +150,19 @@ const Header = () => {
           </div>
         </div>
         <div className="tl-mobile-menu">
-          <Link to="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+          <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
           <Link to="/services" onClick={() => setIsMenuOpen(false)}>Services</Link>
-          {["why", "team", "industries", "contact"].map((link) => (
-            isHomePage ? (
-              <a key={link} href={`#${link}`} onClick={() => setIsMenuOpen(false)}>
-                {link.charAt(0).toUpperCase() + link.slice(1).replace("-", " ")}
-              </a>
-            ) : (
-              <a key={link} href={`/#${link}`} onClick={() => setIsMenuOpen(false)}>
-                {link.charAt(0).toUpperCase() + link.slice(1).replace("-", " ")}
-              </a>
-            )
-          ))}
-          {isHomePage ? (
-            <a href="#contact" className="tl-btn tl-btn--primary" style={{marginTop: "10px", justifyContent: "center"}} onClick={() => setIsMenuOpen(false)}>Schedule Consultation</a>
-          ) : (
-            <a href="/#contact" className="tl-btn tl-btn--primary" style={{marginTop: "10px", justifyContent: "center"}} onClick={() => setIsMenuOpen(false)}>Schedule Consultation</a>
-          )}
+
+          <a href="/#industries" onClick={() => setIsMenuOpen(false)}>Clients</a>
+          <Link to="/internship" onClick={() => setIsMenuOpen(false)}>Internship</Link>
+          <a href="https://www.incometaxindia.gov.in/income-tax-calculator" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Tax Calculator</a>
+          <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+          <a href="/#contact" className="tl-btn tl-btn--primary" style={{marginTop: "10px", justifyContent: "center"}} onClick={() => setIsMenuOpen(false)}>Connect With Our Team</a>
         </div>
       </div>
-    </header>
+      </header>
+    </>
   );
 };
 

@@ -1,29 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
+import Footer from "./components/HomePage/Footer";
 import "./ContactUs.css";
 
-const heroImages = [
-  "/assets/team/Office2.png",
-  "/assets/team/Connect-with-us.jpeg"
-];
-
 const ContactUs = () => {
-  const [currentImage, setCurrentImage] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    service: "Taxation Advisory",
+    phone: "",
+    subject: "",
     message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
+    window.scrollTo(0, 0);
   }, []);
 
   const handleChange = (e) => {
@@ -35,233 +27,205 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setSubmitted(true);
-
     setTimeout(() => {
       setFormData({
         name: "",
         email: "",
-        service: "Taxation Advisory",
+        phone: "",
+        subject: "",
         message: "",
       });
-
       setSubmitted(false);
     }, 3000);
   };
 
   return (
-    <>
+    <div className="contact-page-wrapper">
       <Header />
 
-      <div className="contact-page">
-        {/* Hero Section */}
-        <section className="contact-hero">
-          {heroImages.map((image, index) => (
-            <div
-              key={index}
-              className={`hero-slide ${
-                index === currentImage ? "active" : ""
-              }`}
-              style={{ backgroundImage: `url(${image})` }}
-            />
-          ))}
-
-          <div className="hero-overlay"></div>
-
-          <div className="contact-hero-content">
-
-            <h1>
-              Get in <span>Touch</span>
-            </h1>
-
-            <p>
-              Securing your legal and fiscal future through high-precision
-              expertise. Our dedicated team is ready to provide strategic
-              counsel tailored to your complex needs.
-            </p>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="contact-section">
-          <div className="contact-grid">
-            {/* Contact Form */}
-            <div className="contact-form-card">
-              <div className="section-heading">
-                <h2>Schedule a Consultation</h2>
-               
-              </div>
-
-              <form onSubmit={handleSubmit}>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>Full Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="John Doe"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label>Email Address</label>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="john@company.com"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="form-group">
-                  <label>Service Type</label>
-                  <select
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                  >
-                    <option>Taxation Advisory</option>
-                    <option>Legal Counsel</option>
-                    <option>Regulatory Compliance</option>
-                    <option>Corporate Restructuring</option>
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label>Message</label>
-                  <textarea
-                    rows="5"
-                    name="message"
-                    placeholder="How can our experts assist you?"
-                    value={formData.message}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <button type="submit" className="submit-btn">
-                  {submitted ? "Inquiry Received ✓" : "Submit Inquiry"}
-                </button>
-              </form>
-            </div>
-
-            {/* Contact Info */}
-            <div className="contact-info">
-              <div className="contact-card">
-                <h3>Reach Us Directly</h3>
-
-                <div className="info-item">
-                  <div className="icon">📞</div>
-                  <div>
-                    <span>Phone Number</span>
-                    <p>+91 9819705068</p>
-                  </div>
-                </div>
-
-                <div className="info-item">
-                  <div className="icon">✉️</div>
-                  <div>
-                    <span>Email Address</span>
-                    <p>info@taxlegal.in</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="map-card">
-  <iframe
-    title="Office Location"
-    src="https://maps.google.com/maps?q=401-404,Prabhat%20Center,CBD-Belapur,Navi%20Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    loading="lazy"
-  />
-
-  <a
-    href="https://maps.google.com?q=401-404,PrabhatCenter,CBD-Belapur,NaviMumbai"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="map-overlay"
-  >
-    📍 Get Directions
-  </a>
-</div>
+      <main className="contact-main-content">
+        {/* HERO SECTION */}
+        <section
+          className="contact-hero-section"
+          style={{
+            background: `linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.75)), url('/assets/Internships/Contact.jpeg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="contact-hero-overlay"></div>
+          <div className="contact-container contact-hero-container">
+            <div className="contact-hero-content">
+              <span className="contact-badge-simple">Contact Us</span>
+              <h1 className="contact-hero-title">
+                Let's Discuss Your Business Needs
+              </h1>
+              <p className="contact-hero-description">
+                Whether you need expert taxation, legal advisory, compliance support, company registration, or business consulting, our experienced team is ready to assist you. Get in touch with us today.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="stats-section">
-          <div className="stats-container">
-            <div className="stats-heading">
-              <h2>Institutional Excellence</h2>
-              <p>Certified Advisory for Global Entities</p>
+        {/* MAIN CONTACT SECTION */}
+        <section className="contact-main-section">
+          {/* Abstract Background Elements */}
+          <div className="contact-bg-blob blob-1"></div>
+          <div className="contact-bg-blob blob-2"></div>
+          <div className="contact-bg-pattern"></div>
+
+          <div className="contact-container" style={{ position: 'relative', zIndex: 10 }}>
+
+            {/* Section Header */}
+            <div className="contact-form-header">
+              <span className="contact-badge-simple contact-badge-dark">Contact Us</span>
+              <h2 className="form-title">Let's Start a Conversation</h2>
+              <p className="form-description">
+                Please fill out the contact form with your name, email address, phone number, and your query. Our team will respond as soon as possible.
+              </p>
             </div>
 
-            <div className="stats-grid">
-              <div className="stat">
-                <h3>30+</h3>
-                <span>Years Active</span>
+            <div className="contact-grid-main">
+
+              {/* LEFT SIDE: MAP & INFO (40%) */}
+              <div className="contact-left-col">
+
+                <div className="contact-info-cards">
+                  <div className="info-card">
+                    <div className="info-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div className="info-text">
+                      <h4>Our Office</h4>
+                      <p>401–404, Prabhat Center<br />CBD Belapur<br />Navi Mumbai – 400614<br />Maharashtra, India</p>
+                    </div>
+                  </div>
+
+                  <div className="info-card">
+                    <div className="info-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div className="info-text">
+                      <h4>Call Us</h4>
+                      <p>+91 98765 43210<br />+91 99887 66554</p>
+                    </div>
+                  </div>
+
+                  <div className="info-card">
+                    <div className="info-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div className="info-text">
+                      <h4>Email Us</h4>
+                      <p>info@taxlegal.in<br />support@taxlegal.in</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="contact-map-wrapper">
+                  <iframe
+                    title="Office Location"
+                    src="https://maps.google.com/maps?ll=19.019674,73.039406&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=401-404,Prabhat+Center,CBD-Belapur,Navi+Mumbai&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+
               </div>
 
-              <div className="stat">
-                <h3>2.5K</h3>
-                <span>Clients Served</span>
+              {/* RIGHT SIDE: CONTACT FORM (60%) */}
+              <div className="contact-right-col">
+                <div className="contact-form-glass-card">
+
+                  <form className="premium-contact-form" onSubmit={handleSubmit}>
+                    <div className="form-row-2">
+                      <div className="input-group">
+                        <label>Full Name *</label>
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Your full name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                      <div className="input-group">
+                        <label>Email Address *</label>
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="your@email.com"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="form-row-2">
+                      <div className="input-group">
+                        <label>Phone Number</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          placeholder="+91 XXXXX XXXXX"
+                          value={formData.phone}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="input-group">
+                        <label>Service Required</label>
+                        <select name="subject" value={formData.subject} onChange={handleChange} required>
+                          <option value="" disabled>Select a service</option>
+                          <option value="Taxation Advisory">Taxation Advisory</option>
+                          <option value="Legal Counsel">Legal Counsel</option>
+                          <option value="Compliance">Compliance</option>
+                          <option value="Company Registration">Company Registration</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="input-group">
+                      <label>Message *</label>
+                      <textarea
+                        rows="6"
+                        name="message"
+                        placeholder="Briefly describe your requirement..."
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        className="no-resize"
+                      ></textarea>
+                    </div>
+
+                    <button type="submit" className="contact-submit-btn">
+                      <span>{submitted ? "Message Sent ✓" : "Submit Enquiry"}</span>
+                      {!submitted && (
+                        <svg className="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                      )}
+                    </button>
+                    <p className="form-disclaimer">
+                      By submitting this form, you acknowledge that you are seeking information of your own accord. No lawyer-client relationship is created by this communication. © {new Date().getFullYear()} TaxLegal. <br />All rights reserved.
+                    </p>
+                  </form>
+                </div>
               </div>
 
-              <div className="stat">
-                <h3>100%</h3>
-                <span>Compliance Rate</span>
-              </div>
             </div>
           </div>
-        </section>{/* Footer */}
-      <footer className="tl-footer">
-        <div className="container">
-          <div className="tl-footer-grid">
-            <div style={{marginLeft: '80px'}}>
-              <a href="#top" className="tl-logo" aria-label="TaxLegal home">
-                <img src="/assets/logo.png" alt="TaxLegal Logo" className="tl-logo-img tl-logo-img--footer" />
-              </a>
-              <p className="desc">A multidisciplinary firm of Advocates, Chartered Accountants, and Company Secretaries, established 1996.</p>
-            </div>
-            <div>
-              <h5>Reach Us</h5>
-              <p style={{lineHeight: '1.9'}}>401–404, Prabhat Center<br/>CBD-Belapur, Navi Mumbai<br/>+91-9819705068<br/>info@taxlegal.in</p>
-            </div>
-            <div>
-              <h5>Services</h5>
-              <ul>
-                <li><a href="#services">Company Formation</a></li>
-                <li><a href="#services">Statutory Registrations</a></li>
-                <li><a href="#services">Audit Services</a></li>
-                <li><a href="#services">Tax Litigation</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5>Links</h5>
-              <ul>
-                <li><a href="#services">NCLT Matters</a></li>
-                <li><a href="#services">Tax Advisory</a></li>
-                <li><a href="#services">Compliance</a></li>
-                <li><a href="#services">GST Litigation</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="tl-footer-bottom">
-            <span>© 2026 TaxLegal. All rights reserved.</span>
-            <span>CBD-Belapur, Navi Mumbai</span>
-          </div>
-        </div>
-      </footer>
-      </div>
-    </>
+        </section>
+
+      </main>
+
+      <Footer hideContactSection={true} />
+    </div>
   );
 };
 
