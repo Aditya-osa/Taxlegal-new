@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="footer-grid">
           {/* Column 1: Info */}
           <div className="footer-col-info">
-            <a href="/" className="footer-logo">
-              <span className="t1">Tax<span>.</span>Legal</span>
+            <a href="/" className="footer-logo-link">
+              <img src="/assets/logo.png" alt="TaxLegal Logo" className="footer-logo-img" />
             </a>
             <p className="footer-desc">
               Advocates, Chartered Accountants & Company Secretaries. Practicing legal and tax matters since 1996 from Navi Mumbai.
