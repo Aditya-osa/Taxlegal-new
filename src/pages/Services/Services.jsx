@@ -179,10 +179,6 @@ const Services = () => {
               </div>
 
               <div className="service-overlay">
-                <h3>{service.title}</h3>
-
-                <p>{service.description}</p>
-
                 <div className="service-tags">
                   {service.tags.map((tag, index) => (
                     <span key={index}>{tag}</span>
