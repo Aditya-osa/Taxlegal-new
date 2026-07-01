@@ -6,10 +6,10 @@ import "./Services.css";
 const services = [
   {
     id: 1,
-    title: "Business Incorporation & Startup Services",
-    image: "/assets/team/bacck.png",
+    title: "",
+    image: "/assets/Services/Startup.jpeg",
     description:
-      "Comprehensive business setup solutions for startups, entrepreneurs, and growing organizations.",
+      "",
     tags: [
       "Proprietorship Registration",
       "Partnership Firm Registration",

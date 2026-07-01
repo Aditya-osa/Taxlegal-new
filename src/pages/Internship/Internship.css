@@ -405,7 +405,8 @@
 }
 
 .faq-item.open .faq-content-wrap {
-  max-height: 300px; /* Big enough to fit any answer */
+  max-height: 300px;
+  /* Big enough to fit any answer */
 }
 
 .faq-content-inner {
@@ -434,12 +435,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
-  
+
   .domains-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
-  
+
   .overview-grid {
     gap: 20px;
   }
@@ -450,39 +451,39 @@
   .internship-hero {
     padding: var(--section-py) 0;
   }
-  
+
   .internship-hero-title {
     font-size: 2.3rem;
   }
-  
+
   .section-title {
     font-size: 1.85rem;
   }
-  
+
   .overview-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .overview-container-box {
     padding: 36px 24px;
   }
-  
+
   .overview-title {
     font-size: 1.6rem;
     margin-bottom: 24px;
   }
-  
+
   .why-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .domains-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .cta-title {
     font-size: 1.75rem;
   }
@@ -493,24 +494,24 @@
   .internship-container {
     padding: 0 16px;
   }
-  
+
   .internship-hero-title {
     font-size: 1.95rem;
   }
-  
+
   .internship-hero-subtitle {
     font-size: 1.05rem;
     margin-bottom: 16px;
   }
-  
+
   .section-title {
     font-size: 1.55rem;
   }
-  
+
   .why-card {
     padding: 24px 20px;
   }
-  
+
   .domain-card {
     padding: 20px;
   }
