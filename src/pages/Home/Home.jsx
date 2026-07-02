@@ -43,9 +43,8 @@ const Home = () => {
           <TestimonialsSection />
           <CareerSection />
         </main>
-
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

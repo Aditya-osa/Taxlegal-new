@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
+import InternshipReview from '../../components/Internship/InternshipReview';
 import "./Internship.css";
 
 const InternshipPage = () => {
@@ -232,6 +233,9 @@ const InternshipPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Reviews Section */}
+      <InternshipReview />
 
       {/* CTA Section */}
       <section className="internship-cta">
