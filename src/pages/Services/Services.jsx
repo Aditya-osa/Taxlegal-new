@@ -269,7 +269,7 @@ const whyChooseItems = [
     description:
       "Legal advice designed around commercial realities. Supporting confident business decisions.",
     icon: Briefcase,
-    image: "/assets/Services/Startup.jpeg",
+    image: "/assets/Services/client_centric_approach.jpg",
   },
   {
     id: 3,
@@ -277,7 +277,7 @@ const whyChooseItems = [
     description:
       "Integrated legal expertise across practice areas. Delivering practical and coordinated solutions.",
     icon: Building2,
-    image: "/assets/Services/Accounts-Audit.jpeg",
+    image: "/assets/Services/end_to_end_support.jpg",
   },
   {
     id: 4,
@@ -293,7 +293,7 @@ const whyChooseItems = [
     description:
       "Responsive advice with clear timelines. Focused on timely delivery and measurable outcomes.",
     icon: Clock,
-    image: "/assets/Services/Registeration.jpeg",
+    image: "/assets/Services/timely_and_effective_solutions.jpg",
   },
   {
     id: 6,
@@ -301,7 +301,7 @@ const whyChooseItems = [
     description:
       "Built on professionalism, discretion and accountability. Long-term partnerships driven by client success.",
     icon: ShieldCheck,
-    image: "/assets/Services/Audit.jpeg",
+    image: "/assets/Services/integrity_and_transparency.jpg",
   },
   {
     id: 7,
@@ -309,7 +309,7 @@ const whyChooseItems = [
     description:
       "Supporting clients across jurisdictions and industries. Consistent legal advice wherever business operates.",
     icon: Globe,
-    image: "/assets/Services/Incorporation.jpeg",
+    image: "/assets/Services/pan_india_presence.jpg",
   },
 ];
 
