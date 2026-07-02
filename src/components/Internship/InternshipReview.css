@@ -1,0 +1,379 @@
+/* Internship Review Section Styles */
+
+.internship-review-section {
+  padding: 40px 0 100px 0;
+  background-color: var(--white);
+  overflow: hidden;
+  position: relative;
+}
+
+.internship-review-header {
+  text-align: center;
+  margin-bottom: 80px; /* Increased white space */
+  padding: 0 var(--container-px);
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.internship-review-section.is-visible .internship-review-header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.internship-review-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--red);
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Thin separator line below eyebrow */
+.internship-review-header-divider {
+  width: 40px;
+  height: 1px;
+  background-color: var(--red);
+  margin: 16px auto 32px auto;
+}
+
+.internship-review-title {
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Serif only for heading */
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.internship-review-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--red);
+}
+
+.internship-review-subtitle {
+  font-size: 1.1rem;
+  color: #555555;
+  line-height: 1.65;
+  max-width: 650px; /* Narrower subtitle */
+  margin: 0 auto 36px auto;
+}
+
+/* Subtle editorial CTA */
+.internship-review-cta-wrap {
+  margin-top: 15px;
+}
+
+.internship-review-cta {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 6px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.internship-review-cta:hover {
+  color: var(--red);
+}
+
+.internship-review-cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 20px;
+  height: 1px;
+  background-color: var(--red);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.internship-review-cta:hover::after {
+  width: 100%;
+}
+
+/* Marquee Container with Fade Mask and Clip-path Reveal */
+.internship-marquee-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  position: relative;
+  opacity: 0;
+  clip-path: inset(0 0 30% 0);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s, clip-path 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+  
+  /* Seamless fading edges */
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  padding: 15px 0;
+}
+
+.internship-review-section.is-visible .internship-marquee-container {
+  opacity: 1;
+  clip-path: inset(0);
+}
+
+.internship-marquee-row {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Track holding the cards (duplicated contents) */
+.internship-marquee-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  will-change: transform;
+}
+
+.internship-marquee-track.scroll-left {
+  animation: scroll-left-animation 90s linear infinite;
+}
+
+.internship-marquee-track.scroll-right {
+  animation: scroll-right-animation 85s linear infinite;
+}
+
+/* Pause scroll when hovering over a specific row, allowing the other to move */
+.internship-marquee-row:hover .internship-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Cards styling - Newspaper / Editorial layout */
+.internship-review-card {
+  position: relative;
+  width: 350px;
+  min-width: 350px;
+  background: linear-gradient(to bottom, #ffffff, #FAF8F6);
+  border: 1px solid #ECE8E3;
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+  transition: border-color 0.35s ease, box-opacity 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Newspaper left accent bar expands on hover */
+.internship-review-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #C62828;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s ease;
+  z-index: 2;
+}
+
+.internship-review-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* Bottom signature line animation */
+.internship-review-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #B22222;
+  transition: width 0.4s ease;
+  z-index: 2;
+}
+
+.internship-review-card:hover::after {
+  width: 100%;
+}
+
+.internship-review-card:hover {
+  transform: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-color: #C62828;
+  background: #ffffff;
+  z-index: 10;
+}
+
+/* Dim other cards in the hovered row only */
+.internship-marquee-row:hover .internship-review-card:not(:hover) {
+  opacity: 0.65;
+  filter: grayscale(20%);
+  transform: none;
+}
+
+.quote-icon-wrap {
+  color: #B68A35; /* Gold Accent */
+  opacity: 0.18;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.35s ease, color 0.35s ease;
+}
+
+.internship-review-card:hover .quote-icon-wrap {
+  opacity: 1;
+  color: #C62828; /* Deep red on hover */
+  transform: none;
+}
+
+.internship-review-text {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #4a4a4a;
+  margin: 0 0 24px 0;
+  font-weight: 400;
+  flex-grow: 1;
+  transition: color 0.35s ease;
+}
+
+.internship-review-card:hover .internship-review-text {
+  color: #1F2B46; /* Readable hover dark navy */
+}
+
+/* Thin editorial separator line */
+.internship-review-separator {
+  height: 1px;
+  background-color: #F0ECE7;
+  margin-bottom: 20px;
+  transition: background-color 0.35s ease;
+}
+
+.internship-review-card:hover .internship-review-separator {
+  background-color: #B68A35; /* Turn gold on hover */
+}
+
+.internship-review-meta {
+  margin-top: auto;
+  padding-top: 0;
+}
+
+.internship-review-author {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #000000; /* Black */
+  margin: 0 0 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: color 0.35s ease;
+}
+
+.internship-review-card:hover .internship-review-author {
+  color: #000000; /* Stays black on hover */
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.linkedin-link:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.linkedin-icon {
+  color: #3b5998;
+  display: block;
+}
+
+.internship-review-role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--red);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* Animations */
+@keyframes scroll-left-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scroll exactly half-width (the length of the original list) */
+  }
+}
+
+@keyframes scroll-right-animation {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .internship-review-title {
+    font-size: 2.6rem;
+  }
+  .internship-marquee-container {
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
+}
+
+@media (max-width: 768px) {
+  .internship-review-section {
+    padding: 70px 0;
+  }
+  
+  .internship-review-title {
+    font-size: 2.1rem;
+  }
+  
+  .internship-review-subtitle {
+    font-size: 0.98rem;
+  }
+  
+  .internship-review-card {
+    width: 300px;
+    min-width: 300px;
+    padding: 24px 22px;
+  }
+
+  .internship-marquee-track.scroll-left {
+    animation-duration: 45s;
+  }
+
+  .internship-marquee-track.scroll-right {
+    animation-duration: 40s;
+  }
+}
+
+@media (max-width: 480px) {
+  .internship-review-title {
+    font-size: 1.8rem;
+  }
+  
+  .internship-review-card {
+    width: 270px;
+    min-width: 270px;
+  }
+}
