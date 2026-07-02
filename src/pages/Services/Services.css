@@ -76,13 +76,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 720px;
+  max-width: 880px;
   flex: 1 1 500px;
 }
 
 .banner-content h1 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(3rem, 4.2vw, 4.5rem);
+  font-size: clamp(2.6rem, 3.6vw, 3.85rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.5px;
@@ -170,16 +170,16 @@ body {
   position: relative;
   width: auto;
   max-width: 100%;
-  padding: 14px 28px;
+  padding: 16px 28px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
+  border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 24px;
   flex-wrap: nowrap;
   white-space: nowrap;
   z-index: 10;
@@ -195,29 +195,39 @@ body {
   }
 }
 
-.services-hero-meta-card strong {
-  display: inline;
-  margin-bottom: 0;
-  color: #D32C36;
-  font-size: 1.25rem;
-  font-weight: 800;
+.meta-card-stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 
-.services-hero-meta-card strong span {
+.meta-stat-num {
+  color: #D32C36;
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.meta-stat-num span {
   color: inherit;
   font-size: inherit;
   font-weight: inherit;
 }
 
-.services-hero-meta-card > span {
-  display: inline;
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.15rem;
-  line-height: 1.5;
+.meta-stat-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 2px;
 }
 
-.services-hero-meta-card > span+span {
-  margin-top: 0;
+.meta-card-divider {
+  width: 1px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 0 4px;
 }
 
 /* ================= INTRO ================= */
@@ -283,7 +293,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #000;
-  margin: 40px 0 50px;
+  margin: 40px 0 0px;
   /* top + bottom spacing */
 }
 
@@ -532,7 +542,7 @@ body {
 }
 
 .legal-hero-content {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -731,8 +741,8 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: #ffffff;
-  margin-bottom: 48px;
+  color: #d42a2a;
+  margin-bottom: 20px;
   text-transform: uppercase;
   position: relative;
 }
@@ -1191,5 +1201,18 @@ body {
 
   .legal-bottom-cta {
     padding: 50px 20px;
+  }
+
+  .services-hero-meta-card {
+    padding: 12px 18px;
+    gap: 16px;
+  }
+
+  .meta-stat-num {
+    font-size: 1.25rem;
+  }
+
+  .meta-stat-label {
+    font-size: 0.85rem;
   }
 }

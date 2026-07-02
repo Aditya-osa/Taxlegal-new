@@ -497,10 +497,10 @@ const Services = () => {
           <div className="services-intro-copy">
             <div className="services-eyebrow">OUR EXPERTISE & DOMAINS</div>
             <h1>
-              Three Decades of <br />Tax and Legal <span>Practice.</span>
+              Three Decades of <br />Tax and Legal Excellence
             </h1>
             <p>
-              Matters relating to taxation, regulatory compliance, and legal proceedings. Including advisory, compliance, and representation before appropriate authorities.
+              Delivering integrated tax, regulatory and legal solutions through advisory, compliance and dispute resolution.
             </p>
             <div className="services-hero-actions">
               <a href="#services" className="services-btn services-btn--primary">
@@ -510,17 +510,24 @@ const Services = () => {
           </div>
 
           <div className="services-hero-meta-card">
-            <strong>
-              <AnimatedCounter target={30} suffix="+" /> Years of Experience
-            </strong>
-            <span>
-              with <AnimatedCounter target={10000} separator="," suffix="+" /> Customers Served
-            </span>
+            <div className="meta-card-stat">
+              <span className="meta-stat-num">
+                <AnimatedCounter target={30} suffix="+" /> Years
+              </span>
+              <span className="meta-stat-label">of Experience</span>
+            </div>
+            <div className="meta-card-divider"></div>
+            <div className="meta-card-stat">
+              <span className="meta-stat-num">
+                <AnimatedCounter target={10000} separator="," suffix="+" />
+              </span>
+              <span className="meta-stat-label">Customers Served</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <h1 className="section-heading">Our Services</h1>
+      <h1 className="section-heading">Our Practice Areas</h1>
 
 
       {/* ================= SERVICES GRID ================= */}
@@ -568,9 +575,7 @@ const Services = () => {
               <span>OUR LEGAL ADVISORY SERVICES</span>
             </div>
             <h2>
-              Strategic Legal Expertise.
-              <br />
-              Business-Focused Solutions.
+              Strategic Legal Expertise. Business-Focused Solutions.
               <br />
               Trusted Representation.
             </h2>
@@ -612,7 +617,8 @@ const Services = () => {
 
         {/* Why Clients Choose TaxLegal */}
         <div className="why-choose-section">
-          <h2 className="why-choose-heading">WHY CLIENTS CHOOSE TAXLEGAL</h2>
+          <h2 className="why-choose-heading">Why Leading Businesses Work With Us</h2>
+          <p style={{color: "white", justifyContent: "center", display: "flex", alignItems: "center",textAlign: "center",marginTop: "0px"}}>We combine legal excellence with commercial understanding to help clients manage complexity, <br />reduce risk and make informed decisions with confidence.</p>
           <WhyChooseCarousel items={whyChooseItems} />
         </div>
 
