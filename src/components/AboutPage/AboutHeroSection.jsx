@@ -8,10 +8,9 @@ const AboutHeroSection = () => {
       <div className="about-hero-container">
         <div className="about-hero-content">
           <p className="hero-badge-simple">ABOUT TAXLEGAL</p>
-          <h1 className="hero-title">Multidisciplinary Professional Services Since 1996</h1>
+          <h1 className="hero-title">Multidisciplinary Professional Services Since 1995</h1>
           <p className="hero-description">
-            Advocates, Chartered Accountants and Company Secretaries working together<br />
-            to deliver integrated professional services to businesses across sectors.
+            Bringing together Chartered Accountants, Company Secretaries and Advocates <br />to deliver integrated tax, regulatory and legal solutions with a commercial perspective.
           </p>
         </div>
       </div>

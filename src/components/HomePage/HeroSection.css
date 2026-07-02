@@ -5,7 +5,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--theme-gradient);
+  background-image: url('/assets/Home%20Page/Hero%20Section.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--white);
   padding: var(--section-py) var(--container-px);
   overflow: hidden;
@@ -18,7 +21,13 @@
 }
 
 .hero-overlay {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.85) 0%, rgba(10, 25, 47, 0.6) 100%);
+  z-index: 1;
 }
 
 .hero-container {
@@ -36,6 +45,7 @@
 .hero-content {
   flex: 1;
   max-width: 700px;
+  margin-top: 0;
 }
 
 .hero-badge {
@@ -45,7 +55,7 @@
   border-radius: 20px;
   font-size: 0.9rem;
   letter-spacing: 1px;
-  margin-bottom: 24px;
+  margin: 0 0 24px 0;
   text-transform: uppercase;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -71,7 +81,7 @@
 .hero-buttons {
   display: flex;
   gap: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .hero-stats {

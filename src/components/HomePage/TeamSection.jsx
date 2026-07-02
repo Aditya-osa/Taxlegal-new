@@ -65,7 +65,7 @@ const TeamSection = () => {
             <p className="section-eyebrow">OUR TEAM</p>
             <div className="subtitle-line"></div>
           </div>
-          <h2 className="section-title">Experienced Panel of Experts</h2>
+          <h2 className="section-title">Experienced Panel of Experts Consultants</h2>
           <p className="team-subtitle">
             Our professionals bring decades of industry experience to help your business succeed.
           </p>
