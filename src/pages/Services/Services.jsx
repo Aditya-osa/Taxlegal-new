@@ -386,31 +386,24 @@ const Services = () => {
       <section className="services-banner">
         <div className="banner-content">
           <div className="services-intro-copy">
+            <div className="services-eyebrow">OUR EXPERTISE & DOMAINS</div>
             <h1>
-              Three Decades  <br />Tax
-              and of <span><br /> Practice.</span>
+              Three Decades of <br />Tax and Legal <span>Practice.</span>
             </h1>
-
             <p>
-              Matters relating to taxation, regulatory compliance, and legal proceedings. Including advisory, compliance, and representation before appropriate authorities.            </p>
+              Matters relating to taxation, regulatory compliance, and legal proceedings. Including advisory, compliance, and representation before appropriate authorities.
+            </p>
             <div className="services-hero-actions">
               <a href="#services" className="services-btn services-btn--primary">
                 Explore All Domains
               </a>
-
             </div>
           </div>
 
-
-          <div className="services-intro-visual">
-            <div className="intro-visual-card">
-              <img src="/assets/team/Banner1.png" alt="Team advisory experts" />
-            </div>
-            <div className="intro-visual-meta">
-              <strong>30+ Years</strong>
-              <span>Trusted Advisory for</span>
-              <span>Fortune 500 & Startups</span>
-            </div>
+          <div className="services-hero-meta-card">
+            <strong>30+ Years</strong>
+            <span>Trusted Advisory for</span>
+            <span>Fortune 500 & Startups</span>
           </div>
         </div>
       </section>

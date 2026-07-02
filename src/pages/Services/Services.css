@@ -41,9 +41,15 @@ body {
 /* ================= HEADER STYLE (MATCH IMAGE) ================= */
 
 .services-banner {
+  position: relative;
   width: 100%;
-  background: var(--off-white);
-  padding: 36px 5% 40px;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.75) 50%, rgba(15, 23, 42, 0.35) 100%),
+              url("/assets/Services/service_herosection.jpg") no-repeat center center / cover;
+  padding: 80px 5% 90px;
+  overflow: hidden;
 }
 
 /* REMOVE DARK LAYER COMPLETELY */
@@ -55,171 +61,152 @@ body {
 
 .banner-content {
   position: relative;
-  max-width: 1180px;
+  z-index: 2;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(320px, 1fr) minmax(360px, 520px);
-  gap: 48px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
 }
 
 .services-intro-copy {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
+  max-width: 720px;
+  flex: 1 1 500px;
 }
 
 .banner-content h1 {
   font-family: "Playfair Display", serif;
-  /* Elegant serif */
-  font-size: clamp(3rem, 4vw, 4.5rem);
+  font-size: clamp(3rem, 4.2vw, 4.5rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.5px;
-  color: var(--navy);
-  /* Strong brand color */
+  color: var(--white);
   margin: 0;
 }
 
 .banner-content h1 span {
-  color: var(--red);
-  /* Accent emphasis */
+  color: #ff4d4d;
 }
 
 .banner-content p {
-  font-size: 1rem;
-  line-height: 1.85;
-  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
   max-width: 640px;
+  margin: 0;
 }
 
 .services-eyebrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 16px;
-  margin-bottom: 24px;
-  font-size: 0.78rem;
+  padding: 8px 18px;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  background: rgba(204, 34, 41, 0.08);
-  color: var(--accent-red);
+  background: rgba(255, 77, 77, 0.15);
+  color: #ff4d4d;
+  border: 1px solid rgba(255, 77, 77, 0.3);
   border-radius: 999px;
+  width: fit-content;
 }
 
 .services-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .services-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 28px;
+  padding: 14px 32px;
   border-radius: 999px;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-transform: none;
-  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .services-btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .services-btn--primary {
   background: var(--primary-blue);
   color: var(--white);
+  box-shadow: 0 10px 25px rgba(26, 58, 110, 0.4);
+}
+
+.services-btn--primary:hover {
+  background: #234888;
+  box-shadow: 0 14px 30px rgba(26, 58, 110, 0.6);
 }
 
 .services-btn--outline {
-  color: var(--primary-blue);
-  border: 2px solid var(--primary-blue);
-  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
 }
 
 .services-btn--outline:hover {
-  background: rgba(26, 58, 110, 0.06);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--white);
 }
 
-.services-intro-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ================= FLOATING HERO META CARD ================= */
+
+.services-hero-meta-card {
   position: relative;
-}
-
-.intro-visual-card {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
-  aspect-ratio: 1 / 1;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 0 40px 120px rgba(15, 23, 42, 0.12);
-}
-
-.intro-visual-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.intro-visual-meta {
-  position: absolute;
-  left: -70px;
-  top: 20px;
-  width: min(320px, calc(100% - 48px));
-  padding: 18px 24px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+  width: min(340px, 100%);
+  padding: 28px 32px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
   animation: floaty 5s ease-in-out infinite;
   z-index: 10;
 }
 
 @keyframes floaty {
-
   0%,
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
 }
 
-.intro-visual-meta strong {
+.services-hero-meta-card strong {
   display: block;
-  margin-bottom: 12px;
-  color: var(--accent-red);
-  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #ff4d4d;
+  font-size: 1.6rem;
+  font-weight: 800;
 }
 
-.intro-visual-meta span {
+.services-hero-meta-card span {
   display: block;
-  color: var(--dark);
-  font-size: 0.9rem;
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
-.intro-visual-meta span+span {
+.services-hero-meta-card span+span {
   margin-top: 4px;
-}
-
-.intro-visual-meta::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  pointer-events: none;
 }
 
 /* ================= INTRO ================= */
@@ -248,9 +235,15 @@ body {
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
+  .services-banner {
+    min-height: auto;
+    padding: 60px 5% 70px;
+  }
+
   .banner-content {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
   }
 
   .banner-content h1 {
@@ -261,8 +254,8 @@ body {
     font-size: 0.95rem;
   }
 
-  .intro-visual-card {
-    aspect-ratio: auto;
+  .services-hero-meta-card {
+    width: 100%;
     max-width: 100%;
   }
 }
@@ -468,7 +461,8 @@ body {
 
 @media(max-width:1024px) {
   .banner-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: left;
   }
 
@@ -497,25 +491,6 @@ body {
 
   .service-card {
     aspect-ratio: 1 / 1;
-  }
-
-  .banner-content {
-    grid-template-columns: 1fr;
-  }
-
-  .banner-content h1 {
-    font-size: 32px;
-  }
-
-  .intro-visual-card {
-    max-width: 100%;
-  }
-
-  .intro-visual-meta {
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
-    padding: 16px 18px;
   }
 }
 
