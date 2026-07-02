@@ -37,9 +37,9 @@ const TestimonialsSection = () => {
             <p className="section-eyebrow">TESTIMONIALS</p>
             <div className="subtitle-line"></div>
           </div>
-          <h2 className="section-title">What Clients Say</h2>
+          <h2 className="section-title">Client Testimonials</h2>
           <p className="testimonials-subtitle">
-            Don't just take our word for it. Read what our successful clients have to say about our services.
+            Perspectives from clients on their experience working with TaxLegal.
           </p>
         </div>
 

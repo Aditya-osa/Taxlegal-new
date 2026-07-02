@@ -7,12 +7,12 @@ const CareerSection = () => {
       <div className="career-container">
         <div className="career-content-column">
           <p className="career-subtitle">INTERNSHIP PROGRAM</p>
-          <h2 className="career-title">Launch Your <span style={{ color: 'var(--red-accent)' }}>Career</span> Before You Graduate</h2>
+          <h2 className="career-title">Build Professional Experience While You Learn</h2>
           <p className="career-italic">Practice. Perform. Prosper.</p>
           <p className="career-desc">
-            At TaxLegal, students gain practical exposure to accounting, taxation, compliance, legal research, audit support, documentation, social media, design, and digital communication through a structured internship environment.
+            Gain practical exposure through a structured internship programme designed to develop technical, analytical and professional skills across tax, accounting, audit, corporate compliance, legal advisory and business support functions..
           </p>
-          
+
           <div className="internship-badges">
             <div className="intern-badge"><span className="dot"></span>Accounts & Tax</div>
             <div className="intern-badge"><span className="dot"></span>Audit & Compliance</div>
@@ -24,7 +24,7 @@ const CareerSection = () => {
 
           <button className="btn-primary" style={{ marginTop: '20px' }}>Apply for Internship</button>
         </div>
-        
+
         <div className="career-criteria-column">
           <div className="criteria-card">
             <h3>Program at a Glance</h3>
@@ -57,7 +57,7 @@ const CareerSection = () => {
             <div className="criteria-info-box">
               <p><strong>Duration:</strong> Minimum 3 months. Longer internships may be considered based on role, availability, performance, and firm requirements. Stipend applicable for internships of 12 months or more.</p>
             </div>
-            
+
             <button className="btn-primary-full">View Full Program Details</button>
           </div>
         </div>
