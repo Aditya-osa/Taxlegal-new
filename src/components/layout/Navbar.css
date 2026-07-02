@@ -105,11 +105,11 @@
 @media (min-width: 993px) {
   .tl-navlinks {
     position: absolute;
-    left: 50%;
+    left: 53%;
     transform: translateX(-50%);
-    width: 650px;
-    /* Try 650–700px */
-    justify-content: space-between;
+    width: auto;
+    justify-content: center;
+    gap: 62px;
   }
 }
 

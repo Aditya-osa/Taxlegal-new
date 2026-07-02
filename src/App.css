@@ -29,3 +29,56 @@ button {
 button:hover {
   border-color: #646cff;
 }
+
+/* Floating Tax Calculator Button */
+.floating-tax-btn {
+  position: fixed;
+  right: 0;
+  top: 60%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #E53935 0%, #B71C1C 100%);
+  color: #ffffff;
+  padding: 20px 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  border-radius: 8px 0 0 8px;
+  z-index: 9999;
+  box-shadow: -4px 0 20px rgba(183, 28, 28, 0.4), 
+              inset 2px 0 5px rgba(255,255,255,0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: 2px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+/* Premium shine effect */
+.floating-tax-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 20%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.floating-tax-btn:hover::before {
+  top: 150%;
+  opacity: 1;
+  transition: all 0.7s ease;
+}
+
+.floating-tax-btn:hover {
+  background: linear-gradient(135deg, #ef5350 0%, #c62828 100%);
+  transform: translateY(-50%) translateX(-6px);
+  box-shadow: -6px 0 25px rgba(183, 28, 28, 0.6), 
+              inset 2px 0 5px rgba(255,255,255,0.3);
+  color: #ffffff;
+}

@@ -53,7 +53,7 @@ const Navbar = () => {
           <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>Services</Link>
           <a href="/#industries">Clients</a>
           <Link to="/internship" className={location.pathname === "/internship" ? "active" : ""}>Internship</Link>
-          <a href="https://www.incometaxindia.gov.in/income-tax-calculator" target="_blank" rel="noopener noreferrer">Tax Calculator</a>
+          {/* <a href="https://www.incometaxindia.gov.in/income-tax-calculator" target="_blank" rel="noopener noreferrer">Tax Calculator</a> */}
           <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>Contact Us</Link>
         </nav>
         <div className="tl-nav-cta">

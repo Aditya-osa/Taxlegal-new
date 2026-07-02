@@ -99,7 +99,7 @@ const services = [
   {
     id: 6,
     title: "IT Advisory & Compliance",
-    image: "/assets/team/Direct-tax.png",
+    image: "/assets/Services/Income-tax.jpeg",
     description:
       "End-to-end direct tax advisory and compliance services for individuals and corporate entities.",
     tags: [
@@ -133,11 +133,11 @@ const services = [
   {
     id: 8,
     title: " Regulatory Compliance",
-    image: "/assets/Services/Regulatory.png",
+    image: "/assets/Services/Regulatory-compilance.png",
     description:
       "Holistic compliance management services covering statutory, corporate, and payroll needs.",
     tags: [
-      " Corporate Secretarial Services",
+      "Corporate Secretarial Services",
       "Director Appointment & Resignation",
       "Share Capital & Equity Management",
       "Company & LLP Closure",

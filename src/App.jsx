@@ -8,13 +8,23 @@ import InternshipPage from './pages/Internship/InternshipPage';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<AboutUs />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/contact" element={<ContactUs />} />
-      <Route path="/internship" element={<InternshipPage />} />
-    </Routes>
+    <>
+      <a 
+        href="https://www.incometaxindia.gov.in/income-tax-calculator" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="floating-tax-btn"
+      >
+        Tax Calculator
+      </a>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/internship" element={<InternshipPage />} />
+      </Routes>
+    </>
   )
 }
 

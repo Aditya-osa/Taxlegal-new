@@ -29,22 +29,24 @@ import Footer from '../../components/layout/Footer';
 
 const Home = () => {
   return (
-    <div className="home-page-container">
+    <>
       {/* Replace this with your actual Header component */}
       <Header />
-      <main>
-        <HeroSection />
-        <LogosSection />
-        <AboutSection />
-        <ServicesSection />
-        <FeaturesSection />
-        <TeamSection />
-        <TestimonialsSection />
-        <CareerSection />
-      </main>
+      <div className="home-page-container">
+        <main>
+          <HeroSection />
+          <LogosSection />
+          <AboutSection />
+          <ServicesSection />
+          <FeaturesSection />
+          <TeamSection />
+          <TestimonialsSection />
+          <CareerSection />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
