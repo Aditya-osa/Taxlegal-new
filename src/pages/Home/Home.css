@@ -3,8 +3,8 @@
   --navy-primary: #173B78;
   --navy-dark: #102B5C;
   --navy-secondary: #234B8E;
-  --red-accent: #E53935;
-  --red-dark: #C62828;
+  --red-accent: #D32C36;
+  --red-dark: #B2222B;
   --white: #FFFFFF;
   --bg-light: #F5F7FB;
   --bg-section: #EEF2F7;
@@ -21,7 +21,7 @@
   --mid-gray: var(--body-text);
 
   /* Theme Gradient */
-  --theme-gradient: linear-gradient(135deg, #173B78 0%, #102B5C 70%, #C62828 100%);
+  --theme-gradient: linear-gradient(135deg, #173B78 0%, #102B5C 70%, #B2222B 100%);
 }
 
 .home-page-container {

@@ -461,9 +461,8 @@ const Services = () => {
           </div>
 
           <div className="services-hero-meta-card">
-            <strong>30+ Years</strong>
-            <span>Trusted Advisory for</span>
-            <span>Fortune 500 & Startups</span>
+            <strong>3 Decades of Experience</strong>
+            <span>with 10,000 Customers Served</span>
           </div>
         </div>
       </section>

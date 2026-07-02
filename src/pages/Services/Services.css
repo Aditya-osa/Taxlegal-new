@@ -3,8 +3,8 @@
 :root {
   --primary-blue: #1A3A6E;
   --primary-blue-light: #2e55a0;
-  --accent-red: #CC2229;
-  --accent-red-light: #e04a50;
+  --accent-red: #D32C36;
+  --accent-red-light: #df444e;
   --dark: #111;
   --text: #333;
   --light: #f8f9fb;
@@ -67,7 +67,7 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   gap: 48px;
   flex-wrap: wrap;
 }
@@ -91,7 +91,7 @@ body {
 }
 
 .banner-content h1 span {
-  color: #ff4d4d;
+  color: #D32C36;
 }
 
 .banner-content p {
@@ -111,9 +111,9 @@ body {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  background: rgba(255, 77, 77, 0.15);
-  color: #ff4d4d;
-  border: 1px solid rgba(255, 77, 77, 0.3);
+  background: rgba(211, 44, 54, 0.15);
+  color: #D32C36;
+  border: 1px solid rgba(211, 44, 54, 0.3);
   border-radius: 999px;
   width: fit-content;
 }
@@ -168,15 +168,20 @@ body {
 
 .services-hero-meta-card {
   position: relative;
-  width: min(340px, 100%);
-  padding: 28px 32px;
+  width: auto;
+  max-width: 100%;
+  padding: 14px 28px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 24px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-  animation: floaty 5s ease-in-out infinite;
+  border-radius: 999px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   z-index: 10;
 }
 
@@ -191,22 +196,22 @@ body {
 }
 
 .services-hero-meta-card strong {
-  display: block;
-  margin-bottom: 10px;
-  color: #ff4d4d;
-  font-size: 1.6rem;
+  display: inline;
+  margin-bottom: 0;
+  color: #D32C36;
+  font-size: 1.25rem;
   font-weight: 800;
 }
 
 .services-hero-meta-card span {
-  display: block;
+  display: inline;
   color: rgba(255, 255, 255, 0.95);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.5;
 }
 
 .services-hero-meta-card span+span {
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 /* ================= INTRO ================= */
@@ -257,6 +262,12 @@ body {
   .services-hero-meta-card {
     width: 100%;
     max-width: 100%;
+    flex-wrap: wrap;
+    white-space: normal;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    padding: 18px 20px;
   }
 }
 
@@ -796,7 +807,7 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #a82020;
+  background: var(--accent-red);
   color: #ffffff;
   display: flex;
   align-items: center;

@@ -178,7 +178,7 @@
   left: 0;
   width: 5px;
   height: 100%;
-  background: #C62828;
+  background: #D32C36;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.35s ease;
@@ -197,7 +197,7 @@
   left: 0;
   height: 2px;
   width: 0;
-  background: #B22222;
+  background: #B2222B;
   transition: width 0.4s ease;
   z-index: 2;
 }
@@ -209,7 +209,7 @@
 .internship-review-card:hover {
   transform: none;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  border-color: #C62828;
+  border-color: #D32C36;
   background: #ffffff;
   z-index: 10;
 }
@@ -232,7 +232,7 @@
 
 .internship-review-card:hover .quote-icon-wrap {
   opacity: 1;
-  color: #C62828; /* Deep red on hover */
+  color: #D32C36; /* Deep red on hover */
   transform: none;
 }
 
