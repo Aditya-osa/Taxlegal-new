@@ -437,6 +437,55 @@ const WhyChooseCarousel = ({ items }) => {
   );
 };
 
+const AnimatedCounter = ({ target, duration = 1600, suffix = "", separator = "" }) => {
+  const [count, setCount] = useState(0);
+  const elementRef = useRef(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          const start = performance.now();
+
+          const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(eased * target);
+            setCount(current);
+            if (progress < 1) {
+              requestAnimationFrame(tick);
+            } else {
+              setCount(target);
+            }
+          };
+
+          requestAnimationFrame(tick);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [target, duration]);
+
+  const formatNumber = (num) => {
+    if (!separator) return num.toString();
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+  };
+
+  return (
+    <span ref={elementRef}>
+      {formatNumber(count)}{suffix}
+    </span>
+  );
+};
+
 const Services = () => {
   return (
     <>
@@ -461,8 +510,12 @@ const Services = () => {
           </div>
 
           <div className="services-hero-meta-card">
-            <strong>3 Decades of Experience</strong>
-            <span>with 10,000 Customers Served</span>
+            <strong>
+              <AnimatedCounter target={30} suffix="+" /> Years of Experience
+            </strong>
+            <span>
+              with <AnimatedCounter target={10000} separator="," suffix="+" /> Customers Served
+            </span>
           </div>
         </div>
       </section>

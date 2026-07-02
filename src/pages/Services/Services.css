@@ -203,14 +203,20 @@ body {
   font-weight: 800;
 }
 
-.services-hero-meta-card span {
+.services-hero-meta-card strong span {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.services-hero-meta-card > span {
   display: inline;
   color: rgba(255, 255, 255, 0.95);
   font-size: 1.15rem;
   line-height: 1.5;
 }
 
-.services-hero-meta-card span+span {
+.services-hero-meta-card > span+span {
   margin-top: 0;
 }
 
