@@ -255,12 +255,62 @@ const legalAdvisoryServices = [
 ];
 
 const whyChooseItems = [
-  { id: 1, title: "Experienced Legal Professionals", icon: Award },
-  { id: 2, title: "Business-Centric Legal Advice", icon: Briefcase },
-  { id: 3, title: "Transparent & Ethical Practice", icon: ShieldCheck },
-  { id: 4, title: "End-to-End Representation", icon: CheckCircle2 },
-  { id: 5, title: "Timely & Practical Solutions", icon: Clock },
-  { id: 6, title: "Pan-India Legal Support", icon: Globe },
+  {
+    id: 1,
+    title: "Experienced Legal Professionals",
+    description:
+      "Seasoned legal experts with decades of practice. Delivering strategic and dependable representation.",
+    icon: Award,
+    image: "/assets/Services/experienced_proffessionals.jpg",
+  },
+  {
+    id: 2,
+    title: "Business-Centric Thinking",
+    description:
+      "Legal advice designed around commercial realities. Supporting confident business decisions.",
+    icon: Briefcase,
+    image: "/assets/Services/Startup.jpeg",
+  },
+  {
+    id: 3,
+    title: "Multi-Disciplinary Capability",
+    description:
+      "Integrated legal expertise across practice areas. Delivering practical and coordinated solutions.",
+    icon: Building2,
+    image: "/assets/Services/Accounts-Audit.jpeg",
+  },
+  {
+    id: 4,
+    title: "Regulatory Perspective",
+    description:
+      "Navigating evolving legal and compliance requirements. Helping clients operate with greater certainty.",
+    icon: Scale,
+    image: "/assets/Services/Regulatory-compilance.png",
+  },
+  {
+    id: 5,
+    title: "Efficient Execution",
+    description:
+      "Responsive advice with clear timelines. Focused on timely delivery and measurable outcomes.",
+    icon: Clock,
+    image: "/assets/Services/Registeration.jpeg",
+  },
+  {
+    id: 6,
+    title: "Trusted Relationships",
+    description:
+      "Built on professionalism, discretion and accountability. Long-term partnerships driven by client success.",
+    icon: ShieldCheck,
+    image: "/assets/Services/Audit.jpeg",
+  },
+  {
+    id: 7,
+    title: "National Reach",
+    description:
+      "Supporting clients across jurisdictions and industries. Consistent legal advice wherever business operates.",
+    icon: Globe,
+    image: "/assets/Services/Incorporation.jpeg",
+  },
 ];
 
 const WhyChooseCarousel = ({ items }) => {
@@ -346,10 +396,20 @@ const WhyChooseCarousel = ({ items }) => {
               key={item.id}
               onClick={() => setActiveIndex(idx)}
             >
-              <div className="why-choose-icon">
-                <Icon size={36} strokeWidth={1.5} />
+              <div className="why-choose-card-image-wrap">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="why-choose-card-img"
+                />
+                <div className="why-choose-icon-badge">
+                  <Icon size={26} strokeWidth={2} />
+                </div>
               </div>
-              <h4>{item.title}</h4>
+              <div className="why-choose-card-content">
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+              </div>
             </div>
           );
         })}
