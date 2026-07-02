@@ -1,5 +1,24 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import {
+  Scale,
+  Landmark,
+  IndianRupee,
+  Building2,
+  FileText,
+  Handshake,
+  Gavel,
+  Home,
+  Users,
+  Award,
+  Briefcase,
+  ShieldCheck,
+  CheckCircle2,
+  Clock,
+  Globe,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import "./Services.css";
@@ -160,6 +179,204 @@ const services = [
   },*/
 ];
 
+const legalAdvisoryServices = [
+  {
+    id: 1,
+    num: "01",
+    title: "INSOLVENCY & BANKRUPTCY",
+    icon: Scale,
+    description:
+      "Navigate financial challenges with confidence. Advising businesses, creditors and borrowers on IBC matters, restructuring, liquidation and proceedings before the NCLT.",
+  },
+  {
+    id: 2,
+    num: "02",
+    title: "SARFAESI & RDB MATTERS",
+    icon: Landmark,
+    description:
+      "Effective recovery and debt resolution. Legal representation in SARFAESI actions, DRT/DRAT proceedings, loan recovery and secured asset enforcement matters.",
+  },
+  {
+    id: 3,
+    num: "03",
+    title: "BANKING & FINANCE LAW",
+    icon: IndianRupee,
+    description:
+      "Trusted legal support for financial institutions. Advisory on banking regulations, lending transactions, financing, regulatory compliance and financial disputes.",
+  },
+  {
+    id: 4,
+    num: "04",
+    title: "CORPORATE & COMMERCIAL ADVISORY",
+    icon: Building2,
+    description:
+      "Legal guidance for growing businesses. Supporting companies with corporate governance, restructuring, compliance, joint ventures and commercial transactions.",
+  },
+  {
+    id: 5,
+    num: "05",
+    title: "COMMERCIAL & CONTRACT LAW",
+    icon: FileText,
+    description:
+      "Contracts that safeguard your business. Drafting, reviewing and negotiating commercial agreements that minimize risk and strengthen business relationships.",
+  },
+  {
+    id: 6,
+    num: "06",
+    title: "ARBITRATION & MEDIATION",
+    icon: Handshake,
+    description:
+      "Efficient resolution of commercial disputes. Representing clients in domestic and international arbitration, mediation and alternative dispute resolution mechanisms.",
+  },
+  {
+    id: 7,
+    num: "07",
+    title: "CIVIL & CRIMINAL LITIGATION",
+    icon: Gavel,
+    description:
+      "Strong representation across all courts. Handling civil, criminal and commercial litigation before courts, tribunals and regulatory authorities across India.",
+  },
+  {
+    id: 8,
+    num: "08",
+    title: "PROPERTY & REAL ESTATE",
+    icon: Home,
+    description:
+      "Protecting your property interests. Legal support for property transactions, title verification, due diligence, RERA compliance and real estate disputes.",
+  },
+  {
+    id: 9,
+    num: "09",
+    title: "FAMILY COURT MATTERS",
+    icon: Users,
+    description:
+      "Compassionate guidance during difficult times. Representation in divorce, child custody, maintenance, succession and other family law matters with complete confidentiality.",
+  },
+];
+
+const whyChooseItems = [
+  { id: 1, title: "Experienced Legal Professionals", icon: Award },
+  { id: 2, title: "Business-Centric Legal Advice", icon: Briefcase },
+  { id: 3, title: "Transparent & Ethical Practice", icon: ShieldCheck },
+  { id: 4, title: "End-to-End Representation", icon: CheckCircle2 },
+  { id: 5, title: "Timely & Practical Solutions", icon: Clock },
+  { id: 6, title: "Pan-India Legal Support", icon: Globe },
+];
+
+const WhyChooseCarousel = ({ items }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+
+  const nextSlide = () => {
+    setActiveIndex((prev) => (prev + 1) % items.length);
+  };
+
+  const prevSlide = () => {
+    setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
+  };
+
+  useEffect(() => {
+    if (isHovered) return;
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [isHovered, items.length]);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const diff = touchStartX.current - touchEndX.current;
+    if (diff > 50) {
+      nextSlide();
+    } else if (diff < -50) {
+      prevSlide();
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
+  const getCardClass = (index) => {
+    const N = items.length;
+    let offset = (index - activeIndex) % N;
+    if (offset > Math.floor(N / 2)) offset -= N;
+    if (offset < -Math.floor(N / 2)) offset += N;
+
+    if (offset === 0) return "coverflow-card--center";
+    if (offset === -1) return "coverflow-card--left-1";
+    if (offset === 1) return "coverflow-card--right-1";
+    if (offset === -2) return "coverflow-card--left-2";
+    if (offset === 2) return "coverflow-card--right-2";
+    return "coverflow-card--hidden";
+  };
+
+  return (
+    <div
+      className="why-choose-coverflow-wrapper"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div className="why-choose-coverflow-container">
+        <button
+          onClick={prevSlide}
+          className="why-choose-coverflow-arrow left"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft size={24} />
+        </button>
+
+        {items.map((item, idx) => {
+          const Icon = item.icon;
+          const cardClass = getCardClass(idx);
+          return (
+            <div
+              className={`why-choose-coverflow-card ${cardClass}`}
+              key={item.id}
+              onClick={() => setActiveIndex(idx)}
+            >
+              <div className="why-choose-icon">
+                <Icon size={36} strokeWidth={1.5} />
+              </div>
+              <h4>{item.title}</h4>
+            </div>
+          );
+        })}
+
+        <button
+          onClick={nextSlide}
+          className="why-choose-coverflow-arrow right"
+          aria-label="Next slide"
+        >
+          <ChevronRight size={24} />
+        </button>
+      </div>
+
+      <div className="why-choose-coverflow-dots">
+        {items.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setActiveIndex(idx)}
+            className={`why-choose-coverflow-dot ${activeIndex === idx ? "active" : ""}`}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Services = () => {
   return (
     <>
@@ -231,6 +448,86 @@ const Services = () => {
           <Link to="/contact" className="services-btn services-btn--primary">
             Contact Us to Know More
           </Link>
+        </div>
+      </section>
+
+      {/* ================= LEGAL ADVISORY SERVICES SECTION ================= */}
+      <h1 className="section-heading">About Our Legal Advisory Services</h1>
+
+      <section id="legal-advisory" className="legal-advisory-section">
+        {/* Top Hero Banner */}
+        <div className="legal-hero-banner">
+          <div className="legal-hero-content">
+            <div className="legal-eyebrow">
+              <Scale size={18} />
+              <span>OUR LEGAL ADVISORY SERVICES</span>
+            </div>
+            <h2>
+              Strategic Legal Expertise.
+              <br />
+              Business-Focused Solutions.
+              <br />
+              Trusted Representation.
+            </h2>
+            <p>
+              Whether you are an individual, entrepreneur, financial institution, corporate house,
+              or multinational organization, TaxLegal provides comprehensive legal advisory and
+              dispute resolution services across diverse areas of law.
+            </p>
+            <div className="legal-hero-actions">
+              <Link to="/contact" className="services-btn legal-btn--primary">
+                SCHEDULE A CONSULTATION &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* 9 Legal Services Grid */}
+        <div className="legal-services-container">
+          <div className="legal-services-grid">
+            {legalAdvisoryServices.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div className="legal-card" key={item.id}>
+                  <div className="legal-card-header">
+                    <div className="legal-card-num">
+                      {item.num}
+                    </div>
+                    <div className="legal-card-icon">
+                      <Icon size={34} strokeWidth={1.5} />
+                    </div>
+                  </div>
+                  <h3 className="legal-card-title">{item.title}</h3>
+                  <p className="legal-card-desc">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Why Clients Choose TaxLegal */}
+        <div className="why-choose-section">
+          <h2 className="why-choose-heading">WHY CLIENTS CHOOSE TAXLEGAL</h2>
+          <WhyChooseCarousel items={whyChooseItems} />
+        </div>
+
+        {/* Bottom Expert Advice CTA Banner */}
+        <div className="legal-bottom-cta">
+          <div className="legal-bottom-cta-content">
+            <h2>NEED EXPERT LEGAL ADVICE?</h2>
+            <p>
+              Whether you&apos;re facing a complex legal dispute, planning a business transaction,
+              or seeking strategic legal guidance, our experienced professionals are ready to assist.
+            </p>
+            <div className="legal-bottom-actions">
+              <Link to="/contact" className="services-btn legal-btn--primary">
+                BOOK A CONSULTATION &rarr;
+              </Link>
+              <Link to="/contact" className="services-btn legal-btn--outline">
+                TALK TO AN EXPERT &rarr;
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
       <Footer />
