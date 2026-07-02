@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import "./Services.css";
@@ -224,6 +225,12 @@ const Services = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="services-cta-container">
+          <Link to="/contact" className="services-btn services-btn--primary">
+            Contact Us to Know More
+          </Link>
         </div>
       </section>
       <Footer />
