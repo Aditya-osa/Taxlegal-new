@@ -9,32 +9,33 @@ const HeroSection = () => {
         <div className="hero-content">
           <p className="hero-badge">A Professional Practice Built on Excellence</p>
           <h1 className="hero-title">
-            Integrated Taxation,<br />
+            Integrated Tax,<br />
             Compliance & <span className="hero-title-highlight">Legal</span><br />
-            Advisory Since 1999
+            Advisory Since 1995
           </h1>
           <p className="hero-description">
-            Experience professional solutions from a unified platform covering all business needs under one roof. Providing trusted services globally.
+            Delivering integrated tax, regulatory, compliance and legal solutions through <br/>a single, trusted advisory platform for businesses and individuals.
           </p>
+          <br/>
           <div className="hero-buttons">
             <button className="btn-primary">Contact Us Now</button>
-            <button className="btn-secondary">Our Services</button>
+            <button className="btn-secondary">Our Practice Areas</button>
           </div>
-
+          
           <div className="hero-stats">
             <div className="stat-item">
-              <h3>95%</h3>
-              <p>Client Retention</p>
+              <h3>30+</h3>
+              <p>Years Experience</p>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <h3>2500+</h3>
-              <p>Clients Worldwide</p>
+              <h3>150+</h3>
+              <p>Years Collective Experience</p>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <h3>25+</h3>
-              <p>Expert Consultants</p>
+              <h3>10000+</h3>
+              <p>Customers Served</p>
             </div>
           </div>
         </div>
