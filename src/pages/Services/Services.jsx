@@ -528,7 +528,7 @@ const Services = () => {
         </div>
       </section>
 
-<LogosSection />
+      <LogosSection />
       <h1 className="section-heading">Our Practice Areas</h1>
 
       {/* ================= SERVICES GRID ================= */}
@@ -621,22 +621,15 @@ const Services = () => {
           <h2 className="why-choose-heading">Why Leading Businesses Work With Us</h2>
           <p style={{ color: "white", justifyContent: "center", display: "flex", alignItems: "center", textAlign: "center", marginTop: "0px" }}>We combine legal excellence with commercial understanding to help clients manage complexity, <br />reduce risk and make informed decisions with confidence.</p>
           <WhyChooseCarousel items={whyChooseItems} />
+          <div className="legal-bottom-actions">
+            <Link to="/contact" className="services-btn legal-btn--primary">
+              BOOK A CONSULTATION &rarr;
+            </Link>
+          </div>
         </div>
 
         {/* Bottom Expert Advice CTA Banner */}
-        <div className="legal-bottom-cta">
-          <div className="legal-bottom-cta-content">
-            <h2>How Can We Help?</h2>
-            <p>
-              Speak with our professionals to discuss your tax, legal or regulatory requirements and discover how we can support your business.
-            </p>
-            <div className="legal-bottom-actions">
-              <Link to="/contact" className="services-btn legal-btn--primary">
-                BOOK A CONSULTATION &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
+
       </section>
       <Footer />
     </>
