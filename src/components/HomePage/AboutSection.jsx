@@ -15,7 +15,7 @@ const AboutSection = () => {
               <div className="subtitle-line"></div>
             </div>
             <h2 className="section-title">
-              Guiding Businesses Through Every Stage of Growth and Compliance.
+              Guiding Businesses Through <br /> Every Stage of Growth and Compliance.
             </h2>
             <div className="about-description">
               <p>Established in 1996, TaxLegal is a multidisciplinary professional services firm providing integrated solutions across accounting, taxation, audit, corporate compliance, and legal advisory.</p>
@@ -62,7 +62,7 @@ const AboutSection = () => {
         <button className="btn-navy" style={{ marginTop: '10px', alignSelf: 'center' }} onClick={() => navigate('/about')}>Read More About Us</button>
 
       </div>
-    </section>
+    </section >
   );
 };
 

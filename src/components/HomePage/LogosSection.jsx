@@ -8,7 +8,7 @@ const LogosSection = () => {
   return (
     <section className="logos-section">
       <div className="logos-container">
-        <h2 className="logos-title">A Legacy of Trusted Client Relationships</h2>
+        <h2 className="logos-title" style={{ color: "#F32F37", fontWeight: "bold", fontSize: "24px" }}>A Legacy of Trusted Client Relationships</h2>
         <div className="logos-grid">
           {logos.map((logo, index) => (
             <div key={`logo-1-${index}`} className="logo-placeholder">
