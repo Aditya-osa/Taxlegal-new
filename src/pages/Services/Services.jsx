@@ -625,17 +625,13 @@ const Services = () => {
         {/* Bottom Expert Advice CTA Banner */}
         <div className="legal-bottom-cta">
           <div className="legal-bottom-cta-content">
-            <h2>NEED EXPERT LEGAL ADVICE?</h2>
+            <h2>How Can We Help?</h2>
             <p>
-              Whether you&apos;re facing a complex legal dispute, planning a business transaction,
-              or seeking strategic legal guidance, our experienced professionals are ready to assist.
+              Speak with our professionals to discuss your tax, legal or regulatory requirements and discover how we can support your business.
             </p>
             <div className="legal-bottom-actions">
               <Link to="/contact" className="services-btn legal-btn--primary">
                 BOOK A CONSULTATION &rarr;
-              </Link>
-              <Link to="/contact" className="services-btn legal-btn--outline">
-                TALK TO AN EXPERT &rarr;
               </Link>
             </div>
           </div>

@@ -47,8 +47,8 @@ const AboutSection = () => {
             <div className="feature-box-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D32C36" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
-            <h4 className="feature-box-title">Proven Expertise</h4>
-            <p className="feature-box-desc">Delivering tailored legal, tax, and compliance solutions to businesses.</p>
+            <h4 className="feature-box-title">Technical Excellence</h4>
+            <p className="feature-box-desc">Combining deep technical knowledge with practical commercial insight.</p>
           </div>
 
           <div className="feature-box">
@@ -63,8 +63,8 @@ const AboutSection = () => {
             <div className="feature-box-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D32C36" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
             </div>
-            <h4 className="feature-box-title">Dedicated Team</h4>
-            <p className="feature-box-desc">Professional ethics, confidentiality, and practical problem-solving.</p>
+            <h4 className="feature-box-title">Quality & Integrity</h4>
+            <p className="feature-box-desc">Maintaining the highest standards of professionalism, ethics and confidentiality.</p>
           </div>
         </div>
         <button className="btn-navy" style={{ marginTop: '10px', alignSelf: 'center' }}>Read More About Us</button>

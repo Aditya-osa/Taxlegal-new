@@ -8,9 +8,8 @@ const CareerSection = () => {
         <div className="career-content-column">
           <p className="career-subtitle">INTERNSHIP PROGRAM</p>
           <h2 className="career-title">Build Professional Experience While You Learn</h2>
-          <p className="career-italic">Practice. Perform. Prosper.</p>
           <p className="career-desc">
-            Gain practical exposure through a structured internship programme designed to develop technical, analytical and professional skills across tax, accounting, audit, corporate compliance, legal advisory and business support functions..
+            Gain practical exposure through a structured internship programme designed to develop technical, analytical and professional skills across tax, accounting, audit, corporate compliance, legal advisory and business support functions.
           </p>
 
           <div className="internship-badges">
@@ -33,29 +32,30 @@ const CareerSection = () => {
                 <div className="check-icon-wrapper">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D32C36" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
-                <span>Practical exposure to live business assignments alongside experienced professionals</span>
+                <span>Live Project Experience: Work alongside experienced professionals on live client assignments.</span>
               </li>
               <li>
                 <div className="check-icon-wrapper">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D32C36" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
-                <span>Training in Tally, GST compliance, TDS, Income Tax Return preparation</span>
+                <span>Technical Training: Exposure to Tally, GST, TDS, Income Tax Returns and corporate compliance.</span>
               </li>
               <li>
                 <div className="check-icon-wrapper">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D32C36" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
-                <span>Certificate of Internship on successful completion</span>
+                <span>Internship Certificate: Awarded upon successful completion of the programme.</span>
               </li>
               <li>
                 <div className="check-icon-wrapper">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D32C36" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
-                <span>Open to B.Com (1st–3rd Year) and LL.B. (2nd–5th Year) students</span>
+                <span>Eligibility: B.Com (First to Third Year) and LL.B. (Second to Fifth Year) students.</span>
               </li>
             </ul>
             <div className="criteria-info-box">
-              <p><strong>Duration:</strong> Minimum 3 months. Longer internships may be considered based on role, availability, performance, and firm requirements. Stipend applicable for internships of 12 months or more.</p>
+              <p><strong>Duration:</strong>Minimum 3 months, with extended internships based on role, availability, performance and business requirements.</p>
+              <p><strong>Stipend:</strong>Applicable for internships of 12 months or longer.</p>
             </div>
 
             <button className="btn-primary-full">View Full Program Details</button>
