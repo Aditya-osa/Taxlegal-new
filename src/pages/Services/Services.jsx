@@ -618,7 +618,7 @@ const Services = () => {
         {/* Why Clients Choose TaxLegal */}
         <div className="why-choose-section">
           <h2 className="why-choose-heading">Why Leading Businesses Work With Us</h2>
-          <p style={{color: "white", justifyContent: "center", display: "flex", alignItems: "center",textAlign: "center",marginTop: "0px"}}>We combine legal excellence with commercial understanding to help clients manage complexity, <br />reduce risk and make informed decisions with confidence.</p>
+          <p style={{ color: "white", justifyContent: "center", display: "flex", alignItems: "center", textAlign: "center", marginTop: "0px" }}>We combine legal excellence with commercial understanding to help clients manage complexity, <br />reduce risk and make informed decisions with confidence.</p>
           <WhyChooseCarousel items={whyChooseItems} />
         </div>
 

@@ -6,7 +6,7 @@ import "../../global.css";
 const Header = () => {
   return (
     <>
-      <div className="header-spacer" style={{ height: '110px' }}></div>
+      <div className="header-spacer"></div>
       <header className="tl-header">
         <Topbar />
         <Navbar />

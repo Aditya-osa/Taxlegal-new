@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: column;
   line-height: 1;
-  margin-left: 60px;
+  margin-left: 0;
 }
 
 .tl-logo .tl-logo-line {
@@ -156,6 +156,18 @@
   width: 100%;
   border-radius: 2px;
   transition: transform .25s, opacity .25s;
+}
+
+@media (max-width: 992px) {
+  .tl-navlinks {
+    display: none !important;
+  }
+  .tl-burger {
+    display: flex !important;
+  }
+  .tl-burger span {
+    background: #ffffff;
+  }
 }
 
 .tl-mobile-menu {

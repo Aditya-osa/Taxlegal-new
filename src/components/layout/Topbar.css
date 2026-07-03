@@ -122,6 +122,10 @@
     margin: 0;
     justify-content: center;
   }
+
+  .tl-contact-pipe {
+    display: none !important;
+  }
 }
 
 /* ==========================================
