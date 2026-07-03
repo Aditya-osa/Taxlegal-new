@@ -8,7 +8,8 @@
 }
 
 .services-section {
-  padding: var(--section-py) 0;
+  margin-top: -100px;
+  padding: 0 0 80px;
   background: var(--off-white);
   overflow: hidden;
 }
@@ -47,8 +48,13 @@
 }
 
 @keyframes services-slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ═══════════════════════════════════════════════

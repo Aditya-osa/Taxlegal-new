@@ -9,23 +9,55 @@ const AboutSection = () => {
       <div className="about-container">
 
         <div className="about-top-row">
+
+          {/* Left Content */}
           <div className="about-content-column">
             <div className="subtitle-wrapper">
               <p className="section-eyebrow">ABOUT TAXLEGAL</p>
               <div className="subtitle-line"></div>
             </div>
+
             <h2 className="section-title">
-              Guiding Businesses Through <br /> Every Stage of Growth and Compliance.
+              Guiding Businesses Through <br />
+              Every Stage of Growth and Compliance.
             </h2>
+
             <div className="about-description">
-              <p>Established in 1996, TaxLegal is a multidisciplinary professional services firm providing integrated solutions across accounting, taxation, audit, corporate compliance, and legal advisory.</p>
-              <p>For nearly three decades, we have worked with entrepreneurs, businesses, institutions, housing societies, and charitable organizations, helping them navigate statutory obligations, regulatory requirements, and evolving business challenges with clarity and confidence.</p>
-              <p>Every assignment is approached with a strong emphasis on technical competence, professional ethics, confidentiality, and practical problem-solving.</p>
+              <p>
+                Established in 1996, TaxLegal is a multidisciplinary professional
+                services firm providing integrated solutions across accounting,
+                taxation, audit, corporate compliance, and legal advisory.
+              </p>
+
+              <p>
+                For nearly three decades, we have worked with entrepreneurs,
+                businesses, institutions, housing societies, and charitable
+                organizations, helping them navigate statutory obligations,
+                regulatory requirements, and evolving business challenges with
+                clarity and confidence.
+              </p>
+
+              <p>
+                Every assignment is approached with a strong emphasis on technical
+                competence, professional ethics, confidentiality, and practical
+                problem-solving.
+              </p>
             </div>
-
           </div>
-        </div>
 
+          {/* Right Image */}
+          <div className="about-image-column">
+            <img
+              src="/assets/Home Page/Single.png"
+              alt="About TaxLegal"
+              className="about-image"
+            />
+          </div>
+
+        </div>
+        <br />
+        <br />
+        <br />
         <div className="about-features-grid">
           <div className="feature-box">
             <div className="feature-box-icon">

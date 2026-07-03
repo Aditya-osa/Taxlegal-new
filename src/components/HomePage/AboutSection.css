@@ -1,25 +1,84 @@
-.about-section {
-  padding: var(--section-py-desktop) 0;
-  background-color: var(--white);
-  font-family: var(--font-head);
+.about-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
 }
+
+.about-content-column {
+  flex: 1.2;
+}
+
+.about-image-column {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 720px;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .about-top-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-image-column {
+    width: 100%;
+  }
+
+  .about-image {
+    max-width: 600px;
+    height: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .about-top-row {
+    gap: 30px;
+  }
+
+  .about-image {
+    border-radius: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .about-container {
   display: flex;
   flex-direction: column;
 }
 
-.about-top-row {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
-}
 
-.about-content-column {
-  width: 120%;
-  max-width: 900px;
-  margin-left: -260px;
-}
+
 
 .about-content-column .section-title {
   margin-bottom: 24px;
