@@ -7,6 +7,7 @@ import Disciplines from "../../components/AboutPage/Disciplines";
 import LeadershipTeam from "../../components/AboutPage/LeadershipTeam";
 import WhyTrustUs from "../../components/AboutPage/WhyTrustUs";
 import AboutCTASection from "../../components/AboutPage/AboutCTASection";
+import OurProcess from "../../components/AboutPage/OurProcess";
 import "./AboutUs.css";
 
 const AboutUs = () => {
@@ -24,6 +25,7 @@ const AboutUs = () => {
         <WhoWeAre />
         <Disciplines />
         <LeadershipTeam />
+        <OurProcess />
       </main>
 
       <Footer />
