@@ -151,7 +151,7 @@ const ClientsPage = () => {
         <section
           className="clients-hero-section"
           style={{
-            background: `linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('/assets/Internships/Contact.jpeg')`,
+            background: `linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('/assets/Clients page/Clients-Banner.jpeg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
