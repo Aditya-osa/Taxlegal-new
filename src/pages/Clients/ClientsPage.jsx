@@ -160,12 +160,12 @@ const ClientsPage = () => {
           <div className="clients-hero-overlay"></div>
           <div className="container clients-hero-container">
             <div className="clients-hero-content">
-              <span className="clients-badge-simple">Clients & Partners</span>
+              <span className="clients-badge-simple">Clients & Testimonials </span>
               <h1 className="clients-hero-title">
                 Trusted by Organizations That Value Expertise
               </h1>
               <p className="clients-hero-description">
-                Supporting organizations of every size with practical,
+                Supporting organizations of every size with practical,<br />
                 business-focused tax and legal solutions.              </p>
             </div>
           </div>
@@ -340,7 +340,7 @@ const ClientsPage = () => {
             <div className="clients-cta-card">
               <h2>Ready to Experience Seamless Advisory?</h2>
               <p>
-                Get in touch with our multidisciplinary team of  CAs, CSs  and advocates to discuss how we can help your business stay compliant and grow.
+                Get in touch with our multidisciplinary team to discuss how we can help your business stay compliant and grow.
               </p>
               <a href="/contact" className="clients-cta-btn">
                 Schedule a Consultation
