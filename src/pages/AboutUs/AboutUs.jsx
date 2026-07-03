@@ -11,7 +11,6 @@ import OurProcess from "../../components/AboutPage/OurProcess";
 import WhyChooseUsSection from "../../components/AboutPage/WhyChooseUsSection";
 import "./AboutUs.css";
 import LogosSection from '../../components/HomePage/LogosSection';
-import WhyChooseUsSection from "../../components/AboutPage/WhyChooseUsSection.css";
 const AboutUs = () => {
   useEffect(() => {
     // Scroll to top when component mounts
