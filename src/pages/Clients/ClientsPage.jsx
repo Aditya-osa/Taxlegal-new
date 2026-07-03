@@ -158,7 +158,7 @@ const ClientsPage = () => {
           }}
         >
           <div className="clients-hero-overlay"></div>
-          <div className="clients-container clients-hero-container">
+          <div className="container clients-hero-container">
             <div className="clients-hero-content">
               <span className="clients-badge-simple">Clients & Partners</span>
               <h1 className="clients-hero-title">
@@ -173,7 +173,7 @@ const ClientsPage = () => {
 
         {/* LOGOS SCROLLING SECTION */}
         <section className="clients-logos-section">
-          <div className="clients-container">
+          <div className="container">
             <div className="clients-section-header">
               <div className="subtitle-wrapper">
                 <span className="clients-eyebrow">OUR NETWORKS</span>
@@ -237,7 +237,7 @@ const ClientsPage = () => {
 
         {/* TESTIMONY SCROLLING SECTION */}
         <section className="clients-testimonials-section">
-          <div className="clients-container">
+          <div className="container">
             <div className="clients-section-header">
               <div className="subtitle-wrapper">
                 <span className="clients-eyebrow">CLIENT STORIES</span>
@@ -337,7 +337,7 @@ const ClientsPage = () => {
 
         {/* CTA BANNER */}
         <section className="clients-cta-section">
-          <div className="clients-container">
+          <div className="container">
             <div className="clients-cta-card">
               <h2>Ready to Experience Seamless Advisory?</h2>
               <p>

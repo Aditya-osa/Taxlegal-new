@@ -7,16 +7,6 @@ const AboutSection = () => {
       <div className="about-container">
 
         <div className="about-top-row">
-          <div className="about-image-column">
-            <div className="about-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" alt="Professional Consultant" className="about-img" />
-              <div className="experience-badge">
-                <span className="exp-years">1996</span>
-                <span className="exp-text">EST. YEAR</span>
-              </div>
-            </div>
-          </div>
-
           <div className="about-content-column">
             <div className="subtitle-wrapper">
               <p className="section-eyebrow">ABOUT TAXLEGAL</p>
