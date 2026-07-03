@@ -12,7 +12,7 @@ const WhoWeAre = () => {
           </div>
           
           <h2 className="section-title">
-            Guiding Businesses Through Every Stage of Growth and Compliance.
+            Guiding Businesses Through Growth, Governance and Compliance
           </h2>
           
           <div className="who-we-are-text">
@@ -20,10 +20,10 @@ const WhoWeAre = () => {
               Established in 1996, Tax.Legal is a multidisciplinary professional services firm providing integrated solutions across accounting, taxation, audit, corporate compliance, and legal advisory.
             </p>
             <p>
-              For nearly three decades, we have worked with entrepreneurs, businesses, institutions, housing societies, and charitable organizations, helping them navigate statutory obligations, regulatory requirements, and evolving business challenges with clarity and confidence.
+              For nearly three decades, we have advised businesses, entrepreneurs, institutions, housing societies and charitable organizations on tax, regulatory and legal matters, supporting informed decision-making in an increasingly complex business environment.
             </p>
             <p>
-              Our practice brings together expertise across company formation, business registrations, accounting, audit, payroll, corporate compliance, direct and indirect taxation, litigation support, regulatory representation, and legal advisory. This integrated approach enables clients to access coordinated professional services through a single point of engagement.
+              Our multidisciplinary team combines technical excellence with professional integrity to deliver practical, commercially focused solutions while maintaining the highest standards of quality, ethics and confidentiality.
             </p>
           </div>
         </div>
