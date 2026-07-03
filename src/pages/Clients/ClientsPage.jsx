@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
+import WhyChooseUsSection
+  from "../../components/AboutPage/WhyChooseUsSection";
 import {
   TrendingUp,
   Shield,
@@ -333,22 +335,9 @@ const ClientsPage = () => {
             </div>
           </div>
         </section>
-
+        <WhyChooseUsSection />
         {/* CTA BANNER */}
-        <section className="clients-cta-section">
-          <div className="container">
-            <div className="clients-cta-card">
-              <h2>Ready to Experience Seamless Advisory?</h2>
-              <p>
-                Get in touch with our multidisciplinary team to discuss how we can help your business stay compliant and grow.
-              </p>
-              <a href="/contact" className="clients-cta-btn">
-                Schedule a Consultation
-                <svg className="cta-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-          </div>
-        </section>
+
       </main>
 
       <Footer />

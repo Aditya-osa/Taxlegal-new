@@ -4,6 +4,7 @@ import Footer from '../../components/layout/Footer';
 import InternshipReview from '../../components/Internship/InternshipReview';
 import "./Internship.css";
 import LogosSection from '../../components/HomePage/LogosSection';
+import WhyChooseUsSection from '../../components/AboutPage/WhyChooseUsSection';
 
 const InternshipPage = () => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -157,7 +158,7 @@ const InternshipPage = () => {
         </div>
       </section>
 
-<LogosSection />
+      <LogosSection />
 
       {/* Domains Section */}
       <section className="internship-domains">
@@ -239,16 +240,7 @@ const InternshipPage = () => {
       <InternshipReview />
 
       {/* CTA Section */}
-      <section className="internship-cta">
-        <div className="internship-container cta-content-center">
-          <h2 style={{ color: 'var(--white)' }}>Build Experience. Build Confidence. Build Your Market Value.</h2>
-          <p className="cta-desc">
-            Your first professional experience can shape your career. Join the TaxLegal Internship Program and
-            get the knowledge, confidence, and practical skills to prepare you for the professional world.
-          </p>
-
-        </div>
-      </section>
+      <WhyChooseUsSection />
 
       {/* FAQ Section */}
 
