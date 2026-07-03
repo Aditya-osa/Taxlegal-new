@@ -9,6 +9,7 @@ import WhyTrustUs from "../../components/AboutPage/WhyTrustUs";
 import AboutCTASection from "../../components/AboutPage/AboutCTASection";
 import OurProcess from "../../components/AboutPage/OurProcess";
 import "./AboutUs.css";
+import LogosSection from '../../components/HomePage/LogosSection';
 
 const AboutUs = () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const AboutUs = () => {
 
       <main className="about-main-content">
         <AboutHeroSection />
+        <LogosSection />
         <WhoWeAre />
         <Disciplines />
         <LeadershipTeam />

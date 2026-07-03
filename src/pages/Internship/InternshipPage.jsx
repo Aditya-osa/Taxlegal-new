@@ -3,6 +3,7 @@ import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import InternshipReview from '../../components/Internship/InternshipReview';
 import "./Internship.css";
+import LogosSection from '../../components/HomePage/LogosSection';
 
 const InternshipPage = () => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -156,7 +157,7 @@ const InternshipPage = () => {
         </div>
       </section>
 
-
+<LogosSection />
 
       {/* Domains Section */}
       <section className="internship-domains">

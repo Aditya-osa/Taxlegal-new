@@ -22,6 +22,7 @@ import {
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import "./Services.css";
+import LogosSection from '../../components/HomePage/LogosSection';
 
 const services = [
   {
@@ -527,8 +528,8 @@ const Services = () => {
         </div>
       </section>
 
+<LogosSection />
       <h1 className="section-heading">Our Practice Areas</h1>
-
 
       {/* ================= SERVICES GRID ================= */}
       <section id="services" className="services-section">
