@@ -24,6 +24,19 @@
   --container-max-width: 1440px;
   --card-padding: 32px;
   --font-head: Georgia, 'Times New Roman', Times, serif;
+
+  /* Premium Corporate Colors & Gradients */
+  --navy-primary: #173B78;
+  --navy-dark: #102B5C;
+  --navy-secondary: #234B8E;
+  --red-accent: #D32C36;
+  --red-dark: #B2222B;
+  --bg-light: #F5F7FB;
+  --bg-section: #EEF2F7;
+  --border-color: #E5E7EB;
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --theme-gradient: linear-gradient(135deg, #173B78 0%, #102B5C 70%, #B2222B 100%);
 }
 
 @media (max-width: 992px) {

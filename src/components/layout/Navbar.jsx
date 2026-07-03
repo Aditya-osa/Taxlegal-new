@@ -51,7 +51,7 @@ const Navbar = () => {
 
           <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>About</Link>
           <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>Services</Link>
-          <a href="/#industries">Clients</a>
+          <Link to="/clients" className={location.pathname === "/clients" ? "active" : ""}>Clients</Link>
           <Link to="/internship" className={location.pathname === "/internship" ? "active" : ""}>Internship</Link>
           {/* <a href="https://www.incometaxindia.gov.in/income-tax-calculator" target="_blank" rel="noopener noreferrer">Tax Calculator</a> */}
           <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>Contact Us</Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
 
         <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
         <Link to="/services" onClick={() => setIsMenuOpen(false)}>Services</Link>
-        <a href="/#industries" onClick={() => setIsMenuOpen(false)}>Clients</a>
+        <Link to="/clients" onClick={() => setIsMenuOpen(false)}>Clients</Link>
         <Link to="/internship" onClick={() => setIsMenuOpen(false)}>Internship</Link>
         <a href="https://www.incometaxindia.gov.in/income-tax-calculator" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Tax Calculator</a>
         <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
