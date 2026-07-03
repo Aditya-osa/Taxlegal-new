@@ -126,7 +126,7 @@ const ServicesSection = ({ navigateToPage }) => {
             className="btn-navy"
             onClick={() => navigateToPage?.("services")}
           >
-            View All Services &amp; Practice Areas
+            Explore More
           </button>
         </div>
       </div>
