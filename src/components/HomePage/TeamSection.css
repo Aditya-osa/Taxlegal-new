@@ -105,13 +105,14 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-transform: uppercase;
 }
 
 .team-role {
   color: var(--red-accent);
   font-weight: 600;
   font-size: 0.75rem;
-  text-transform: uppercase;
+  text-transform: none;
   margin-bottom: 6px;
   line-height: 1.4;
   letter-spacing: 0.5px;
@@ -120,7 +121,7 @@
 .team-desc {
   color: var(--body-text);
   font-size: 0.75rem;
-  text-transform: uppercase;
+  text-transform: none;
   line-height: 1.4;
   letter-spacing: 0.5px;
 }

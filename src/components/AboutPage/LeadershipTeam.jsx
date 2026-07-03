@@ -58,19 +58,17 @@ const LeadershipTeam = () => {
   return (
     <section className="leadership-section tl-section tl-section--off">
       <div className="about-container">
-        
+
         <div className="leadership-header">
-          <div className="subtitle-wrapper" style={{ justifyContent: 'center' }}>
-            <p className="section-eyebrow">LEADERSHIP TEAM</p>
-            <div className="subtitle-line"></div>
+          <div className="subtitle-wrapper" style={{ justifyContent: 'center', color: "red" }}>
+
           </div>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             Our Leadership, Advisors & Specialists
           </h2>
           <p className="leadership-intro" style={{ textAlign: 'center' }}>
-            TaxLegal is led by experienced professionals who bring together decades of expertise in taxation, legal advisory, litigation, compliance, and corporate governance.
-            Our multidisciplinary team works collaboratively to provide thoughtful advice, practical solutions, and responsive service tailored to each client's unique requirements.
-          </p>
+            TaxLegal is led by experienced professionals who combine deep expertise in taxation,
+            law, compliance, and governance to deliver practical, trusted advice.</p>
         </div>
 
         <div className="leadership-profiles">
