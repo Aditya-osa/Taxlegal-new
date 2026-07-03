@@ -30,14 +30,14 @@ const DisclaimerModal = () => {
         {/* Banner Section */}
         <div className="disclaimer-banner">
           <div className="disclaimer-logo-box">
-            <img 
-              src="/assets/logo.png" 
-              alt="TaxLegal Logo" 
-              className="disclaimer-logo-img" 
+            <img
+              src="/assets/logo.png"
+              alt="TaxLegal Logo"
+              className="disclaimer-logo-img"
             />
           </div>
           <p className="disclaimer-banner-sub">
-            ADVOCATES, CHARTERED ACCOUNTANTS &amp; COMPANY SECRETARIES
+            CHARTERED ACCOUNTANTS, COMPANY SECRETARIES &amp; ADVOCATES
           </p>
         </div>
 
@@ -46,7 +46,7 @@ const DisclaimerModal = () => {
           <h3 className="disclaimer-heading">
             Important Disclaimer — Please Read Before Proceeding
           </h3>
-          
+
           <p className="disclaimer-para">
             As mandated by the Bar Council of India, this website is intended solely for informational purposes and does not constitute solicitation, advertisement, personal communication, or inducement of any kind to engage legal services.
           </p>
