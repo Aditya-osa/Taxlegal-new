@@ -8,6 +8,7 @@ import LeadershipTeam from "../../components/AboutPage/LeadershipTeam";
 import WhyTrustUs from "../../components/AboutPage/WhyTrustUs";
 import AboutCTASection from "../../components/AboutPage/AboutCTASection";
 import OurProcess from "../../components/AboutPage/OurProcess";
+import WhyChooseUsSection from "../../components/AboutPage/WhyChooseUsSection";
 import "./AboutUs.css";
 import LogosSection from '../../components/HomePage/LogosSection';
 
@@ -28,8 +29,10 @@ const AboutUs = () => {
         <Disciplines />
         <LeadershipTeam />
         <OurProcess />
+        <WhyChooseUsSection />
       </main>
-
+<br/>
+<br/>
       <Footer />
     </div>
   );
