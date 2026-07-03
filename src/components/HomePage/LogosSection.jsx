@@ -2,8 +2,8 @@ import React from 'react';
 import './LogosSection.css';
 
 const LogosSection = () => {
-  // Array of 12 items for the logo placeholders
-  const logos = Array.from({ length: 12 }, (_, i) => i + 1);
+  // Array of 26 items for the actual logo files
+  const logos = Array.from({ length: 26 }, (_, i) => i + 1);
 
   return (
     <section className="logos-section">
@@ -12,13 +12,13 @@ const LogosSection = () => {
         <div className="logos-grid">
           {logos.map((logo, index) => (
             <div key={`logo-1-${index}`} className="logo-placeholder">
-              <div className="logo-box">Logo {logo}</div>
+              <img src={`/assets/Logoo/logo${logo}.jpeg`} alt={`Client Logo ${logo}`} className="logo-img" />
             </div>
           ))}
           {/* Duplicate set for seamless looping */}
           {logos.map((logo, index) => (
             <div key={`logo-2-${index}`} className="logo-placeholder">
-              <div className="logo-box">Logo {logo}</div>
+              <img src={`/assets/Logoo/logo${logo}.jpeg`} alt={`Client Logo ${logo}`} className="logo-img" />
             </div>
           ))}
         </div>
