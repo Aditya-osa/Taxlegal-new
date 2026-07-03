@@ -6,10 +6,12 @@ import './App.css'
 import ContactUs from './pages/ContactUs/ContactUs';
 import InternshipPage from './pages/Internship/InternshipPage';
 import ClientsPage from './pages/Clients/ClientsPage';
+import DisclaimerModal from './components/common/DisclaimerModal';
 
 function App() {
   return (
     <>
+      <DisclaimerModal />
       <a 
         href="https://www.incometaxindia.gov.in/income-tax-calculator" 
         target="_blank" 

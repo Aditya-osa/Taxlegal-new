@@ -1,0 +1,244 @@
+/* Disclaimer Modal Overlay & Backdrop */
+.disclaimer-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(15, 23, 42, 0.90);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: disclaimerFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes disclaimerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Card */
+.disclaimer-modal-card {
+  width: 100%;
+  max-width: 680px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 92vh;
+  animation: disclaimerScaleUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes disclaimerScaleUp {
+  from {
+    transform: scale(0.94);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Top Banner */
+.disclaimer-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #dc2626 100%);
+  padding: 32px 24px 26px;
+  text-align: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.disclaimer-logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 10px 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 16px;
+}
+
+.disclaimer-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.disclaimer-banner-sub {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* Body Content */
+.disclaimer-body {
+  padding: 32px 36px 24px;
+  overflow-y: auto;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.disclaimer-heading {
+  color: #1e3a8a;
+  font-size: 1.28rem;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.01em;
+}
+
+.disclaimer-para {
+  margin: 0 0 14px 0;
+  color: #475569;
+}
+
+.disclaimer-confirm-text {
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+}
+
+/* List */
+.disclaimer-list {
+  margin: 0 0 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.disclaimer-list li {
+  margin-bottom: 10px;
+  color: #475569;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1.55;
+}
+
+.disclaimer-list li::before {
+  content: attr(data-index);
+  font-weight: 600;
+  color: #64748b;
+  min-width: 18px;
+  flex-shrink: 0;
+}
+
+/* Callout Box */
+.disclaimer-callout {
+  background: #fef2f2;
+  border-left: 4px solid #dc2626;
+  padding: 14px 18px;
+  border-radius: 8px;
+  color: #7f1d1d;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 0 0 8px 0;
+}
+
+/* Action Footer */
+.disclaimer-actions {
+  padding: 20px 36px 32px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.disclaimer-btn {
+  padding: 13px 28px;
+  border-radius: 8px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agree-btn {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+}
+
+.agree-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.45);
+}
+
+.agree-btn:active {
+  transform: translateY(0);
+}
+
+.exit-btn {
+  background: #ffffff;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  padding: 13px 24px;
+}
+
+.exit-btn:hover {
+  background: #f8fafc;
+  color: #334155;
+  border-color: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .disclaimer-modal-card {
+    border-radius: 14px;
+    max-height: 95vh;
+  }
+
+  .disclaimer-banner {
+    padding: 24px 16px 20px;
+  }
+
+  .disclaimer-logo-box {
+    padding: 8px 20px;
+  }
+
+  .disclaimer-logo-img {
+    height: 38px;
+  }
+
+  .disclaimer-banner-sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+  }
+
+  .disclaimer-body {
+    padding: 24px 20px 16px;
+  }
+
+  .disclaimer-heading {
+    font-size: 1.12rem;
+  }
+
+  .disclaimer-actions {
+    padding: 16px 20px 24px;
+  }
+
+  .disclaimer-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
