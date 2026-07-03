@@ -2,8 +2,8 @@ import React from 'react';
 import './LogosSection.css';
 
 const LogosSection = () => {
-  // Array of 26 items for the actual logo files
-  const logos = Array.from({ length: 26 }, (_, i) => i + 1);
+  // Array of existing logo file numbers in public/assets/Logoo/
+  const logos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 16, 19, 20, 22, 23, 24, 25, 26];
 
   return (
     <section className="logos-section">
