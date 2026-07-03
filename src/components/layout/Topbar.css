@@ -98,63 +98,11 @@
 }
 
 /* ==========================================
-   TABLET
+   TABLET & MOBILE
 ========================================== */
 
-@media (max-width: 992px) {
-
-  .tl-topbar .container {
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px;
-
-    padding: 10px 20px;
-  }
-
-  .tl-topbar .tl-contacts {
-    margin: 0;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-
-  .tl-topbar .tl-social {
-    margin: 0;
-    justify-content: center;
-  }
-
-  .tl-contact-pipe {
-    display: none !important;
-  }
-}
-
-/* ==========================================
-   MOBILE
-========================================== */
-
-@media (max-width: 576px) {
-
+@media (max-width: 1024px) {
   .tl-topbar {
-    font-size: 0.72rem;
-  }
-
-  .tl-topbar .container {
-    padding: 10px 16px;
-    gap: 10px;
-  }
-
-  .tl-topbar .tl-contacts {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .tl-topbar .tl-social {
-    gap: 8px;
-  }
-
-  .tl-topbar .tl-social a {
-    width: 28px;
-    height: 28px;
+    display: none !important;
   }
 }

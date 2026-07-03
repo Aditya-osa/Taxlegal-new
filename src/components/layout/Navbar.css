@@ -102,7 +102,7 @@
   align-items: center;
 }
 
-@media (min-width: 993px) {
+@media (min-width: 1025px) {
   .tl-navlinks {
     position: absolute;
     left: 53%;
@@ -147,44 +147,102 @@
   display: none;
   flex-direction: column;
   gap: 5px;
-  width: 26px;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff !important;
+  border: 1px solid var(--light-gray) !important;
+  border-radius: 6px;
+  padding: 0;
 }
 
 .tl-burger span {
   height: 2px;
-  background: var(--dark);
-  width: 100%;
+  background: var(--navy) !important;
+  width: 20px;
   border-radius: 2px;
   transition: transform .25s, opacity .25s;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .tl-navlinks {
     display: none !important;
   }
   .tl-burger {
     display: flex !important;
   }
-  .tl-burger span {
-    background: #ffffff;
-  }
 }
 
 .tl-mobile-menu {
   display: none;
   flex-direction: column;
-  padding: 8px 5% 22px;
+  padding: 16px 5% 32px;
   gap: 4px;
   background: #fff;
   border-top: 1px solid var(--light-gray);
 }
 
 .tl-mobile-menu a {
-  padding: 12px 4px;
+  padding: 14px 8px;
   font-weight: 500;
   border-bottom: 1px solid var(--light-gray);
+  color: var(--navy);
+  text-decoration: none;
 }
 
 .tl-nav-wrap.open .tl-mobile-menu {
   display: flex;
+}
+
+/* Mobile Contact & Social Info */
+.tl-mobile-contact-info {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px dashed var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tl-mobile-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: none !important;
+  padding: 8px 8px !important;
+}
+
+.tl-mobile-contact-item svg {
+  color: var(--red);
+}
+
+.tl-mobile-social {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  padding: 8px;
+}
+
+.tl-mobile-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--light-gray);
+  color: var(--navy);
+  border-bottom: none !important;
+  padding: 0 !important;
+  transition: all 0.3s ease;
+}
+
+.tl-mobile-social a:hover {
+  background: var(--red);
+  color: #fff;
 }
