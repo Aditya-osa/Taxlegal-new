@@ -13,17 +13,11 @@
 
 .leadership-profiles {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.leadership-profile-group {
-  display: flex;
-  flex-direction: column;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: stretch;
 }
 
 /* Responsive */
@@ -33,7 +27,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .leadership-profiles {
     grid-template-columns: 1fr;
   }

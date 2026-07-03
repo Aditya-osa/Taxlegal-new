@@ -4,6 +4,15 @@
   padding-bottom: 80px;
 }
 
+.disciplines-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.disciplines-header .subtitle-line {
+  margin: 0 auto;
+}
+
 .disciplines-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13,7 +22,45 @@
 }
 
 .discipline-card {
-  height: 100%;
+  height: 100% !important;
+  aspect-ratio: auto !important;
+  padding: 28px 24px !important;
+  justify-content: flex-start !important;
+}
+
+.discipline-card p {
+  margin-bottom: 0 !important;
+}
+
+.discipline-card .service-icon {
+  width: 68px !important;
+  height: 68px !important;
+  background: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  border-radius: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.3s ease !important;
+  padding: 10px !important;
+}
+
+.discipline-card:hover .service-icon {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+  border-color: #ced4da !important;
+  background: #ffffff !important;
+}
+
+.discipline-card .service-icon svg,
+.discipline-card .service-icon img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 46px !important;
+  max-height: 46px !important;
+  object-fit: contain !important;
 }
 
 /* Responsive */

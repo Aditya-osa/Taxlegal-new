@@ -1,69 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './LeadershipCard.css';
 
 const LeadershipCard = ({ member }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
   return (
-    <div 
-      className={`flip-card-container ${isFlipped ? 'flipped' : ''}`} 
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
-      onClick={() => setIsFlipped(!isFlipped)}
-    >
-      <div className="flip-card-inner">
-        {/* FRONT */}
-        <div className="flip-card-front">
-          <div className="card-image-wrapper">
-            <img src={member.photo} alt={member.name} className="card-image" />
-          </div>
-          <div className="card-front-content">
-            <h3 className="card-name">{member.name}</h3>
-            <p className="card-designation">{member.designation}</p>
-            <p className="card-experience">{member.experience}</p>
-            <div className="view-profile-indicator">
-              <span>View Profile</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-            </div>
-          </div>
-        </div>
-
-        {/* BACK */}
-        <div className="flip-card-back">
-          <div className="card-back-content">
-            <h3 className="card-name">{member.name}</h3>
-            <p className="card-designation" style={{ marginBottom: '16px' }}>{member.designation}</p>
-            
-            <p className="card-bio">{member.bio}</p>
-            
-            <div className="card-expertise-section">
-              <h4>Key Expertise</h4>
-              <ul className="expertise-list">
-                {member.expertise.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="card-achievements-section">
-              <h4>Professional Highlights</h4>
-              <ul className="achievements-list">
-                {member.achievements.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="card-social">
-              <a href={member.social.linkedin} aria-label="LinkedIn" onClick={e => e.stopPropagation()}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </a>
-              <a href={`mailto:${member.social.email}`} aria-label="Email" onClick={e => e.stopPropagation()}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-              </a>
-            </div>
-          </div>
-        </div>
+    <div className="team-card-large">
+      <div className="team-img-wrapper">
+        <img src={member.image} alt={member.name} />
+      </div>
+      <div className="team-info">
+        <h3 className="team-name">
+          <span className="name-text">{member.name}</span>
+          <a href="#" className="linkedin-icon" aria-label="LinkedIn Profile">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+        </h3>
+        <p className="team-role">{member.role}</p>
+        {member.description && <p className="team-desc">{member.description}</p>}
       </div>
     </div>
   );

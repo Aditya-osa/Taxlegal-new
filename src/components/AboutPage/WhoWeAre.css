@@ -1,14 +1,33 @@
 .who-we-are-section {
   background-color: var(--white);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.who-we-are-header {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.who-we-are-header .section-title {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.who-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
 }
 
 .who-we-are-content {
-  max-width: 900px;
+  max-width: 100%;
 }
 
-.who-we-are-content .section-title {
-  margin-top: 10px;
-  margin-bottom: 24px;
+.who-we-are-right {
+  margin-top: -60px;
 }
 
 .who-we-are-text p {
@@ -30,4 +49,12 @@
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .who-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }

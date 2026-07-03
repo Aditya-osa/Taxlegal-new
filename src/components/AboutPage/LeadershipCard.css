@@ -1,191 +1,101 @@
-.flip-card-container {
-  background-color: transparent;
-  width: 100%;
-  max-width: 380px;
-  height: 520px;
-  perspective: 1500px; /* 3D effect */
-  cursor: pointer;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform-style: preserve-3d;
-  box-shadow: var(--shadow-md);
-  border-radius: var(--r-card);
-}
-
-.flip-card-container.flipped .flip-card-inner,
-.flip-card-container:hover .flip-card-inner {
-  transform: rotateY(180deg);
-  box-shadow: var(--shadow-lg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: var(--r-card);
-  overflow: hidden;
-}
-
-/* FRONT SIDE */
-.flip-card-front {
+.team-card-large {
   background-color: var(--white);
-  color: var(--dark);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
-.card-image-wrapper {
-  height: 60%;
+.team-card-large:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.team-img-wrapper {
   width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: transparent;
   overflow: hidden;
 }
 
-.card-image {
+.team-img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center bottom;
   transition: transform 0.5s ease;
 }
 
-.flip-card-container:hover .card-image {
+.team-card-large:hover .team-img-wrapper img {
   transform: scale(1.05);
 }
 
-.card-front-content {
-  height: 40%;
-  padding: 24px;
+.linkedin-icon {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  background: var(--white);
-}
-
-.card-name {
-  font-family: var(--font-head);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 8px;
-}
-
-.card-designation {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--red-accent);
-  margin-bottom: 8px;
-}
-
-.card-experience {
-  font-size: 0.85rem;
-  color: var(--mid-gray);
-  margin-bottom: auto;
-}
-
-.view-profile-indicator {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin-top: 16px;
+  color: #0077b5;
+  flex-shrink: 0;
   transition: color 0.3s ease;
 }
 
-.view-profile-indicator svg {
-  transition: transform 0.3s ease;
+.linkedin-icon svg {
+  width: 16px;
+  height: 16px;
 }
 
-.flip-card-container:hover .view-profile-indicator {
-  color: var(--red-accent);
+.linkedin-icon:hover {
+  color: #005885;
 }
 
-.flip-card-container:hover .view-profile-indicator svg {
-  transform: translateX(4px);
-}
-
-
-/* BACK SIDE */
-.flip-card-back {
-  background-color: var(--navy);
-  color: var(--white);
-  transform: rotateY(180deg);
-  padding: 32px 24px;
+.team-info {
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
 }
 
-.flip-card-back .card-name {
-  color: var(--white);
-}
-
-.flip-card-back .card-designation {
-  color: #ffd0d2;
-}
-
-.card-bio {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 24px;
-}
-
-.card-expertise-section, .card-achievements-section {
-  margin-bottom: 16px;
-}
-
-.card-expertise-section h4, .card-achievements-section h4 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 8px;
-}
-
-.expertise-list, .achievements-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.expertise-list li, .achievements-list li {
-  font-size: 0.85rem;
-  line-height: 1.4;
-  margin-bottom: 4px;
-  padding-left: 12px;
-  position: relative;
-}
-
-.expertise-list li::before, .achievements-list li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--red-accent);
-}
-
-.card-social {
-  margin-top: auto;
+.team-info .team-name {
   display: flex;
-  gap: 16px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.02rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.card-social a {
-  color: var(--white);
-  transition: color 0.3s ease;
+.team-info .team-name .name-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.card-social a:hover {
+.team-role {
   color: var(--red-accent);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.team-desc {
+  color: var(--body-text);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
 }

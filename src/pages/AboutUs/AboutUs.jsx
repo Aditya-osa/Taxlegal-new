@@ -3,7 +3,6 @@ import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import AboutHeroSection from "../../components/AboutPage/AboutHeroSection";
 import WhoWeAre from "../../components/AboutPage/WhoWeAre";
-import VisionMission from "../../components/AboutPage/VisionMission";
 import Disciplines from "../../components/AboutPage/Disciplines";
 import LeadershipTeam from "../../components/AboutPage/LeadershipTeam";
 import WhyTrustUs from "../../components/AboutPage/WhyTrustUs";
@@ -23,7 +22,6 @@ const AboutUs = () => {
       <main className="about-main-content">
         <AboutHeroSection />
         <WhoWeAre />
-        <VisionMission />
         <Disciplines />
         <LeadershipTeam />
       </main>
