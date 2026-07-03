@@ -1,4 +1,4 @@
-  import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Scale,
   Award,
@@ -203,6 +203,11 @@ const WhyChooseUsSection = () => {
         We combine legal excellence with commercial understanding to help clients manage complexity, <br />reduce risk and make informed decisions with confidence.
       </p>
       <WhyChooseCarousel items={whyChooseItems} />
+      <div className="legal-bottom-actions">
+        <Link to="/contact" className="services-btn legal-btn--primary">
+          BOOK A CONSULTATION &rarr;
+        </Link>
+      </div>
     </div>
   );
 };
