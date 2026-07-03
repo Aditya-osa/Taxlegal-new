@@ -183,8 +183,8 @@ section {
   max-width: 1280px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: 60px !important;
-  padding-right: 60px !important;
+  padding-left: var(--container-px) !important;
+  padding-right: var(--container-px) !important;
   box-sizing: border-box;
 }
 
@@ -194,22 +194,22 @@ section {
   max-width: 800px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: 60px !important;
-  padding-right: 60px !important;
+  padding-left: var(--container-px) !important;
+  padding-right: var(--container-px) !important;
   box-sizing: border-box;
 }
 
 /* 3. Responsive Horizontal Padding */
 @media (max-width: 992px) {
   .about-container, .career-container, .features-container, .hero-container, .logos-container, .services-component .container, .team-container, .testimonials-container, .calculator-container, .cta-container, .footer-container {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
+    padding-left: var(--container-px) !important;
+    padding-right: var(--container-px) !important;
   }
 }
 
 @media (max-width: 576px) {
   .about-container, .career-container, .features-container, .hero-container, .logos-container, .services-component .container, .team-container, .testimonials-container, .calculator-container, .cta-container, .footer-container {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
+    padding-left: var(--container-px) !important;
+    padding-right: var(--container-px) !important;
   }
 }

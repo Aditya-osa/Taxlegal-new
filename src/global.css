@@ -76,15 +76,9 @@ body {
   height: 116px; /* Desktop Header Height: Topbar 44px + Navbar 72px */
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .header-spacer {
-    height: 154px; /* Tablet Header Height: Topbar 82px + Navbar 72px */
-  }
-}
-
-@media (max-width: 576px) {
-  .header-spacer {
-    height: 192px; /* Mobile Header Height: Topbar 120px + Navbar 72px */
+    height: 72px; /* Tablet & Mobile Header Height: Navbar only 72px (Topbar hidden) */
   }
 }
 

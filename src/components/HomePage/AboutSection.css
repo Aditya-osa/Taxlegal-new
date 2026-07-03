@@ -18,13 +18,11 @@
 .about-content-column {
   width: 100%;
   max-width: 900px;
-  text-align: center;
-  margin: 0 auto;
+  margin-left: -260px;
 }
 
 .about-content-column .section-title {
   margin-bottom: 24px;
-  text-align: center;
 }
 
 .about-description {
@@ -123,7 +121,14 @@
   }
 
   .about-top-row {
-    margin-bottom: 40px;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .about-image-column {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   .about-features-grid {

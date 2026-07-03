@@ -48,7 +48,7 @@ body {
   align-items: center;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.75) 50%, rgba(15, 23, 42, 0.35) 100%),
               url("/assets/Services/service_herosection.jpg") no-repeat center center / cover;
-  padding: 80px 5% 90px;
+  padding: 80px var(--container-px) 90px;
   overflow: hidden;
 }
 
@@ -270,7 +270,7 @@ body {
 @media (max-width: 768px) {
   .services-banner {
     min-height: auto;
-    padding: 60px 5% 70px;
+    padding: 60px var(--container-px) 70px;
   }
 
   .banner-content {
@@ -310,12 +310,12 @@ body {
 }
 
 .services-section {
-  padding: 60px 80px;
+  padding: 60px var(--container-px);
 }
 
 @media (max-width:768px) {
   .services-section {
-    padding: 40px 20px;
+    padding: 40px var(--container-px);
   }
 }
 
@@ -545,7 +545,7 @@ body {
 .legal-hero-banner {
   background: linear-gradient(135deg, #0b1c38 0%, var(--primary-blue) 50%, #11284d 100%);
   color: var(--white);
-  padding: 80px 5%;
+  padding: 80px var(--container-px);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -636,7 +636,7 @@ body {
 .legal-services-container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 var(--container-px);
 }
 
 .legal-services-grid {
@@ -743,7 +743,7 @@ body {
   width: 100%;
   max-width: 100%;
   margin: 80px 0 0 0;
-  padding: 80px 5%;
+  padding: 80px var(--container-px);
   background: #000000;
   text-align: center;
 }
@@ -1031,7 +1031,7 @@ body {
 .legal-bottom-cta {
   background: linear-gradient(135deg, #0f2347 0%, var(--primary-blue) 50%, #0b1c38 100%);
   color: var(--white);
-  padding: 70px 5%;
+  padding: 70px var(--container-px);
   text-align: center;
   margin-top: 80px;
   box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.08);
@@ -1072,11 +1072,11 @@ body {
 /* Responsive Styles for Legal Advisory Section */
 @media (max-width: 1024px) {
   .legal-services-container {
-    padding: 0 40px;
+    padding: 0 var(--container-px);
   }
 
   .why-choose-section {
-    padding: 60px 40px;
+    padding: 60px var(--container-px);
   }
 
   .legal-services-grid {

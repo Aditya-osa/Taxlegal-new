@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
-import { 
-  TrendingUp, 
-  Shield, 
-  Activity, 
-  Truck, 
-  Globe, 
-  Heart, 
-  Cpu, 
-  Home, 
-  Zap, 
-  Briefcase, 
-  Package, 
-  Database, 
-  Star 
+import {
+  TrendingUp,
+  Shield,
+  Activity,
+  Truck,
+  Globe,
+  Heart,
+  Cpu,
+  Home,
+  Zap,
+  Briefcase,
+  Package,
+  Database,
+  Star
 } from "lucide-react";
 import "./ClientsPage.css";
 
@@ -162,11 +162,11 @@ const ClientsPage = () => {
             <div className="clients-hero-content">
               <span className="clients-badge-simple">Clients & Partners</span>
               <h1 className="clients-hero-title">
-                Trusted by Leading Enterprises & Innovators
+                Trusted by Organizations That Value Expertise
               </h1>
               <p className="clients-hero-description">
-                We partner with organizations of all sizes—from fast-growing startups to multinational corporations—to navigate complex tax, legal, and compliance landscapes. Here is a look at the organizations we serve and what they say about us.
-              </p>
+                Supporting organizations of every size with practical,
+                business-focused tax and legal solutions.              </p>
             </div>
           </div>
         </section>
@@ -176,12 +176,12 @@ const ClientsPage = () => {
           <div className="container">
             <div className="clients-section-header">
               <div className="subtitle-wrapper">
-                <span className="clients-eyebrow">OUR NETWORKS</span>
+                <span className="clients-eyebrow">Our Valued Clients</span>
                 <div className="subtitle-line"></div>
               </div>
-              <h2 className="clients-section-title">Industry-Leading Relationships</h2>
+              <h2 className="clients-section-title">  A Legacy of  Partnerships</h2>
               <p className="clients-section-subtitle">
-                Supporting clients across sectors. Consistent legal advice wherever business operates.
+                Chosen by organizations that value expertise, integrity, and lasting partnerships.
               </p>
             </div>
 
@@ -243,10 +243,9 @@ const ClientsPage = () => {
                 <span className="clients-eyebrow">CLIENT STORIES</span>
                 <div className="subtitle-line"></div>
               </div>
-              <h2 className="clients-section-title">What Our Clients Say</h2>
+              <h2 className="clients-section-title">Trusted Voices. Proven Relationships.</h2>
               <p className="clients-section-subtitle">
-                Feedback from decision-makers who rely on TaxLegal for auditing, compliance, and legal counsel.
-              </p>
+                Real experiences from organizations that have partnered with us for strategic advice and lasting value.              </p>
             </div>
 
             <div className="marquee-wrapper testimonies-marquee">
