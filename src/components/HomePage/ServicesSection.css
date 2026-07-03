@@ -10,6 +10,7 @@
 .services-section {
   padding: var(--section-py) 0;
   background: var(--off-white);
+  overflow: hidden;
 }
 
 .services-header {
@@ -23,19 +24,39 @@
 }
 
 /* ═══════════════════════════════════════════════
-   SERVICES GRID
+   SERVICES CAROUSEL
    ═══════════════════════════════════════════════ */
-.services-component .services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.services-component .services-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0 30px;
+  margin: -20px 0 -30px;
+}
+
+.services-component .services-carousel-track {
+  display: flex;
+  width: max-content;
   gap: 24px;
+  padding-right: 24px;
+  animation: services-slide 40s linear infinite;
   align-items: stretch;
+}
+
+.services-component .services-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes services-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ═══════════════════════════════════════════════
    SERVICE CARD (PREMIUM PORTAL OVERLAY SHIFT)
    ═══════════════════════════════════════════════ */
 .services-component .service-card {
+  flex: 0 0 320px;
+  width: 320px;
   position: relative;
   aspect-ratio: 1 / 1.15;
   overflow: hidden;
@@ -158,8 +179,9 @@
    RESPONSIVE
    ═══════════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .services-component .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .services-component .service-card {
+    flex: 0 0 300px;
+    width: 300px;
   }
 }
 
@@ -168,13 +190,20 @@
     margin-bottom: 40px;
   }
 
-  .services-component .services-grid {
+  .services-component .services-carousel-track {
     gap: 18px;
+    padding-right: 18px;
+  }
+
+  .services-component .service-card {
+    flex: 0 0 280px;
+    width: 280px;
   }
 }
 
 @media (max-width: 576px) {
-  .services-component .services-grid {
-    grid-template-columns: 1fr;
+  .services-component .service-card {
+    flex: 0 0 260px;
+    width: 260px;
   }
 }
