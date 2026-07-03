@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HeroSection.css';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="hero-section">
       <div className="hero-overlay"></div>
@@ -18,8 +20,8 @@ const HeroSection = () => {
           </p>
           <br/>
           <div className="hero-buttons">
-            <button className="btn-primary">Contact Us Now</button>
-            <button className="btn-secondary">Our Practice Areas</button>
+            <button className="btn-primary" onClick={() => navigate('/contact')}>Contact Us Now</button>
+            <button className="btn-secondary" onClick={() => navigate('/services')}>Our Practice Areas</button>
           </div>
           
           <div className="hero-stats">

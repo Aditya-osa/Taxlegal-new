@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CareerSection.css';
 
 const CareerSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="career-section">
       <div className="career-container">
@@ -21,7 +23,7 @@ const CareerSection = () => {
             <div className="intern-badge"><span className="dot"></span>Video Editing</div>
           </div>
 
-          <button className="btn-primary" style={{ marginTop: '20px' }}>Apply for Internship</button>
+          <button className="btn-primary" style={{ marginTop: '20px' }} onClick={() => navigate('/internship')}>Apply for Internship</button>
         </div>
 
         <div className="career-criteria-column">
@@ -58,7 +60,7 @@ const CareerSection = () => {
               <p><strong>Stipend:</strong>Applicable for internships of 12 months or longer.</p>
             </div>
 
-            <button className="btn-primary-full">View Full Program Details</button>
+            <button className="btn-primary-full" onClick={() => navigate('/internship')}>View Full Program Details</button>
           </div>
         </div>
       </div>

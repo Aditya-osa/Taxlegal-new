@@ -1,6 +1,7 @@
 .site-footer {
-  background-color: var(--dark, #0f172a);
-  color: #e2e8f0;
+  background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url("/Footer.png") no-repeat center center;
+  background-size: cover;
+  color: #ffffff;
   padding: 64px 0 0;
 }
 
@@ -30,7 +31,7 @@
 
 .footer-desc {
   font-size: 0.88rem;
-  color: #a0aec0;
+  color: #ffffff;
   line-height: 1.6;
   margin-bottom: 24px;
 }
@@ -78,7 +79,7 @@
 
 .footer-links-list a {
   font-size: 0.88rem;
-  color: #a0aec0;
+  color: #ffffff;
   transition: color 0.2s;
   display: inline-block;
 }
@@ -107,7 +108,7 @@
 
 .reach-text {
   font-size: 0.88rem;
-  color: #a0aec0;
+  color: #ffffff;
   line-height: 1.5;
 }
 
@@ -127,7 +128,7 @@
 
 .footer-copyright {
   font-size: 0.82rem;
-  color: #718096;
+  color: #ffffff;
 }
 
 .footer-bottom-links {
@@ -138,7 +139,7 @@
 
 .footer-bottom-links a {
   font-size: 0.82rem;
-  color: #718096;
+  color: #ffffff;
   transition: color 0.2s;
 }
 
@@ -161,14 +162,14 @@
 
 .footer-disclaimer-block p {
   font-size: 0.76rem;
-  color: #718096;
+  color: #ffffff;
   line-height: 1.5;
   margin: 0;
   text-align: justify;
 }
 
 .footer-disclaimer-block p strong {
-  color: #a0aec0;
+  color: #ffffff;
   font-weight: 600;
 }
 

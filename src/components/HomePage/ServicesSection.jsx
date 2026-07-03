@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./ServicesSection.css";
 
 const services = [
@@ -73,6 +74,16 @@ const services = [
 ];
 
 const ServicesSection = ({ navigateToPage }) => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    if (navigateToPage) {
+      navigateToPage(path);
+    } else {
+      navigate(`/${path}`);
+    }
+  };
+
   return (
     <section className="services-section services-component">
       <div className="container">
@@ -98,7 +109,6 @@ const ServicesSection = ({ navigateToPage }) => {
             <div 
               className="service-card" 
               key={service.id}
-              onClick={() => navigateToPage?.("services")}
             >
               <img
                 src={service.image}
@@ -124,7 +134,7 @@ const ServicesSection = ({ navigateToPage }) => {
         <div style={{ textAlign: "center", marginTop: "40px" }}>
           <button
             className="btn-navy"
-            onClick={() => navigateToPage?.("services")}
+            onClick={() => handleNavigation("services")}
           >
             Explore More
           </button>

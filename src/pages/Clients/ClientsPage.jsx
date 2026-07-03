@@ -148,11 +148,19 @@ const ClientsPage = () => {
 
       <main className="clients-main-content">
         {/* HERO SECTION */}
-        <section className="clients-hero-section">
+        <section
+          className="clients-hero-section"
+          style={{
+            background: `linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('/assets/Internships/Contact.jpeg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
           <div className="clients-hero-overlay"></div>
           <div className="container clients-hero-container">
             <div className="clients-hero-content">
-              <span className="clients-badge-simple">Clients & Testimony</span>
+              <span className="clients-badge-simple">Clients & Partners</span>
               <h1 className="clients-hero-title">
                 Trusted by Organizations That Value Expertise
               </h1>
@@ -332,7 +340,7 @@ const ClientsPage = () => {
             <div className="clients-cta-card">
               <h2>Ready to Experience Seamless Advisory?</h2>
               <p>
-                Get in touch with our multidisciplinary team of advocates, CAs, and CSs to discuss how we can help your business stay compliant and grow.
+                Get in touch with our multidisciplinary team of  CAs, CSs  and advocates to discuss how we can help your business stay compliant and grow.
               </p>
               <a href="/contact" className="clients-cta-btn">
                 Schedule a Consultation

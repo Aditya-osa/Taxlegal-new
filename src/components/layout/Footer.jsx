@@ -15,7 +15,7 @@ const Footer = () => {
               Advocates, Chartered Accountants & Company Secretaries. Practicing legal and tax matters since 1996 from Navi Mumbai.
             </p>
             <div className="footer-social-icons">
-            <a href="https://www.linkedin.com/company/taxlegal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/taxlegal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
                   <circle cx="4" cy="4" r="2" />
@@ -117,21 +117,11 @@ const Footer = () => {
           <span className="footer-copyright">&copy; 2026 TaxLegal. All rights reserved.</span>
           <div className="footer-bottom-links">
             <a href="/#disclaimer">Disclaimer</a>
-            <span className="separator">|</span>
-            <a href="/#terms">Terms &amp; Conditions</a>
-            <span className="separator">|</span>
-            <a href="/#privacy">Privacy Policy</a>
+
           </div>
         </div>
 
-        <div className="footer-disclaimer-block">
-          <p>
-            <strong>Disclaimer:</strong> As per the rules of the Bar Council of India, we are not permitted to solicit work and advertise.
-            The contents of this website are for informational purposes only and should not be interpreted as soliciting or advertisement.
-            The user acknowledges that there has been no solicitation, invitation or inducement of any sort whatsoever from the firm or
-            any of its members to create an attorney-client relationship through this website.
-          </p>
-        </div>
+
       </div>
     </footer>
   );
