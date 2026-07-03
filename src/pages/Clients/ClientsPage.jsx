@@ -148,19 +148,11 @@ const ClientsPage = () => {
 
       <main className="clients-main-content">
         {/* HERO SECTION */}
-        <section
-          className="clients-hero-section"
-          style={{
-            background: `linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('/assets/Internships/Contact.jpeg')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
+        <section className="clients-hero-section">
           <div className="clients-hero-overlay"></div>
           <div className="container clients-hero-container">
             <div className="clients-hero-content">
-              <span className="clients-badge-simple">Clients & Partners</span>
+              <span className="clients-badge-simple">Clients & Testimony</span>
               <h1 className="clients-hero-title">
                 Trusted by Organizations That Value Expertise
               </h1>

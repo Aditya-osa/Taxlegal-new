@@ -564,7 +564,7 @@ const Services = () => {
       </section>
 
       {/* ================= LEGAL ADVISORY SERVICES SECTION ================= */}
-      <h1 className="section-heading">About Our Legal Advisory Services</h1>
+      {/* <h1 className="section-heading">About Our Legal Advisory Services</h1> */}
 
       <section id="legal-advisory" className="legal-advisory-section">
         {/* Top Hero Banner */}

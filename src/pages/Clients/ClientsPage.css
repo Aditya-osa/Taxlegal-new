@@ -16,6 +16,22 @@
   overflow: hidden;
   color: var(--white);
   z-index: 1;
+  background-color: var(--navy);
+}
+
+.clients-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('/assets/Internships/Contact.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  z-index: 1;
 }
 
 .clients-hero-overlay {
