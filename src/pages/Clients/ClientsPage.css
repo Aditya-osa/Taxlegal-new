@@ -1,0 +1,495 @@
+/* ClientsPage.css */
+
+.clients-page-wrapper {
+  background-color: var(--off-white);
+  min-height: 100vh;
+}
+
+/* HERO SECTION */
+.clients-hero-section {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 80px 0;
+  overflow: hidden;
+  color: var(--white);
+  z-index: 1;
+}
+
+.clients-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(211, 44, 54, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.clients-hero-container {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.clients-hero-content {
+  max-width: 800px;
+  text-align: left;
+}
+
+.clients-badge-simple {
+  display: inline-block;
+  background-color: rgba(211, 44, 54, 0.15);
+  color: var(--red-lt);
+  border: 1px solid rgba(211, 44, 54, 0.3);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(4px);
+}
+
+.clients-hero-title {
+  font-family: var(--font-head);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.clients-hero-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
+}
+
+/* RESPONSIVE HERO */
+@media (max-width: 992px) {
+  .clients-hero-section {
+    min-height: 320px;
+    padding: 60px 0;
+  }
+  .clients-hero-title {
+    font-size: 2.5rem;
+  }
+  .clients-hero-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .clients-hero-title {
+    font-size: 2rem;
+  }
+}
+
+/* SECTIONS STRUCTURE */
+.clients-logos-section {
+  padding: 80px 0 40px 0;
+  background-color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.clients-testimonials-section {
+  padding: 60px 0 80px 0;
+  background-color: var(--off-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.clients-section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+}
+
+.clients-section-header .subtitle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.clients-section-header .subtitle-line {
+  width: 40px;
+  height: 3px;
+  background-color: var(--red);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.clients-eyebrow {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.clients-section-title {
+  font-family: var(--font-head);
+  font-size: 2.25rem;
+  color: var(--dark);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.clients-section-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  color: var(--mid-gray);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .clients-section-title {
+    font-size: 1.75rem;
+  }
+  .clients-logos-section {
+    padding: 60px 0 30px 0;
+  }
+  .clients-testimonials-section {
+    padding: 40px 0 60px 0;
+  }
+}
+
+/* MARQUEE WRAPPER AND ANIMATIONS */
+.marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonies-marquee {
+  gap: 40px;
+}
+
+.marquee-track {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+  position: relative;
+}
+
+/* Fade effects on the edges of the marquee scroll track */
+.marquee-track::before,
+.marquee-track::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.marquee-track::before {
+  left: 0;
+  background: linear-gradient(to right, var(--white) 0%, transparent 100%);
+}
+
+.marquee-track::after {
+  right: 0;
+  background: linear-gradient(to left, var(--white) 0%, transparent 100%);
+}
+
+/* Testimonies container sits on off-white section background, so we change fade color */
+.testimonies-marquee .marquee-track::before {
+  background: linear-gradient(to right, var(--off-white) 0%, transparent 100%);
+}
+.testimonies-marquee .marquee-track::after {
+  background: linear-gradient(to left, var(--off-white) 0%, transparent 100%);
+}
+
+@media (max-width: 768px) {
+  .marquee-track::before,
+  .marquee-track::after {
+    width: 50px;
+  }
+}
+
+.marquee-content {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.marquee-left {
+  animation: scroll-left 32s linear infinite;
+}
+
+.marquee-right {
+  animation: scroll-right 32s linear infinite;
+}
+
+/* Testimonial scrolls slower because of long texts to read */
+.testimonies-marquee .marquee-left {
+  animation: scroll-left 45s linear infinite;
+}
+.testimonies-marquee .marquee-right {
+  animation: scroll-right 45s linear infinite;
+}
+
+/* Pause scroll animation on hover so details can be read */
+.marquee-track:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* LOGO CARD */
+.logo-card {
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 250px;
+  height: 80px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
+}
+
+.logo-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(46, 85, 160, 0.3);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+}
+
+.logo-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.logo-card:hover .logo-icon-box {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.logo-card-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--dark);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* TESTIMONY CARD */
+.testimony-card {
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 16px;
+  padding: 32px;
+  width: 420px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
+  white-space: normal; /* Restore standard wrapping for texts */
+  flex-shrink: 0;
+}
+
+.testimony-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(211, 44, 54, 0.25);
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+}
+
+.testimony-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.testimony-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--body-text);
+  font-style: italic;
+}
+
+.testimony-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid var(--light-gray);
+  padding-top: 16px;
+}
+
+.testimony-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--light-gray);
+  background-color: var(--off-white);
+  transition: border-color 0.3s;
+}
+
+.testimony-card:hover .testimony-avatar {
+  border-color: var(--red);
+}
+
+.testimony-author-info h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: var(--dark);
+  font-weight: 600;
+  margin: 0;
+}
+
+.testimony-author-info p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  color: var(--mid-gray);
+  margin: 2px 0 0 0;
+}
+
+@media (max-width: 576px) {
+  .testimony-card {
+    width: 320px;
+    padding: 24px;
+  }
+}
+
+/* CTA SECTION */
+.clients-cta-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.clients-cta-card {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--dark) 100%);
+  padding: 60px 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Abstract design in CTA card */
+.clients-cta-card::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(211, 44, 54, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.clients-cta-card h2 {
+  font-family: var(--font-head);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+}
+
+.clients-cta-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 650px;
+  margin: 0 auto 32px auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.clients-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--red);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 15px rgba(211, 44, 54, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.clients-cta-btn:hover {
+  background-color: var(--red-lt);
+  transform: translateY(-2px);
+}
+
+.cta-arrow {
+  transition: transform 0.3s;
+}
+
+.clients-cta-btn:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .clients-cta-card {
+    padding: 40px 24px;
+  }
+  .clients-cta-card h2 {
+    font-size: 1.85rem;
+  }
+  .clients-cta-card p {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+}
