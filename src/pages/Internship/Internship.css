@@ -150,16 +150,9 @@
   line-height: 1.55;
 }
 
-/* Program Overview Section */
 .internship-overview {
-  padding: var(--section-py) 0 20px 0;
-  background-color: var(--white);
-}
-
-.overview-container-box {
-  background: linear-gradient(135deg, #102447 0%, #1A3A6E 100%);
-  border-radius: 12px;
-  padding: 48px 40px;
+  padding: var(--section-py) 0;
+  background: linear-gradient(135deg, rgba(16, 36, 71, 0.85) 0%, rgba(26, 58, 110, 0.9) 100%), url("/assets/Internships/Program-overview.png") no-repeat center center / cover;
   color: var(--white);
 }
 
