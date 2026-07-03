@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import WhyChooseUsSection
@@ -19,6 +19,8 @@ import {
   Star
 } from "lucide-react";
 import "./ClientsPage.css";
+import testimonialsData from "../../data/testimonialsData.json";
+import TestimonialModal from "../../components/common/TestimonialModal";
 
 // Unique Logos Row 1 (Moves Left)
 const logosRow1 = [
@@ -40,108 +42,36 @@ const logosRow2 = [
   { name: "Database Systems", icon: Database, color: "#64748b", bg: "rgba(100, 116, 139, 0.1)" },
 ];
 
-// Unique Testimonials Row 1 (Moves Left)
-const testimonialsRow1 = [
-  {
-    id: 1,
-    text: "The tax optimization strategies provided by TaxLegal helped us restructure our cross-border operations, saving us millions in compliance costs.",
-    author: "Sarah Jenkins",
-    company: "TechVanguard",
-    role: "CFO",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
-  },
-  {
-    id: 2,
-    text: "Their legal team's expertise in handling corporate litigation is outstanding. They secured a favorable settlement for our dispute in record time.",
-    author: "Rajesh Mehta",
-    company: "Mehta Steel Group",
-    role: "Managing Director",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
-  },
-  {
-    id: 3,
-    text: "Working with TaxLegal for our annual auditing has been a seamless experience. Their attention to detail and transparency are top-notch.",
-    author: "Elena Rostova",
-    company: "Horizon Logistics",
-    role: "VP of Finance",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop"
-  },
-  {
-    id: 4,
-    text: "As a fast-growing startup, navigating regulatory filings was overwhelming. TaxLegal took over all compliance, letting us focus on scaling.",
-    author: "David Chen",
-    company: "Zenith AgriTech",
-    role: "Co-Founder",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop"
-  },
-  {
-    id: 5,
-    text: "Their advisory service on property tax and corporate restructuring was invaluable. A truly trusted partner for long-term growth.",
-    author: "Marcus Aurelius",
-    company: "Rome Property Group",
-    role: "Director",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop"
-  }
-];
+const halfLen = Math.ceil(testimonialsData.length / 2);
+// Testimonials Row 1 (Moves Left)
+const testimonialsRow1 = testimonialsData.slice(0, halfLen);
 
-// Unique Testimonials Row 2 (Moves Right) - No overlap with Row 1
-const testimonialsRow2 = [
-  {
-    id: 6,
-    text: "The compliance audit done by TaxLegal was incredibly thorough. They identified key risk areas and helped us implement robust controls.",
-    author: "Jennifer Sterling",
-    company: "Apex Capital",
-    role: "COO",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=150&auto=format&fit=crop"
-  },
-  {
-    id: 7,
-    text: "In real estate, legal clarity is paramount. TaxLegal's contract drafting and legal advisory have been our shield and guidance.",
-    author: "Vikram Malhotra",
-    company: "Prime Developers",
-    role: "CEO",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=150&auto=format&fit=crop"
-  },
-  {
-    id: 8,
-    text: "TaxLegal helped us set up our company registration, trademark filings, and initial tax structures smoothly. Outstanding client service!",
-    author: "Sophia Loren",
-    company: "Bella Beauty",
-    role: "Founder",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop"
-  },
-  {
-    id: 9,
-    text: "Their team acts not just as advisors, but as partners in our business. Their response times and clarity of counsel are exceptional.",
-    author: "Alister Vance",
-    company: "Nova Group",
-    role: "Head of Operations",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=150&auto=format&fit=crop"
-  },
-  {
-    id: 10,
-    text: "TaxLegal's deep expertise in corporate compliance and tax planning gave us the confidence to expand our operations into new regions.",
-    author: "Amina Diallo",
-    company: "Pan-African Energy",
-    role: "General Counsel",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop"
-  }
-];
+// Testimonials Row 2 (Moves Right) - No overlap with Row 1
+const testimonialsRow2 = testimonialsData.slice(halfLen);
 
 const ClientsPage = () => {
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+
   useEffect(() => {
     // Scroll to top on mount
     window.scrollTo(0, 0);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    const cards = document.querySelectorAll(".testimony-card");
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -256,18 +186,29 @@ const ClientsPage = () => {
                 <div className="marquee-content marquee-left">
                   {testimonialsRow1.map((t, index) => (
                     <div key={`t-r1-${index}`} className="testimony-card">
-                      <div className="testimony-stars">
-                        {[...Array(t.rating)].map((_, i) => (
+                      <div className="testimony-stars" aria-label={`Rated ${t.rating || 5} out of 5`}>
+                        {[...Array(t.rating || 5)].map((_, i) => (
                           <Star key={i} size={16} fill="#FFC107" color="#FFC107" />
                         ))}
                       </div>
-                      <p className="testimony-text">"{t.text}"</p>
-                      <div className="testimony-author">
-                        <img src={t.avatar} alt={t.author} className="testimony-avatar" />
-                        <div className="testimony-author-info">
-                          <h4>{t.author}</h4>
-                          <p>{t.role}, {t.company}</p>
+                      <p className="testimony-text">"{t.excerpt || t.testimonial}"</p>
+                      <div className="testimony-footer">
+                        <div className="testimony-author">
+                          <div className="testimony-author-info">
+                            <h4>{t.name}</h4>
+                            {t.designation && <p className="testimony-designation">{t.designation}</p>}
+                            <p className="testimony-company">{t.company}</p>
+                          </div>
                         </div>
+                        <button
+                          type="button"
+                          className="read-more-btn"
+                          onClick={() => setSelectedTestimonial(t)}
+                          aria-label={`Read full testimonial from ${t.name}`}
+                        >
+                          Read More
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -275,17 +216,28 @@ const ClientsPage = () => {
                   {testimonialsRow1.map((t, index) => (
                     <div key={`t-r1-dup-${index}`} className="testimony-card" aria-hidden="true">
                       <div className="testimony-stars">
-                        {[...Array(t.rating)].map((_, i) => (
+                        {[...Array(t.rating || 5)].map((_, i) => (
                           <Star key={i} size={16} fill="#FFC107" color="#FFC107" />
                         ))}
                       </div>
-                      <p className="testimony-text">"{t.text}"</p>
-                      <div className="testimony-author">
-                        <img src={t.avatar} alt={t.author} className="testimony-avatar" />
-                        <div className="testimony-author-info">
-                          <h4>{t.author}</h4>
-                          <p>{t.role}, {t.company}</p>
+                      <p className="testimony-text">"{t.excerpt || t.testimonial}"</p>
+                      <div className="testimony-footer">
+                        <div className="testimony-author">
+                          <div className="testimony-author-info">
+                            <h4>{t.name}</h4>
+                            {t.designation && <p className="testimony-designation">{t.designation}</p>}
+                            <p className="testimony-company">{t.company}</p>
+                          </div>
                         </div>
+                        <button
+                          type="button"
+                          className="read-more-btn"
+                          onClick={() => setSelectedTestimonial(t)}
+                          tabIndex="-1"
+                        >
+                          Read More
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -297,18 +249,29 @@ const ClientsPage = () => {
                 <div className="marquee-content marquee-right">
                   {testimonialsRow2.map((t, index) => (
                     <div key={`t-r2-${index}`} className="testimony-card">
-                      <div className="testimony-stars">
-                        {[...Array(t.rating)].map((_, i) => (
+                      <div className="testimony-stars" aria-label={`Rated ${t.rating || 5} out of 5`}>
+                        {[...Array(t.rating || 5)].map((_, i) => (
                           <Star key={i} size={16} fill="#FFC107" color="#FFC107" />
                         ))}
                       </div>
-                      <p className="testimony-text">"{t.text}"</p>
-                      <div className="testimony-author">
-                        <img src={t.avatar} alt={t.author} className="testimony-avatar" />
-                        <div className="testimony-author-info">
-                          <h4>{t.author}</h4>
-                          <p>{t.role}, {t.company}</p>
+                      <p className="testimony-text">"{t.excerpt || t.testimonial}"</p>
+                      <div className="testimony-footer">
+                        <div className="testimony-author">
+                          <div className="testimony-author-info">
+                            <h4>{t.name}</h4>
+                            {t.designation && <p className="testimony-designation">{t.designation}</p>}
+                            <p className="testimony-company">{t.company}</p>
+                          </div>
                         </div>
+                        <button
+                          type="button"
+                          className="read-more-btn"
+                          onClick={() => setSelectedTestimonial(t)}
+                          aria-label={`Read full testimonial from ${t.name}`}
+                        >
+                          Read More
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -316,17 +279,28 @@ const ClientsPage = () => {
                   {testimonialsRow2.map((t, index) => (
                     <div key={`t-r2-dup-${index}`} className="testimony-card" aria-hidden="true">
                       <div className="testimony-stars">
-                        {[...Array(t.rating)].map((_, i) => (
+                        {[...Array(t.rating || 5)].map((_, i) => (
                           <Star key={i} size={16} fill="#FFC107" color="#FFC107" />
                         ))}
                       </div>
-                      <p className="testimony-text">"{t.text}"</p>
-                      <div className="testimony-author">
-                        <img src={t.avatar} alt={t.author} className="testimony-avatar" />
-                        <div className="testimony-author-info">
-                          <h4>{t.author}</h4>
-                          <p>{t.role}, {t.company}</p>
+                      <p className="testimony-text">"{t.excerpt || t.testimonial}"</p>
+                      <div className="testimony-footer">
+                        <div className="testimony-author">
+                          <div className="testimony-author-info">
+                            <h4>{t.name}</h4>
+                            {t.designation && <p className="testimony-designation">{t.designation}</p>}
+                            <p className="testimony-company">{t.company}</p>
+                          </div>
                         </div>
+                        <button
+                          type="button"
+                          className="read-more-btn"
+                          onClick={() => setSelectedTestimonial(t)}
+                          tabIndex="-1"
+                        >
+                          Read More
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -337,7 +311,10 @@ const ClientsPage = () => {
         </section>
         <WhyChooseUsSection />
         {/* CTA BANNER */}
-
+        <TestimonialModal
+          testimonial={selectedTestimonial}
+          onClose={() => setSelectedTestimonial(null)}
+        />
       </main>
 
       <Footer />
