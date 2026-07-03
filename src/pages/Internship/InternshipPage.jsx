@@ -200,12 +200,8 @@ const InternshipPage = () => {
       {/* Program Overview Section */}
       <section className="internship-overview">
         <div className="internship-container">
-          <div className="overview-container-box">
-            <span className="internship-eyebrow text-red-light">PROGRAM OVERVIEW</span>
-            <h2 className="overview-title">On-Site, Practical-oriented Learning</h2>
-
-
-          </div>
+          <span className="internship-eyebrow text-red-light">PROGRAM OVERVIEW</span>
+          <h2 className="overview-title" style={{ marginBottom: 0 }}>On-Site, Practical-oriented Learning</h2>
         </div>
       </section>
 
