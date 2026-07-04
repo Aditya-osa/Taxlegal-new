@@ -3,51 +3,17 @@ import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import WhyChooseUsSection
   from "../../components/AboutPage/WhyChooseUsSection";
-import {
-  TrendingUp,
-  Shield,
-  Activity,
-  Truck,
-  Globe,
-  Heart,
-  Cpu,
-  Home,
-  Zap,
-  Briefcase,
-  Package,
-  Database,
-  Star
-} from "lucide-react";
+import { Star } from "lucide-react";
 import "./ClientsPage.css";
 import testimonialsData from "../../data/testimonialsData.json";
 import TestimonialModal from "../../components/common/TestimonialModal";
+import LogosSection from "../../components/HomePage/LogosSection";
 
-// Unique Logos Row 1 (Moves Left)
-const logosRow1 = [
-  { name: "FinCorp Solutions", icon: TrendingUp, color: "#10b981", bg: "rgba(16, 185, 129, 0.1)" },
-  { name: "Apex Legal Group", icon: Shield, color: "#2e55a0", bg: "rgba(46, 85, 160, 0.1)" },
-  { name: "Zenith Biotech", icon: Activity, color: "#06b6d4", bg: "rgba(6, 182, 212, 0.1)" },
-  { name: "Horizon Logistics", icon: Truck, color: "#f97316", bg: "rgba(249, 115, 22, 0.1)" },
-  { name: "AeroSpace Partners", icon: Globe, color: "#3a85c8", bg: "rgba(58, 133, 200, 0.1)" },
-  { name: "Nova Health", icon: Heart, color: "#ef4444", bg: "rgba(239, 68, 68, 0.1)" },
-];
+// Testimonials Row 1 (Moves Left): 17 cards
+const testimonialsRow1 = testimonialsData.slice(0, 17);
 
-// Unique Logos Row 2 (Moves Right) - No overlap with Row 1
-const logosRow2 = [
-  { name: "Nexus Tech", icon: Cpu, color: "#8b5cf6", bg: "rgba(139, 92, 246, 0.1)" },
-  { name: "Prime Builders", icon: Home, color: "#f59e0b", bg: "rgba(245, 158, 11, 0.1)" },
-  { name: "Pinnacle Energy", icon: Zap, color: "#eab308", bg: "rgba(234, 179, 8, 0.1)" },
-  { name: "Summit Finance", icon: Briefcase, color: "#6366f1", bg: "rgba(99, 102, 241, 0.1)" },
-  { name: "Vance Retail", icon: Package, color: "#ec4899", bg: "rgba(236, 72, 153, 0.1)" },
-  { name: "Database Systems", icon: Database, color: "#64748b", bg: "rgba(100, 116, 139, 0.1)" },
-];
-
-const halfLen = Math.ceil(testimonialsData.length / 2);
-// Testimonials Row 1 (Moves Left)
-const testimonialsRow1 = testimonialsData.slice(0, halfLen);
-
-// Testimonials Row 2 (Moves Right) - No overlap with Row 1
-const testimonialsRow2 = testimonialsData.slice(halfLen);
+// Testimonials Row 2 (Moves Right): 18 cards
+const testimonialsRow2 = testimonialsData.slice(17, 35);
 
 const ClientsPage = () => {
   const [selectedTestimonial, setSelectedTestimonial] = useState(null);
@@ -104,68 +70,7 @@ const ClientsPage = () => {
         </section>
 
         {/* LOGOS SCROLLING SECTION */}
-        <section className="clients-logos-section">
-          <div className="container">
-            <div className="clients-section-header">
-              <div className="subtitle-wrapper">
-                <span className="clients-eyebrow">Our Valued Clients</span>
-                <div className="subtitle-line"></div>
-              </div>
-              <h2 className="clients-section-title">  A Legacy of  Partnerships</h2>
-              <p className="clients-section-subtitle">
-                Chosen by organizations that value expertise, integrity, and lasting partnerships.
-              </p>
-            </div>
-
-            <div className="marquee-wrapper">
-              {/* Row 1: moves to left */}
-              <div className="marquee-track">
-                <div className="marquee-content marquee-left">
-                  {logosRow1.map((logo, index) => (
-                    <div key={`logo-r1-${index}`} className="logo-card">
-                      <div className="logo-icon-box" style={{ backgroundColor: logo.bg }}>
-                        <logo.icon size={26} color={logo.color} strokeWidth={2} />
-                      </div>
-                      <span className="logo-card-name">{logo.name}</span>
-                    </div>
-                  ))}
-                  {/* Duplicate set for seamless looping */}
-                  {logosRow1.map((logo, index) => (
-                    <div key={`logo-r1-dup-${index}`} className="logo-card" aria-hidden="true">
-                      <div className="logo-icon-box" style={{ backgroundColor: logo.bg }}>
-                        <logo.icon size={26} color={logo.color} strokeWidth={2} />
-                      </div>
-                      <span className="logo-card-name">{logo.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Row 2: moves to right */}
-              <div className="marquee-track">
-                <div className="marquee-content marquee-right">
-                  {logosRow2.map((logo, index) => (
-                    <div key={`logo-r2-${index}`} className="logo-card">
-                      <div className="logo-icon-box" style={{ backgroundColor: logo.bg }}>
-                        <logo.icon size={26} color={logo.color} strokeWidth={2} />
-                      </div>
-                      <span className="logo-card-name">{logo.name}</span>
-                    </div>
-                  ))}
-                  {/* Duplicate set for seamless looping */}
-                  {logosRow2.map((logo, index) => (
-                    <div key={`logo-r2-dup-${index}`} className="logo-card" aria-hidden="true">
-                      <div className="logo-icon-box" style={{ backgroundColor: logo.bg }}>
-                        <logo.icon size={26} color={logo.color} strokeWidth={2} />
-                      </div>
-                      <span className="logo-card-name">{logo.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <LogosSection />
 
         {/* TESTIMONY SCROLLING SECTION */}
         <section className="clients-testimonials-section">
