@@ -1,9 +1,9 @@
 :root {
   /* Premium Corporate Colors */
-  --navy-primary: #173B78;
-  --navy-dark: #102B5C;
-  --navy-secondary: #234B8E;
-  --red-accent: #D32C36;
+  --navy-primary: #076aaa;
+  --navy-dark: #054f80;
+  --navy-secondary: #087bc4;
+  --red-accent: #c42a2f;
   --red-dark: #B2222B;
   --white: #FFFFFF;
   --bg-light: #F5F7FB;
@@ -21,7 +21,7 @@
   --mid-gray: var(--body-text);
 
   /* Theme Gradient */
-  --theme-gradient: linear-gradient(135deg, #173B78 0%, #102B5C 70%, #B2222B 100%);
+  --theme-gradient: #076aaa;
 }
 
 .home-page-container {

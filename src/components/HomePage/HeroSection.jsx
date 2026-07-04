@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="hero-overlay"></div>
       <div className="hero-container">
         <div className="hero-content">
-          <p className="hero-badge">A Professional Practice Built on Excellence</p>
+          <p className="tl-hero-badge-pill">A Professional Practice Built on Excellence</p>
           <h1 className="hero-title">
             Integrated Tax,<br />
             Compliance & <span className="hero-title-highlight">Legal</span><br />

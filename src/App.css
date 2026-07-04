@@ -36,7 +36,7 @@ button:hover {
   right: 0;
   top: 60%;
   transform: translateY(-50%);
-  background: linear-gradient(135deg, #D32C36 0%, #B2222B 100%);
+  background: #c42a2f;
   color: #ffffff;
   padding: 20px 14px;
   font-size: 1rem;

@@ -285,7 +285,7 @@
 
 /* CTA Section */
 .internship-cta {
-  background: linear-gradient(135deg, #102447 0%, #1A3A6E 100%);
+  background: #076aaa;
   color: var(--white);
   padding: 70px 24px;
   text-align: center;

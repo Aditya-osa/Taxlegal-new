@@ -80,7 +80,7 @@
 .testimonial-modal-close:focus {
   background-color: #F1F5F9;
   color: #0F172A;
-  outline: 2px solid var(--red-accent, #D32C36);
+  outline: 2px solid var(--red-accent, #c42a2f);
   outline-offset: 2px;
 }
 
@@ -120,7 +120,7 @@
 .testimonial-modal-designation {
   font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
-  color: var(--red-accent, #D32C36);
+  color: var(--red-accent, #c42a2f);
   font-weight: 600;
   margin-bottom: 2px;
 }
@@ -141,7 +141,7 @@
 }
 
 .testimonial-modal-done-btn {
-  background-color: var(--navy-primary, #173B78);
+  background-color: var(--navy-primary, #076aaa);
   color: #FFFFFF;
   border: none;
   border-radius: 8px;
@@ -154,9 +154,9 @@
 
 .testimonial-modal-done-btn:hover,
 .testimonial-modal-done-btn:focus {
-  background-color: var(--navy-dark, #102B5C);
+  background-color: var(--navy-dark, #054f80);
   transform: translateY(-1px);
-  outline: 2px solid var(--red-accent, #D32C36);
+  outline: 2px solid var(--red-accent, #c42a2f);
   outline-offset: 2px;
 }
 

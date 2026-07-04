@@ -337,7 +337,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: linear-gradient(135deg, var(--red-accent) 0%, #a01a1a 100%);
+  background: var(--red-accent);
   color: var(--white);
   border: none;
   border-radius: 12px;
@@ -354,7 +354,7 @@
 .contact-submit-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 25px rgba(220, 38, 38, 0.3);
-  background: linear-gradient(135deg, var(--navy-dark) 0%, #06182c 100%);
+  background: var(--navy-dark);
 }
 
 .btn-arrow {

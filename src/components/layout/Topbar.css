@@ -4,10 +4,7 @@
 
 .tl-topbar {
   position: relative;
-  background: linear-gradient(100deg,
-      var(--navy) 0%,
-      var(--navy-lt) 55%,
-      var(--red) 100%);
+  background: #076aaa;
   color: #fff;
   font-size: 0.78rem;
 }
@@ -84,7 +81,7 @@
   height: 30px;
 
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
+  background: #c42a2f;
 
   color: rgba(255, 255, 255, 0.85);
 
@@ -93,7 +90,7 @@
 
 .tl-topbar .tl-social a:hover {
   color: #fff;
-  background: rgba(255, 255, 255, 0.18);
+  background: #992125;
   transform: translateY(-2px);
 }
 

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary-blue: #1A3A6E;
+  --primary-blue: #076aaa;
   --primary-blue-light: #2e55a0;
-  --accent-red: #D32C36;
+  --accent-red: #c42a2f;
   --accent-red-light: #df444e;
   --dark: #111;
   --text: #333;
@@ -46,7 +46,7 @@ body {
   min-height: 75vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.75) 50%, rgba(15, 23, 42, 0.35) 100%),
+  background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
     url("/assets/Services/service_herosection.jpg") no-repeat center center / cover;
   padding: 80px var(--container-px) 90px;
   overflow: hidden;
@@ -103,7 +103,7 @@ body {
 }
 
 .banner-content h1 span {
-  color: #D32C36;
+  color: #c42a2f;
 }
 
 .banner-content p {
@@ -124,7 +124,7 @@ body {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   background: rgba(211, 44, 54, 0.15);
-  color: #D32C36;
+  color: #c42a2f;
   border: 1px solid rgba(211, 44, 54, 0.3);
   border-radius: 999px;
   width: fit-content;
@@ -217,7 +217,7 @@ body {
 }
 
 .meta-stat-num {
-  color: #D32C36;
+  color: #c42a2f;
   font-size: 1.45rem;
   font-weight: 800;
   line-height: 1.2;
@@ -425,10 +425,7 @@ body {
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(135deg,
-      rgba(26, 58, 110, .98),
-      rgba(40, 75, 140, .95),
-      rgba(204, 34, 41, .92));
+  background: rgba(7, 106, 170, 0.95);
 
   padding: 32px 24px 24px;
 
@@ -545,7 +542,7 @@ body {
 
 /* Hero Banner */
 .legal-hero-banner {
-  background: linear-gradient(135deg, #0b1c38 0%, var(--primary-blue) 50%, #11284d 100%);
+  background: var(--primary-blue);
   color: var(--white);
   padding: 80px var(--container-px);
   text-align: center;
@@ -1049,7 +1046,7 @@ body {
 
 /* Bottom CTA Banner */
 .legal-bottom-cta {
-  background: linear-gradient(135deg, #0f2347 0%, var(--primary-blue) 50%, #0b1c38 100%);
+  background: var(--primary-blue);
   color: var(--white);
   padding: 70px var(--container-px);
   text-align: center;

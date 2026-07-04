@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --red: #D32C36;
-  --red-lt: #df444e;
-  --navy: #1A3A6E;
-  --navy-lt: #2e55a0;
-  --blue-mid: #3a85c8;
+  --red: #c42a2f;
+  --red-lt: #d63c41;
+  --navy: #076aaa;
+  --navy-lt: #097cc4;
+  --blue-mid: #076aaa;
   --white: #FFFFFF;
   --off-white: #F5F7FA;
   --light-gray: #E8ECF2;
@@ -26,17 +26,34 @@
   --font-head: Georgia, 'Times New Roman', Times, serif;
 
   /* Premium Corporate Colors & Gradients */
-  --navy-primary: #173B78;
-  --navy-dark: #102B5C;
-  --navy-secondary: #234B8E;
-  --red-accent: #D32C36;
-  --red-dark: #B2222B;
+  --navy-primary: #076aaa;
+  --navy-dark: #054f80;
+  --navy-secondary: #087bc4;
+  --red-accent: #c42a2f;
+  --red-dark: #992125;
   --bg-light: #F5F7FB;
   --bg-section: #EEF2F7;
   --border-color: #E5E7EB;
   --text-primary: #1E293B;
-  --text-secondary: #64748B;
-  --theme-gradient: linear-gradient(135deg, #173B78 0%, #102B5C 70%, #B2222B 100%);
+  --theme-gradient: #076aaa;
+}
+
+/* Global Hero Badge Pill */
+.tl-hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: rgba(196, 42, 47, 0.15);
+  color: #c42a2f;
+  border: 1px solid rgba(196, 42, 47, 0.3);
+  border-radius: 999px;
+  width: fit-content;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 992px) {
@@ -470,7 +487,7 @@ h4 {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(195deg, rgba(26, 58, 110, .06) 30%, rgba(26, 58, 110, .82) 100%);
+  background: rgba(26, 58, 110, 0.5);
 }
 
 .tl-slide figcaption {
@@ -984,7 +1001,7 @@ h4 {
 }
 
 .tl-team-card.active .tl-team-top {
-  background: linear-gradient(135deg, var(--navy-lt), #1a3a6e);
+  background: #076aaa;
 }
 
 .tl-team-top {
@@ -1234,7 +1251,7 @@ h4 {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(110deg, rgba(26, 58, 110, .55) 0%, rgba(46, 85, 160, .55) 55%, rgba(204, 34, 41, .55) 100%);
+  background: rgba(7, 106, 170, 0.55);
 }
 
 .tl-cta .container {

@@ -33,12 +33,11 @@
   }
 
   .about-image-column {
-    width: 100%;
+    display: none;
   }
 
   .about-image {
-    max-width: 600px;
-    height: auto;
+    display: none;
   }
 }
 
@@ -185,9 +184,7 @@
   }
 
   .about-image-column {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+    display: none;
   }
 
   .about-features-grid {

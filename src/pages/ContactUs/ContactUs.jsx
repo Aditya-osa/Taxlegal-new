@@ -58,7 +58,7 @@ const ContactUs = () => {
           <div className="contact-hero-overlay"></div>
           <div className="contact-container contact-hero-container">
             <div className="contact-hero-content">
-              <span className="contact-badge-simple">Contact Us</span>
+              <span className="tl-hero-badge-pill">Contact Us</span>
               <h1 className="contact-hero-title">
                 Let's Start the Conversation
               </h1>

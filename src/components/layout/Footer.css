@@ -45,7 +45,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: var(--red, #D32C36);
+  background-color: var(--red, #c42a2f);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +101,7 @@
 }
 
 .reach-icon {
-  color: var(--red, #D32C36);
+  color: var(--red, #c42a2f);
   margin-top: 3px;
   flex-shrink: 0;
 }

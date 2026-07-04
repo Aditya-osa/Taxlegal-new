@@ -496,7 +496,7 @@ const Services = () => {
       <section className="services-banner">
         <div className="banner-content">
           <div className="services-intro-copy">
-            <div className="services-eyebrow">OUR EXPERTISE & DOMAINS</div>
+            <div className="tl-hero-badge-pill">OUR EXPERTISE & DOMAINS</div>
             <h1>
               Three Decades of <br />Tax and Legal Excellence
             </h1>

@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('/assets/About%20page/Hero-section.jpg');
+  background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url("/assets/About page/Hero-section.jpg") center/cover no-repeat;
   background-size: cover;
   background-position: center;
   color: var(--white);
