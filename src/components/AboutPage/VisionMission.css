@@ -1,12 +1,12 @@
 .vm-grid-stacked {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 16px;
   width: 100%;
 }
 
 .vm-card {
-  padding: 36px 36px;
+  padding: 24px 28px;
   border-radius: var(--r-card, 16px);
   box-shadow: var(--shadow-md, 0 10px 30px rgba(0, 0, 0, 0.06));
   position: relative;
@@ -34,7 +34,7 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .vm-card-navy .vm-label {
@@ -46,11 +46,11 @@
 }
 
 .vm-card blockquote {
-  font-size: 1.15rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
   font-weight: 500;
   border-left: 3px solid var(--red-accent, #cc2229);
-  padding-left: 18px;
+  padding-left: 14px;
   margin: 0;
 }
 

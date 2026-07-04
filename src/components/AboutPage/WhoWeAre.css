@@ -27,7 +27,7 @@
 }
 
 .who-we-are-right {
-  margin-top: -60px;
+  margin-top: 0;
 }
 
 .who-we-are-text p {
@@ -47,8 +47,15 @@
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
