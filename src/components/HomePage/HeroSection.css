@@ -206,7 +206,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .hero-title {
     font-size: 2.5rem;
   }
@@ -222,7 +222,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .hero-title {
     font-size: 2rem;
   }

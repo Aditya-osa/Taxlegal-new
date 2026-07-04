@@ -54,6 +54,7 @@
   border-radius: 999px;
   width: fit-content;
   margin-bottom: 20px;
+  visibility: hidden;
 }
 
 @media (max-width: 992px) {

@@ -12,10 +12,7 @@ const AboutSection = () => {
 
           {/* Left Content */}
           <div className="about-content-column">
-            <div className="subtitle-wrapper">
-              <p className="section-eyebrow">ABOUT TAXLEGAL</p>
-              <div className="subtitle-line"></div>
-            </div>
+
 
             <h2 className="section-title">
               Guiding Businesses Through <br />
