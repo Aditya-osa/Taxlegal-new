@@ -145,10 +145,11 @@ const InternshipPage = () => {
   return (
     <div className="internship-page-wrapper">
       <Header />
+      <main className="internship-main-content">
 
       {/* Hero Section */}
       <section className="internship-hero">
-        <div className="internship-container">
+        <div className="container internship-container">
           <span className="tl-hero-badge-pill">INTERNSHIP PROGRAM</span>
           <h1 className="internship-hero-title">Launch Your Career <br /> Before You Graduate</h1>
           <p className="internship-hero-desc">
@@ -162,7 +163,7 @@ const InternshipPage = () => {
 
       {/* Domains Section */}
       <section className="internship-domains">
-        <div className="internship-container">
+        <div className="container internship-container">
           <div className="section-header-center">
             <span className="internship-eyebrow text-red">INTERNSHIP DOMAINS</span>
             <h2 className="section-title">Choose the Domain That Matches Your Career Goals.</h2>
@@ -199,7 +200,7 @@ const InternshipPage = () => {
 
       {/* Program Overview Section */}
       <section className="internship-overview">
-        <div className="internship-container">
+        <div className="container internship-container">
           <span className="internship-eyebrow text-red-light">PROGRAM OVERVIEW</span>
           <h2 className="overview-title" style={{ marginBottom: 0 }}>On-Site, Practical-oriented Learning</h2>
         </div>
@@ -208,7 +209,7 @@ const InternshipPage = () => {
 
       {/* Why Choose Section */}
       <section className="internship-why">
-        <div className="internship-container">
+        <div className="container internship-container">
           <div className="section-header-center">
             <span className="internship-eyebrow text-red">WHY CHOOSE TAXLEGAL INTERNSHIP</span>
             <h2 className="section-title">This Isn't Just Another Internship.</h2>
@@ -240,7 +241,7 @@ const InternshipPage = () => {
 
       {/* FAQ Section */}
 
-
+      </main>
       <Footer />
     </div>
   );

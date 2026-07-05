@@ -147,7 +147,7 @@
    ========================================================= */
 
 /* 1. Consistent Top and Bottom Spacing */
-.about-section, .career-section, .features-section, .hero-section, .logos-section, .services-section, .team-section, .testimonials-section, .calculator-section, .footer-contact-section {
+.about-section, .career-section, .features-section, .logos-section, .services-section, .team-section, .testimonials-section, .calculator-section, .footer-contact-section {
   padding-top: 80px !important;
   padding-bottom: 80px !important;
 }
@@ -158,14 +158,14 @@
 }
 
 @media (max-width: 768px) {
-  .about-section, .career-section, .features-section, .hero-section, .logos-section, .services-section, .team-section, .testimonials-section, .calculator-section, .footer-contact-section {
+  .about-section, .career-section, .features-section, .logos-section, .services-section, .team-section, .testimonials-section, .calculator-section, .footer-contact-section {
     padding-top: 60px !important;
     padding-bottom: 60px !important;
   }
 }
 
 @media (max-width: 576px) {
-  .about-section, .career-section, .features-section, .hero-section, .logos-section, .services-section, .team-section, .testimonials-section, .calculator-section, .footer-contact-section {
+  .about-section, .career-section, .features-section, .logos-section, .services-section, .team-section, .testimonials-section, .calculator-section, .footer-contact-section {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
   }
@@ -180,12 +180,25 @@ section {
 /* 2. Single Centered Container (Max-Width 1280px) */
 .about-container, .career-container, .features-container, .hero-container, .logos-container, .services-component .container, .team-container, .testimonials-container, .cta-container, .footer-container {
   width: 100% !important;
-  max-width: 1280px !important;
+  max-width: var(--container-max-width) !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: var(--container-px) !important;
   padding-right: var(--container-px) !important;
   box-sizing: border-box;
+}
+
+.home-page-container .about-container,
+.home-page-container .career-container,
+.home-page-container .features-container,
+.home-page-container .hero-container,
+.home-page-container .logos-container,
+.home-page-container .services-component .container,
+.home-page-container .team-container,
+.home-page-container .testimonials-container,
+.home-page-container .cta-container,
+.home-page-container .footer-container {
+  padding-left: calc(var(--container-px) + 13px) !important;
 }
 
 /* Calculator container needs smaller max-width to look good, but we ensure its padding */

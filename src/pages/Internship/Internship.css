@@ -7,11 +7,13 @@
   overflow-x: hidden;
 }
 
+.internship-main-content .container,
+.internship-main-content .logos-container {
+  padding-left: calc(var(--container-px) + 13px) !important;
+}
+
 .internship-container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--container-px);
   box-sizing: border-box;
 }
 

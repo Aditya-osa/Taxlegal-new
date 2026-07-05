@@ -5,7 +5,7 @@ const AboutHeroSection = () => {
   return (
     <section className="about-hero-section">
       <div className="about-hero-overlay"></div>
-      <div className="about-hero-container">
+      <div className="container about-hero-container">
         <div className="about-hero-content">
           <p className="tl-hero-badge-pill">ABOUT TAXLEGAL</p>
           <h1 className="hero-title">Trusted Advisors.<br/> Practical Solutions.<br/> Lasting Relationships.</h1>

@@ -5,6 +5,11 @@
   min-height: 100vh;
 }
 
+.clients-main-content .container,
+.clients-main-content .logos-container {
+  padding-left: calc(var(--container-px) + 13px) !important;
+}
+
 /* HERO SECTION */
 .clients-hero-section {
   position: relative;

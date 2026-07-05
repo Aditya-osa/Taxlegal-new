@@ -44,10 +44,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
   text-align: left;
-  padding: 0 var(--container-px);
 }
 
 .about-hero-content {

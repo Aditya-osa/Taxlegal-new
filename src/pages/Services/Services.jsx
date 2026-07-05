@@ -489,12 +489,13 @@ const AnimatedCounter = ({ target, duration = 1600, suffix = "", separator = "" 
 
 const Services = () => {
   return (
-    <>
+    <div className="services-page-wrapper">
       <Header />
+      <main className="services-main-content">
 
       {/* ================= BANNER SECTION ================= */}
       <section className="services-banner">
-        <div className="banner-content">
+        <div className="container banner-content">
           <div className="services-intro-copy">
             <div className="tl-hero-badge-pill">OUR EXPERTISE & DOMAINS</div>
             <h1>
@@ -631,8 +632,9 @@ const Services = () => {
         {/* Bottom Expert Advice CTA Banner */}
 
       </section>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

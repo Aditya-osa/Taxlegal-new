@@ -134,10 +134,7 @@
 .services-component .service-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-      rgba(26, 58, 110, .98),
-      rgba(40, 75, 140, .95),
-      rgba(204, 34, 41, .92));
+  background: rgba(7, 106, 170, 0.95);
   padding: 32px 24px 24px;
   display: flex;
   flex-direction: column;

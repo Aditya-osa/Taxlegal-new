@@ -25,7 +25,6 @@
   align-items: center;
   justify-content: space-between;
   min-height: 72px;
-  padding: 0 var(--container-px);
 }
 
 

@@ -13,9 +13,17 @@
 
 
 .about-container {
-  max-width: 1440px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--container-px);
+}
+
+.about-main-content .container,
+.about-main-content .about-container,
+.about-main-content .logos-container,
+.about-main-content .team-container,
+.about-main-content .features-container {
+  padding-left: calc(var(--container-px) + 13px) !important;
 }
 
 /* Common Header Styles for Sections */

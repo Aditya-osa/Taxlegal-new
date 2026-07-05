@@ -49,14 +49,14 @@ const ContactUs = () => {
         <section
           className="contact-hero-section"
           style={{
-            background: `linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.75)), url('/assets/Internships/Contact.jpeg')`,
-            backgroundSize: 'cover',
+            background: `linear-gradient(rgba(10, 37, 64, 0.45), rgba(10, 37, 64, 0.45)), url('/assets/Contact/Contact.png')`,
+            backgroundSize: '100% 100%',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
           }}
         >
           <div className="contact-hero-overlay"></div>
-          <div className="contact-container contact-hero-container">
+          <div className="container contact-container contact-hero-container">
             <div className="contact-hero-content">
               <span className="tl-hero-badge-pill">Contact Us</span>
               <h1 className="contact-hero-title">
@@ -76,7 +76,7 @@ const ContactUs = () => {
           <div className="contact-bg-blob blob-2"></div>
           <div className="contact-bg-pattern"></div>
 
-          <div className="contact-container" style={{ position: 'relative', zIndex: 10 }}>
+          <div className="container contact-container" style={{ position: 'relative', zIndex: 10 }}>
 
             {/* Section Header */}
             {/* <div className="contact-form-header">

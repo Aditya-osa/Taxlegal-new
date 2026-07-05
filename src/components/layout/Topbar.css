@@ -15,7 +15,7 @@
   justify-content: center;
   gap: 30px;
 
-  padding: 8px 28px;
+  padding: 8px var(--container-px);
   min-height: 44px;
 }
 

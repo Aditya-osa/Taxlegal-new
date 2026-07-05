@@ -32,6 +32,15 @@ body {
   transition: all 0.45s ease;
 }
 
+.services-main-content .container,
+.services-main-content .services-section,
+.services-main-content .legal-hero-banner,
+.services-main-content .legal-services-container,
+.services-main-content .why-choose-section,
+.services-main-content .logos-container {
+  padding-left: calc(var(--container-px) + 13px) !important;
+}
+
 .tl-stab:hover {
   background: #f7f7f7;
   /* light hover */
@@ -43,12 +52,12 @@ body {
 .services-banner {
   position: relative;
   width: 100%;
-  min-height: 75vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
     url("/assets/Services/service_herosection.jpg") no-repeat center center / cover;
-  padding: 80px var(--container-px) 90px;
+  padding: 40px 0 40px;
   overflow: hidden;
 }
 
@@ -62,9 +71,7 @@ body {
 .banner-content {
   position: relative;
   z-index: 2;
-  max-width: 1300px;
   width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

@@ -6,9 +6,10 @@
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 24px;
+  padding-left: calc(var(--container-px) + 13px) !important;
+  padding-right: var(--container-px) !important;
 }
 
 .footer-grid {

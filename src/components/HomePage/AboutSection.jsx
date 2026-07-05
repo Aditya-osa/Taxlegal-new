@@ -21,13 +21,13 @@ const AboutSection = () => {
 
             <div className="about-description">
               <p>
-                Established in 1996, TaxLegal is a multidisciplinary professional
+                Established in 1996, <strong>TaxLegal</strong> is a multidisciplinary professional
                 services firm providing integrated solutions across accounting,
                 taxation, audit, corporate compliance, and legal advisory.
               </p>
 
               <p>
-                For nearly three decades, we have worked with entrepreneurs,
+                For nearly <strong>three decades</strong>, we have worked with entrepreneurs,
                 businesses, institutions, housing societies, and charitable
                 organizations, helping them navigate statutory obligations,
                 regulatory requirements, and evolving business challenges with
@@ -45,7 +45,7 @@ const AboutSection = () => {
           {/* Right Image */}
           <div className="about-image-column">
             <img
-              src="/assets/Home Page/Single.png"
+              src="/assets/Home Page/image.png"
               alt="About TaxLegal"
               className="about-image"
             />
