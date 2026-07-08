@@ -70,11 +70,6 @@
   cursor: pointer;
 }
 
-.rating {
-  display: flex;
-  gap: 4px;
-  margin-bottom: 20px;
-}
 
 .testimonial-text {
   color: var(--body-text);
