@@ -3,10 +3,10 @@ export const teamData = [
     id: 1,
     slug: 'adv-suresh-sharma',
     name: 'Adv. Suresh Sharma',
-    role: 'IT & GST Taxation Matters',
+    role: 'Senior Tax Practitioner',
     shortDescription: 'GST Arrest & Court Cases',
     image: "/assets/team/suresh-sir.png",
-    detailedBio: "Adv. Suresh Sharma is a highly experienced legal professional specializing in IT and GST Taxation matters. With decades of experience, he has successfully represented numerous clients in complex tax litigations, GST arrests, and challenging court cases. His deep understanding of tax regulations and proactive approach helps businesses navigate intricate compliance structures with ease.",
+    detailedBio: "Adv. Suresh Sharma (M.Com, D.F.M., LL.B.) is a senior tax practitioner with over three decades of experience in India’s tax landscape. His career has closely followed the country’s journey from Sales Tax and VAT to the current GST regime. Over the years, he has worked extensively across Income Tax, Sales Tax, VAT, LBT, Service Tax, and GST matters.\n\nHis practice focuses on guiding businesses through assessments, departmental proceedings, appeals, and litigation. He is particularly known for his practical understanding of how tax laws are applied on the ground and how procedural lapses often become the real cause of disputes. With long-standing courtroom experience, he brings clarity to complex situations by focusing on process, timelines, and lawful response rather than technical complexity.\n\nThrough his work as a practitioner and author, Adv. Suresh Sharma consistently emphasizes fairness, legal discipline, and informed decision-making.\n\nAdv. Suresh Sharma is the author of two books on GST:\n• GST: Search, Seizure, Summons and Arrest\n• GST Litigation: A Practical Guide",
     expertise: [
       "GST Advisory and Compliance",
       "Income Tax Assessments",
@@ -14,8 +14,9 @@ export const teamData = [
       "Tax Litigation"
     ],
     education: [
-      "LL.B., Advanced Tax Laws",
-      "B.Com"
+      "M.Com",
+      "D.F.M.",
+      "LL.B."
     ],
     linkedin: "https://www.linkedin.com/in/adv-suresh-sharma/",
     isMainTeam: true
@@ -50,21 +51,28 @@ export const teamData = [
   },
   {
     id: 3,
-    slug: 'adv-vaishnavi-shukla',
-    name: 'Adv. Vaishnavi Shukla',
-    role: 'Specialisation',
-    shortDescription: 'Criminal & Civil Matters',
+    slug: 'adv-vaishnavi-sharma',
+    name: 'Adv. Vaishnavi Sharma',
+    role: 'Advocate & ADR Professional',
+    shortDescription: 'Civil, Commercial & Corporate Matters',
     image: "/assets/team/vaishnavi ma'am .png",
-    detailedBio: "Adv. Vaishnavi Shukla is a dedicated legal practitioner focusing on Criminal and Civil matters. Her analytical skills and empathetic approach to client counseling make her an invaluable asset to the team. She has a strong track record of securing favorable outcomes in complex civil litigation and dispute resolution.",
+    detailedBio: "Adv. Vaishnavi Sharma is an Advocate and Alternative Dispute Resolution (ADR) Professional with experience in litigation, corporate advisory, commercial transactions, and dispute resolution. She is an IIAM Certified Arbitrator accredited by the Indian Institute of Arbitration & Mediation and holds a BLS/LLB, a Master's in Business Law, and a PGDM in Human Resource Management.\n\nHer practice focuses on delivering strategic legal solutions across civil, commercial, and corporate matters. She advises businesses and individuals on contract drafting and negotiation, commercial documentation, regulatory compliance, employment and labour laws, dispute resolution, and legal risk management.\n\nAdv. Vaishnavi has extensive experience in drafting and reviewing commercial agreements, Service Level Agreements (SLAs), Memorandums of Understanding (MOUs), and other contractual documents. Her work also includes recovery proceedings, matters under the Negotiable Instruments Act, customs refund appeals, arbitration proceedings, corporate compliance, legal due diligence, and case assessment. She has represented clients before the Bombay High Court and various courts, tribunals, and judicial forums across Mumbai and Navi Mumbai.\n\nWith a practical, solution-oriented approach, she combines legal precision with commercial understanding to help clients navigate complex legal challenges, mitigate risk, and safeguard their business interests.",
     expertise: [
-      "Civil Litigation",
-      "Criminal Defense",
-      "Family Law",
-      "Alternative Dispute Resolution"
+      "Contract Drafting, Review & Negotiation",
+      "Commercial Agreements, SLAs & Documentation",
+      "Memorandums of Understanding (MOUs)",
+      "Civil & Commercial Litigation",
+      "Arbitration & Alternative Dispute Resolution (ADR)",
+      "Employment & Labour Law Advisory",
+      "Recovery Proceedings & Negotiable Instruments Act Matters",
+      "Corporate Compliance & Regulatory Advisory",
+      "Legal Due Diligence & Documentation Review",
+      "Case Assessment & Legal Strategy"
     ],
     education: [
-      "LL.B.",
-      "B.A. LL.B. (Hons.)"
+      "BLS/LLB",
+      "Master's in Business Law",
+      "PGDM in Human Resource Management"
     ],
     linkedin: "https://www.linkedin.com/in/advocatevaishnavisharma/",
     isMainTeam: true
@@ -73,10 +81,10 @@ export const teamData = [
     id: 4,
     slug: 'adv-varun-sharma',
     name: 'Adv. Varun Sharma',
-    role: 'Specialization',
+    role: 'Taxation Law Specialist',
     shortDescription: 'Direct and Indirect Tax Expert',
     image: "/assets/team/varun-sharma.png",
-    detailedBio: "Adv. Varun Sharma is a recognized expert in both Direct and Indirect Tax matters. He advises corporations and high-net-worth individuals on tax optimization, structuring, and compliance. His nuanced understanding of recent tax amendments helps clients mitigate risks and align their business strategies efficiently.",
+    detailedBio: "Adv. Varun Sharma (B.Com, LL.B, LL.M – Taxation) is a second-generation legal professional with a specialization in taxation law, encompassing both direct and indirect taxes. His engagement with taxation began early in his legal education, shaped by a sustained interest in the structural, procedural, and constitutional dimensions of fiscal law.\n\nHe holds a Master’s degree in Taxation Laws from O.P. Jindal Global Law School, where his academic training strengthened his analytical approach to statutory interpretation, adjudication, and appellate strategy. His professional development has been marked by close, hands-on exposure to litigation, enabling him to engage with GST disputes across enforcement, adjudication, and appellate stages.\n\nAdv. Varun Sharma is the author of three books on GST:\n• GST: Search, Seizure, Summons and Arrest\n• GST Litigation: A Practical Guide\n• First-Generation Lawyer",
     expertise: [
       "Direct Taxation",
       "Indirect Taxation (GST, Customs)",
@@ -84,8 +92,9 @@ export const teamData = [
       "Appellate Advocacy"
     ],
     education: [
+      "B.Com",
       "LL.B.",
-      "Chartered Accountant (CA)"
+      "LL.M. (Taxation)"
     ],
     linkedin: "https://www.linkedin.com/in/adv-varun-sharma/",
     isMainTeam: false
@@ -115,19 +124,25 @@ export const teamData = [
     id: 6,
     slug: 'cs-sanjay-dhadich',
     name: 'CS Sanjay Dhadich',
-    role: 'Legal Audit & Compliance Expert',
-    shortDescription: 'CS Corporate Laws | Foreign Exchange Laws | Company Formation | ROC Matter',
+    role: 'Practising Company Secretary',
+    shortDescription: 'Corporate Laws | Foreign Exchange Laws | FEMA & Corporate Compliance',
     image: "/assets/team/sanjay.jpg",
-    detailedBio: "CS Sanjay Dhadich is a seasoned Company Secretary and Legal Audit expert. He excels in guiding companies through the complex landscape of corporate governance, foreign exchange laws (FEMA), and ROC matters. He is instrumental in helping startups and established businesses with seamless company formation and statutory compliance.",
+    detailedBio: "CS Sanjay Dadhichi is the Founder of Singh Dadhichi Consultants LLP and a Practising Company Secretary with over a decade of experience in corporate laws, regulatory advisory, and business consulting. An Associate Member of the Institute of Company Secretaries of India (ICSI) and a Commerce graduate (B.Com), he advises businesses on complex legal, regulatory, and governance matters with a strategic and solution-oriented approach.\n\nHis practice focuses on corporate structuring, foreign investment regulations, and legal compliance for domestic and international businesses. He has extensive experience in the incorporation of foreign subsidiaries, companies with foreign promoters, and Section 8 companies, while also advising on Foreign Direct Investment (FDI), Overseas Direct Investment (ODI), SME listings, corporate restructuring, and regulatory approvals under the Companies Act, 2013 and the Foreign Exchange Management Act (FEMA).\n\nCS Sanjay also provides comprehensive advisory on corporate governance, strategic business decisions, company law compliance, and legal documentation. His expertise includes drafting and reviewing commercial agreements, regulatory filings, and corporate legal documentation, enabling organizations to operate with confidence while maintaining full compliance with evolving statutory requirements.",
     expertise: [
-      "Corporate Governance & Compliance",
-      "FEMA & Foreign Exchange Laws",
-      "Company Formation & ROC Filings",
-      "Legal Audits"
+      "Corporate Legal Consulting",
+      "Business Advisory & Strategic Consulting",
+      "Company Law Compliance",
+      "Foreign Direct Investment (FDI) & Overseas Direct Investment (ODI)",
+      "Incorporation of Foreign Companies & Section 8 Companies",
+      "FEMA & Corporate Regulatory Advisory",
+      "SME Listing & Corporate Restructuring",
+      "Drafting & Review of Commercial Agreements",
+      "Corporate Governance & Secretarial Compliance",
+      "Compounding of Offences under the Companies Act, 2013 & FEMA"
     ],
     education: [
-      "Fellow Company Secretary (FCS)",
-      "LL.B."
+      "Associate Company Secretary (ACS)",
+      "B.Com"
     ],
     linkedin: "https://www.linkedin.com/in/sanjay-dadhich-91743a286?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false
@@ -169,13 +184,23 @@ export const teamData = [
   {
     id: 9,
     slug: 'ashutosh-agrawal',
-    name: 'Ashutosh Agrawal',
-    role: 'Tax Consultant',
-    shortDescription: 'Tax Planning & Advisory',
+    name: 'CA Ashutosh Agrawal',
+    role: 'Finance & Audit Professional',
+    shortDescription: 'Assurance, Compliance & Advisory',
     image: "/assets/team/Ashutosh-Agrawal.png",
-    detailedBio: "Ashutosh Agrawal specializes in tax planning and financial advisory for individuals and businesses. He brings a detail-oriented approach to complex tax structuring and ensures clients achieve optimal financial outcomes.",
-    expertise: ["Tax Planning", "Financial Advisory", "Corporate Tax"],
-    education: ["B.Com", "Taxation Expert"],
+    detailedBio: "CA Ashutosh Agrawal is a finance and audit professional with expertise in assurance, compliance, risk management, and business advisory. As the Proprietor of Ashutosh Agrawal & Associates, he advises organizations on strengthening financial controls, enhancing operational efficiency, and maintaining regulatory compliance through a structured and analytical approach.\n\nHis practice focuses on internal audits, risk assessment, fraud detection, and information systems audits, helping businesses identify vulnerabilities, improve governance frameworks, and establish robust financial and operational controls. He works closely with organizations to ensure compliance while driving process improvements that support sustainable growth.\n\nPrior to establishing his independent practice, he served as a Partner at Agrawal Tayal & Associates, where he was involved in audit engagements, management consultancy assignments, and the resolution of direct and indirect tax matters. His professional experience spans financial reporting, compliance management, accounts receivable oversight, credit control, and business process optimization.",
+    expertise: [
+      "Bookkeeping & Financial Record Management",
+      "Financial Accounting & Reporting",
+      "Financial Planning & Business Advisory",
+      "Budgeting & Financial Forecasting",
+      "Tax Advisory & Regulatory Compliance",
+      "Personal Tax Planning & Tax Optimization"
+    ],
+    education: [
+      "Chartered Accountant (CA)",
+      "B.Com"
+    ],
     linkedin: "https://www.linkedin.com/in/ca-ashutosh-agrawal-2421a614b/",
     isMainTeam: false
   },
