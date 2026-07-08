@@ -21,7 +21,6 @@ import HeroSection from '../../components/HomePage/HeroSection';
 import LogosSection from '../../components/HomePage/LogosSection';
 import AboutSection from '../../components/HomePage/AboutSection';
 import ServicesSection from '../../components/HomePage/ServicesSection';
-import FeaturesSection from '../../components/HomePage/FeaturesSection';
 import TeamSection from '../../components/HomePage/TeamSection';
 import TestimonialsSection from '../../components/HomePage/TestimonialsSection';
 import CareerSection from '../../components/HomePage/CareerSection';
@@ -39,7 +38,6 @@ const Home = () => {
           <LogosSection />
           <AboutSection />
           <ServicesSection />
-          <FeaturesSection />
           <TeamSection />
           <TestimonialsSection />
           <CareerSection />

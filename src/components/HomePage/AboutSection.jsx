@@ -88,7 +88,7 @@ const AboutSection = () => {
             <p className="feature-box-desc">Maintaining the highest standards of professionalism, ethics and confidentiality.</p>
           </div>
         </div>
-        <button className="btn-navy" style={{ marginTop: '10px', alignSelf: 'center' }} onClick={() => navigate('/about')}>Read More About Us</button>
+        <button className="btn-navy about-read-more-btn" style={{ marginTop: '10px', alignSelf: 'center' }} onClick={() => navigate('/about')}>Read More About Us</button>
 
       </div>
     </section >

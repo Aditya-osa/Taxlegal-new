@@ -17,6 +17,7 @@ export const teamData = [
       "LL.B., Advanced Tax Laws",
       "B.Com"
     ],
+    linkedin: "https://www.linkedin.com/in/adv-suresh-sharma/",
     isMainTeam: true
   },
   {
@@ -37,6 +38,7 @@ export const teamData = [
       "LL.M., Criminal Law",
       "LL.B."
     ],
+    linkedin: "https://www.linkedin.com/in/adv-vivek-sharma/",
     isMainTeam: true
   },
   {
@@ -57,6 +59,7 @@ export const teamData = [
       "LL.B.",
       "B.A. LL.B. (Hons.)"
     ],
+    linkedin: "https://www.linkedin.com/in/advocatevaishnavisharma/",
     isMainTeam: true
   },
   {
@@ -77,6 +80,7 @@ export const teamData = [
       "LL.B.",
       "Chartered Accountant (CA)"
     ],
+    linkedin: "https://www.linkedin.com/in/adv-varun-sharma/",
     isMainTeam: false
   },
   {
@@ -97,6 +101,7 @@ export const teamData = [
       "LL.M., Maritime Law",
       "LL.B."
     ],
+    linkedin: "https://www.linkedin.com/in/alok-shukla-40a296a7/",
     isMainTeam: false
   },
   {
@@ -117,6 +122,7 @@ export const teamData = [
       "Fellow Company Secretary (FCS)",
       "LL.B."
     ],
+    linkedin: "https://www.linkedin.com/in/sanjay-dadhich-91743a286?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false
   },
   {
@@ -149,6 +155,7 @@ export const teamData = [
     detailedBio: "Ajay R. Mane is an advocate practising in commercial litigation and arbitration, with a focus on contractual and civil disputes before the Bombay High Court and arbitral tribunals. He has represented clients in proceedings under Sections 9, 11, 34, and 37 of the Arbitration and Conciliation Act, 1996, from the pre-arbitration stage through post-award challenges.\n\nHis practice includes drafting pleadings, written submissions, affidavits, case strategy, evidence structuring, and cross-examination preparation. He has also worked on commercial agreements and cross-border regulatory review under FEMA, 1999, with a transaction advisory practice in Pune.\n\nAjay holds an LLM in Alternative Dispute Resolution from Jindal Global Law School, O.P. Jindal Global University, an Advanced Diploma in ADR from NALSAR University of Law, Hyderabad, and a B.A. LL.B. (Hons.) from Maharashtra National Law University, Aurangabad.",
     expertise: ["Commercial Litigation", "Arbitration", "Contractual & Civil Disputes", "Transactional Matters & FEMA"],
     education: ["LL.M., Alternative Dispute Resolution", "B.A. LL.B. (Hons.)", "Advanced Diploma in ADR"],
+    linkedin: "https://www.linkedin.com/in/ajay-mane07?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false
   },
   {
@@ -161,6 +168,7 @@ export const teamData = [
     detailedBio: "Ashutosh Agrawal specializes in tax planning and financial advisory for individuals and businesses. He brings a detail-oriented approach to complex tax structuring and ensures clients achieve optimal financial outcomes.",
     expertise: ["Tax Planning", "Financial Advisory", "Corporate Tax"],
     education: ["B.Com", "Taxation Expert"],
+    linkedin: "https://www.linkedin.com/in/ca-ashutosh-agrawal-2421a614b/",
     isMainTeam: false
   },
   {
@@ -173,6 +181,7 @@ export const teamData = [
     detailedBio: "Bipin Singh has a strong track record in civil and corporate law. He helps organizations navigate business disputes, draft critical legal documents, and minimize operational legal risks.",
     expertise: ["Civil Litigation", "Corporate Law", "Drafting & Vetting"],
     education: ["LL.B."],
+    linkedin: "https://www.linkedin.com/in/cs-bipin-singh-22ab70a8/",
     isMainTeam: false
   },
   {
@@ -197,6 +206,7 @@ export const teamData = [
     detailedBio: "Kartikyan provides key support in regulatory advisory and tax assessments. He plays a vital role in researching case laws and preparing documentation for client representations.",
     expertise: ["Regulatory Advisory", "Tax Assessments", "Legal Research"],
     education: ["B.A. LL.B."],
+    linkedin: "https://www.linkedin.com/in/karthikeyan-tc?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false
   },
   {
@@ -209,18 +219,20 @@ export const teamData = [
     detailedBio: "Lokesh Rana offers expert guidance on corporate and commercial legal matters. His focus is on ensuring seamless corporate transactions and resolving commercial disputes efficiently.",
     expertise: ["Corporate Transactions", "Commercial Law", "Dispute Resolution"],
     education: ["LL.B."],
+    linkedin: "https://www.linkedin.com/in/ca-lokkeesh-rana-b59127193?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false
   },
   {
     id: 14,
-    slug: 'sahil',
-    name: 'Sahil',
+    slug: 'adv-sahil-kumar',
+    name: 'Adv. Sahil Kumar',
     role: 'Associate',
     shortDescription: 'Civil & Commercial Litigation',
     image: "/assets/team/Sahil.png",
-    detailedBio: "Sahil is an Associate whose practice focuses on civil litigation and commercial litigation, ensuring that all client cases are prepared with the highest level of accuracy and thoroughness.",
+    detailedBio: "Adv. Sahil Kumar is an Associate whose practice focuses on civil litigation and commercial litigation, ensuring that all client cases are prepared with the highest level of accuracy and thoroughness.",
     expertise: ["Civil Litigation", "Commercial Litigation"],
     education: ["B.Com", "LL.B."],
+    linkedin: "https://www.linkedin.com/in/adv-sahil-kumar-6315b7129?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false
   }
 ];

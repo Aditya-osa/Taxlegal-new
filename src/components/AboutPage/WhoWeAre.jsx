@@ -14,7 +14,7 @@ const WhoWeAre = () => {
           </div>
 
           <h2 className="section-title">
-            Guiding Businesses Through  <br /> Growth,Governance and Compliance
+            Guiding Businesses Through  <br /> Growth,  Governance and Compliance
           </h2>
         </div>
 

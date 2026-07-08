@@ -190,6 +190,10 @@
   .about-features-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .about-read-more-btn {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 576px) {
