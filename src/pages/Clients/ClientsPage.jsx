@@ -3,7 +3,6 @@ import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import WhyChooseUsSection
   from "../../components/AboutPage/WhyChooseUsSection";
-import { Star } from "lucide-react";
 import "./ClientsPage.css";
 import testimonialsData from "../../data/testimonialsData.json";
 import TestimonialModal from "../../components/common/TestimonialModal";
@@ -91,11 +90,6 @@ const ClientsPage = () => {
                 <div className="marquee-content marquee-left">
                   {testimonialsRow1.map((t, index) => (
                     <div key={`t-r1-${index}`} className="testimony-card">
-                      <div className="testimony-stars" aria-label={`Rated ${t.rating || 5} out of 5`}>
-                        {[...Array(t.rating || 5)].map((_, i) => (
-                          <Star key={i} size={16} fill="#FFC107" color="#FFC107" />
-                        ))}
-                      </div>
                       <p className="testimony-text">"{t.excerpt || t.testimonial}"</p>
                       <div className="testimony-footer">
                         <div className="testimony-author">
@@ -120,11 +114,6 @@ const ClientsPage = () => {
                   {/* Duplicate set for seamless looping */}
                   {testimonialsRow1.map((t, index) => (
                     <div key={`t-r1-dup-${index}`} className="testimony-card" aria-hidden="true">
-                      <div className="testimony-stars">
-                        {[...Array(t.rating || 5)].map((_, i) => (
-                          <Star key={i} size={16} fill="#FFC107" color="#FFC107" />
-                        ))}
-                      </div>
                       <p className="testimony-text">"{t.excerpt || t.testimonial}"</p>
                       <div className="testimony-footer">
                         <div className="testimony-author">
@@ -154,11 +143,6 @@ const ClientsPage = () => {
                 <div className="marquee-content marquee-right">
                   {testimonialsRow2.map((t, index) => (
                     <div key={`t-r2-${index}`} className="testimony-card">
-                      <div className="testimony-stars" aria-label={`Rated ${t.rating || 5} out of 5`}>
-                        {[...Array(t.rating || 5)].map((_, i) => (
-                          <Star key={i} size={16} fill="#FFC107" color="#FFC107" />
-                        ))}
-                      </div>
                       <p className="testimony-text">"{t.excerpt || t.testimonial}"</p>
                       <div className="testimony-footer">
                         <div className="testimony-author">
@@ -183,11 +167,6 @@ const ClientsPage = () => {
                   {/* Duplicate set for seamless looping */}
                   {testimonialsRow2.map((t, index) => (
                     <div key={`t-r2-dup-${index}`} className="testimony-card" aria-hidden="true">
-                      <div className="testimony-stars">
-                        {[...Array(t.rating || 5)].map((_, i) => (
-                          <Star key={i} size={16} fill="#FFC107" color="#FFC107" />
-                        ))}
-                      </div>
                       <p className="testimony-text">"{t.excerpt || t.testimonial}"</p>
                       <div className="testimony-footer">
                         <div className="testimony-author">

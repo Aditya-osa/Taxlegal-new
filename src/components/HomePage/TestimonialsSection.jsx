@@ -25,11 +25,6 @@ const TestimonialsSection = () => {
         <div className="testimonials-carousel-track">
           {testimonialsData.map((testimonial, index) => (
             <div key={`testimonial-1-${testimonial.id}-${index}`} className="testimonial-card">
-              <div className="rating" aria-label={`Rated ${testimonial.rating || 5} out of 5`}>
-                {[...Array(testimonial.rating || 5)].map((_, i) => (
-                  <svg key={i} xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFC107" stroke="#FFC107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                ))}
-              </div>
               <p className="testimonial-text">"{testimonial.excerpt}"</p>
               <div className="testimonial-footer">
                 <div className="testimonial-author">
@@ -56,11 +51,6 @@ const TestimonialsSection = () => {
           {/* Duplicate set for seamless looping */}
           {testimonialsData.map((testimonial, index) => (
             <div key={`testimonial-2-${testimonial.id}-${index}`} className="testimonial-card" aria-hidden="true">
-              <div className="rating">
-                {[...Array(testimonial.rating || 5)].map((_, i) => (
-                  <svg key={i} xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFC107" stroke="#FFC107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                ))}
-              </div>
               <p className="testimonial-text">"{testimonial.excerpt}"</p>
               <div className="testimonial-footer">
                 <div className="testimonial-author">

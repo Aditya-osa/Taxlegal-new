@@ -368,10 +368,6 @@
   cursor: pointer;
 }
 
-.testimony-stars {
-  display: flex;
-  gap: 4px;
-}
 
 .testimony-text {
   font-family: 'Poppins', sans-serif;
