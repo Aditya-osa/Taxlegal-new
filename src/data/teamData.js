@@ -143,6 +143,7 @@ export const teamData = [
       "Chartered Accountant (FCA)",
       "B.Com"
     ],
+    linkedin: "https://www.linkedin.com/in/narendra-kumar-rajput-b170681/",
     isMainTeam: false
   },
   {
