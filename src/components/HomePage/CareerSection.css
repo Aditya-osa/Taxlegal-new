@@ -1,6 +1,9 @@
 .career-section {
   padding: var(--section-py) 0;
-  background: var(--theme-gradient);
+  background-image: linear-gradient(rgba(11, 46, 89, 0.75), rgba(7, 106, 170, 0.75)), url('/assets/Home Page/Internship-program.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--white);
   font-family: var(--font-head);
 }
@@ -19,7 +22,7 @@
 }
 
 .career-subtitle {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--white);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -36,14 +39,14 @@
 }
 
 .career-italic {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--white);
   font-style: italic;
   font-size: 1.1rem;
   margin-bottom: 24px;
 }
 
 .career-desc {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--white);
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -175,8 +178,9 @@
     flex-direction: column;
     gap: 50px;
   }
-  
-  .career-content-column, .career-criteria-column {
+
+  .career-content-column,
+  .career-criteria-column {
     width: 100%;
   }
 }
@@ -185,11 +189,11 @@
   .internship-badges {
     grid-template-columns: 1fr;
   }
-  
+
   .career-title {
     font-size: 2rem;
   }
-  
+
   .criteria-card {
     padding: 24px;
   }

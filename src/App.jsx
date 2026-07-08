@@ -6,6 +6,7 @@ import './App.css'
 import ContactUs from './pages/ContactUs/ContactUs';
 import InternshipPage from './pages/Internship/InternshipPage';
 import ClientsPage from './pages/Clients/ClientsPage';
+import TeamMemberProfile from './pages/TeamMemberProfile/TeamMemberProfile';
 import DisclaimerModal from './components/common/DisclaimerModal';
 import ScrollToTop from './components/common/ScrollToTop';
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/internship" element={<InternshipPage />} />
         <Route path="/clients" element={<ClientsPage />} />
+        <Route path="/team/:slug" element={<TeamMemberProfile />} />
       </Routes>
     </>
   )

@@ -25,6 +25,7 @@ import FeaturesSection from '../../components/HomePage/FeaturesSection';
 import TeamSection from '../../components/HomePage/TeamSection';
 import TestimonialsSection from '../../components/HomePage/TestimonialsSection';
 import CareerSection from '../../components/HomePage/CareerSection';
+import WhyChooseUsSection from '../../components/AboutPage/WhyChooseUsSection';
 import Footer from '../../components/layout/Footer';
 
 const Home = () => {
@@ -42,6 +43,7 @@ const Home = () => {
           <TeamSection />
           <TestimonialsSection />
           <CareerSection />
+          <WhyChooseUsSection />
         </main>
       </div>
       <Footer />

@@ -188,7 +188,7 @@ const InternshipPage = () => {
                   </p>
                 </div>
                 <div className="domain-apply-wrap" style={{ marginTop: 'auto', paddingTop: '20px' }}>
-                  <a href={`mailto:info@taxlegal.in?subject=Internship Application - ${item.title}`} className="internship-btn-red" style={{ display: 'inline-block', width: '100%', textAlign: 'center', padding: '12px 12px', fontSize: '1rem', borderRadius: '6px' }}>
+                  <a href="https://taxlegal.bitrix24.site/" target="_blank" rel="noopener noreferrer" className="internship-btn-red" style={{ display: 'inline-block', width: '100%', textAlign: 'center', padding: '12px 12px', fontSize: '1rem', borderRadius: '6px' }}>
                     Apply Now
                   </a>
                 </div>

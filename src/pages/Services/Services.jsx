@@ -493,145 +493,145 @@ const Services = () => {
       <Header />
       <main className="services-main-content">
 
-      {/* ================= BANNER SECTION ================= */}
-      <section className="services-banner">
-        <div className="container banner-content">
-          <div className="services-intro-copy">
-            <div className="tl-hero-badge-pill">OUR EXPERTISE & DOMAINS</div>
-            <h1>
-              Three Decades of <br />Tax and Legal Excellence
-            </h1>
-            <p>
-              Delivering integrated tax, regulatory and legal solutions through advisory, compliance and dispute resolution.
-            </p>
-            <div className="services-hero-actions">
-              <a href="#services" className="services-btn services-btn--primary">
-                Explore All Domains
-              </a>
-            </div>
-          </div>
-
-          <div className="services-hero-meta-card">
-            <div className="meta-card-stat">
-              <span className="meta-stat-num">
-                <AnimatedCounter target={30} suffix="+" /> Years
-              </span>
-              <span className="meta-stat-label">of Experience</span>
-            </div>
-            <div className="meta-card-divider"></div>
-            <div className="meta-card-stat">
-              <span className="meta-stat-num">
-                <AnimatedCounter target={10000} separator="," suffix="+" />
-              </span>
-              <span className="meta-stat-label">Customers Served</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <LogosSection />
-      <h1 className="section-heading">Our Practice Areas</h1>
-
-      {/* ================= SERVICES GRID ================= */}
-      <section id="services" className="services-section">
-        <div className="services-grid">
-          {services.map((service) => (
-            <div className="service-card" key={service.id}>
-              <img
-                src={service.image}
-                alt={service.title}
-                className="service-image"
-              />
-
-              <div className="service-title">
-                <h3>{service.title}</h3>
+        {/* ================= BANNER SECTION ================= */}
+        <section className="services-banner">
+          <div className="container banner-content">
+            <div className="services-intro-copy">
+              <div className="tl-hero-badge-pill">OUR EXPERTISE & DOMAINS</div>
+              <h1>
+                Three Decades of <br />Tax and Legal Excellence
+              </h1>
+              <p>
+                Delivering integrated tax, regulatory and legal solutions through advisory, compliance and dispute resolution.
+              </p>
+              <div className="services-hero-actions">
+                <a href="#services" className="services-btn services-btn--primary">
+                  Explore All Domains
+                </a>
               </div>
+            </div>
 
-              <div className="service-overlay">
-                <div className="service-tags">
-                  {service.tags.map((tag, index) => (
-                    <span key={index}>{tag}</span>
-                  ))}
+            <div className="services-hero-meta-card">
+              <div className="meta-card-stat">
+                <span className="meta-stat-num">
+                  <AnimatedCounter target={30} suffix="+" /> Years
+                </span>
+                <span className="meta-stat-label">of Experience</span>
+              </div>
+              <div className="meta-card-divider"></div>
+              <div className="meta-card-stat">
+                <span className="meta-stat-num">
+                  <AnimatedCounter target={10000} separator="," suffix="+" />
+                </span>
+                <span className="meta-stat-label">Customers Served</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <LogosSection />
+        <h1 className="section-heading">Our Practice Areas</h1>
+
+        {/* ================= SERVICES GRID ================= */}
+        <section id="services" className="services-section">
+          <div className="services-grid">
+            {services.map((service) => (
+              <div className="service-card" key={service.id}>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="service-image"
+                />
+
+                <div className="service-title">
+                  <h3>{service.title}</h3>
+                </div>
+
+                <div className="service-overlay">
+                  <div className="service-tags">
+                    {service.tags.map((tag, index) => (
+                      <span key={index}>{tag}</span>
+                    ))}
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+
+          <div className="services-cta-container">
+            <Link to="/contact" className="services-btn services-btn--primary">
+              Contact Us to Know More
+            </Link>
+          </div>
+        </section>
+
+        {/* ================= LEGAL ADVISORY SERVICES SECTION ================= */}
+        {/* <h1 className="section-heading">About Our Legal Advisory Services</h1> */}
+
+        <section id="legal-advisory" className="legal-advisory-section">
+          {/* Top Hero Banner */}
+          <div className="legal-hero-banner">
+            <div className="legal-hero-content">
+              <div className="legal-eyebrow">
+                <Scale size={18} />
+                <span>OUR LEGAL ADVISORY SERVICES</span>
+              </div>
+              <h2>
+                Strategic Legal Expertise <br /> Business-Focused Solutions
+                <br />
+                Trusted Representation.
+              </h2>
+              <p>
+                Whether you are an individual, entrepreneur, financial institution, corporate house,
+                or multinational organization, TaxLegal provides comprehensive legal advisory and
+                dispute resolution services across diverse areas of law.
+              </p>
+              <div className="legal-hero-actions">
+                <Link to="/contact" className="services-btn legal-btn--primary">
+                  SCHEDULE A CONSULTATION &rarr;
+                </Link>
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="services-cta-container">
-          <Link to="/contact" className="services-btn services-btn--primary">
-            Contact Us to Know More
-          </Link>
-        </div>
-      </section>
-
-      {/* ================= LEGAL ADVISORY SERVICES SECTION ================= */}
-      {/* <h1 className="section-heading">About Our Legal Advisory Services</h1> */}
-
-      <section id="legal-advisory" className="legal-advisory-section">
-        {/* Top Hero Banner */}
-        <div className="legal-hero-banner">
-          <div className="legal-hero-content">
-            <div className="legal-eyebrow">
-              <Scale size={18} />
-              <span>OUR LEGAL ADVISORY SERVICES</span>
+          {/* 9 Legal Services Grid */}
+          <div className="legal-services-container">
+            <div className="legal-services-grid">
+              {legalAdvisoryServices.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div className="legal-card" key={item.id}>
+                    <div className="legal-card-header">
+                      <div className="legal-card-num">
+                        {item.num}
+                      </div>
+                      <div className="legal-card-icon">
+                        <Icon size={34} strokeWidth={1.5} />
+                      </div>
+                    </div>
+                    <h3 className="legal-card-title">{item.title}</h3>
+                    <p className="legal-card-desc">{item.description}</p>
+                  </div>
+                );
+              })}
             </div>
-            <h2>
-              Strategic Legal Expertise. Business-Focused Solutions.
-              <br />
-              Trusted Representation.
-            </h2>
-            <p>
-              Whether you are an individual, entrepreneur, financial institution, corporate house,
-              or multinational organization, TaxLegal provides comprehensive legal advisory and
-              dispute resolution services across diverse areas of law.
-            </p>
-            <div className="legal-hero-actions">
+          </div>
+
+          {/* Why Clients Choose TaxLegal */}
+          <div className="why-choose-section">
+            <h2 className="why-choose-heading">Why Leading Businesses Work With Us</h2>
+            <p style={{ color: "white", justifyContent: "center", display: "flex", alignItems: "center", textAlign: "center", marginTop: "0px" }}>We combine legal excellence with commercial understanding to help clients manage complexity, <br />reduce risk and make informed decisions with confidence.</p>
+            <WhyChooseCarousel items={whyChooseItems} />
+            <div className="legal-bottom-actions">
               <Link to="/contact" className="services-btn legal-btn--primary">
-                SCHEDULE A CONSULTATION &rarr;
+                BOOK A CONSULTATION &rarr;
               </Link>
             </div>
           </div>
-        </div>
 
-        {/* 9 Legal Services Grid */}
-        <div className="legal-services-container">
-          <div className="legal-services-grid">
-            {legalAdvisoryServices.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div className="legal-card" key={item.id}>
-                  <div className="legal-card-header">
-                    <div className="legal-card-num">
-                      {item.num}
-                    </div>
-                    <div className="legal-card-icon">
-                      <Icon size={34} strokeWidth={1.5} />
-                    </div>
-                  </div>
-                  <h3 className="legal-card-title">{item.title}</h3>
-                  <p className="legal-card-desc">{item.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+          {/* Bottom Expert Advice CTA Banner */}
 
-        {/* Why Clients Choose TaxLegal */}
-        <div className="why-choose-section">
-          <h2 className="why-choose-heading">Why Leading Businesses Work With Us</h2>
-          <p style={{ color: "white", justifyContent: "center", display: "flex", alignItems: "center", textAlign: "center", marginTop: "0px" }}>We combine legal excellence with commercial understanding to help clients manage complexity, <br />reduce risk and make informed decisions with confidence.</p>
-          <WhyChooseCarousel items={whyChooseItems} />
-          <div className="legal-bottom-actions">
-            <Link to="/contact" className="services-btn legal-btn--primary">
-              BOOK A CONSULTATION &rarr;
-            </Link>
-          </div>
-        </div>
-
-        {/* Bottom Expert Advice CTA Banner */}
-
-      </section>
+        </section>
       </main>
       <Footer />
     </div>

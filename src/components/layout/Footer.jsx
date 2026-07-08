@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,9 +9,9 @@ const Footer = () => {
         <div className="footer-grid">
           {/* Column 1: Info */}
           <div className="footer-col-info">
-            <a href="/" className="footer-logo-link">
+            <Link to="/" className="footer-logo-link">
               <img src="/assets/logo.png" alt="TaxLegal Logo" className="footer-logo-img" />
-            </a>
+            </Link>
             <p className="footer-desc">
               Advocates, Chartered Accountants & Company Secretaries. Practicing legal and tax matters since 1996 from Navi Mumbai.
             </p>
@@ -52,14 +53,14 @@ const Footer = () => {
           <div className="footer-col-links">
             <h5 className="footer-col-title">SERVICES</h5>
             <ul className="footer-links-list">
-              <li><a href="/#services">Business Formation</a></li>
-              <li><a href="/#services">Business Registration</a></li>
-              <li><a href="/#services">Accounting & Audit</a></li>
-              <li><a href="/#services">Direct Taxation</a></li>
-              <li><a href="/#services">Indirect Taxation / GST</a></li>
-              <li><a href="/#services">Litigation & Appeals</a></li>
-              <li><a href="/#services">Corporate Compliance</a></li>
-              <li><a href="/#services">Payroll Compliance</a></li>
+              <li><Link to="/services">Business Formation</Link></li>
+              <li><Link to="/services">Business Registration</Link></li>
+              <li><Link to="/services">Accounting & Audit</Link></li>
+              <li><Link to="/services">Direct Taxation</Link></li>
+              <li><Link to="/services">Indirect Taxation / GST</Link></li>
+              <li><Link to="/services">Litigation & Appeals</Link></li>
+              <li><Link to="/services">Corporate Compliance</Link></li>
+              <li><Link to="/services">Payroll Compliance</Link></li>
             </ul>
           </div>
 
@@ -67,14 +68,14 @@ const Footer = () => {
           <div className="footer-col-links">
             <h5 className="footer-col-title">QUICK LINKS</h5>
             <ul className="footer-links-list">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About The Firm</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/#team">Our Team</a></li>
-              <li><a href="/clients">Clients</a></li>
-              <li><a href="/internship">Internship</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About The Firm</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/about">Our Team</Link></li>
+              <li><Link to="/clients">Clients</Link></li>
+              <li><Link to="/internship">Internship</Link></li>
               <li><a href="https://www.incometaxindia.gov.in/income-tax-calculator" target="_blank" rel="noopener noreferrer">Tax Calculator</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -113,8 +114,11 @@ const Footer = () => {
         <div className="footer-bottom-row">
           <span className="footer-copyright">&copy; 2026 TaxLegal. All rights reserved.</span>
           <div className="footer-bottom-links">
-            <a href="/#disclaimer">Disclaimer</a>
-
+            <a href="#" onClick={(e) => {
+              e.preventDefault();
+              sessionStorage.removeItem('taxlegal_disclaimer_agreed');
+              window.location.reload();
+            }}>Disclaimer</a>
           </div>
         </div>
 

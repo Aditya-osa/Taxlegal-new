@@ -27,10 +27,10 @@ const CalculatorCTASection = () => {
             under current provisions. For personalised tax planning, connect with our<br />
             team.
           </p>
-          <button className="btn-navy" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+          <a href="https://www.incometaxindia.gov.in/income-tax-calculator" target="_blank" rel="noopener noreferrer" className="btn-navy" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }}>
             Open Tax Calculator
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-          </button>
+          </a>
         </div>
       </section>
 

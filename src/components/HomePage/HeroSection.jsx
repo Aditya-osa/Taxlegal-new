@@ -34,7 +34,7 @@ const HeroSection = () => {
           <h1 className="hero-title">
             Integrated Tax,<br />
             Compliance & <span className="hero-title-highlight">Legal</span><br />
-            Advisory Since 1995
+            Advisory Since 1996
           </h1>
           <p className="hero-description">
             Delivering integrated tax, regulatory, compliance and legal solutions <br /> through a single, trusted advisory platform for businesses and individuals.

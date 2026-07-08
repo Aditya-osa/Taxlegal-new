@@ -1,6 +1,9 @@
 .features-section {
   padding: var(--section-py) 0;
-  background: var(--theme-gradient);
+  background-image: linear-gradient(rgba(11, 46, 89, 0.6), rgba(7, 106, 170, 0.6)), url('/assets/Home Page/Why-choose-us.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--white);
   font-family: var(--font-head);
 }
