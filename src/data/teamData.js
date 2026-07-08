@@ -231,14 +231,14 @@ export const teamData = [
   },
   {
     id: 12,
-    slug: 'kartikyan',
-    name: 'Kartikyan',
+    slug: 'karthikeyan-tc',
+    name: 'Karthikeyan TC',
     role: 'Associate Consultant',
     shortDescription: 'Regulatory Advisory',
     image: "/assets/team/Kartikyan.png",
-    detailedBio: "Kartikyan provides key support in regulatory advisory and tax assessments. He plays a vital role in researching case laws and preparing documentation for client representations.",
+    detailedBio: "Entering legal practice feels like beginning a journey without a map. Law school provides structure and certainty, but practice introduces unpredictability. Files arrive without instructions, courtrooms have their own procedures and practice, and much of what matters is never formally explained. Very soon, one understands that law is learned not only through reading, but through repetition and observation.\n\nFor a first-generation lawyer, each decision feels heavy, and early confusion can be mistaken for incompetence. At the initial stage when one begins to handle cases independently, the need for guidance is felt at every step, and confidence is tested through daily practice. Learning happens through listening, watching seniors, and quietly correcting errors. There is no clear measure of progress in the beginning. In contrast, a second-generation lawyer often grows up in an environment where legal discussions are part of daily life. Had structured mentorship been available early on, many uncertainties could have been avoided. Practical direction on routine work and feedback on mistakes would have made learning more efficient. Practice eventually teaches these lessons, but guidance could have made the early years more focused and less isolating.",
     expertise: ["Regulatory Advisory", "Tax Assessments", "Legal Research"],
-    education: ["B.A. LL.B."],
+    education: ["BBA LL.B. (Hons.)", "LL.M."],
     linkedin: "https://www.linkedin.com/in/karthikeyan-tc?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false
   },
@@ -262,9 +262,12 @@ export const teamData = [
     role: 'Associate',
     shortDescription: 'Civil & Commercial Litigation',
     image: "/assets/team/Sahil.png",
-    detailedBio: "Adv. Sahil Kumar is an Associate whose practice focuses on civil litigation and commercial litigation, ensuring that all client cases are prepared with the highest level of accuracy and thoroughness.",
+    detailedBio: "The day I entered practice, I realised something uncomfortable. Law school prepared me for law. Not for the profession.\n\nAs a first-generation lawyer, I started without a handbook. I did not know how fast I was supposed to grow, whether confusion was normal, or whether everyone else was simply pretending to know more. You read more than you speak. You watch closely. You second-guess often. What stays with you is not the fear of being wrong, but the fear of being exposed as unprepared.\n\nIn hindsight, I often wonder how different the early years might have been with guidance or mentorship from the start. How much uncertainty could have been avoided. How many mistakes could have become lessons sooner. For first-generation lawyers, the absence of early direction delays confidence, not capability.\n\nMuch of my grounding came from an unexpected moment. I approached my senior in the corridors of the Delhi High Court, directly and without introduction. He trusted me. He taught me. He placed faith in me even when I made mistakes. He never reminded me that I was first generation. Instead, he ensured I was valued equally among my peers. Working under Mr. A.K. Singla, whose legal legacy spans over fifty years, taught me how much the environment matters.",
     expertise: ["Civil Litigation", "Commercial Litigation"],
-    education: ["B.Com", "LL.B."],
+    education: [
+      "B.A. LL.B. (University of Calcutta)",
+      "LL.M. (O.P. Jindal Global University)"
+    ],
     linkedin: "https://www.linkedin.com/in/adv-sahil-kumar-6315b7129?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false
   }
