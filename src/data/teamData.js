@@ -24,19 +24,26 @@ export const teamData = [
     id: 2,
     slug: 'adv-vivek-sharma',
     name: 'Adv. Vivek Sharma',
-    role: 'Specialisation',
-    shortDescription: 'Criminal & Civil Matters',
+    role: 'Criminal, Civil & Commercial Litigation',
+    shortDescription: 'Bombay High Court',
     image: "/assets/team/vivek-sharma.png",
-    detailedBio: "Adv. Vivek Sharma brings robust expertise in handling both Criminal and Civil matters. Known for his strategic litigation approaches and thorough preparation, he is a trusted advisor for clients facing high-stakes legal challenges. He ensures that his clients' rights are fiercely protected in every legal forum.",
+    detailedBio: "Adv. Vivek Sharma is a litigation-focused legal professional with extensive courtroom experience across Mumbai, Pune, Ahmedabad, and Baroda. He specializes in criminal, civil, and commercial matters, with a strong focus on high-stakes dispute resolution.\n\nAdv. Vivek’s criminal practice encompasses cyber and financial fraud matters, Bail applications, FIR quashing matters, cases under the POCSO Act and MCOCA, matters before the Economic Offences Wing (EOW), and offences involving women and children, including sensitive and high-profile cases. Alongside criminal litigation, he has substantial experience in consumer disputes and matrimonial matters, consistently delivering pragmatic and favourable outcomes.\n\nAdvocate Vivek also possesses hands-on experience in third-party insurance claims, including proceedings before the Motor Accident Claims Tribunal (MACT), as well as advisory and litigation work relating to general and marine insurance claims, policy interpretation, and claim settlement disputes.",
     expertise: [
+      "Insurance Law & Claims Advisory",
+      "Motor Accident Claims (MACT)",
+      "Civil Litigation & Recovery Proceedings",
+      "Negotiable Instruments Act, 1881 Matters",
+      "Consumer Protection & Insurance-Related Disputes",
+      "White-Collar Crime & Economic Offences",
       "Criminal Litigation",
-      "Civil Disputes",
-      "Property Law",
-      "Contractual Disputes"
+      "Cyber Crime & Financial Fraud",
+      "Offences Against Women and Children",
+      "Contract Drafting, Vetting & Commercial Advisory",
+      "Society & Property-Related Matters"
     ],
     education: [
-      "LL.M., Criminal Law",
-      "LL.B."
+      "BLS-LLB",
+      "Advance Program in Cyber Law"
     ],
     linkedin: "https://www.linkedin.com/in/adv-vivek-sharma/",
     isMainTeam: true

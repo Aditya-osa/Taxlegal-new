@@ -8,7 +8,7 @@ import './TeamMemberProfile.css';
 
 const TeamMemberProfile = () => {
   const { slug } = useParams();
-  
+
   const member = teamData.find(m => m.slug === slug);
 
   useEffect(() => {
@@ -31,10 +31,10 @@ const TeamMemberProfile = () => {
   return (
     <div className="profile-page-wrapper">
       <Header />
-      
+
       <main className="profile-main-content">
         <div className="container profile-container">
-          
+
           <div className="profile-sidebar">
             <div className="profile-image-container">
               <img src={member.image} alt={member.name} className="profile-image" />
@@ -45,12 +45,12 @@ const TeamMemberProfile = () => {
               {member.shortDescription && (
                 <p className="profile-short-desc">{member.shortDescription}</p>
               )}
-              
+
               <a href={member.linkedin || "#"} target="_blank" rel="noopener noreferrer" className="profile-contact-btn linkedin-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
-                Connect on LinkedIn
+                LinkedIn
               </a>
             </div>
           </div>
@@ -114,11 +114,11 @@ const TeamMemberProfile = () => {
               )}
             </div>
           </div>
-          
+
         </div>
-        
+
         <div className="container other-members-section">
-          <h2 className="section-title" style={{textAlign: 'center', marginBottom: '40px'}}>Other Team Members</h2>
+          <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>Other Team Members</h2>
           <div className="other-members-grid">
             {teamData.filter(m => m.id !== member.id).map(otherMember => (
               <LeadershipCard key={otherMember.id} member={otherMember} />
