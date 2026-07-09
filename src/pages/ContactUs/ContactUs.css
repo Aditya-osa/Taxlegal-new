@@ -8,7 +8,7 @@
 }
 
 .contact-main-content .container {
-  padding-left: calc(var(--container-px) + 13px) !important;
+  padding-left: calc(var(--container-px) + 10px) !important;
 }
 
 .contact-main-content {
@@ -262,6 +262,7 @@
 .contact-form-glass-card {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 24px;
   padding: 40px 50px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);

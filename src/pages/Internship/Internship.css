@@ -9,7 +9,20 @@
 
 .internship-main-content .container,
 .internship-main-content .logos-container {
+  padding-left: 2% !important;
+}
+
+.internship-page-wrapper.is-edge .internship-main-content .container,
+.internship-page-wrapper.is-edge .internship-main-content .logos-container {
   padding-left: calc(var(--container-px) + 13px) !important;
+}
+
+@media (max-width: 992px) {
+
+  .internship-main-content .container,
+  .internship-main-content .logos-container {
+    padding-left: 10px !important;
+  }
 }
 
 .internship-container {

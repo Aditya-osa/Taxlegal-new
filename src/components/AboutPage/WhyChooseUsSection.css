@@ -36,6 +36,9 @@
   max-width: 1300px;
   margin: 0 auto;
   padding: 20px 0 40px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 

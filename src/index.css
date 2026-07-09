@@ -8,3 +8,65 @@ body,
   min-height: 100vh;
 }
 
+/* Modern CSS Reset & Normalization for Cross-Browser Consistency */
+html {
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape on iOS */
+  -moz-tab-size: 4;
+  tab-size: 4;
+  scrollbar-gutter: stable; /* Reserve scrollbar space to prevent layout shifts */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Standardize form controls across platforms (Chrome, Safari, Firefox, Edge) */
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button, input {
+  overflow: visible; /* Show overflow in Edge */
+}
+
+button, select {
+  text-transform: none; /* Correct text-transform in Firefox */
+}
+
+/* Reset button appearance for consistent styling across platforms */
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+/* Normalise search inputs styling (especially on macOS/iOS Safari) */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -2px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Adjust image vertical alignment and ensure flexible media content */
+img, svg, video, canvas {
+  vertical-align: middle;
+}
+
+/* Restrict textarea resize to vertical only to prevent width breaks */
+textarea {
+  resize: vertical;
+}
+

@@ -142,8 +142,10 @@ const InternshipPage = () => {
     }
   ];
 
+  const isEdge = typeof window !== "undefined" && /Edg\//i.test(navigator.userAgent);
+
   return (
-    <div className="internship-page-wrapper">
+    <div className={`internship-page-wrapper ${isEdge ? "is-edge" : ""}`}>
       <Header />
       <main className="internship-main-content">
 
