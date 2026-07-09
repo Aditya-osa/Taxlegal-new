@@ -309,11 +309,12 @@ body {
 
 /* ================= SERVICES GRID ================= */
 .section-heading {
+  font-size: 2.2rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #000;
-  margin: 40px 0 0px;
+  margin: 40px 0 20px;
   /* top + bottom spacing */
 }
 
@@ -324,6 +325,10 @@ body {
 @media (max-width:768px) {
   .services-section {
     padding: 40px var(--container-px);
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
   }
 }
 
@@ -592,19 +597,19 @@ body {
 }
 
 .legal-hero-content h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Georgia, serif;
   font-size: clamp(2.2rem, 3.5vw, 3.4rem);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.15;
   color: var(--white);
   margin: 10px 0;
   letter-spacing: -0.5px;
 }
 
 .legal-hero-content p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.88);
   max-width: 760px;
   margin: 0 auto;
 }

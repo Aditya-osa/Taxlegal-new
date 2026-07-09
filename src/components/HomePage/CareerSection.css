@@ -1,6 +1,6 @@
 .career-section {
   padding: var(--section-py) 0;
-  background-image: linear-gradient(rgba(11, 46, 89, 0.75), rgba(7, 106, 170, 0.75)), url('/assets/Home Page/Internship-program.png');
+  background-image: linear-gradient(rgba(4, 32, 66, 0.85), rgba(7, 61, 98, 0.85)), url('/assets/Home Page/Internship-program.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

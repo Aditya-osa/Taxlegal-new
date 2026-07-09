@@ -576,11 +576,11 @@ const Services = () => {
                 <Scale size={18} />
                 <span>OUR LEGAL ADVISORY SERVICES</span>
               </div>
-              <h2>
+              <h1 style={{ color: 'white', }}>
                 Strategic Legal Expertise <br /> Business-Focused Solutions
                 <br />
                 Trusted Representation.
-              </h2>
+              </h1>
               <p>
                 Whether you are an individual, entrepreneur, financial institution, corporate house,
                 or multinational organization, TaxLegal provides comprehensive legal advisory and
