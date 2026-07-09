@@ -244,14 +244,27 @@ export const teamData = [
   },
   {
     id: 13,
-    slug: 'lokesh-rana',
-    name: 'CA Lokesh Rana',
-    role: 'Legal Consultant',
-    shortDescription: 'Corporate & Commercial Law',
+    slug: 'ca-lokkeesh-rana',
+    name: 'CA Lokkeesh Rana',
+    role: 'Chartered Accountant',
+    shortDescription: 'Chartered Accountant',
     image: "/assets/team/Lokesh-Rana.png",
-    detailedBio: "Lokesh Rana offers expert guidance on corporate and commercial legal matters. His focus is on ensuring seamless corporate transactions and resolving commercial disputes efficiently.",
-    expertise: ["Corporate Transactions", "Commercial Law", "Dispute Resolution"],
-    education: ["LL.B."],
+    detailedBio: "CA Lokkeesh Rana is the Founder Partner of G L A & Co., Chartered Accountants, with extensive experience in audit, taxation, financial consulting, and regulatory compliance. A Fellow Chartered Accountant (FCA), entrepreneur, strategic investor, and author of Profits Are Not Enough, he advises businesses on strengthening financial governance, managing compliance, and driving sustainable growth through sound financial strategies.\n\nHis professional practice spans statutory audits, tax advisory, financial consulting, and regulatory compliance across diverse industries. He has developed significant expertise in direct and indirect taxation, audit assurance, financial reporting, and risk assessment, helping organizations maintain compliance while improving operational and financial performance.\n\nCA Lokkeesh combines technical proficiency with a practical business perspective, enabling clients to navigate complex financial and regulatory challenges with confidence. His approach emphasizes analytical decision-making, process improvement, and long-term value creation while fostering trusted relationships with clients and stakeholders.",
+    expertise: [
+      "Statutory Audit & Assurance",
+      "Direct & Indirect Tax Advisory",
+      "Financial Consulting",
+      "Regulatory & Compliance Advisory",
+      "Financial Reporting & Accounting",
+      "Risk Assessment & Internal Controls",
+      "Business Advisory & Strategic Planning",
+      "Audit Research & Financial Analysis",
+      "Client Advisory & Governance",
+      "Financial Process Optimization"
+    ],
+    education: [
+      "Chartered Accountant"
+    ],
     linkedin: "https://www.linkedin.com/in/ca-lokkeesh-rana-b59127193?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false
   },
