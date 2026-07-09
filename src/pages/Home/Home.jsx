@@ -38,10 +38,10 @@ const Home = () => {
           <LogosSection />
           <AboutSection />
           <ServicesSection />
+          <WhyChooseUsSection />
           <TeamSection />
           <TestimonialsSection />
           <CareerSection />
-          <WhyChooseUsSection />
         </main>
       </div>
       <Footer />
