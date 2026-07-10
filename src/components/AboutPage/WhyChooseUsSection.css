@@ -45,7 +45,7 @@
 .why-choose-coverflow-container {
   position: relative;
   width: 100%;
-  height: 480px;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,7 +76,7 @@
 .why-choose-card-image-wrap {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 25vh;
   flex-shrink: 0;
   overflow: visible;
 }
@@ -304,7 +304,7 @@
   }
 
   .why-choose-coverflow-container {
-    height: 440px;
+    height: 58vh;
   }
 
   .why-choose-coverflow-card {
@@ -314,7 +314,7 @@
   }
 
   .why-choose-card-image-wrap {
-    height: 180px;
+    height: 23vh;
   }
 
   .why-choose-card-content {
@@ -344,7 +344,7 @@
   }
 
   .why-choose-coverflow-container {
-    height: 400px;
+    height: 55vh;
   }
 
   .why-choose-coverflow-card {
@@ -354,7 +354,7 @@
   }
 
   .why-choose-card-image-wrap {
-    height: 150px;
+    height: 20vh;
   }
 
   .why-choose-icon-badge {
