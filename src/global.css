@@ -91,21 +91,21 @@ body {
 }
 
 .header-spacer {
-  height: 116px;
-  /* Desktop Header Height: Topbar 44px + Navbar 72px */
+  height: 13vh;
+  /* Desktop Header Height: Topbar 5vh + Navbar 8vh */
 }
 
 .header-spacer.home-spacer {
-  height: 95px; /* Decreased by 21px (15px + 6px) for home page */
+  height: 10.5vh;
 }
 
 @media (max-width: 1024px) {
   .header-spacer {
-    height: 72px;
-    /* Tablet & Mobile Header Height: Navbar only 72px (Topbar hidden) */
+    height: 8vh;
+    /* Tablet & Mobile Header Height: Navbar only 8vh (Topbar hidden) */
   }
   .header-spacer.home-spacer {
-    height: 51px; /* Decreased by 21px (15px + 6px) for home page */
+    height: 5.6vh;
   }
 }
 
