@@ -66,10 +66,10 @@
 .internship-hero {
   background: linear-gradient(135deg, rgba(16, 36, 71, 0.15) 0%, rgba(26, 58, 110, 0.15) 100%), url('/assets/Internships/Internship-intro.jpeg') center top/cover no-repeat;
   color: var(--white);
-  min-height: 50vh;
+  min-height: 35vh;
   display: flex;
   align-items: center;
-  padding: 40px 0;
+  padding: 4vh 0;
   margin-top: 0;
   position: relative;
 }
@@ -101,7 +101,7 @@
 
 /* Why Choose Section */
 .internship-why {
-  padding: 40px 0 var(--section-py) 0;
+  padding: 5vh 0 8vh 0;
   background-color: var(--white);
 }
 
@@ -156,10 +156,7 @@
 }
 
 .internship-overview {
-  min-height: 35vh;
-  display: flex;
-  align-items: center;
-  padding: var(--section-py) 0;
+  padding: 8vh 0;
   background: linear-gradient(135deg, rgba(16, 36, 71, 0.85) 0%, rgba(26, 58, 110, 0.9) 100%), url("/assets/Internships/Program-overview.png") no-repeat center center / cover;
   color: var(--white);
 }
@@ -213,7 +210,7 @@
 
 /* Domains Section */
 .internship-domains {
-  padding: var(--section-py) 0;
+  padding: 8vh 0;
   background-color: var(--off-white);
 }
 
@@ -230,7 +227,7 @@
   padding: 28px;
   display: flex;
   flex-direction: column;
-  min-height: 32vh;
+  min-height: 280px;
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
   box-shadow: 0 4px 10px rgba(28, 37, 53, 0.01);
 }
@@ -275,7 +272,7 @@
   border-radius: 6px;
   padding: 12px 16px;
   border-left: 3px solid var(--navy);
-  min-height: 10vh;
+  height: 90px;
   display: flex;
   align-items: center;
 }
@@ -295,7 +292,7 @@
 .internship-cta {
   background: #076aaa;
   color: var(--white);
-  padding: 70px 24px;
+  padding: 8vh 24px;
   text-align: center;
 }
 
@@ -347,7 +344,7 @@
 
 /* FAQ Section */
 .internship-faq {
-  padding: var(--section-py) 0;
+  padding: 8vh 0;
   background-color: var(--white);
 }
 
@@ -406,7 +403,7 @@
 }
 
 .faq-item.open .faq-content-wrap {
-  max-height: 35vh;
+  max-height: 300px;
   /* Big enough to fit any answer */
 }
 
@@ -423,12 +420,6 @@
 
 /* Responsiveness */
 
-/* Desktop (1440px+) */
-@media (min-width: 1440px) {
-  .internship-container {
-    max-width: 1300px;
-  }
-}
 
 /* Laptop (1024px) */
 @media (max-width: 1024px) {

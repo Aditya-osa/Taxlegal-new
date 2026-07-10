@@ -1,7 +1,7 @@
 /* Internship Review Section Styles */
 
 .internship-review-section {
-  padding: 40px 0 100px 0;
+  padding: 5vh 0 10vh 0;
   background-color: var(--white);
   overflow: hidden;
   position: relative;
@@ -343,7 +343,7 @@
 
 @media (max-width: 768px) {
   .internship-review-section {
-    padding: 70px 0;
+    padding: 8vh 0;
   }
   
   .internship-review-title {
