@@ -173,7 +173,7 @@ const InternshipPage = () => {
             {domainItems.map((item, idx) => (
               <div className="domain-card" key={idx}>
                 {item.image && (
-                  <div className="domain-card-image" style={{ width: '100%', height: '180px', margin: '0 0 15px 0', borderRadius: '12px', overflow: 'hidden' }}>
+                  <div className="domain-card-image" style={{ width: '100%', height: '20vh', margin: '0 0 15px 0', borderRadius: '12px', overflow: 'hidden' }}>
                     <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                 )}

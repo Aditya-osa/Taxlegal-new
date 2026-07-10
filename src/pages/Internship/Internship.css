@@ -66,7 +66,10 @@
 .internship-hero {
   background: linear-gradient(135deg, rgba(16, 36, 71, 0.15) 0%, rgba(26, 58, 110, 0.15) 100%), url('/assets/Internships/Internship-intro.jpeg') center top/cover no-repeat;
   color: var(--white);
-  padding: var(--section-py) 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
   margin-top: 0;
   position: relative;
 }
@@ -153,6 +156,9 @@
 }
 
 .internship-overview {
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
   padding: var(--section-py) 0;
   background: linear-gradient(135deg, rgba(16, 36, 71, 0.85) 0%, rgba(26, 58, 110, 0.9) 100%), url("/assets/Internships/Program-overview.png") no-repeat center center / cover;
   color: var(--white);
@@ -224,7 +230,7 @@
   padding: 28px;
   display: flex;
   flex-direction: column;
-  min-height: 280px;
+  min-height: 32vh;
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
   box-shadow: 0 4px 10px rgba(28, 37, 53, 0.01);
 }
@@ -269,7 +275,7 @@
   border-radius: 6px;
   padding: 12px 16px;
   border-left: 3px solid var(--navy);
-  height: 90px;
+  min-height: 10vh;
   display: flex;
   align-items: center;
 }
@@ -400,7 +406,7 @@
 }
 
 .faq-item.open .faq-content-wrap {
-  max-height: 300px;
+  max-height: 35vh;
   /* Big enough to fit any answer */
 }
 
