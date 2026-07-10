@@ -52,13 +52,13 @@ body {
 .services-banner {
   position: relative;
   width: 100%;
-  min-height: var(--hero-min-height);
+  min-height: 30vh;
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
     url("/assets/Services/service_herosection.jpg") no-repeat center center / cover;
-  padding: var(--hero-padding);
-  margin-top: 0;
+  padding: 1vh 0;
+  margin-top: -14px;
   overflow: hidden;
 }
 
@@ -94,7 +94,7 @@ body {
   margin-top: 0;
   margin-bottom: 20px;
   max-width: 700px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
 @media (max-width: 992px) {
@@ -118,7 +118,7 @@ body {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.95);
   max-width: 600px;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   margin: 0;
 }
 
@@ -142,16 +142,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .services-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 32px;
+  padding: 10px 28px;
   border-radius: 999px;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   text-transform: none;
   transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
@@ -189,12 +190,11 @@ body {
 
 .services-hero-meta-card {
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 120px;
+  bottom: 20px;
   width: auto;
   max-width: 100%;
-  padding: 16px 28px;
+  padding: 12px 24px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -283,8 +283,8 @@ body {
 
 @media (max-width: 992px) {
   .services-banner {
-    min-height: 50vh;
-    padding: var(--hero-padding-tablet);
+    min-height: 35vh;
+    padding: 30px 0;
   }
 
   .banner-content {
