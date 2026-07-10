@@ -53,12 +53,12 @@ body {
 .services-banner {
   position: relative;
   width: 100%;
-  min-height: var(--hero-min-height);
+  min-height: 50vh;
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
     url("/assets/Services/service_herosection.jpg") no-repeat center center / cover;
-  padding: 5vh 0;
+  padding: 4.4vh 0;
   margin-top: -14px;
   overflow: hidden;
 }
