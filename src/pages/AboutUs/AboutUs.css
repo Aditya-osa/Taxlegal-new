@@ -23,7 +23,7 @@
 .about-main-content .logos-container,
 .about-main-content .team-container,
 .about-main-content .features-container {
-  padding-left: calc(var(--container-px) + 13px) !important;
+  padding-left: var(--content-start) !important;
 }
 
 /* Common Header Styles for Sections */

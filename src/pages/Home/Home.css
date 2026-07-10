@@ -198,7 +198,7 @@ section {
 .home-page-container .testimonials-container,
 .home-page-container .cta-container,
 .home-page-container .footer-container {
-  padding-left: calc(var(--container-px) + 19px) !important;
+  padding-left: var(--content-start) !important;
 }
 
 /* Calculator container needs smaller max-width to look good, but we ensure its padding */

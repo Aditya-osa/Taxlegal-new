@@ -8,7 +8,7 @@
 }
 
 .contact-main-content .container {
-  padding-left: calc(var(--container-px) + 10px) !important;
+  padding-left: var(--content-start) !important;
 }
 
 .contact-main-content {

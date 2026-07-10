@@ -36,6 +36,8 @@
   --border-color: #E5E7EB;
   --text-primary: #1E293B;
   --theme-gradient: #076aaa;
+  /* Consistent content alignment: matches navbar logo left edge (container-px + logo margin-left 9px) */
+  --content-start: calc(var(--container-px) + 9px);
 }
 
 /* Global Hero Badge Pill */
@@ -91,21 +93,21 @@ body {
 }
 
 .header-spacer {
-  height: 13vh;
-  /* Desktop Header Height: Topbar 5vh + Navbar 8vh */
+  height: 116px;
+  /* Desktop Header Height: Topbar 44px + Navbar 72px */
 }
 
 .header-spacer.home-spacer {
-  height: 10.5vh;
+  height: 95px;
 }
 
 @media (max-width: 1024px) {
   .header-spacer {
-    height: 8vh;
-    /* Tablet & Mobile Header Height: Navbar only 8vh (Topbar hidden) */
+    height: 72px;
+    /* Tablet & Mobile Header Height: Navbar only 72px (Topbar hidden) */
   }
   .header-spacer.home-spacer {
-    height: 5.6vh;
+    height: 51px;
   }
 }
 

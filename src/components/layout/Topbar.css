@@ -15,8 +15,8 @@
   justify-content: center;
   gap: 30px;
 
-  padding: 0.9vh var(--container-px);
-  min-height: 5vh;
+  padding: 8px var(--container-px);
+  min-height: 44px;
 }
 
 /* ==========================================

@@ -7,7 +7,7 @@
 
 .clients-main-content .container,
 .clients-main-content .logos-container {
-  padding-left: calc(var(--container-px) + 13px) !important;
+  padding-left: var(--content-start) !important;
 }
 
 /* HERO SECTION */

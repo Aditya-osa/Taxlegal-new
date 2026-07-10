@@ -38,7 +38,7 @@ body {
 .services-main-content .legal-services-container,
 .services-main-content .why-choose-section,
 .services-main-content .logos-container {
-  padding-left: calc(var(--container-px) + 13px) !important;
+  padding-left: var(--content-start) !important;
 }
 
 .tl-stab:hover {
