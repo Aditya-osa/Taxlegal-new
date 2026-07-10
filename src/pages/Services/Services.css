@@ -52,12 +52,13 @@ body {
 .services-banner {
   position: relative;
   width: 100%;
-  min-height: 40vh;
+  min-height: var(--hero-min-height);
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
     url("/assets/Services/service_herosection.jpg") no-repeat center center / cover;
-  padding: 40px 0 40px;
+  padding: var(--hero-padding);
+  margin-top: 0;
   overflow: hidden;
 }
 
@@ -74,26 +75,26 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   gap: 48px;
   flex-wrap: wrap;
 }
 
 .services-intro-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 880px;
-  flex: 1 1 500px;
+  max-width: 700px;
+  flex: 1 1 auto;
 }
 
 .banner-content h1 {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.5px;
   color: var(--white);
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+  max-width: 700px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 @media (max-width: 992px) {
@@ -114,9 +115,10 @@ body {
 
 .banner-content p {
   font-size: 1.1rem;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.88);
-  max-width: 640px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 600px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
   margin: 0;
 }
 
@@ -186,7 +188,10 @@ body {
 /* ================= FLOATING HERO META CARD ================= */
 
 .services-hero-meta-card {
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: auto;
   max-width: 100%;
   padding: 16px 28px;
@@ -276,10 +281,10 @@ body {
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .services-banner {
-    min-height: auto;
-    padding: 60px var(--container-px) 70px;
+    min-height: 50vh;
+    padding: var(--hero-padding-tablet);
   }
 
   .banner-content {
@@ -297,6 +302,10 @@ body {
   }
 
   .services-hero-meta-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
     width: 100%;
     max-width: 100%;
     flex-wrap: wrap;

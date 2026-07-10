@@ -64,23 +64,24 @@
 
 /* Hero Section */
 .internship-hero {
-  background: linear-gradient(135deg, rgba(16, 36, 71, 0.15) 0%, rgba(26, 58, 110, 0.15) 100%), url('/assets/Internships/Internship-intro.jpeg') center top/cover no-repeat;
+  background: linear-gradient(135deg, rgba(16, 36, 71, 0.55) 0%, rgba(26, 58, 110, 0.45) 60%, rgba(16, 36, 71, 0.15) 100%), url('/assets/Internships/Internship-intro.jpeg') right 15%/cover no-repeat;
   color: var(--white);
-  min-height: 35vh;
+  min-height: var(--hero-min-height);
   display: flex;
   align-items: center;
-  padding: 4vh 0;
+  padding: 5vh 0;
   margin-top: 0;
   position: relative;
 }
 
 .internship-hero-title {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   font-weight: 700;
   color: var(--white);
-  line-height: 1.2;
-  margin-bottom: 12px;
-  max-width: 900px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  max-width: 700px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 .internship-hero-subtitle {
@@ -93,10 +94,11 @@
 }
 
 .internship-hero-desc {
-  font-size: 1.08rem;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 720px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 600px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
 
 /* Why Choose Section */
@@ -442,6 +444,8 @@
 @media (max-width: 992px) {
   .internship-hero {
     padding: var(--section-py) 0;
+    min-height: 50vh;
+    background-position: right center;
   }
 
   .internship-hero-title {

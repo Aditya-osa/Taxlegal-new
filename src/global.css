@@ -38,6 +38,12 @@
   --theme-gradient: #076aaa;
   /* Consistent content alignment: matches navbar logo left edge (container-px + logo margin-left 9px) */
   --content-start: calc(var(--container-px) + 9px);
+  /* Consistent inner-page hero height (all pages except Home) */
+  --hero-min-height: 62vh;
+  /* Consistent inner-page hero padding (desktop) */
+  --hero-padding: 5vh 0;
+  /* Consistent inner-page hero padding (tablet ≤992px) */
+  --hero-padding-tablet: var(--section-py) 0;
 }
 
 /* Global Hero Badge Pill */

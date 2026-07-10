@@ -13,11 +13,12 @@
 /* HERO SECTION */
 .clients-hero-section {
   position: relative;
-  min-height: 380px;
+  min-height: var(--hero-min-height);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 80px 0;
+  padding: var(--hero-padding);
+  margin-top: 0;
   overflow: hidden;
   color: var(--white);
   z-index: 1;
@@ -84,8 +85,8 @@
 /* RESPONSIVE HERO */
 @media (max-width: 992px) {
   .clients-hero-section {
-    min-height: 320px;
-    padding: 60px 0;
+    min-height: 50vh;
+    padding: var(--hero-padding-tablet);
   }
 
   .clients-hero-title {

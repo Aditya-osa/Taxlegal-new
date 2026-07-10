@@ -24,12 +24,13 @@
 .contact-hero-section {
   position: relative;
   width: 100%;
-  min-height: 35vh;
+  min-height: var(--hero-min-height);
   display: flex;
   align-items: center;
   background: var(--theme-gradient);
   color: var(--white);
-  padding: 100px 0 60px 0;
+  padding: var(--hero-padding);
+  margin-top: 0;
   overflow: hidden;
   animation: fadeIn 1s ease-out;
 }
@@ -436,7 +437,8 @@
 
 @media (max-width: 576px) {
   .contact-hero-section {
-    padding: 80px 0 60px 0;
+    min-height: 50vh;
+    padding: var(--hero-padding-tablet);
   }
   
   .contact-hero-title {
