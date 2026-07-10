@@ -59,7 +59,7 @@ const ContactUs = () => {
           <div className="container contact-container contact-hero-container">
             <div className="contact-hero-content">
               <span className="tl-hero-badge-pill">Contact Us</span>
-              <h1 className="contact-hero-title">
+              <h1 className="hero-title">
                 Let's Start the Conversation
               </h1>
               <p className="contact-hero-description">

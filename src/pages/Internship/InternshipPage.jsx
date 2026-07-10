@@ -151,7 +151,7 @@ const InternshipPage = () => {
       <section className="internship-hero">
         <div className="container internship-container">
           <span className="tl-hero-badge-pill">INTERNSHIP PROGRAM</span>
-          <h1 className="internship-hero-title">Launch Your Career <br /> Before You Graduate</h1>
+          <h1 className="hero-title">Launch Your Career <br /> Before You Graduate</h1>
           <p className="internship-hero-desc">
             Learn from professionals to start building your career. <br />At TaxLegal, we believe the best professionals
             are shaped through <br />real experience, meaningful mentoring, and practical exposure.

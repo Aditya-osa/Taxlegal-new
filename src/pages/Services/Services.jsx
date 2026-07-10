@@ -22,6 +22,7 @@ import {
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import "./Services.css";
+import "./ServicesHero.css";
 import LogosSection from '../../components/HomePage/LogosSection';
 
 const services = [
@@ -498,7 +499,7 @@ const Services = () => {
           <div className="container banner-content">
             <div className="services-intro-copy">
               <div className="tl-hero-badge-pill">OUR EXPERTISE & DOMAINS</div>
-              <h1>
+              <h1 className="hero-title">
                 Three Decades of <br />Tax and Legal Excellence
               </h1>
               <p>

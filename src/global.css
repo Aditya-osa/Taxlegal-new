@@ -1441,3 +1441,28 @@ h4 {
     font-size: 1.2rem;
   }
 }
+
+/* ================= GLOBAL HERO TITLE STYLES (HOME HERO SOURCE OF TRUTH) ================= */
+.hero-title {
+  font-family: var(--font-head);
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--white);
+  text-shadow: none;
+  letter-spacing: normal;
+}
+
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+}

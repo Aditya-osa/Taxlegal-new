@@ -58,7 +58,7 @@ const ClientsPage = () => {
           <div className="container clients-hero-container">
             <div className="clients-hero-content">
               <span className="tl-hero-badge-pill">Clients & Testimonials </span>
-              <h1 className="clients-hero-title">
+              <h1 className="hero-title">
                 Trusted by Organizations That Value Expertise
               </h1>
               <p className="clients-hero-description">

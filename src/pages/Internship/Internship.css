@@ -74,15 +74,6 @@
   position: relative;
 }
 
-.internship-hero-title {
-  font-size: 3.8rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.15;
-  margin-bottom: 20px;
-  max-width: 700px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
-}
 
 .internship-hero-subtitle {
   font-size: 1.25rem;
@@ -448,9 +439,6 @@
     background-position: right center;
   }
 
-  .internship-hero-title {
-    font-size: 2.5rem;
-  }
 
   .section-title {
     font-size: 1.85rem;
@@ -491,9 +479,6 @@
     padding: 0 16px;
   }
 
-  .internship-hero-title {
-    font-size: 2rem;
-  }
 
   .internship-hero-subtitle {
     font-size: 1.05rem;
