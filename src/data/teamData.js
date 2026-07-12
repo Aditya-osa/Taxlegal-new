@@ -244,26 +244,33 @@ export const teamData = [
   },
   {
     id: 13,
-    slug: 'ca-lokkeesh-rana',
-    name: 'CA Lokkeesh Rana',
-    role: 'Chartered Accountant',
-    shortDescription: 'Chartered Accountant',
+    slug: 'ca-lokesh-rana',
+    name: 'CA Lokesh Rana',
+    role: 'Founder & Managing Partner',
+    shortDescription: 'FCA | ACS | B.Com',
     image: "/assets/team/Lokesh-Rana.png",
-    detailedBio: "CA Lokkeesh Rana is the Founder Partner of G L A & Co., Chartered Accountants, with extensive experience in audit, taxation, financial consulting, and regulatory compliance. A Fellow Chartered Accountant (FCA), entrepreneur, strategic investor, and author of Profits Are Not Enough, he advises businesses on strengthening financial governance, managing compliance, and driving sustainable growth through sound financial strategies.\n\nHis professional practice spans statutory audits, tax advisory, financial consulting, and regulatory compliance across diverse industries. He has developed significant expertise in direct and indirect taxation, audit assurance, financial reporting, and risk assessment, helping organizations maintain compliance while improving operational and financial performance.\n\nCA Lokkeesh combines technical proficiency with a practical business perspective, enabling clients to navigate complex financial and regulatory challenges with confidence. His approach emphasizes analytical decision-making, process improvement, and long-term value creation while fostering trusted relationships with clients and stakeholders.",
+    detailedBio: "CA Lokesh Rana is a Fellow Chartered Accountant (FCA) and Associate Company Secretary (ACS) with over a decade of professional experience in Audit & Assurance, Direct & Indirect Taxation, Corporate Laws, Financial Advisory, Risk Management, and Regulatory Compliance. As Founder & Managing Partner of G L A & Co., Chartered Accountants, he has advised and supported startups, MSMEs, corporate houses, and multinational enterprises across a wide spectrum of industries, providing strategic financial and business advisory services that strengthen governance, improve operational efficiency, optimise taxation, and enable sustainable growth.\n\nHe has extensive experience leading statutory audits, internal audits, tax audits, GST advisory, due diligence assignments, business restructuring, financial reporting, corporate compliances, and virtual CFO engagements. His practical, solution-oriented approach enables businesses to establish robust internal controls, implement effective financial systems, and navigate complex regulatory requirements with confidence.\n\nCA Lokesh Rana believes a Chartered Accountant should act as a strategic business partner rather than merely a compliance professional — combining technical excellence, commercial understanding, ethical practice, and technology-driven solutions to help businesses build strong financial foundations, mitigate risks, and make informed strategic decisions.",
     expertise: [
-      "Statutory Audit & Assurance",
-      "Direct & Indirect Tax Advisory",
-      "Financial Consulting",
-      "Regulatory & Compliance Advisory",
-      "Financial Reporting & Accounting",
-      "Risk Assessment & Internal Controls",
-      "Business Advisory & Strategic Planning",
-      "Audit Research & Financial Analysis",
-      "Client Advisory & Governance",
-      "Financial Process Optimization"
+      "Statutory, Internal & Tax Audits",
+      "GST Advisory, Audit & Litigation",
+      "Direct Tax Advisory & Compliance",
+      "Due Diligence & Transaction Advisory",
+      "Virtual CFO Services",
+      "Corporate & ROC Compliances",
+      "Internal Financial Controls (IFC)",
+      "SOP & Process Improvement",
+      "Risk Management & Compliance Framework",
+      "Business Structuring & Startup Advisory",
+      "Project Finance & Banking Advisory",
+      "Government Incentives & Subsidy Advisory",
+      "Financial Reporting & MIS",
+      "Accounting & Business Consulting"
     ],
+
     education: [
-      "Chartered Accountant"
+      "FCA",
+      "ACS",
+      "B.Com"
     ],
     linkedin: "https://www.linkedin.com/in/ca-lokkeesh-rana-b59127193?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false

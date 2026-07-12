@@ -121,6 +121,7 @@ const TeamMemberProfile = () => {
                   </ul>
                 </div>
               )}
+
             </div>
 
             <div className="profile-bottom-right">
