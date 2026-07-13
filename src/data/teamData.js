@@ -1,4 +1,137 @@
 export const teamData = [
+
+  {
+    id: 7,
+    slug: 'ca-narendra-rajput',
+    name: 'CA Narendra Rajput',
+    role: 'Chartered Accountant',
+    shortDescription: 'Income Tax and Audit',
+    image: "/assets/team/narendra.jpg",
+    flipImage: true,
+    detailedBio: "CA Narendra Rajput is a dedicated Chartered Accountant specializing in Income Tax and comprehensive Auditing services. He assists businesses in maintaining financial transparency, preparing accurate financial statements, and ensuring strict adherence to statutory auditing standards and tax filing requirements.",
+    expertise: [
+      "Statutory & Internal Audit",
+      "Income Tax E-Filing & Advisory",
+      "Financial Reporting",
+      "Business Valuation"
+    ],
+    education: [
+      "Chartered Accountant (FCA)",
+      "B.Com"
+    ],
+    linkedin: "https://www.linkedin.com/in/narendra-kumar-rajput-b170681/",
+    isMainTeam: false
+  },
+  {
+    id: 11,
+    slug: 'ca-mohan-kumar',
+    name: 'CA Mohan Kumar',
+    role: 'Chartered Accountant',
+    shortDescription: 'Audit & Financial Compliance',
+    image: "/assets/team/Ca-Mohan-Kumar.png",
+    detailedBio: "CA Mohan Kumar is an experienced Chartered Accountant with deep expertise in auditing, financial compliance, and accounting standards. He ensures that corporate financial practices meet all statutory and regulatory requirements.",
+    expertise: ["Statutory Audit", "Financial Compliance", "Accounting"],
+    education: ["Chartered Accountant (CA)", "B.Com"],
+    isMainTeam: false
+  },
+
+  {
+    id: 9,
+    slug: 'ashutosh-agrawal',
+    name: 'CA Ashutosh Agrawal',
+    role: 'Finance & Audit Professional',
+    shortDescription: 'Assurance, Compliance & Advisory',
+    image: "/assets/team/Ashutosh-Agrawal.jpeg",
+    detailedBio: "CA Ashutosh Agrawal is a finance and audit professional with expertise in assurance, compliance, risk management, and business advisory. As the Proprietor of Ashutosh Agrawal & Associates, he advises organizations on strengthening financial controls, enhancing operational efficiency, and maintaining regulatory compliance through a structured and analytical approach.\n\nHis practice focuses on internal audits, risk assessment, fraud detection, and information systems audits, helping businesses identify vulnerabilities, improve governance frameworks, and establish robust financial and operational controls. He works closely with organizations to ensure compliance while driving process improvements that support sustainable growth.\n\nPrior to establishing his independent practice, he served as a Partner at Agrawal Tayal & Associates, where he was involved in audit engagements, management consultancy assignments, and the resolution of direct and indirect tax matters. His professional experience spans financial reporting, compliance management, accounts receivable oversight, credit control, and business process optimization.",
+    expertise: [
+      "Bookkeeping & Financial Record Management",
+      "Financial Accounting & Reporting",
+      "Financial Planning & Business Advisory",
+      "Budgeting & Financial Forecasting",
+      "Tax Advisory & Regulatory Compliance",
+      "Personal Tax Planning & Tax Optimization"
+    ],
+    education: [
+      "Chartered Accountant (CA)",
+      "B.Com"
+    ],
+    linkedin: "https://www.linkedin.com/in/ca-ashutosh-agrawal-2421a614b/",
+    isMainTeam: false
+  },
+
+  {
+    id: 13,
+    slug: 'ca-lokesh-rana',
+    name: 'CA Lokesh Rana',
+    role: 'Founder & Managing Partner',
+    shortDescription: 'FCA | ACS | B.Com',
+    image: "/assets/team/Lokesh-Rana.png",
+    detailedBio: "CA Lokesh Rana is a Fellow Chartered Accountant (FCA) and Associate Company Secretary (ACS) with over a decade of professional experience in Audit & Assurance, Direct & Indirect Taxation, Corporate Laws, Financial Advisory, Risk Management, and Regulatory Compliance. As Founder & Managing Partner of G L A & Co., Chartered Accountants, he has advised and supported startups, MSMEs, corporate houses, and multinational enterprises across a wide spectrum of industries, providing strategic financial and business advisory services that strengthen governance, improve operational efficiency, optimise taxation, and enable sustainable growth.\n\nHe has extensive experience leading statutory audits, internal audits, tax audits, GST advisory, due diligence assignments, business restructuring, financial reporting, corporate compliances, and virtual CFO engagements. His practical, solution-oriented approach enables businesses to establish robust internal controls, implement effective financial systems, and navigate complex regulatory requirements with confidence.\n\nCA Lokesh Rana believes a Chartered Accountant should act as a strategic business partner rather than merely a compliance professional — combining technical excellence, commercial understanding, ethical practice, and technology-driven solutions to help businesses build strong financial foundations, mitigate risks, and make informed strategic decisions.",
+    expertise: [
+      "Statutory, Internal & Tax Audits",
+      "GST Advisory, Audit & Litigation",
+      "Direct Tax Advisory & Compliance",
+      "Due Diligence & Transaction Advisory",
+      "Virtual CFO Services",
+      "Corporate & ROC Compliances",
+      "Internal Financial Controls (IFC)",
+      "SOP & Process Improvement",
+      "Risk Management & Compliance Framework",
+      "Business Structuring & Startup Advisory",
+      "Project Finance & Banking Advisory",
+      "Government Incentives & Subsidy Advisory",
+      "Financial Reporting & MIS",
+      "Accounting & Business Consulting"
+    ],
+
+    education: [
+      "FCA",
+      "ACS",
+      "B.Com"
+    ],
+    linkedin: "https://www.linkedin.com/in/ca-lokkeesh-rana-b59127193?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    isMainTeam: false
+  },
+  {
+    id: 6,
+    slug: 'cs-sanjay-dhadich',
+    name: 'CS Sanjay Dhadich',
+    role: 'Practising Company Secretary',
+    shortDescription: 'Corporate Laws | Foreign Exchange Laws | FEMA & Corporate Compliance',
+    image: "/assets/team/sanjay.png",
+    detailedBio: "CS Sanjay Dadhichi is the Founder of Singh Dadhichi Consultants LLP and a Practising Company Secretary with over a decade of experience in corporate laws, regulatory advisory, and business consulting. An Associate Member of the Institute of Company Secretaries of India (ICSI) and a Commerce graduate (B.Com), he advises businesses on complex legal, regulatory, and governance matters with a strategic and solution-oriented approach.\n\nHis practice focuses on corporate structuring, foreign investment regulations, and legal compliance for domestic and international businesses. He has extensive experience in the incorporation of foreign subsidiaries, companies with foreign promoters, and Section 8 companies, while also advising on Foreign Direct Investment (FDI), Overseas Direct Investment (ODI), SME listings, corporate restructuring, and regulatory approvals under the Companies Act, 2013 and the Foreign Exchange Management Act (FEMA).\n\nCS Sanjay also provides comprehensive advisory on corporate governance, strategic business decisions, company law compliance, and legal documentation. His expertise includes drafting and reviewing commercial agreements, regulatory filings, and corporate legal documentation, enabling organizations to operate with confidence while maintaining full compliance with evolving statutory requirements.",
+    expertise: [
+      "Corporate Legal Consulting",
+      "Business Advisory & Strategic Consulting",
+      "Company Law Compliance",
+      "Foreign Direct Investment (FDI) & Overseas Direct Investment (ODI)",
+      "Incorporation of Foreign Companies & Section 8 Companies",
+      "FEMA & Corporate Regulatory Advisory",
+      "SME Listing & Corporate Restructuring",
+      "Drafting & Review of Commercial Agreements",
+      "Corporate Governance & Secretarial Compliance",
+      "Compounding of Offences under the Companies Act, 2013 & FEMA"
+    ],
+    education: [
+      "Associate Company Secretary (ACS)",
+      "B.Com"
+    ],
+    linkedin: "https://www.linkedin.com/in/sanjay-dadhich-91743a286?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    isMainTeam: false
+  },
+  {
+    id: 10,
+    slug: 'bipin-singh',
+    name: 'CS Bipin Singh',
+    role: 'Legal Specialist',
+    shortDescription: 'Civil & Corporate Law',
+    image: "/assets/team/Bipin-Singh.png",
+    detailedBio: "Bipin Singh has a strong track record in civil and corporate law. He helps organizations navigate business disputes, draft critical legal documents, and minimize operational legal risks.",
+    expertise: ["Civil Litigation", "Corporate Law", "Drafting & Vetting"],
+    education: ["LL.B."],
+    linkedin: "https://www.linkedin.com/in/cs-bipin-singh-22ab70a8/",
+    isMainTeam: false
+  },
   {
     id: 1,
     slug: 'adv-suresh-sharma',
@@ -20,6 +153,26 @@ export const teamData = [
     ],
     linkedin: "https://www.linkedin.com/in/adv-suresh-sharma/",
     isMainTeam: true
+  }, {
+    id: 5,
+    slug: 'adv-alok-shukla',
+    name: 'Adv. Alok Shukla',
+    role: 'ADR | Maritime Matters | Insurance',
+    shortDescription: 'Consumer | Society Matters',
+    image: "/assets/team/Adv-Alok-Shukla.png",
+    detailedBio: "Adv. Alok Shukla is a versatile legal expert with specialized knowledge in Alternative Dispute Resolution (ADR), Maritime Matters, and Insurance Law. He also frequently handles consumer disputes and society-related legal issues. His practical and negotiation-driven approach often resolves disputes favorably outside the courtroom.",
+    expertise: [
+      "Alternative Dispute Resolution (ADR)",
+      "Maritime & Shipping Law",
+      "Insurance Claims & Disputes",
+      "Consumer Protection Law"
+    ],
+    education: [
+      "LL.M., Maritime Law",
+      "LL.B."
+    ],
+    linkedin: "https://www.linkedin.com/in/alok-shukla-40a296a7/",
+    isMainTeam: false
   },
   {
     id: 2,
@@ -99,182 +252,7 @@ export const teamData = [
     linkedin: "https://www.linkedin.com/in/adv-varun-sharma/",
     isMainTeam: false
   },
-  {
-    id: 5,
-    slug: 'adv-alok-shukla',
-    name: 'Adv. Alok Shukla',
-    role: 'ADR | Maritime Matters | Insurance',
-    shortDescription: 'Consumer | Society Matters',
-    image: "/assets/team/Adv Alok Shukla Pic (1).png",
-    detailedBio: "Adv. Alok Shukla is a versatile legal expert with specialized knowledge in Alternative Dispute Resolution (ADR), Maritime Matters, and Insurance Law. He also frequently handles consumer disputes and society-related legal issues. His practical and negotiation-driven approach often resolves disputes favorably outside the courtroom.",
-    expertise: [
-      "Alternative Dispute Resolution (ADR)",
-      "Maritime & Shipping Law",
-      "Insurance Claims & Disputes",
-      "Consumer Protection Law"
-    ],
-    education: [
-      "LL.M., Maritime Law",
-      "LL.B."
-    ],
-    linkedin: "https://www.linkedin.com/in/alok-shukla-40a296a7/",
-    isMainTeam: false
-  },
-  {
-    id: 6,
-    slug: 'cs-sanjay-dhadich',
-    name: 'CS Sanjay Dhadich',
-    role: 'Practising Company Secretary',
-    shortDescription: 'Corporate Laws | Foreign Exchange Laws | FEMA & Corporate Compliance',
-    image: "/assets/team/sanjay.jpg",
-    detailedBio: "CS Sanjay Dadhichi is the Founder of Singh Dadhichi Consultants LLP and a Practising Company Secretary with over a decade of experience in corporate laws, regulatory advisory, and business consulting. An Associate Member of the Institute of Company Secretaries of India (ICSI) and a Commerce graduate (B.Com), he advises businesses on complex legal, regulatory, and governance matters with a strategic and solution-oriented approach.\n\nHis practice focuses on corporate structuring, foreign investment regulations, and legal compliance for domestic and international businesses. He has extensive experience in the incorporation of foreign subsidiaries, companies with foreign promoters, and Section 8 companies, while also advising on Foreign Direct Investment (FDI), Overseas Direct Investment (ODI), SME listings, corporate restructuring, and regulatory approvals under the Companies Act, 2013 and the Foreign Exchange Management Act (FEMA).\n\nCS Sanjay also provides comprehensive advisory on corporate governance, strategic business decisions, company law compliance, and legal documentation. His expertise includes drafting and reviewing commercial agreements, regulatory filings, and corporate legal documentation, enabling organizations to operate with confidence while maintaining full compliance with evolving statutory requirements.",
-    expertise: [
-      "Corporate Legal Consulting",
-      "Business Advisory & Strategic Consulting",
-      "Company Law Compliance",
-      "Foreign Direct Investment (FDI) & Overseas Direct Investment (ODI)",
-      "Incorporation of Foreign Companies & Section 8 Companies",
-      "FEMA & Corporate Regulatory Advisory",
-      "SME Listing & Corporate Restructuring",
-      "Drafting & Review of Commercial Agreements",
-      "Corporate Governance & Secretarial Compliance",
-      "Compounding of Offences under the Companies Act, 2013 & FEMA"
-    ],
-    education: [
-      "Associate Company Secretary (ACS)",
-      "B.Com"
-    ],
-    linkedin: "https://www.linkedin.com/in/sanjay-dadhich-91743a286?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    isMainTeam: false
-  },
-  {
-    id: 7,
-    slug: 'ca-narendra-rajput',
-    name: 'CA Narendra Rajput',
-    role: 'Chartered Accountant',
-    shortDescription: 'Income Tax and Audit',
-    image: "/assets/team/narendra.jpg",
-    detailedBio: "CA Narendra Rajput is a dedicated Chartered Accountant specializing in Income Tax and comprehensive Auditing services. He assists businesses in maintaining financial transparency, preparing accurate financial statements, and ensuring strict adherence to statutory auditing standards and tax filing requirements.",
-    expertise: [
-      "Statutory & Internal Audit",
-      "Income Tax E-Filing & Advisory",
-      "Financial Reporting",
-      "Business Valuation"
-    ],
-    education: [
-      "Chartered Accountant (FCA)",
-      "B.Com"
-    ],
-    linkedin: "https://www.linkedin.com/in/narendra-kumar-rajput-b170681/",
-    isMainTeam: false
-  },
-  {
-    id: 8,
-    slug: 'ajay-mane',
-    name: 'Ajay R. Mane',
-    role: 'Commercial Litigation & Arbitration',
-    shortDescription: 'Contractual and Civil Disputes',
-    image: "/assets/team/Ajay-mane.png",
-    detailedBio: "Ajay R. Mane is an advocate practising in commercial litigation and arbitration, with a focus on contractual and civil disputes before the Bombay High Court and arbitral tribunals. He has represented clients in proceedings under Sections 9, 11, 34, and 37 of the Arbitration and Conciliation Act, 1996, from the pre-arbitration stage through post-award challenges.\n\nHis practice includes drafting pleadings, written submissions, affidavits, case strategy, evidence structuring, and cross-examination preparation. He has also worked on commercial agreements and cross-border regulatory review under FEMA, 1999, with a transaction advisory practice in Pune.\n\nAjay holds an LLM in Alternative Dispute Resolution from Jindal Global Law School, O.P. Jindal Global University, an Advanced Diploma in ADR from NALSAR University of Law, Hyderabad, and a B.A. LL.B. (Hons.) from Maharashtra National Law University, Aurangabad.",
-    expertise: ["Commercial Litigation", "Arbitration", "Contractual & Civil Disputes", "Transactional Matters & FEMA"],
-    education: ["LL.M., Alternative Dispute Resolution", "B.A. LL.B. (Hons.)", "Advanced Diploma in ADR"],
-    linkedin: "https://www.linkedin.com/in/ajay-mane07?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    isMainTeam: false
-  },
-  {
-    id: 9,
-    slug: 'ashutosh-agrawal',
-    name: 'CA Ashutosh Agrawal',
-    role: 'Finance & Audit Professional',
-    shortDescription: 'Assurance, Compliance & Advisory',
-    image: "/assets/team/Ashutosh-Agrawal.png",
-    detailedBio: "CA Ashutosh Agrawal is a finance and audit professional with expertise in assurance, compliance, risk management, and business advisory. As the Proprietor of Ashutosh Agrawal & Associates, he advises organizations on strengthening financial controls, enhancing operational efficiency, and maintaining regulatory compliance through a structured and analytical approach.\n\nHis practice focuses on internal audits, risk assessment, fraud detection, and information systems audits, helping businesses identify vulnerabilities, improve governance frameworks, and establish robust financial and operational controls. He works closely with organizations to ensure compliance while driving process improvements that support sustainable growth.\n\nPrior to establishing his independent practice, he served as a Partner at Agrawal Tayal & Associates, where he was involved in audit engagements, management consultancy assignments, and the resolution of direct and indirect tax matters. His professional experience spans financial reporting, compliance management, accounts receivable oversight, credit control, and business process optimization.",
-    expertise: [
-      "Bookkeeping & Financial Record Management",
-      "Financial Accounting & Reporting",
-      "Financial Planning & Business Advisory",
-      "Budgeting & Financial Forecasting",
-      "Tax Advisory & Regulatory Compliance",
-      "Personal Tax Planning & Tax Optimization"
-    ],
-    education: [
-      "Chartered Accountant (CA)",
-      "B.Com"
-    ],
-    linkedin: "https://www.linkedin.com/in/ca-ashutosh-agrawal-2421a614b/",
-    isMainTeam: false
-  },
-  {
-    id: 10,
-    slug: 'bipin-singh',
-    name: 'CS Bipin Singh',
-    role: 'Legal Specialist',
-    shortDescription: 'Civil & Corporate Law',
-    image: "/assets/team/Bipin-Singh.png",
-    detailedBio: "Bipin Singh has a strong track record in civil and corporate law. He helps organizations navigate business disputes, draft critical legal documents, and minimize operational legal risks.",
-    expertise: ["Civil Litigation", "Corporate Law", "Drafting & Vetting"],
-    education: ["LL.B."],
-    linkedin: "https://www.linkedin.com/in/cs-bipin-singh-22ab70a8/",
-    isMainTeam: false
-  },
-  {
-    id: 11,
-    slug: 'ca-mohan-kumar',
-    name: 'CA Mohan Kumar',
-    role: 'Chartered Accountant',
-    shortDescription: 'Audit & Financial Compliance',
-    image: "/assets/team/CA-Mohan-kumar.png",
-    detailedBio: "CA Mohan Kumar is an experienced Chartered Accountant with deep expertise in auditing, financial compliance, and accounting standards. He ensures that corporate financial practices meet all statutory and regulatory requirements.",
-    expertise: ["Statutory Audit", "Financial Compliance", "Accounting"],
-    education: ["Chartered Accountant (CA)", "B.Com"],
-    isMainTeam: false
-  },
-  {
-    id: 12,
-    slug: 'karthikeyan-tc',
-    name: 'Karthikeyan TC',
-    role: 'Associate Consultant',
-    shortDescription: 'Regulatory Advisory',
-    image: "/assets/team/Kartikyan.png",
-    detailedBio: "Entering legal practice feels like beginning a journey without a map. Law school provides structure and certainty, but practice introduces unpredictability. Files arrive without instructions, courtrooms have their own procedures and practice, and much of what matters is never formally explained. Very soon, one understands that law is learned not only through reading, but through repetition and observation.\n\nFor a first-generation lawyer, each decision feels heavy, and early confusion can be mistaken for incompetence. At the initial stage when one begins to handle cases independently, the need for guidance is felt at every step, and confidence is tested through daily practice. Learning happens through listening, watching seniors, and quietly correcting errors. There is no clear measure of progress in the beginning. In contrast, a second-generation lawyer often grows up in an environment where legal discussions are part of daily life. Had structured mentorship been available early on, many uncertainties could have been avoided. Practical direction on routine work and feedback on mistakes would have made learning more efficient. Practice eventually teaches these lessons, but guidance could have made the early years more focused and less isolating.",
-    expertise: ["Regulatory Advisory", "Tax Assessments", "Legal Research"],
-    education: ["BBA LL.B. (Hons.)", "LL.M."],
-    linkedin: "https://www.linkedin.com/in/karthikeyan-tc?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    isMainTeam: false
-  },
-  {
-    id: 13,
-    slug: 'ca-lokesh-rana',
-    name: 'CA Lokesh Rana',
-    role: 'Founder & Managing Partner',
-    shortDescription: 'FCA | ACS | B.Com',
-    image: "/assets/team/Lokesh-Rana.png",
-    detailedBio: "CA Lokesh Rana is a Fellow Chartered Accountant (FCA) and Associate Company Secretary (ACS) with over a decade of professional experience in Audit & Assurance, Direct & Indirect Taxation, Corporate Laws, Financial Advisory, Risk Management, and Regulatory Compliance. As Founder & Managing Partner of G L A & Co., Chartered Accountants, he has advised and supported startups, MSMEs, corporate houses, and multinational enterprises across a wide spectrum of industries, providing strategic financial and business advisory services that strengthen governance, improve operational efficiency, optimise taxation, and enable sustainable growth.\n\nHe has extensive experience leading statutory audits, internal audits, tax audits, GST advisory, due diligence assignments, business restructuring, financial reporting, corporate compliances, and virtual CFO engagements. His practical, solution-oriented approach enables businesses to establish robust internal controls, implement effective financial systems, and navigate complex regulatory requirements with confidence.\n\nCA Lokesh Rana believes a Chartered Accountant should act as a strategic business partner rather than merely a compliance professional — combining technical excellence, commercial understanding, ethical practice, and technology-driven solutions to help businesses build strong financial foundations, mitigate risks, and make informed strategic decisions.",
-    expertise: [
-      "Statutory, Internal & Tax Audits",
-      "GST Advisory, Audit & Litigation",
-      "Direct Tax Advisory & Compliance",
-      "Due Diligence & Transaction Advisory",
-      "Virtual CFO Services",
-      "Corporate & ROC Compliances",
-      "Internal Financial Controls (IFC)",
-      "SOP & Process Improvement",
-      "Risk Management & Compliance Framework",
-      "Business Structuring & Startup Advisory",
-      "Project Finance & Banking Advisory",
-      "Government Incentives & Subsidy Advisory",
-      "Financial Reporting & MIS",
-      "Accounting & Business Consulting"
-    ],
 
-    education: [
-      "FCA",
-      "ACS",
-      "B.Com"
-    ],
-    linkedin: "https://www.linkedin.com/in/ca-lokkeesh-rana-b59127193?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    isMainTeam: false
-  },
   {
     id: 14,
     slug: 'adv-sahil-kumar',
@@ -289,6 +267,32 @@ export const teamData = [
       "LL.M. (O.P. Jindal Global University)"
     ],
     linkedin: "https://www.linkedin.com/in/adv-sahil-kumar-6315b7129?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    isMainTeam: false
+  },
+  {
+    id: 8,
+    slug: 'ajay-mane',
+    name: 'Adv. Ajay R. Mane',
+    role: 'Commercial Litigation & Arbitration',
+    shortDescription: 'Contractual and Civil Disputes',
+    image: "/assets/team/Ajay-mane.png",
+    detailedBio: "Ajay R. Mane is an advocate practising in commercial litigation and arbitration, with a focus on contractual and civil disputes before the Bombay High Court and arbitral tribunals. He has represented clients in proceedings under Sections 9, 11, 34, and 37 of the Arbitration and Conciliation Act, 1996, from the pre-arbitration stage through post-award challenges.\n\nHis practice includes drafting pleadings, written submissions, affidavits, case strategy, evidence structuring, and cross-examination preparation. He has also worked on commercial agreements and cross-border regulatory review under FEMA, 1999, with a transaction advisory practice in Pune.\n\nAjay holds an LLM in Alternative Dispute Resolution from Jindal Global Law School, O.P. Jindal University, an Advanced Diploma in ADR from NALSAR University of Law, Hyderabad, and a B.A. LL.B. (Hons.) from Maharashtra National Law University, Aurangabad.",
+    expertise: ["Commercial Litigation", "Arbitration", "Contractual & Civil Disputes", "Transactional Matters & FEMA"],
+    education: ["LL.M., Alternative Dispute Resolution", "B.A. LL.B. (Hons.)", "Advanced Diploma in ADR"],
+    linkedin: "https://www.linkedin.com/in/ajay-mane07?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    isMainTeam: false
+  },
+  {
+    id: 12,
+    slug: 'karthikeyan-tc',
+    name: 'Adv. Karthikeyan TC',
+    role: 'Associate Consultant',
+    shortDescription: 'Regulatory Advisory',
+    image: "/assets/team/Karthikeyan.png",
+    detailedBio: "Entering legal practice feels like beginning a journey without a map. Law school provides structure and certainty, but practice introduces unpredictability. Files arrive without instructions, courtrooms have their own procedures and practice, and much of what matters is never formally explained. Very soon, one understands that law is learned not only through reading, but through repetition and observation.\n\nFor a first-generation lawyer, each decision feels heavy, and early confusion can be mistaken for incompetence. At the initial stage when one begins to handle cases independently, the need for guidance is felt at every step, and confidence is tested through daily practice. Learning happens through listening, watching seniors, and quietly correcting errors. There is no clear measure of progress in the beginning. In contrast, a second-generation lawyer often grows up in an environment where legal discussions are part of daily life. Had structured mentorship been available early on, many uncertainties could have been avoided. Practical direction on routine work and feedback on mistakes would have made learning more efficient. Practice eventually teaches these lessons, but guidance could have made the early years more focused and less isolating.",
+    expertise: ["Regulatory Advisory", "Tax Assessments", "Legal Research"],
+    education: ["BBA LL.B. (Hons.)", "LL.M."],
+    linkedin: "https://www.linkedin.com/in/karthikeyan-tc?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     isMainTeam: false
   }
 ];

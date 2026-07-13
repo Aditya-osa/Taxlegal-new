@@ -127,7 +127,7 @@ const ContactUs = () => {
                 <div className="contact-map-wrapper">
                   <iframe
                     title="Office Location"
-                    src="https://maps.google.com/maps?ll=19.019674,73.039406&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=401-404,Prabhat+Center,CBD-Belapur,Navi+Mumbai&output=embed"
+                    src="https://maps.google.com/maps?ll=19.019674,73.039406&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=401-406,Prabhat+Centre+Annex,Sector+1A,CBD-Belapur,Navi+Mumbai&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

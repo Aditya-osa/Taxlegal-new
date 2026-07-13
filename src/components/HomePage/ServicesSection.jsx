@@ -154,7 +154,7 @@ const ServicesSection = ({ navigateToPage }) => {
   return (
     <section className="services-section services-component">
       <div className="container">
-        <div className="services-header">
+        <div className="services-header" data-aos="fade-up">
           <div className="subtitle-wrapper">
             <span className="section-eyebrow">OUR PRACTICE AREAS</span>
             <div className="subtitle-line"></div>
@@ -172,7 +172,7 @@ const ServicesSection = ({ navigateToPage }) => {
         </div>
       </div>
 
-      <div className="services-carousel-container">
+      <div className="services-carousel-container" data-aos="fade-up" data-aos-delay="200">
         <div className="services-carousel-track">
           {services.map((service, index) => (
             <div 

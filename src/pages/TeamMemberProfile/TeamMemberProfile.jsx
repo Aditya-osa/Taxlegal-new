@@ -47,7 +47,7 @@ const TeamMemberProfile = () => {
             <div className="profile-card-col">
               <div className="new-profile-card">
                 <div className="npc-image-wrapper">
-                  <img src={member.image} alt={member.name} />
+                  <img src={member.image} alt={member.name} className={member.flipImage ? 'flipped-image' : ''} />
                 </div>
                 <div className="npc-info">
                   <h1>{member.name}</h1>

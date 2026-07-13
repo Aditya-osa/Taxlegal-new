@@ -233,7 +233,7 @@
 .pillar-lucide-icon {
   width: 24px;
   height: 24px;
-  color: #c59b27;
+  color: var(--red-accent);
   stroke-width: 2px;
 }
 
@@ -252,19 +252,19 @@
     gap: 16px;
     max-width: 550px;
   }
-  
+
   .step-arrow-wrapper {
     padding-top: 0;
     height: 40px;
     width: 100%;
     justify-content: center;
   }
-  
+
   .step-arrow-line {
     width: 2px;
     height: 100%;
   }
-  
+
   .step-arrow-line::after {
     right: -4px;
     top: auto;
@@ -299,13 +299,13 @@
   .step-description {
     max-width: 440px;
   }
-  
+
   .pillars-banner {
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
     padding: 26px 24px;
   }
-  
+
   .pillar-item {
     border-right: none;
     justify-content: flex-start;
@@ -326,7 +326,7 @@
     grid-template-columns: 1fr;
     gap: 18px;
   }
-  
+
   .pillar-item {
     justify-content: center;
   }
@@ -362,12 +362,15 @@
     left: -40px;
     opacity: 0;
   }
+
   15% {
     opacity: 1;
   }
+
   85% {
     opacity: 1;
   }
+
   100% {
     left: 100%;
     opacity: 0;
@@ -379,12 +382,15 @@
     top: -40px;
     opacity: 0;
   }
+
   15% {
     opacity: 1;
   }
+
   85% {
     opacity: 1;
   }
+
   100% {
     top: 100%;
     opacity: 0;

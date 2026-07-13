@@ -59,13 +59,21 @@
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 16px;
+  background-color: #ffffff;
 }
 
 .npc-image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center top;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.npc-image-wrapper img.flipped-image {
+  transform: scaleX(-1) scaleY(1);
+  transform-origin: center center;
 }
 
 .npc-info {

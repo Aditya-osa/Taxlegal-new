@@ -11,7 +11,7 @@ const AboutSection = () => {
         <div className="about-top-row">
 
           {/* Left Content */}
-          <div className="about-content-column">
+          <div className="about-content-column" data-aos="fade-right">
 
 
             <h2 className="section-title">
@@ -39,11 +39,13 @@ const AboutSection = () => {
                 competence, professional ethics, confidentiality, and practical
                 problem-solving.
               </p>
+              <p>Our commitment is to deliver trusted, practical, and value-driven solutions that enable our clients to remain compliant,
+                mitigate risks, and focus on sustainable growth.</p>
             </div>
           </div>
 
           {/* Right Image */}
-          <div className="about-image-column">
+          <div className="about-image-column" data-aos="fade-left">
             <img
               src="/assets/Home Page/image.png"
               alt="About TaxLegal"
@@ -55,7 +57,7 @@ const AboutSection = () => {
         <br />
         <br />
         <br />
-        <div className="about-features-grid">
+        <div className="about-features-grid" data-aos="fade-up" data-aos-duration="200" data-aos-delay="0">
           <div className="feature-box">
             <div className="feature-box-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c42a2f" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -88,7 +90,7 @@ const AboutSection = () => {
             <p className="feature-box-desc">Maintaining the highest standards of professionalism, ethics and confidentiality.</p>
           </div>
         </div>
-        <button className="btn-navy about-read-more-btn" style={{ marginTop: '10px', alignSelf: 'center' }} onClick={() => navigate('/about')}>Read More About Us</button>
+        <button className="btn-navy about-read-more-btn" style={{ marginTop: '10px', alignSelf: 'center' }} onClick={() => navigate('/about')}>Know More</button>
 
       </div>
     </section >
