@@ -96,7 +96,7 @@ const Footer = () => {
               <div className="reach-phones">
                 <a href="tel:+919819705068" className="reach-text">+91-9819705068</a>
                 <span className="phone-separator">/</span>
-                <a href="tel:+919982003040" className="reach-text">+91-9982003040</a>
+                <a href="tel:+919982003040" className="reach-text">+91-9869005068</a>
               </div>
             </div>
             <div className="reach-item">
