@@ -82,18 +82,6 @@ const TeamMemberProfile = () => {
                 ))}
               </div>
 
-              {member.publications && member.publications.length > 0 && (
-                <div className="bio-publications">
-                  <h3>Publications</h3>
-                  {member.publicationsNote && <p className="publications-note">{member.publicationsNote}</p>}
-                  <ul className="publications-list">
-                    {member.publications.map((pub, idx) => (
-                      <li key={idx}>{pub}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
               {member.email && (
                 <div className="bio-email">
                   <span className="email-label">Email: </span>
@@ -103,6 +91,39 @@ const TeamMemberProfile = () => {
             </div>
 
           </div>
+
+          {/* Publications Full-Width Section */}
+          {member.publications && member.publications.length > 0 && (
+            <div className="premium-pub-section">
+              <div className="premium-pub-header">
+                <h2 className="premium-pub-title">Publications</h2>
+                <div className="premium-pub-divider"></div>
+              </div>
+              
+              {member.publicationsNote && (
+                <p className="premium-pub-desc">
+                  {member.publicationsNote}
+                </p>
+              )}
+              
+              <div className="premium-books-container">
+                <div className="premium-books-inner">
+                  <h3 className="premium-books-title">Books</h3>
+                  <ul className="premium-books-list">
+                    {member.publications.map((pub, idx) => (
+                      <li key={idx}>
+                        <svg className="pub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span>{pub}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Bottom Section */}
           <div className="profile-bottom-section">

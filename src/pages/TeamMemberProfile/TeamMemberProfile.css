@@ -42,6 +42,11 @@
 /* Left Profile Card */
 .profile-card-col {
   flex: 0 0 360px;
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  white-space: pre-line;
 }
 
 .new-profile-card {
@@ -49,8 +54,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: sticky;
-  top: 90px;
 }
 
 .npc-image-wrapper {
@@ -60,7 +63,9 @@
   overflow: hidden;
   margin-bottom: 16px;
   background-color: #ffffff;
+  white-space: pre-line;
 }
+
 
 .npc-image-wrapper img {
   width: 100%;
@@ -102,6 +107,7 @@
   font-size: 0.95rem;
   color: #666;
   margin-bottom: 16px;
+  white-space: pre-line;
 }
 
 .npc-linkedin-btn {
@@ -375,38 +381,130 @@
   margin-bottom: 12px;
 }
 
-.publications-note {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #555;
-  margin-bottom: 12px;
+/* Premium Publications Section */
+.premium-pub-section {
+  width: 100%;
+  margin: 0 0 16px 0;
+  padding: 14px 22px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
 }
 
-.publications-list {
+.premium-pub-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.premium-pub-title {
+  font-family: var(--font-head, Georgia, serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy-primary, #076aaa);
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.premium-pub-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #D4AF37;
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.premium-pub-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4A4A4A;
+  text-align: center;
+  line-height: 1.5;
+  margin: 8px auto 0 auto;
+  max-width: 1000px;
+  white-space: pre-line;
+}
+
+.premium-books-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.premium-books-inner {
+  width: 100%;
+}
+
+.premium-books-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0c2340;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.premium-books-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.publications-list li {
+.premium-books-list li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  font-size: 15px;
-  line-height: 1.8;
-  color: #333;
-  margin-bottom: 10px;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #333333;
+  line-height: 1.4;
+  text-align: left;
 }
 
-.publications-list li:last-child {
-  margin-bottom: 0;
-}
-
-.publications-list li::before {
-  content: '📖';
+.premium-books-list .pub-icon {
+  color: #3F67A8;
   flex-shrink: 0;
-  font-size: 16px;
-  line-height: 1.8;
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .premium-pub-section {
+    padding: 40px 24px;
+    border-radius: 16px;
+  }
+
+  .premium-pub-title {
+    font-size: 36px;
+  }
+
+  .premium-pub-desc {
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
+  .premium-books-container {
+    margin-top: 40px;
+  }
+
+  .premium-books-title {
+    font-size: 28px;
+  }
+
+  .premium-books-list li {
+    font-size: 18px;
+  }
 }
 
 /* Bio Email Section */
