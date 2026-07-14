@@ -6,21 +6,19 @@ const WhoWeAre = () => {
   return (
     <section className="about-section who-we-are-section">
       <div className="about-container">
-        {/* Full-width header spanning above both columns */}
-        <div className="who-we-are-header">
-          <div className="subtitle-wrapper">
-            <p className="section-eyebrow">WHO WE ARE</p>
-            <div className="subtitle-line"></div>
-          </div>
-
-          <h2 className="section-title">
-            Shaping Solutions Through   <br /> Experience and Integrity
-          </h2>
-        </div>
-
         <div className="who-vision-grid">
-          {/* Left Column: Who We Are Text */}
+          {/* Left Column: Who We Are Text & Header */}
           <div className="who-we-are-content">
+            <div className="who-we-are-header">
+              <div className="subtitle-wrapper">
+                <p className="section-eyebrow">WHO WE ARE</p>
+                <div className="subtitle-line"></div>
+              </div>
+
+              <h2 className="section-title">
+                Shaping Solutions Through   <br /> Experience and Integrity
+              </h2>
+            </div>
             <div className="who-we-are-text">
               <p>
                 Established in 1996, <strong>TaxLegal</strong> is a professional services firm providing integrated solutions across accounting, taxation, audit, corporate compliance, and legal advisory.
