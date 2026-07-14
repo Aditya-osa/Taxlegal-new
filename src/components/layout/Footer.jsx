@@ -13,7 +13,7 @@ const Footer = () => {
               <img src="/assets/logo.png" alt="TaxLegal Logo" className="footer-logo-img" />
             </Link>
             <p className="footer-desc">
-              Advocates, Chartered Accountants & Company Secretaries. Practicing legal and tax matters since 1996 from Navi Mumbai.
+              Advocates, Chartered Accountants & Company Secretaries. Handling legal and tax matters since 1996 from Navi Mumbai.
             </p>
             <div className="footer-social-icons">
               <a href="https://www.linkedin.com/company/taxlegal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
