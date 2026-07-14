@@ -27,7 +27,7 @@ const AboutSection = () => {
               </p>
 
               <p>
-                For nearly <strong>three decades</strong>, we have worked with entrepreneurs,
+                For nearly <strong>THREE DECADES</strong>, we have worked with entrepreneurs,
                 businesses, institutions, housing societies, and charitable
                 organizations, helping them navigate statutory obligations,
                 regulatory requirements, and evolving business challenges with
@@ -62,7 +62,7 @@ const AboutSection = () => {
             <div className="feature-box-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c42a2f" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
             </div>
-            <h4 className="feature-box-title">Three Decades</h4>
+            <h4 className="feature-box-title">THREE DECADES</h4>
             <p className="feature-box-desc">Serving clients since 1996 across tax, regulatory and legal matters.</p>
           </div>
 
