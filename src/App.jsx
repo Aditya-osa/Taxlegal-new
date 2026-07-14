@@ -28,6 +28,8 @@ function App() {
       touchMultiplier: 2,
     });
 
+    window.lenis = lenis;
+
     AOS.init({
       once: false,
       mirror: true,

@@ -7,9 +7,9 @@ const TeamSection = () => {
   const navigate = useNavigate();
 
   const renderCard = (member, index) => (
-    <div 
-      key={`${member.id}-${index}`} 
-      className="team-card-large" 
+    <div
+      key={`${member.id}-${index}`}
+      className="team-card-large"
       onClick={() => navigate(`/team/${member.slug}`)}
       style={{ cursor: 'pointer' }}
     >
@@ -31,8 +31,12 @@ const TeamSection = () => {
     </div>
   );
 
-  const row1 = teamData.slice(0, 7);
-  const row2 = teamData.slice(7, 14);
+  const row1 = teamData.filter(member => member.name.startsWith('CA') || member.name.startsWith('CS'));
+  const row2Unsorted = teamData.filter(member => !member.name.startsWith('CA') && !member.name.startsWith('CS'));
+  const row2 = [
+    ...row2Unsorted.filter(m => m.slug === 'adv-suresh-sharma' || m.slug === 'adv-alok-shukla'),
+    ...row2Unsorted.filter(m => m.slug !== 'adv-suresh-sharma' && m.slug !== 'adv-alok-shukla')
+  ];
 
   return (
     <section className="team-section">
@@ -43,7 +47,7 @@ const TeamSection = () => {
             <div className="subtitle-line"></div>
           </div>
           <h2 className="section-title">Experienced Advisory Team</h2>
-          <p className="team-subtitle">
+          <p className="team-subtitle" style={{ fontSize: "20px", fontWeight: "600" }}>
             A multidisciplinary team with extensive experience across industries and sectors.
           </p>
         </div>

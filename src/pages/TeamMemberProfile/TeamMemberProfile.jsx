@@ -14,7 +14,11 @@ const TeamMemberProfile = () => {
   const member = teamData.find(m => m.slug === slug);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (window.lenis) {
+      window.lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
   }, [slug]);
 
   if (!member) {
@@ -39,10 +43,10 @@ const TeamMemberProfile = () => {
 
       <main className="profile-main-content">
         <div className="profile-main-container">
-          
+
           {/* Top Section */}
           <div className="profile-top-section">
-            
+
             {/* Left Profile Card */}
             <div className="profile-card-col">
               <div className="new-profile-card">
@@ -53,7 +57,7 @@ const TeamMemberProfile = () => {
                   <h1>{member.name}</h1>
                   <h3 className="npc-role">{member.role}</h3>
                   <p className="npc-location">{member.shortDescription || "Bombay High Court"}</p>
-                  
+
                   {member.linkedin && (
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="npc-linkedin-btn">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -77,13 +81,32 @@ const TeamMemberProfile = () => {
                   <p key={idx} style={{ whiteSpace: 'pre-line' }}>{para}</p>
                 ))}
               </div>
+
+              {member.publications && member.publications.length > 0 && (
+                <div className="bio-publications">
+                  <h3>Publications</h3>
+                  {member.publicationsNote && <p className="publications-note">{member.publicationsNote}</p>}
+                  <ul className="publications-list">
+                    {member.publications.map((pub, idx) => (
+                      <li key={idx}>{pub}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {member.email && (
+                <div className="bio-email">
+                  <span className="email-label">Email: </span>
+                  <a href={`mailto:${member.email}`}>{member.email}</a>
+                </div>
+              )}
             </div>
-            
+
           </div>
 
           {/* Bottom Section */}
           <div className="profile-bottom-section">
-            
+
             {/* Left Expertise Card */}
             <div className="profile-bottom-left">
               {member.expertise && member.expertise.length > 0 && (

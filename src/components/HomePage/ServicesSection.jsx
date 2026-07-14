@@ -164,9 +164,9 @@ const ServicesSection = ({ navigateToPage }) => {
             One Partner. Every Business Solution.
           </h2>
 
-          <p className="section-subtitle">
+          <p className="section-subtitle" style={{ fontSize: "20px", fontWeight: "600" }}>
             From business formation to taxation, compliance, and legal advisory
-            — coordinated professional services through a single point of
+            <br />coordinated professional services through a single point of
             engagement.
           </p>
         </div>
@@ -175,8 +175,8 @@ const ServicesSection = ({ navigateToPage }) => {
       <div className="services-carousel-container" data-aos="fade-up" data-aos-delay="200">
         <div className="services-carousel-track">
           {services.map((service, index) => (
-            <div 
-              className="service-card" 
+            <div
+              className="service-card"
               key={`service-1-${service.id}-${index}`}
             >
               <img
@@ -200,8 +200,8 @@ const ServicesSection = ({ navigateToPage }) => {
           ))}
           {/* Duplicate set for seamless looping */}
           {services.map((service, index) => (
-            <div 
-              className="service-card" 
+            <div
+              className="service-card"
               key={`service-2-${service.id}-${index}`}
             >
               <img
