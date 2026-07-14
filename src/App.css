@@ -85,6 +85,10 @@ button:hover {
 
 /* ================= FLOATING BUTTONS RESPONSIVE ================= */
 
+.tax-btn-icon {
+  display: none;
+}
+
 @media (max-width: 1199px) {
   .floating-tax-btn {
     padding: 16px 10px;
@@ -97,15 +101,91 @@ button:hover {
 }
 
 @media (max-width: 767px) {
-  .floating-tax-btn {
-    padding: 10px 8px;
-    font-size: 0.8rem;
-    top: 15%; 
-    right: 0;
-    letter-spacing: 1px;
-    z-index: 9998;
+  .tax-btn-icon {
+    display: block;
+    flex-shrink: 0;
   }
-  .floating-tax-btn:hover {
-    transform: translateY(-50%) translateX(-4px);
+  
+  .tax-btn-text {
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    margin-left: 0;
+    visibility: hidden; /* Added to trap first tap on iOS */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    white-space: nowrap;
+  }
+  
+  .floating-tax-btn {
+    /* Reset desktop vertical properties */
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    transform: none;
+    top: auto;
+    border-left: none;
+    
+    /* Convert to FAB - collapsed state */
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    background: #c42a2f;
+    color: #ffffff;
+    
+    /* Shape and size */
+    box-sizing: border-box; /* Force border-box for perfect 48x48 circle */
+    max-width: 48px;
+    height: 48px;
+    padding: 0 14px; /* Centers the 20px icon */
+    border-radius: 50%; /* Round shape */
+    
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 9998;
+    box-shadow: 0 4px 15px rgba(183, 28, 28, 0.4);
+    animation: slideUpFab 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    
+    /* Smooth expansion */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+  }
+  
+  .floating-tax-btn::before {
+    display: none; /* Hide desktop shine effect on mobile FAB */
+  }
+  
+  /* Expanded state on hover or touch */
+  .floating-tax-btn:hover,
+  .floating-tax-btn:active,
+  .floating-tax-btn:focus {
+    max-width: 200px;
+    border-radius: 999px; /* Pill shape when expanded */
+    background: linear-gradient(135deg, #df444e 0%, #B2222B 100%);
+    box-shadow: 0 6px 20px rgba(183, 28, 28, 0.6);
+    color: #ffffff;
+    transform: translateY(-4px);
+  }
+
+  /* Show text on hover/active */
+  .floating-tax-btn:hover .tax-btn-text,
+  .floating-tax-btn:active .tax-btn-text,
+  .floating-tax-btn:focus .tax-btn-text {
+    opacity: 1;
+    max-width: 150px;
+    margin-left: 8px;
+    visibility: visible;
+  }
+}
+
+@keyframes slideUpFab {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

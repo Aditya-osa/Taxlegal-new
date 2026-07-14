@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import Lenis from 'lenis'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Calculator } from 'lucide-react'
 import Home from './pages/Home/Home'
 import AboutUs from './pages/AboutUs/AboutUs'
 import Services from './pages/Services/Services'
@@ -60,7 +61,8 @@ function App() {
         rel="noopener noreferrer"
         className="floating-tax-btn"
       >
-        Tax Calculator
+        <Calculator size={20} className="tax-btn-icon" />
+        <span className="tax-btn-text">Tax Calculator</span>
       </a>
       <Routes>
         <Route path="/" element={<Home />} />
