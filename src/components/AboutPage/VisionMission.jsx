@@ -7,14 +7,14 @@ const VisionMission = () => {
       <div className="vm-card vm-card-white">
         <div className="vm-label vm-label-red">VISION</div>
         <blockquote>
-          To be the most trusted advisor, empowering businesses to navigate complexity with confidence and achieve sustainable success.
+          To uphold excellence, integrity, and ethical practice in delivering legal, tax, and regulatory services.
         </blockquote>
       </div>
       
       <div className="vm-card vm-card-white">
         <div className="vm-label vm-label-red">MISSION</div>
         <blockquote>
-          To deliver exceptional tax, legal, and regulatory advisory through technical excellence, professional integrity, and practical insight, helping our clients manage complexity, mitigate risk, and create lasting value.
+          To provide integrated legal, tax, and regulatory services founded on technical excellence, professional integrity, ethical practice, and commercially informed guidance.
         </blockquote>
       </div>
     </div>
