@@ -14,7 +14,7 @@ const WhoWeAre = () => {
           </div>
 
           <h2 className="section-title">
-            Guiding Businesses Through  <br /> Growth,  Governance and Compliance
+            Shaping Solutions Through   <br /> Experience and Integrity
           </h2>
         </div>
 
@@ -23,13 +23,13 @@ const WhoWeAre = () => {
           <div className="who-we-are-content">
             <div className="who-we-are-text">
               <p>
-                Established in 1996, <strong>TaxLegal</strong> is a multidisciplinary professional services firm providing integrated solutions across accounting, taxation, audit, corporate compliance, and legal advisory.
+                Established in 1996, <strong>TaxLegal</strong> is a professional services firm providing integrated solutions across accounting, taxation, audit, corporate compliance, and legal advisory.
               </p>
               <p>
-                For nearly <strong>THREE DECADES</strong>, we have advised organizations, entrepreneurs, institutions, housing societies and charitable organizations on tax, regulatory and legal matters, supporting informed decision-making in an increasingly complex business environment.
+                For nearly <strong>THREE DECADES</strong>, we have served businesses, entrepreneurs, institutions, co-operative housing societies, charitable organisations, and individuals by addressing complex legal, tax, and regulatory matters with technical expertise, commercial insight, and practical legal understanding.
               </p>
               <p>
-                Our multidisciplinary team combines technical excellence with professional integrity to deliver practical, commercially focused solutions while maintaining the highest standards of quality, ethics and confidentiality.
+                Our professionals combine legal, tax, financial, and regulatory expertise to provide thoughtful, commercially informed guidance. Guided by professional integrity, ethical practice, and confidentiality, we uphold the highest standards of quality, diligence, and professional responsibility in every engagement.
               </p>
             </div>
           </div>
