@@ -82,3 +82,30 @@ button:hover {
               inset 2px 0 5px rgba(255,255,255,0.3);
   color: #ffffff;
 }
+
+/* ================= FLOATING BUTTONS RESPONSIVE ================= */
+
+@media (max-width: 1199px) {
+  .floating-tax-btn {
+    padding: 16px 10px;
+    font-size: 0.9rem;
+    right: -4px; 
+  }
+  .floating-tax-btn:hover {
+    transform: translateY(-50%) translateX(-10px);
+  }
+}
+
+@media (max-width: 767px) {
+  .floating-tax-btn {
+    padding: 10px 8px;
+    font-size: 0.8rem;
+    top: 15%; 
+    right: 0;
+    letter-spacing: 1px;
+    z-index: 9998;
+  }
+  .floating-tax-btn:hover {
+    transform: translateY(-50%) translateX(-4px);
+  }
+}
