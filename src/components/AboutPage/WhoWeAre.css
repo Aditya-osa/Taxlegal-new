@@ -17,7 +17,7 @@
 
 .who-vision-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 50px;
   align-items: start;
 }
@@ -27,7 +27,7 @@
 }
 
 .who-we-are-right {
-  margin-top: 0;
+  margin-top: 140px;
 }
 
 .who-we-are-text p {
@@ -47,8 +47,15 @@
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
@@ -56,5 +63,9 @@
   .who-vision-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .who-we-are-right {
+    margin-top: 0;
   }
 }

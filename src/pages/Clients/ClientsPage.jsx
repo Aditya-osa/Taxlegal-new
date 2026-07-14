@@ -59,8 +59,7 @@ const ClientsPage = () => {
             <div className="clients-hero-content">
               <span className="tl-hero-badge-pill">Clients & Testimonials </span>
               <h1 className="hero-title">
-                Trusted by Organizations That Value Expertise
-              </h1>
+                Trusted by many<br /> who value expertise.          </h1>
               <p className="clients-hero-description">
                 Supporting organizations of every size with practical,<br />
                 business-focused tax and legal solutions.              </p>
