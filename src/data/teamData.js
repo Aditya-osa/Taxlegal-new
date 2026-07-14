@@ -184,7 +184,7 @@ export const teamData = [
       "D.F.M.",
       "LL.B."
     ],
-    email: "suresh@taxlegal.in",
+
     linkedin: "https://www.linkedin.com/in/adv-suresh-sharma/",
     isMainTeam: true
   }, {
@@ -217,7 +217,6 @@ export const teamData = [
       "LL.B.",
       "LL.M. (Taxation)"
     ],
-    email: "adv.varunsharmaa@gmail.com",
     linkedin: "https://www.linkedin.com/in/adv-varun-sharma/",
     isMainTeam: false
   },
@@ -269,7 +268,6 @@ export const teamData = [
       "Master's in Business Law",
       "PGDM – Human Resource Management"
     ],
-    email: "advisor@taxlegal.in",
     linkedin: "https://www.linkedin.com/in/advocatevaishnavisharma/",
     isMainTeam: true
   }, {
