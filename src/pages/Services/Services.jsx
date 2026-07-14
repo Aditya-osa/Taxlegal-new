@@ -242,7 +242,7 @@ const legalAdvisoryServices = [
   {
     id: 8,
     num: "08",
-    title: "PROPERTY & REAL ESTATE",
+    title: "RERA ",
     icon: Home,
     description:
       "Protecting your property interests. Legal support for property transactions, title verification, due diligence, RERA compliance and real estate disputes.",
