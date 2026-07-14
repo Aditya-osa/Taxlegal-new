@@ -161,7 +161,7 @@ const ServicesSection = ({ navigateToPage }) => {
           </div>
 
           <h2 className="section-title">
-            One Partner. Every Business Solution.
+            One Stop Solution for All Business Requirements.
           </h2>
 
           <p className="section-subtitle" style={{ fontSize: "20px", fontWeight: "600" }}>

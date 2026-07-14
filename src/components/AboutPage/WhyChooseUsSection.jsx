@@ -58,7 +58,7 @@ const whyChooseItems = [
     id: 6,
     title: "Trusted Relationships",
     description:
-      "Built on professionalism, discretion and accountability. Long-term partnerships driven by client success.",
+      "Built on professionalism, discretion and accountability. Long-term partnerships driven by client's faith.",
     icon: ShieldCheck,
     image: "/assets/Services/integrity_and_transparency.jpg",
   },
