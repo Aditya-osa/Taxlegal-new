@@ -26,7 +26,7 @@ const WhoWeAre = () => {
                 Established in 1996, <strong>TaxLegal</strong> is a multidisciplinary professional services firm providing integrated solutions across accounting, taxation, audit, corporate compliance, and legal advisory.
               </p>
               <p>
-                For nearly <strong>three decades</strong>, we have advised businesses, entrepreneurs, institutions, housing societies and charitable organizations on tax, regulatory and legal matters, supporting informed decision-making in an increasingly complex business environment.
+                For nearly <strong>THREE DECADES</strong>, we have advised organizations, entrepreneurs, institutions, housing societies and charitable organizations on tax, regulatory and legal matters, supporting informed decision-making in an increasingly complex business environment.
               </p>
               <p>
                 Our multidisciplinary team combines technical excellence with professional integrity to deliver practical, commercially focused solutions while maintaining the highest standards of quality, ethics and confidentiality.

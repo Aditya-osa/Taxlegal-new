@@ -62,7 +62,7 @@ const Disciplines = () => {
             </div>
             <h3>Advocates</h3>
             <p>
-              Representing clients in taxation, litigation, legal advisory, dispute resolution, and regulatory matters.
+              Representing clients in taxation, legal advisory, dispute resolution, and regulatory matters.
             </p>
           </div>
 
