@@ -194,7 +194,7 @@ const legalAdvisoryServices = [
   {
     id: 2,
     num: "02",
-    title: "SARFAESI & RDB MATTERS",
+    title: "SARFAESI",
     icon: Landmark,
     description:
       "Effective recovery and debt resolution. Legal representation in SARFAESI actions, DRT/DRAT proceedings, loan recovery and secured asset enforcement matters.",
@@ -253,7 +253,7 @@ const legalAdvisoryServices = [
     title: "FAMILY COURT MATTERS",
     icon: Users,
     description:
-      "Compassionate guidance during difficult times. Representation in divorce, child custody, maintenance, succession and other family law matters with complete confidentiality.",
+      "Compassionate guidance during difficult times. Representation in divorce, child custody, maintenance,  and other family law matters with complete confidentiality.",
   },
 ];
 
