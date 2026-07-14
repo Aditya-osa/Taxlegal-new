@@ -26,7 +26,7 @@ const whyChooseItems = [
     id: 2,
     title: "Business-Centric Thinking",
     description:
-      "Legal advice designed around commercial realities. Supporting confident business decisions.",
+      "A balanced approach that combines legal expertise with an understanding of business and regulatory environments to address evolving commercial needs.",
     icon: Briefcase,
     image: "/assets/Services/client_centric_approach.jpg",
   },
@@ -48,9 +48,9 @@ const whyChooseItems = [
   },
   {
     id: 5,
-    title: "Efficient Execution",
+    title: "Timely Execution",
     description:
-      "Responsive advice with clear timelines. Focused on timely delivery and measurable outcomes.",
+      "Strategic legal assistance delivered with efficiency, clear timelines, and meticulous attention to procedural and regulatory requirements.",
     icon: Clock,
     image: "/assets/Services/timely_and_effective_solutions.jpg",
   },
