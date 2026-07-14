@@ -162,7 +162,7 @@ const InternshipReview = () => {
           Every internship is an opportunity to build practical knowledge, professional confidence, and industry-ready skills.
         </p>
         <div className="internship-review-cta-wrap">
-          <span className="internship-review-cta">View Reviews ↓</span>
+          <span className="internship-review-cta">what our interns got to say about our internship program ↓</span>
         </div>
       </div>
 

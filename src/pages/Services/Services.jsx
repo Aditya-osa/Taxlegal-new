@@ -579,9 +579,9 @@ const Services = () => {
                 <span>OUR LEGAL ADVISORY SERVICES</span>
               </div>
               <h1 style={{ color: 'white', }}>
-                Strategic Legal Expertise <br /> Business-Focused Solutions
+                Integrated Legal Expertise <br /> Professional Integrity
                 <br />
-                Trusted Representation.
+                Ethical Representation.
               </h1>
               <p>
                 Whether you are an individual, entrepreneur, financial institution, corporate house,

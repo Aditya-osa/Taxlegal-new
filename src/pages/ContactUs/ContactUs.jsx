@@ -63,7 +63,7 @@ const ContactUs = () => {
                 Let's Start the Conversation
               </h1>
               <p className="contact-hero-description">
-                Whether you're seeking tax, legal, regulatory, or business advisory services, our multidisciplinary team is here to help. Connect with us to discuss your requirements and explore the right solutions for your business.
+                Whether you require legal, tax, regulatory, or business advisory services, our team is available to provide professional guidance tailored to your requirements. Contact us to discuss your matter.
               </p>
             </div>
           </div>
