@@ -147,99 +147,99 @@ const InternshipPage = () => {
       <Header />
       <main className="internship-main-content">
 
-      {/* Hero Section */}
-      <section className="internship-hero">
-        <div className="container internship-container">
-          <span className="tl-hero-badge-pill">INTERNSHIP PROGRAM</span>
-          <h1 className="hero-title">Launch Your Career <br /> Before You Graduate</h1>
-          <p className="internship-hero-desc">
-            Learn from professionals to start building your career. <br />At TaxLegal, we believe the best professionals
-            are shaped through <br />real experience, meaningful mentoring, and practical exposure.
-          </p>
-        </div>
-      </section>
-
-      <LogosSection />
-
-      {/* Domains Section */}
-      <section className="internship-domains">
-        <div className="container internship-container">
-          <div className="section-header-center">
-            <span className="internship-eyebrow text-red">INTERNSHIP DOMAINS</span>
-            <h2 className="section-title">Choose the Domain That Matches Your Career Goals.</h2>
-          </div>
-
-          <div className="domains-grid">
-            {domainItems.map((item, idx) => (
-              <div className="domain-card" key={idx}>
-                {item.image && (
-                  <div className="domain-card-image" style={{ width: '100%', height: '180px', margin: '0 0 15px 0', borderRadius: '12px', overflow: 'hidden' }}>
-                    <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  </div>
-                )}
-
-                <div className="domain-card-header" style={{ justifyContent: 'center' }}>
-                  <h4 className="domain-card-title">{item.title}</h4>
-                </div>
-                <p className="domain-card-desc">{item.description}</p>
-                <div className="domain-eligibility-panel">
-                  <p className="eligibility-text">
-                    <strong>Eligibility:</strong> {item.eligibility}
-                  </p>
-                </div>
-                <div className="domain-apply-wrap" style={{ marginTop: 'auto', paddingTop: '20px' }}>
-                  <a href="https://taxlegal.bitrix24.site/" target="_blank" rel="noopener noreferrer" className="internship-btn-red" style={{ display: 'inline-block', width: '100%', textAlign: 'center', padding: '12px 12px', fontSize: '1rem', borderRadius: '6px' }}>
-                    Apply Now
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Program Overview Section */}
-      <section className="internship-overview">
-        <div className="container internship-container">
-          <span className="internship-eyebrow text-red-light">PROGRAM OVERVIEW</span>
-          <h2 className="overview-title" style={{ marginBottom: 0 }}>On-Site, Practical-oriented Learning</h2>
-        </div>
-      </section>
-
-
-      {/* Why Choose Section */}
-      <section className="internship-why">
-        <div className="container internship-container">
-          <div className="section-header-center">
-            <span className="internship-eyebrow text-red">WHY CHOOSE TAXLEGAL INTERNSHIP</span>
-            <h2 className="section-title">This Isn't Just Another Internship.</h2>
-            <p className="section-subtitle">
-              Get the opportunity to learn from professionals who have spent nearly three decades in business,
-              taxation, accounting, compliance, and legal sectors.
+        {/* Hero Section */}
+        <section className="internship-hero">
+          <div className="container internship-container">
+            <span className="tl-hero-badge-pill">INTERNSHIP PROGRAM</span>
+            <h1 className="hero-title">Launch Your Career <br /> While You Graduate</h1>
+            <p className="internship-hero-desc">
+              Learn from professionals to start building your career. <br />At TaxLegal, we believe the best professionals
+              are shaped through <br />real experience, meaningful mentoring, and practical exposure.
             </p>
           </div>
+        </section>
 
-          <div className="why-grid">
-            {whyChooseItems.map((item, idx) => (
-              <div className="why-card" key={idx}>
-                <div className="why-icon-wrap">
-                  {item.icon}
+        <LogosSection />
+
+        {/* Domains Section */}
+        <section className="internship-domains">
+          <div className="container internship-container">
+            <div className="section-header-center">
+              <span className="internship-eyebrow text-red">INTERNSHIP DOMAINS</span>
+              <h2 className="section-title">Choose the Domain That Matches Your Career Goals.</h2>
+            </div>
+
+            <div className="domains-grid">
+              {domainItems.map((item, idx) => (
+                <div className="domain-card" key={idx}>
+                  {item.image && (
+                    <div className="domain-card-image" style={{ width: '100%', height: '180px', margin: '0 0 15px 0', borderRadius: '12px', overflow: 'hidden' }}>
+                      <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                  )}
+
+                  <div className="domain-card-header" style={{ justifyContent: 'center' }}>
+                    <h4 className="domain-card-title">{item.title}</h4>
+                  </div>
+                  <p className="domain-card-desc">{item.description}</p>
+                  <div className="domain-eligibility-panel">
+                    <p className="eligibility-text">
+                      <strong>Eligibility:</strong> {item.eligibility}
+                    </p>
+                  </div>
+                  <div className="domain-apply-wrap" style={{ marginTop: 'auto', paddingTop: '20px' }}>
+                    <a href="https://taxlegal.bitrix24.site/" target="_blank" rel="noopener noreferrer" className="internship-btn-red" style={{ display: 'inline-block', width: '100%', textAlign: 'center', padding: '12px 12px', fontSize: '1rem', borderRadius: '6px' }}>
+                      Apply Now
+                    </a>
+                  </div>
                 </div>
-                <h4 className="why-card-title">{item.title}</h4>
-                <p className="why-card-desc">{item.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Reviews Section */}
-      <InternshipReview />
+        {/* Program Overview Section */}
+        <section className="internship-overview">
+          <div className="container internship-container">
+            <span className="internship-eyebrow text-red-light">PROGRAM OVERVIEW</span>
+            <h2 className="overview-title" style={{ marginBottom: 0 }}>On-Site, Practical-oriented Learning</h2>
+          </div>
+        </section>
 
-      {/* CTA Section */}
-      <WhyChooseUsSection />
 
-      {/* FAQ Section */}
+        {/* Why Choose Section */}
+        <section className="internship-why">
+          <div className="container internship-container">
+            <div className="section-header-center">
+              <span className="internship-eyebrow text-red">WHY CHOOSE TAXLEGAL INTERNSHIP</span>
+              <h2 className="section-title">This Isn't Just Another Internship.</h2>
+              <p className="section-subtitle">
+                Get the opportunity to learn from professionals who have spent nearly three decades in business,
+                taxation, accounting, compliance, and legal sectors.
+              </p>
+            </div>
+
+            <div className="why-grid">
+              {whyChooseItems.map((item, idx) => (
+                <div className="why-card" key={idx}>
+                  <div className="why-icon-wrap">
+                    {item.icon}
+                  </div>
+                  <h4 className="why-card-title">{item.title}</h4>
+                  <p className="why-card-desc">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Reviews Section */}
+        <InternshipReview />
+
+        {/* CTA Section */}
+        <WhyChooseUsSection />
+
+        {/* FAQ Section */}
 
       </main>
       <Footer />
