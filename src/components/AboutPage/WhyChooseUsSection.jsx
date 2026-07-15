@@ -16,60 +16,44 @@ import "./WhyChooseUsSection.css";
 const whyChooseItems = [
   {
     id: 1,
-    title: "Experienced Legal Professionals",
+    title: "Multidisciplinary Expertise",
     description:
-      "Seasoned legal experts with decades of practice. Delivering strategic and dependable representation.",
-    icon: Award,
-    image: "/assets/Services/experienced_proffessionals.jpg",
-  },
-  {
-    id: 2,
-    title: "Business-Centric Thinking",
-    description:
-      "A balanced approach that combines legal expertise with an understanding of business and regulatory environments to address evolving commercial needs.",
-    icon: Briefcase,
-    image: "/assets/Services/client_centric_approach.jpg",
-  },
-  {
-    id: 3,
-    title: "Multi-Disciplinary Capability",
-    description:
-      "Integrated legal expertise across practice areas. Delivering practical and coordinated solutions.",
+      "Chartered Accountants, Company Secretaries and Legal Professionals delivering integrated professional services.",
     icon: Building2,
     image: "/assets/Services/end_to_end_support.jpg",
   },
   {
-    id: 4,
-    title: "Regulatory Perspective",
+    id: 2,
+    title: "Commercial Perspective",
     description:
-      "Navigating evolving legal and compliance requirements. Helping clients operate with greater certainty.",
+      "Advice aligned with business objectives, governance requirements and regulatory expectations.",
     icon: Scale,
     image: "/assets/Services/Regulatory-compilance.png",
   },
   {
-    id: 5,
-    title: "Timely Execution",
+    id: 3,
+    title: "Integrated Solutions",
     description:
-      "Strategic legal assistance delivered with efficiency, clear timelines, and meticulous attention to procedural and regulatory requirements.",
+      "Coordinated expertise across tax, corporate advisory, regulatory compliance, transactions, dispute resolution and legal services.",
+    icon: Briefcase,
+    image: "/assets/Services/client_centric_approach.jpg",
+  },
+  {
+    id: 4,
+    title: "Execution Excellence",
+    description:
+      "Responsive delivery with a focus on quality, accountability and timely execution.",
     icon: Clock,
     image: "/assets/Services/timely_and_effective_solutions.jpg",
   },
   {
-    id: 6,
-    title: "Trusted Relationships",
+    id: 5,
+    title: "Pan-India Capability",
     description:
-      "Built on professionalism, discretion and accountability. Long-term partnerships driven by client's faith.",
-    icon: ShieldCheck,
-    image: "/assets/Services/integrity_and_transparency.jpg",
-  },
-  {
-    id: 7,
-    title: "National Reach",
-    description:
-      "Supporting clients across jurisdictions and industries. Consistent legal advice wherever business operates.",
+      "Consistent support across pan India jurisdictions and industries through a collaborative multidisciplinary team.",
     icon: Globe,
     image: "/assets/Services/pan_india_presence.jpg",
-  },
+  }
 ];
 
 const WhyChooseCarousel = ({ items }) => {
