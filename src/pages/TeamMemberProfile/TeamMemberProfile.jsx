@@ -1038,8 +1038,8 @@ const TeamMemberProfile = () => {
                 <Phone size={22} color="white" strokeWidth={1.5} />
               </div>
               <div className="premium-cta-text">
-                <h3 className="premium-cta-heading">Need Legal Assistance?</h3>
-                <p className="premium-cta-desc">Let's discuss how I can help you and your business.</p>
+                <h3 className="premium-cta-heading">Need Assistance?</h3>
+                <p className="premium-cta-desc">Let's discuss how we can help you and your business.</p>
               </div>
             </div>
             <div className="premium-cta-right">
