@@ -42,7 +42,8 @@ const TeamMemberProfile = () => {
       <Header />
 
       <main className="profile-main-content">
-        <div className="premium-profile-card">
+        <div className="profile-main-container">
+          <div className="premium-profile-card">
           
           {/* Top Section */}
           <div className="premium-profile-top">
@@ -102,11 +103,9 @@ const TeamMemberProfile = () => {
               </div>
             </div>
           </div>
-
         </div>
 
-        <div className="profile-main-container">
-          {/* New Areas of Expertise Section */}
+        {/* New Areas of Expertise Section */}
           <div className="premium-expertise-section">
             <h2 className="premium-expertise-title">Areas of Expertise</h2>
             <div className="premium-expertise-divider"></div>
