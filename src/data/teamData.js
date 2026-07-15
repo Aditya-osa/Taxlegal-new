@@ -7,7 +7,6 @@ export const teamData = [
     role: 'Practice Domain',
     shortDescription: 'Income Tax &  Statutory Audit ',
     image: "/assets/our team/narendra.jpg",
-    flipImage: true,
     detailedBio: "CA Narendra Rajput is a Chartered Accountant with expertise in Income Tax, Auditing, Financial Reporting, and Business Advisory. With extensive professional experience in taxation and assurance services, he assists businesses in maintaining financial transparency, ensuring regulatory compliance, and strengthening financial governance.\n\nHe specializes in statutory and internal audits, income tax advisory, tax planning, financial reporting, and business valuation. His practical and analytical approach enables businesses to comply with evolving statutory requirements while improving operational and financial efficiency.\n\nAs a Legal Advisor at TaxLegal, he provides strategic advisory and professional support in matters relating to Income Tax, statutory and internal audits, financial reporting, tax compliance, and business valuation. He assists clients in preparing accurate financial statements, ensuring statutory compliance, managing tax filings, and delivering practical financial solutions tailored to business requirements.",
     expertise: [
       "Statutory & Internal Audit",

@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { teamData } from '../../data/teamData';
 import './AboutSection.css';
+
+const teamImages = teamData.map((member) => member.image);
 
 const AboutSection = () => {
   const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (teamImages.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % teamImages.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="about-section">
       <div className="about-container">
@@ -45,11 +58,25 @@ const AboutSection = () => {
 
           {/* Right Image */}
           <div className="about-image-column" data-aos="fade-left">
-            <img
-              src="/assets/Home Page/image.png"
-              alt="About TaxLegal"
-              className="about-image"
-            />
+            {teamImages.length <= 1 ? (
+              <img
+                src={teamImages[0] || "/assets/Home Page/image.png"}
+                alt="About TaxLegal"
+                className="about-image"
+              />
+            ) : (
+              <div className="about-image-carousel">
+                {/* ponytail: stacked absolute images with CSS opacity transition for zero-shift crossfade without external carousel libs */}
+                {teamImages.map((src, index) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt={`TaxLegal Team ${index + 1}`}
+                    className={`about-carousel-img ${index === currentIndex ? 'active' : ''}`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
 
         </div>

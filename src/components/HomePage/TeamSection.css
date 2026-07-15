@@ -127,18 +127,8 @@
   transform-origin: center center;
 }
 
-.team-img-wrapper img.flipped-image {
-  transform: scaleX(-1) scaleY(1);
-  transform-origin: center center;
-}
-
 .team-card-large:hover .team-img-wrapper img {
   transform: scale(1.05);
-}
-
-.team-card-large:hover .team-img-wrapper img.flipped-image {
-  transform: scaleX(-1.05) scaleY(1.05);
-  transform-origin: center center;
 }
 
 .linkedin-icon {
