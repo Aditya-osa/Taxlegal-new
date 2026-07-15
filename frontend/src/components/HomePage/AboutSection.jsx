@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { teamData } from '../../data/teamData';
 import './AboutSection.css';
@@ -8,17 +8,38 @@ const teamImages = teamData.map((member) => member.image);
 const AboutSection = () => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (teamImages.length <= 1) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (teamImages.length <= 1 || !isVisible) return;
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % teamImages.length);
     }, 3000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isVisible]);
 
   return (
-    <section className="about-section">
+    <section className="about-section" ref={sectionRef}>
       <div className="about-container">
 
         <div className="about-top-row">
