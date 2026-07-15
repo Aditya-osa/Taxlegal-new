@@ -31,15 +31,14 @@ const AboutSection = () => {
                 businesses, institutions, housing societies, and charitable
                 organizations, helping them navigate statutory obligations,
                 regulatory requirements, and evolving business challenges with
-                clarity and confidence.
+                clarity and  precision.
               </p>
 
               <p>
-                Every assignment is approached with a strong emphasis on technical
-                competence, professional ethics, confidentiality, and practical
+                Every engagement is approached with a strong emphasis on maintain compliance, professional ethics, confidentiality, and practical
                 problem-solving.
               </p>
-              <p>Our commitment is to deliver trusted, practical, and value-driven solutions that enable our clients to remain compliant,
+              <p>Our mission is to deliver trusted, practical, and value-driven solutions that enable our clients to remain compliant,
                 mitigate risks, and focus on sustainable growth.</p>
             </div>
           </div>

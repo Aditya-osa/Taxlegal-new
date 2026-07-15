@@ -1015,5 +1015,69 @@ body {
     padding: 50px 20px;
   }
 
-
 }
+
+/* ================= RESPONSIVE HERO SECTION (Legal Advisory) ================= */
+
+@media (max-width: 1199px) {
+  .legal-hero-banner {
+    padding: 60px 24px;
+    background-position: center 30%;
+  }
+  
+  .legal-hero-content h1,
+  .legal-hero-content h2 {
+    font-size: clamp(2.4rem, 4vw, 3rem);
+    padding: 0 40px; 
+  }
+
+  .legal-hero-content p {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .legal-hero-banner {
+    padding: 40px 16px;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    background-position: center 20%;
+    background-image: linear-gradient(rgba(11, 46, 89, 0.82), rgba(7, 106, 170, 0.82)), url('/assets/Home Page/Why-choose-us.png');
+  }
+
+  .legal-hero-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .legal-hero-content h1,
+  .legal-hero-content h2 {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    line-height: 1.25;
+    padding: 0 20px;
+    margin: 15px 0;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .legal-hero-content p {
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .legal-eyebrow {
+    margin: 0 auto;
+  }
+
+  .legal-hero-actions {
+    display: flex;
+    justify-content: center;
+  }
+}

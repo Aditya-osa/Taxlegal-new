@@ -1,8 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Lenis from 'lenis'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Calculator } from 'lucide-react'
 import Home from './pages/Home/Home'
 import AboutUs from './pages/AboutUs/AboutUs'
 import Services from './pages/Services/Services'
@@ -49,6 +50,39 @@ function App() {
     };
   }, []);
 
+  const [isTaxBtnExpanded, setIsTaxBtnExpanded] = useState(false);
+
+  const handleTaxBtnClick = (e) => {
+    // Check if it's mobile view where the icon needs expansion
+    if (window.innerWidth <= 767) {
+      if (!isTaxBtnExpanded) {
+        e.preventDefault(); // Prevent navigation on first tap
+        setIsTaxBtnExpanded(true); // Expand it
+      } else {
+        // Allow navigation, and reset state for the next time they come back (if applicable)
+        setIsTaxBtnExpanded(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (isTaxBtnExpanded && !e.target.closest('.floating-tax-btn')) {
+        setIsTaxBtnExpanded(false);
+      }
+    };
+
+    if (isTaxBtnExpanded) {
+      document.addEventListener('click', handleClickOutside);
+      document.addEventListener('touchstart', handleClickOutside);
+    }
+    
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isTaxBtnExpanded]);
+
   return (
     <>
       <ScrollToTop />
@@ -58,9 +92,11 @@ function App() {
         href="https://www.incometaxindia.gov.in/income-tax-calculator" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="floating-tax-btn"
+        className={`floating-tax-btn ${isTaxBtnExpanded ? 'expanded' : ''}`}
+        onClick={handleTaxBtnClick}
       >
-        Tax Calculator
+        <Calculator size={20} className="tax-btn-icon" />
+        <span className="tax-btn-text">Tax Calculator</span>
       </a>
       <Routes>
         <Route path="/" element={<Home />} />

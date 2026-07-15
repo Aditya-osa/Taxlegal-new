@@ -1,10 +1,10 @@
-/* TeamMemberProfile.css - Complete Redesign */
+/* TeamMemberProfile.css - Premium Redesign */
 
 .profile-page-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #fafafa;
+  background-color: var(--off-white);
 }
 
 .profile-main-content {
@@ -22,373 +22,489 @@
   gap: 48px;
 }
 
-/* Base Card Style */
-.new-profile-card,
-.info-card {
+/* ================= PREMIUM PROFILE CARD ================= */
+.premium-profile-card {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 48px auto;
   background: #ffffff;
-  border-radius: 12px;
-  border: 1px solid #ececec;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  padding: 16px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-/* ================= TOP SECTION ================= */
-.profile-top-section {
+/* --- Top Section --- */
+.premium-profile-top {
   display: flex;
   gap: 48px;
-  align-items: flex-start;
 }
 
-/* Left Profile Card */
-.profile-card-col {
-  flex: 0 0 360px;
-  position: sticky;
-  top: 90px;
-  display: flex;
-  flex-direction: column;
-  white-space: pre-line;
-}
-
-.new-profile-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.npc-image-wrapper {
-  width: 100%;
-  aspect-ratio: 1/1;
+.ppt-left {
+  flex: 0 0 280px;
+  height: 360px;
   border-radius: 12px;
+  border: 1px solid var(--border-color);
   overflow: hidden;
-  margin-bottom: 16px;
-  background-color: #ffffff;
-  white-space: pre-line;
 }
 
-
-.npc-image-wrapper img {
+.ppt-left img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-.npc-image-wrapper img.flipped-image {
-  transform: scaleX(-1) scaleY(1);
-  transform-origin: center center;
+.ppt-left img.flipped-image {
+  transform: scaleX(-1);
 }
 
-.npc-info {
-  width: 100%;
+.ppt-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
 }
 
-.npc-info h1 {
-  font-family: var(--font-head, serif);
-  font-size: 1.8rem;
+.ppt-name {
+  font-family: var(--font-head, Georgia, serif);
+  font-size: 48px;
   font-weight: 700;
-  color: #0c2340;
-  /* Dark Navy */
-  margin-bottom: 8px;
+  color: #3A85C8;
+  line-height: 1.1;
+  margin: 0;
 }
 
-.npc-role {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #ea3a3c;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 8px;
+.ppt-role {
+  font-family: var(--font-head, Georgia, serif);
+  font-size: 22px;
+  color: var(--red);
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 0;
 }
 
-.npc-location {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 16px;
-  white-space: pre-line;
+.ppt-divider {
+  width: 70px;
+  height: 2px;
+  background: var(--red);
+  margin: 22px 0;
 }
 
-.npc-linkedin-btn {
+.ppt-info-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.ppt-info-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 26px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ppt-info-row:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.ppt-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-section);
+  color: var(--red);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  width: 100%;
-  background-color: #0077b5;
-  color: #ffffff;
-  padding: 12px 0;
-  border-radius: 8px;
-  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.ppt-info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ppt-info-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: var(--mid-gray);
+  margin-bottom: 4px;
+}
+
+.ppt-info-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #3A85C8;
   text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.npc-linkedin-btn:hover {
-  background-color: #006097;
-}
-
-/* Right Bio Column */
-.profile-bio-col {
-  flex: 1;
-}
-
-.bio-header {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.ppt-info-link:hover {
+  text-decoration: underline;
+}
+
+.ppt-ext-link {
+  color: var(--red);
+}
+
+.ppt-info-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* --- Bottom Section --- */
+.premium-profile-bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0;
+  align-items: stretch;
+}
+
+.ppb-left {
+  padding-right: 40px;
+}
+
+.ppb-right {
+  border-left: 1px solid #ECECEC;
+  padding-left: 36px;
+  margin-top: 100px;
+}
+
+.ppb-right-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ppb-right-item:last-child {
+  margin-bottom: 0;
+}
+
+.ppb-right-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #F8F5F0;
+  color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.ppb-right-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3A85C8;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.ppb-right-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666666;
+  margin: 0;
+}
+
+.ppb-heading {
+  font-family: var(--font-head, Georgia, serif);
+  font-size: 34px;
+  font-weight: 700;
+  color: #3A85C8;
+  margin: 0;
+}
+
+.ppb-underline {
+  width: 55px;
+  height: 2px;
+  background: var(--red);
+  margin: 14px 0 28px;
+}
+
+.ppb-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.ppb-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/* --- Responsive Layout Adjustments --- */
+@media (max-width: 992px) {
+  .premium-profile-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ppt-right {
+    align-items: center;
+  }
+
+  .ppt-divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ppt-info-row {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .ppt-info-text {
+    align-items: center;
+  }
+
+  .premium-profile-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ppb-left {
+    flex: auto;
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .ppb-right {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .premium-profile-card {
+    padding: 24px;
+  }
+
+  .ppt-left {
+    width: 100%;
+    flex: auto;
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+
+  .ppt-name {
+    font-size: 36px;
+  }
+
+  .ppt-role {
+    font-size: 18px;
+  }
+
+  .ppb-heading {
+    font-size: 28px;
+  }
+}
+
+/* ================= NEW EXPERTISE & CTA ================= */
+
+.premium-expertise-section {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 30px 35px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.premium-expertise-title {
+  font-family: var(--font-head, Georgia, serif);
+  font-size: 34px;
+  font-weight: 700;
+  color: #3A85C8;
+  margin: 0;
+}
+
+.premium-expertise-divider {
+  width: 55px;
+  height: 2px;
+  background: var(--red);
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.premium-expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  align-items: start;
+  text-align: center;
+}
+
+.premium-expertise-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.premium-expertise-icon {
   margin-bottom: 16px;
 }
 
-.bio-header h2 {
-  font-family: var(--font-head, serif);
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #0c2340;
-}
-
-.bio-divider {
-  flex: 1;
-  height: 1px;
-  background-color: #e0e0e0;
-}
-
-.bio-content p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555555;
-  /* Medium Gray */
-  margin-bottom: 14px;
-}
-
-.bio-content p:last-child {
-  margin-bottom: 0;
-}
-
-/* ================= BOTTOM SECTION ================= */
-.profile-bottom-section {
-  display: flex;
-  gap: 32px;
-  align-items: stretch;
-}
-
-/* Left Expertise Column */
-.profile-bottom-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.expertise-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: stretch;
-  padding: 32px 32px 28px 32px;
-}
-
-/* Right Education/CTA Column */
-.profile-bottom-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-
-/* Expertise List */
-.expertise-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.expertise-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555555;
-  margin-bottom: 8px;
-}
-
-.expertise-list li:last-child {
-  margin-bottom: 0;
-}
-
-.bullet-icon {
-  color: #0077b5;
-  flex-shrink: 0;
-  margin-top: 4px;
-}
-
-/* Education Card Layout */
-.education-card {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: stretch;
-  padding: 32px 32px 28px 32px;
-}
-
-/* Education Header Styling */
-.edu-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
-.edu-header-icon {
-  color: var(--navy-primary, #076aaa);
-  flex-shrink: 0;
-}
-
-.edu-header h2 {
-  font-family: var(--font-head, Georgia, serif);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--navy-primary, #076aaa);
-  margin: 0;
-  line-height: 1.2;
-}
-
-/* Education List */
-.education-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.edu-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background-color: transparent;
-  border: none;
-}
-
-.edu-row:last-child {
-  margin-bottom: 0;
-}
-
-.edu-item-icon {
-  color: var(--navy-primary, #076aaa);
-  flex-shrink: 0;
-}
-
-.edu-item-text {
+.premium-expertise-item-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #333333;
+  font-size: 15px;
+  font-weight: 600;
+  color: #3A85C8;
+  margin-bottom: 6px;
   line-height: 1.4;
 }
 
-/* CTA Card */
-.cta-card {
-  background-color: #0c2340;
-  color: #ffffff;
-  border: none;
-  box-shadow: 0 8px 30px rgba(12, 35, 64, 0.2);
+.premium-expertise-item-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: var(--mid-gray);
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Call-to-Action Banner */
+.premium-cta-banner {
+  background: linear-gradient(135deg, var(--navy-dark), #3A85C8);
+  border-radius: 12px;
+  padding: 28px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.premium-cta-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.premium-cta-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.premium-cta-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  padding: 32px 24px;
-  gap: 16px;
 }
 
-.cta-card h2 {
-  font-family: var(--font-head, serif);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0;
-}
-
-.cta-btn {
-  width: max-content;
-  background: #ffffff;
-  color: #0c2340;
-  border: none;
-  padding: 10px 24px;
-  border-radius: 6px;
-  font-size: 14px;
+.premium-cta-heading {
+  font-family: var(--font-head, Georgia, serif);
+  font-size: 26px;
   font-weight: 600;
+  color: white;
   margin: 0;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
 }
 
-.cta-btn:hover {
-  background: #f0f0f0;
+.premium-cta-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.premium-cta-btn {
+  background: var(--red);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 34px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.premium-cta-btn:hover {
+  background: var(--red-dark);
   transform: translateY(-2px);
 }
 
-/* Publications Card Layout */
-.publications-card {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: stretch;
-  padding: 32px 32px 28px 32px;
+/* Responsive Extensions */
+@media (max-width: 992px) {
+  .premium-expertise-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .premium-cta-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .premium-cta-left {
+    flex-direction: column;
+  }
 }
 
-.publications-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+@media (max-width: 768px) {
+  .premium-expertise-section {
+    padding: 24px;
+  }
+
+  .premium-expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .premium-expertise-title {
+    font-size: 28px;
+  }
+
+  .premium-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-.pub-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background-color: transparent;
-  border: none;
+@media (max-width: 480px) {
+  .premium-expertise-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.pub-item-icon {
-  color: var(--navy-primary, #076aaa);
-  flex-shrink: 0;
-}
-
-.pub-item-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #333333;
-  line-height: 1.4;
-}
-
-/* Bio Publications Section */
-.bio-publications {
-  margin-top: 28px;
-  padding-top: 24px;
-  border-top: 1px solid #e8e8e8;
-}
-
-.bio-publications h3 {
-  font-family: var(--font-head, serif);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #0c2340;
-  margin-bottom: 12px;
-}
-
+/* ================= EXISTING LOWER SECTIONS ================= */
 /* Premium Publications Section */
 .premium-pub-section {
   width: 100%;
-  margin: 0 0 16px 0;
-  padding: 14px 22px;
+  max-width: 1200px;
+  margin: 0 auto 16px auto;
+  padding: 40px;
   background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
   display: flex;
   flex-direction: column;
 }
@@ -402,35 +518,35 @@
 
 .premium-pub-title {
   font-family: var(--font-head, Georgia, serif);
-  font-size: 1.6rem;
+  font-size: 34px;
   font-weight: 700;
-  color: var(--navy-primary, #076aaa);
-  margin: 0 0 4px 0;
+  color: #3A85C8;
+  margin: 0 0 14px 0;
   line-height: 1.2;
 }
 
 .premium-pub-divider {
-  width: 60px;
-  height: 3px;
-  background-color: #D4AF37;
-  border-radius: 2px;
+  width: 55px;
+  height: 2px;
+  background-color: var(--red);
+  border-radius: 0;
   margin: 0 auto;
 }
 
 .premium-pub-desc {
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  color: #4A4A4A;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-primary);
   text-align: center;
-  line-height: 1.5;
-  margin: 8px auto 0 auto;
+  line-height: 2;
+  margin: 24px auto 0 auto;
   max-width: 1000px;
   white-space: pre-line;
 }
 
 .premium-books-container {
-  margin-top: 16px;
+  margin-top: 34px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -441,11 +557,11 @@
 }
 
 .premium-books-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
+  font-family: var(--font-head, Georgia, serif);
+  font-size: 22px;
   font-weight: 700;
-  color: #0c2340;
-  margin: 0 0 8px 0;
+  color: #3A85C8;
+  margin: 0 0 16px 0;
   text-align: left;
 }
 
@@ -455,139 +571,27 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 12px;
 }
 
 .premium-books-list li {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 14px;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #333333;
-  line-height: 1.4;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--body-text);
+  line-height: 1.8;
   text-align: left;
 }
 
 .premium-books-list .pub-icon {
-  color: #3F67A8;
+  color: var(--red);
   flex-shrink: 0;
-  margin-top: 3px;
-  width: 16px;
-  height: 16px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .premium-pub-section {
-    padding: 40px 24px;
-    border-radius: 16px;
-  }
-
-  .premium-pub-title {
-    font-size: 36px;
-  }
-
-  .premium-pub-desc {
-    font-size: 18px;
-    margin-top: 24px;
-  }
-
-  .premium-books-container {
-    margin-top: 40px;
-  }
-
-  .premium-books-title {
-    font-size: 28px;
-  }
-
-  .premium-books-list li {
-    font-size: 18px;
-  }
-}
-
-/* Bio Email Section */
-.bio-email {
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid #e8e8e8;
-  font-size: 15px;
-}
-
-.email-label {
-  font-weight: 600;
-  color: #0c2340;
-}
-
-.bio-email a {
-  color: #0077b5;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.bio-email a:hover {
-  color: #005a8c;
-  text-decoration: underline;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 1024px) {
-
-  /* Tablet */
-  .profile-top-section {
-    gap: 32px;
-  }
-
-  .profile-bottom-section {
-    gap: 24px;
-  }
-
-  .new-profile-card,
-  .info-card {
-    padding: 24px;
-  }
-
-  .education-card,
-  .expertise-card {
-    padding: 24px;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  /* Mobile - Strict Stacking Order */
-  .profile-top-section {
-    flex-direction: column;
-  }
-
-  .profile-card-col {
-    flex: none;
-    width: 100%;
-  }
-
-  .new-profile-card {
-    position: static;
-  }
-
-  .profile-bottom-section {
-    flex-direction: column;
-  }
-
-  .profile-bottom-left,
-  .profile-bottom-right {
-    flex: none;
-    width: 100%;
-  }
-
-  .education-card,
-  .expertise-card {
-    padding: 20px;
-    gap: 16px;
-  }
+  margin-top: 4px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Utilities */
