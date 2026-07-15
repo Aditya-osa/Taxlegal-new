@@ -1,6 +1,33 @@
 export const teamData = [
-
-  {
+    {
+      id: 1,
+      slug: 'adv-suresh-sharma',
+      name: 'Adv. Suresh Sharma',
+      role: 'Practice Domain',
+      shortDescription: 'Tax Advisory Consultant -\n IT & GST Litigation | Enforcement | Compliance Strategy',
+      image: "/assets/our team/suresh-sir.png",
+      detailedBio: "With over three decades of distinguished practice in taxation and allied laws, Adv. Suresh Sharma is a trusted advisor to businesses operating within India’s evolving and enforcement-intensive tax regime.\n\nHis expertise spans Goods and Services Tax (GST), Income Tax, and tax litigation, with a strong focus on statutory compliance, due process, legal defensibility, and strategic risk mitigation in regulatory proceedings.\n\nOver the years, Adv. Suresh Sharma has closely partnered with business leaders and management teams, advising on complex tax matters involving significant financial and regulatory implications, litigation strategy, and compliance positioning, while guiding organizations through GST and Income Tax proceedings with clarity and precision.",
+      publications: [
+        "GST Search, Seizure, Summons and Arrest",
+        "GST Litigation – A Practical Guide"
+      ],
+      publicationsNote: "Adv. Suresh Sharma and Adv. Varun Sharma are the authors of two reputed publications on GST, published by Bharat Law House. These publications provide practical perspectives on GST procedures, enforcement actions, and litigation, reflecting a deep understanding of evolving tax jurisprudence and regulatory frameworks.",
+      expertise: [
+        "GST audits, inspections, and investigations",
+        "Search, seizure, and arrest-related proceedings",
+        "Complex tax disputes and appellate representation",
+        "Corporate tax structuring and compliance frameworks",
+        "Income Tax assessments and advisory"
+      ],
+      education: [
+        "B.Com",
+        "M.Com",
+        "LL.B."
+      ],
+      linkedin: "https://www.linkedin.com/in/adv-suresh-sharma/",
+      isMainTeam: true
+    }, 
+    {
     id: 7,
     slug: 'ca-narendra-rajput',
     name: 'CA Narendra Rajput',
@@ -149,35 +176,7 @@ export const teamData = [
     ],
     linkedin: "https://www.linkedin.com/in/cs-bipin-singh-22ab70a8/",
     isMainTeam: false
-  },
-  {
-    id: 1,
-    slug: 'adv-suresh-sharma',
-    name: 'Adv. Suresh Sharma',
-    role: 'Practice Domain',
-    shortDescription: 'Tax Advisory Consultant -\n IT & GST Litigation | Enforcement | Compliance Strategy',
-    image: "/assets/our team/suresh-sir.png",
-    detailedBio: "With over three decades of distinguished practice in taxation and allied laws, Adv. Suresh Sharma is a trusted advisor to businesses operating within India’s evolving and enforcement-intensive tax regime.\n\nHis expertise spans Goods and Services Tax (GST), Income Tax, and tax litigation, with a strong focus on statutory compliance, due process, legal defensibility, and strategic risk mitigation in regulatory proceedings.\n\nOver the years, Adv. Suresh Sharma has closely partnered with business leaders and management teams, advising on complex tax matters involving significant financial and regulatory implications, litigation strategy, and compliance positioning, while guiding organizations through GST and Income Tax proceedings with clarity and precision.",
-    publications: [
-      "GST Search, Seizure, Summons and Arrest",
-      "GST Litigation – A Practical Guide"
-    ],
-    publicationsNote: "Adv. Suresh Sharma and Adv. Varun Sharma are the authors of two reputed publications on GST, published by Bharat Law House. These publications provide practical perspectives on GST procedures, enforcement actions, and litigation, reflecting a deep understanding of evolving tax jurisprudence and regulatory frameworks.",
-    expertise: [
-      "GST audits, inspections, and investigations",
-      "Search, seizure, and arrest-related proceedings",
-      "Complex tax disputes and appellate representation",
-      "Corporate tax structuring and compliance frameworks",
-      "Income Tax assessments and advisory"
-    ],
-    education: [
-      "B.Com",
-      "M.Com",
-      "LL.B."
-    ],
-    linkedin: "https://www.linkedin.com/in/adv-suresh-sharma/",
-    isMainTeam: true
-  }, {
+  },{
     id: 4,
     slug: 'adv-varun-sharma',
     name: 'Adv. Varun Sharma',
