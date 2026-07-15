@@ -51,26 +51,22 @@ export const teamData = [
   {
     id: 9,
     slug: 'ashutosh-agrawal',
-    name: 'CA Ashutosh Agrawal',
+    name: 'CA ASHUTOSH AGRAWAL',
     role: 'Practice Domain',
-    shortDescription: 'Audit & Assurance',
+    shortDescription: 'Tax Advisor – TaxLegal | Finance, Audit & Assurance',
     image: "/assets/our team/Ashutosh-Agrawal.jpeg",
     detailedBio: "CA Ashutosh Agrawal is a Chartered Accountant with expertise in assurance, auditing, taxation, financial advisory, and regulatory compliance. He has extensive professional experience in strengthening internal controls, enhancing financial governance, and assisting businesses in achieving operational efficiency through a structured and analytical approach.\n\nHe specializes in internal audits, financial reporting, risk assessment, compliance management, and tax advisory, helping organizations establish robust financial systems while ensuring adherence to statutory and regulatory requirements. His professional experience also includes bookkeeping, financial planning, budgeting, financial forecasting, accounts management, and business process optimization.\n\nAs a Tax Advisor at TaxLegal, he provides strategic financial and taxation advisory services, assisting businesses with internal audits, tax planning, regulatory compliance, financial reporting, and business advisory. His practical and solution-oriented approach enables organizations to strengthen internal controls, optimize financial performance, and maintain full compliance with applicable laws and regulations.",
     expertise: [
       "Internal Audits & Assurance Services",
-      "Bookkeeping & Financial Record Management",
       "Financial Accounting & Reporting",
-      "Financial Planning & Business Advisory",
-      "Budgeting & Financial Forecasting",
       "Tax Advisory & Regulatory Compliance",
-      "Personal Tax Planning & Tax Optimization",
+      "Financial Planning & Business Advisory",
       "Risk Assessment & Internal Controls",
-      "Business Process Improvement",
       "Compliance & Governance Advisory"
     ],
     education: [
-      "Chartered Accountant (CA)",
-      "B.Com"
+      "CHARTERED ACCOUNTANT (CA)",
+      "B.COM"
     ],
     linkedin: "https://www.linkedin.com/in/ca-ashutosh-agrawal-2421a614b/",
     isMainTeam: false
@@ -323,9 +319,9 @@ export const teamData = [
   {
     id: 8,
     slug: 'ajay-mane',
-    name: 'Adv. Ajay R. Mane',
+    name: 'ADV. AJAY R. MANE',
     role: 'Practice Domain',
-    shortDescription: 'Commercial Litigation | Arbitration',
+    shortDescription: 'Legal Advisor – TaxLegal | Commercial Litigation & Arbitration',
     image: "/assets/our team/Ajay-mane.png",
     detailedBio: "Adv. Ajay R. Mane is an Advocate with a focused practice in commercial litigation, arbitration, and contractual disputes. He has extensive experience representing clients before the Bombay High Court and arbitral tribunals, handling complex commercial and civil matters with a strategic and result-oriented approach.\n\nHe specializes in arbitration proceedings under the Arbitration and Conciliation Act, 1996, including matters under Sections 9, 11, 34, and 37, representing clients from the pre-arbitration stage through post-award challenges. His professional expertise also includes drafting pleadings, written submissions, affidavits, legal opinions, case strategy, evidence structuring, and cross-examination preparation.\n\nAs a Legal Advisor at TaxLegal, he provides strategic legal advisory and dispute resolution services in commercial litigation, arbitration, contractual disputes, civil matters, and transaction advisory. His practice also extends to drafting and reviewing commercial agreements, transactional documentation, and advisory on regulatory matters under the Foreign Exchange Management Act (FEMA), enabling businesses and individuals to effectively manage legal risks and commercial disputes.",
     expertise: [
@@ -334,7 +330,6 @@ export const teamData = [
       "Contractual & Civil Dispute",
       "Commercial Agreements & Contract Drafting",
       "Transactional Matters & FEMA Advisory",
-      "Legal Research & Case Strategy",
       "Pleadings, Affidavits & Written Submissions",
       "Evidence Structuring & Cross-Examination Preparation"
     ],

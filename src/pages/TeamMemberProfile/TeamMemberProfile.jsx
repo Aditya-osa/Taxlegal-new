@@ -4,7 +4,7 @@ import { teamData } from '../../data/teamData';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import LeadershipCard from '../../components/AboutPage/LeadershipCard';
-import { Gavel, Landmark, FileText, Users, User, GraduationCap, ExternalLink, Handshake, ShieldCheck, Shield, Scale, Phone, ArrowRight, ShieldAlert, BriefcaseBusiness, Car, Building2, Lock, IndianRupee, HandCoins, Monitor, Book, Target, FileSearch, FileCheck, BookOpen, Globe, TrendingUp, FileSignature, CircleDollarSign, Search } from 'lucide-react';
+import { Gavel, Landmark, FileText, Users, User, GraduationCap, ExternalLink, Handshake, ShieldCheck, Shield, Scale, Phone, ArrowRight, ShieldAlert, BriefcaseBusiness, Car, Building2, Lock, IndianRupee, HandCoins, Monitor, Book, Target, FileSearch, FileCheck, BookOpen, Globe, TrendingUp, FileSignature, CircleDollarSign, Search, ClipboardCheck, Award, PieChart } from 'lucide-react';
 import './TeamMemberProfile.css';
 
 
@@ -53,6 +53,11 @@ const TeamMemberProfile = () => {
             
             <div className="ppt-right">
               <h1 className="ppt-name">{member.name}</h1>
+              {(member.slug === 'ajay-mane' || member.slug === 'ashutosh-agrawal') && (
+                <h4 style={{ color: 'var(--red)', fontSize: '18px', fontWeight: '500', margin: '10px 0 10px 0' }}>
+                  {member.education.join(' | ')}
+                </h4>
+              )}
               <h3 className="ppt-role">{member.shortDescription || member.role}</h3>
               <div className="ppt-divider"></div>
               
@@ -73,14 +78,14 @@ const TeamMemberProfile = () => {
                   </div>
                 )}
                 
-                {member.education && member.education.length > 0 && (
+                {member.education && (
                   <div className="ppt-info-row">
                     <div className="ppt-icon-circle">
-                      <GraduationCap size={22} strokeWidth={2} />
+                      <GraduationCap size={20} strokeWidth={1.5} />
                     </div>
                     <div className="ppt-info-text">
                       <span className="ppt-info-desc">
-                        {member.education.join(', ')}
+                        {member.education.join(' | ')}
                       </span>
                     </div>
                   </div>
@@ -112,6 +117,16 @@ const TeamMemberProfile = () => {
                   <p>{bioParagraphs[2]}</p>
                 </div>
               </div>
+            ) : member.slug === 'ajay-mane' || member.slug === 'ashutosh-agrawal' ? (
+              <div className="ppb-left">
+                <h2 className="ppb-heading">PROFILE OVERVIEW</h2>
+                <div className="ppb-underline"></div>
+                <div className="ppb-content">
+                  {bioParagraphs.map((para, idx) => (
+                    <p key={idx}>{para}</p>
+                  ))}
+                </div>
+              </div>
             ) : (
               <div className="ppb-left">
                 <h2 className="ppb-heading">Bio</h2>
@@ -125,7 +140,75 @@ const TeamMemberProfile = () => {
             )}
             
             <div className="ppb-right">
-              {member.slug === 'adv-vivek-sharma' ? (
+              {member.slug === 'ajay-mane' ? (
+                <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Scale size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Commercial Litigation</h4>
+                      <p className="ppb-right-desc">Representing clients in commercial and civil matters before the Bombay High Court, subordinate courts, and other judicial forums.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Gavel size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Arbitration & ADR</h4>
+                      <p className="ppb-right-desc">Handling arbitration proceedings under the Arbitration and Conciliation Act, 1996, including matters under Sections 9, 11, 34, and 37.</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><FileText size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Contractual & Civil Dispute</h4>
+                      <p className="ppb-right-desc">Advising and representing clients in contractual disputes, civil litigation, and related legal proceedings.</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Handshake size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Transactional & Advisory</h4>
+                      <p className="ppb-right-desc">Advising on transactional matters and regulatory compliance under FEMA and drafting/reviewing commercial agreements and documentation.</p>
+                    </div>
+                  </div>
+                </>
+              ) : member.slug === 'ashutosh-agrawal' ? (
+                <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><ClipboardCheck size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Audit & Assurance</h4>
+                      <p className="ppb-right-desc">Conducting internal audits, assurance engagements, and compliance reviews to ensure financial accuracy and transparency.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><TrendingUp size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Tax Advisory & Compliance</h4>
+                      <p className="ppb-right-desc">Providing tax advisory, planning, and compliance support across direct & indirect tax matters.</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><FileText size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Financial Reporting & Planning</h4>
+                      <p className="ppb-right-desc">Assisting in financial reporting, budgeting, forecasting, and analysis to support informed business decisions.</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Handshake size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Business Advisory & Governance</h4>
+                      <p className="ppb-right-desc">Advising businesses on process improvement, internal controls, and regulatory governance for sustainable growth.</p>
+                    </div>
+                  </div>
+                </>
+              ) : member.slug === 'adv-vivek-sharma' ? (
                 <>
                   <div className="ppb-right-item">
                     <div className="ppb-right-icon"><Monitor size={26} strokeWidth={1.5} /></div>
@@ -340,7 +423,7 @@ const TeamMemberProfile = () => {
             <h2 className="premium-expertise-title">Areas of Expertise</h2>
             <div className="premium-expertise-divider"></div>
             
-            <div className="premium-expertise-grid">
+            <div className="premium-expertise-grid" style={member.slug === 'adv-varun-sharma' ? { gridTemplateColumns: 'repeat(8, 1fr)' } : {}}>
               {member.slug === 'adv-suresh-sharma' ? (
                 <>
                   <div className="premium-expertise-item">
@@ -480,6 +563,60 @@ const TeamMemberProfile = () => {
                     <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>ED & PMLA<br/>Matters</h4>
                   </div>
                 </>
+              ) : member.slug === 'ajay-mane' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <Scale className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Commercial<br/>Litigation</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Gavel className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Arbitration &<br/>ADR</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Contractual &<br/>Civil Dispute</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Handshake className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Commercial<br/>Agreements &<br/>Contract Drafting</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Globe className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Transactional Matters<br/>& FEMA Advisory</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Search className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Legal Research &<br/>Case Strategy</h4>
+                  </div>
+                </>
+              ) : member.slug === 'ashutosh-agrawal' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <ClipboardCheck className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Internal Audits &<br/>Assurance Services</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <BookOpen className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Financial Accounting<br/>& Reporting</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <ShieldCheck className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Tax Advisory &<br/>Regulatory Compliance</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <TrendingUp className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Financial Planning &<br/>Business Advisory</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <ShieldCheck className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Risk Assessment &<br/>Internal Controls</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Landmark className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Compliance &<br/>Governance Advisory</h4>
+                  </div>
+                </>
               ) : (
                 <>
                   <div className="premium-expertise-item">
@@ -528,7 +665,7 @@ const TeamMemberProfile = () => {
               <div className="premium-books-container">
                 <div className="premium-books-inner">
                   <h3 className="premium-books-title">Books</h3>
-                  {member.slug === 'adv-suresh-sharma' ? (
+                  {member.slug === 'adv-suresh-sharma' || member.slug === 'adv-varun-sharma' ? (
                     <div className="book-grid">
                       {/* Book 1 */}
                       <div className="book-container">
@@ -559,6 +696,23 @@ const TeamMemberProfile = () => {
                           </div>
                         </div>
                       </div>
+
+                      {/* Book 3 (Only for Varun Sharma, or both if they share it, but varun has 3 publications in data) */}
+                      {member.slug === 'adv-varun-sharma' && (
+                        <div className="book-container">
+                          <div className="book-wrapper">
+                            <div className="book-static-page">
+                              <img src="/assets/Books/backpage2.jpeg" alt="Inner Page Image" />
+                            </div>
+                            <div className="book-hinge">
+                              <div className="book-cover-front">
+                                <img src="/assets/Books/book2.jpeg" alt="Front Cover" />
+                              </div>
+                              <div className="book-cover-back-face"></div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <ul className="premium-books-list">
