@@ -6,7 +6,7 @@ export const teamData = [
     name: 'CA Narendra Rajput',
     role: 'Practice Domain',
     shortDescription: 'Income Tax &  Statutory Audit ',
-    image: "/assets/team/narendra.jpg",
+    image: "/assets/our team/narendra.jpg",
     flipImage: true,
     detailedBio: "CA Narendra Rajput is a Chartered Accountant with expertise in Income Tax, Auditing, Financial Reporting, and Business Advisory. With extensive professional experience in taxation and assurance services, he assists businesses in maintaining financial transparency, ensuring regulatory compliance, and strengthening financial governance.\n\nHe specializes in statutory and internal audits, income tax advisory, tax planning, financial reporting, and business valuation. His practical and analytical approach enables businesses to comply with evolving statutory requirements while improving operational and financial efficiency.\n\nAs a Legal Advisor at TaxLegal, he provides strategic advisory and professional support in matters relating to Income Tax, statutory and internal audits, financial reporting, tax compliance, and business valuation. He assists clients in preparing accurate financial statements, ensuring statutory compliance, managing tax filings, and delivering practical financial solutions tailored to business requirements.",
     expertise: [
@@ -32,7 +32,7 @@ export const teamData = [
     name: 'CA Mohan Kumar',
     role: 'Practice Domain',
     shortDescription: 'Financial Compliance & Statutory Audit',
-    image: "/assets/team/Ca-Mohan-Kumar.png",
+    image: "/assets/our team/CA-Mohan-kumar.png",
     detailedBio: "CA Mohan Kumar is a Chartered Accountant with expertise in auditing, financial compliance, accounting, and regulatory advisory. With extensive professional experience in assurance and financial reporting, he assists businesses in maintaining financial integrity, strengthening internal controls, and ensuring compliance with statutory and regulatory requirements.\n\nHe specializes in statutory audits, financial reporting, accounting standards, compliance management, and financial advisory. His professional approach focuses on enhancing transparency, improving financial governance, and helping organizations establish robust accounting and compliance frameworks.\n\nAs a Legal Advisor at TaxLegal, he provides strategic financial and compliance advisory services, assisting businesses with statutory audits, financial reporting, accounting practices, regulatory compliance, and corporate financial governance. His practical and analytical approach enables organizations to meet evolving statutory requirements while maintaining sound financial management and operational efficiency.",
     expertise: [
       "Statutory Audit",
@@ -54,7 +54,7 @@ export const teamData = [
     name: 'CA Ashutosh Agrawal',
     role: 'Practice Domain',
     shortDescription: 'Audit & Assurance',
-    image: "/assets/team/Ashutosh-Agrawal.jpeg",
+    image: "/assets/our team/Ashutosh-Agrawal.jpeg",
     detailedBio: "CA Ashutosh Agrawal is a Chartered Accountant with expertise in assurance, auditing, taxation, financial advisory, and regulatory compliance. He has extensive professional experience in strengthening internal controls, enhancing financial governance, and assisting businesses in achieving operational efficiency through a structured and analytical approach.\n\nHe specializes in internal audits, financial reporting, risk assessment, compliance management, and tax advisory, helping organizations establish robust financial systems while ensuring adherence to statutory and regulatory requirements. His professional experience also includes bookkeeping, financial planning, budgeting, financial forecasting, accounts management, and business process optimization.\n\nAs a Tax Advisor at TaxLegal, he provides strategic financial and taxation advisory services, assisting businesses with internal audits, tax planning, regulatory compliance, financial reporting, and business advisory. His practical and solution-oriented approach enables organizations to strengthen internal controls, optimize financial performance, and maintain full compliance with applicable laws and regulations.",
     expertise: [
       "Internal Audits & Assurance Services",
@@ -82,7 +82,7 @@ export const teamData = [
     name: 'CA Lokkeesh Rana',
     role: 'Practice Domain',
     shortDescription: 'Audit | Taxation & Financial Advisory',
-    image: "/assets/team/Lokesh-Rana.png",
+    image: "/assets/our team/Lokesh-Rana.png",
     detailedBio: "CA Lokkeesh Rana is a Fellow Chartered Accountant (FCA) with extensive experience in auditing, taxation, financial consulting, and regulatory compliance. He is recognized for providing strategic financial advisory services, helping businesses strengthen financial governance, manage regulatory obligations, and achieve sustainable growth through sound financial planning and compliance.\n\nHe specializes in statutory audits, direct and indirect taxation, financial reporting, regulatory compliance, risk assessment, and business consulting across diverse industries. His professional expertise includes audit assurance, financial analysis, internal controls, tax advisory, accounting, and strategic business planning, enabling organizations to improve operational efficiency while maintaining statutory compliance.\n\nAs a Legal Advisor at TaxLegal, he provides strategic financial and taxation advisory services, assisting businesses with statutory audits, direct and indirect tax matters, financial reporting, regulatory compliance, risk management, and business advisory. His practical, analytical, and solution-oriented approach enables clients to navigate complex financial and regulatory challenges while enhancing governance, operational efficiency, and long-term business value.",
     expertise: [
       "Statutory Audit & Assurance",
@@ -109,7 +109,7 @@ export const teamData = [
     name: 'CS Sanjay Dadhichi',
     role: 'Practice Domain',
     shortDescription: 'Corporate & Secretarial \n Compliance | FEMA',
-    image: "/assets/team/sanjay.png",
+    image: "/assets/our team/sanjay.png",
     detailedBio: "CS Sanjay Dadhichi is a Practising Company Secretary with over 10 years of professional experience in Corporate Laws, Foreign Exchange Laws, Regulatory Advisory, and Corporate Compliance. He is an Associate Member of the Institute of Company Secretaries of India (ICSI) and a Commerce graduate.\n\nHe specializes in corporate structuring, foreign investment regulations, company law advisory, and strategic business consulting. His professional expertise includes incorporation of foreign subsidiaries, companies with foreign promoters, and Section 8 Companies, along with advisory relating to Foreign Direct Investment (FDI), Overseas Direct Investment (ODI), SME Listings, corporate restructuring, and regulatory approvals under the Companies Act, 2013 and the Foreign Exchange Management Act (FEMA).\n\nAs a Legal Advisor at TaxLegal, he provides strategic and practical corporate advisory services, assisting businesses with corporate governance, company law compliances, regulatory filings, drafting and review of commercial agreements, compounding of offences under the Companies Act, 2013 and FEMA, and legal documentation, enabling organizations to operate with confidence while ensuring full statutory and regulatory compliance.",
     expertise: [
       "Corporate Legal Consulting",
@@ -136,7 +136,7 @@ export const teamData = [
     name: 'CS Bipin Singh',
     role: 'Practice Domain',
     shortDescription: 'Corporate & Secretarial  \n Regulatory Compliance ',
-    image: "/assets/team/Bipin-Singh.png",
+    image: "/assets/our team/Bipin-Singh.png",
     detailedBio: "CS Bipin Singh is a Practising Company Secretary and Legal Professional with expertise in Corporate Law, Civil Law, and Regulatory Compliance. An Associate Member of the Institute of Company Secretaries of India (ICSI) and a qualified law graduate, he advises businesses and individuals on corporate governance, legal documentation, and statutory compliance with a practical and solution-oriented approach.\n\nHe specializes in corporate legal advisory, civil litigation support, contract drafting and vetting, company law compliances, and regulatory matters. His professional experience includes assisting organizations in managing legal risks, preparing and reviewing commercial documents, ensuring statutory compliance, and providing strategic legal solutions for business operations.\n\nAs a Legal Advisor at TaxLegal, he provides comprehensive legal and corporate advisory services, assisting clients with company law matters, corporate governance, civil legal issues, drafting and vetting of legal documents, regulatory compliance, and business advisory. His analytical approach enables businesses to operate efficiently while maintaining compliance with evolving legal and regulatory requirements.",
     expertise: [
       "Corporate Law",
@@ -220,8 +220,11 @@ export const teamData = [
     slug: 'adv-vivek-sharma',
     name: 'Adv. Vivek Sharma',
     role: 'Practice Domain',
+    shortDescription: 'Dispute Resolution & Litigation Counsel \n Civil & Commercial | RERA | Family Law',
+    image: "/assets/our team/vivek-sharma.png",
+    detailedBio: "Adv. Vivek Sharma is an Advocate with a litigation-focused practice and extensive courtroom experience across Mumbai, Pune, Ahmedabad, and Vadodara. He specializes in criminal, civil, and commercial litigation, with particular expertise in complex dispute resolution and courtroom advocacy.\n\nHis criminal law practice encompasses cyber crime, financial fraud, bail applications, FIR quashing matters, proceedings under the POCSO Act and MCOCA, Economic Offences Wing (EOW) investigations, and offences involving women and children, including sensitive and high-profile matters. In addition to criminal litigation, he has significant experience in consumer disputes, matrimonial matters, and commercial litigation.\n\nAs Legal Advisor at TaxLegal, he provides strategic and practical legal representation in litigation and dispute resolution matters. His professional practice also includes third-party insurance claims before the Motor Accident Claims Tribunal (MACT), advisory and litigation relating to general and marine insurance claims, policy interpretation, claim settlement disputes, contract drafting, commercial advisory, and recovery proceedings.",
     shortDescription: 'Dispute Resolution & Litigation Counsel',
-    image: "/assets/team/vivek-sharma.png",
+    image: "/assets/our team/vivek-sharma.png",
     detailedBio: "Adv. Vivek Sharma is a seasoned litigation professional with a diversified practice spanning criminal, civil, matrimonial, commercial, banking and insurance laws. He has expertise in complex disputes involving Financial Fraud & Cyber Crime, Recovery Matters, Matters pertaining to Negotiable Instruments Act, Consumer Disputes, MACT Claims, Matrimonial Disputes alongwith RERA & Real Estate Litigation. His practice extends to appearances before the High Courts, Trial Courts, Consumer Forums, MACT tribunals, and various judicial and quasi-judicial forums across India.",
     expertise: [
       "Criminal Litigation",
@@ -247,7 +250,7 @@ export const teamData = [
     name: 'Adv. Vaishnavi Sharma',
     role: 'Practice Domain',
     shortDescription: 'Arbitrator & Corporate Legal Advisory',
-    image: "/assets/team/vaishnavi ma'am .png",
+    image: "/assets/our team/vaishnavi ma'am .png",
     detailedBio: "Adv. Vaishnavi Sharma is an advocate with experience spanning litigation, corporate legal advisory and commercial dispute resolution. She has completed her Masters in Business Law & is a certified Arbitrator from Indian Institute of arbitration.\n\nHer practice encompasses civil, commercial and criminal litigation, contract drafting, vetting and negotiation, banking and recovery matters, cheque dishonour proceedings, employment and labour laws, intellectual property, and regulatory compliance required for the corporates.\n\nHaving served as in-house legal counsel for corporate organisations across diverse industries, she possesses extensive experience in advising businesses on commercial transactions, legal risk management, due diligence, corporate governance and contractual matters.\n\nA Certified Arbitrator accredited by the Indian Institute of Arbitration & Mediation (IIAM), she also advises clients on alternative dispute resolution and commercial arbitration. Her practice extends to appearances before the Bombay High Court, Trial Courts, Consumer Forums and other judicial and quasi-judicial forums.",
     expertise: [
       "Contract Drafting, Review & Negotiation",
@@ -296,7 +299,7 @@ export const teamData = [
     name: 'Adv. Sahil Kumar',
     role: 'Practice Domain',
     shortDescription: 'Civil & Commercial Litigation',
-    image: "/assets/team/Sahil.png",
+    image: "/assets/our team/Sahil.png",
     detailedBio: "Adv. Sahil Kumar is an Advocate with a focused practice in civil, commercial, and criminal litigation. He regularly appears before the Supreme Court of India, the Delhi High Court, and various judicial forums, representing clients in complex disputes with a strategic, research-driven, and solution-oriented approach.\n\nHis professional experience encompasses civil and commercial litigation, arbitration, insurance and consumer disputes, property and trust matters, contractual disputes, and criminal proceedings, including bail matters. He has developed expertise in legal drafting, pleadings, legal research, case strategy, and courtroom advocacy, enabling clients to effectively navigate complex legal challenges.\n\nAs a Legal Advisor at TaxLegal, he provides strategic legal advisory and litigation support in civil, commercial, and criminal matters, assisting clients with dispute resolution, arbitration, contractual issues, property disputes, legal drafting, and representation before courts and judicial forums. His practical and client-centric approach ensures efficient legal strategies while safeguarding the interests of individuals and businesses.",
     expertise: [
       "Civil Litigation",
@@ -323,7 +326,7 @@ export const teamData = [
     name: 'Adv. Ajay R. Mane',
     role: 'Practice Domain',
     shortDescription: 'Commercial Litigation | Arbitration',
-    image: "/assets/team/Ajay-mane.png",
+    image: "/assets/our team/Ajay-mane.png",
     detailedBio: "Adv. Ajay R. Mane is an Advocate with a focused practice in commercial litigation, arbitration, and contractual disputes. He has extensive experience representing clients before the Bombay High Court and arbitral tribunals, handling complex commercial and civil matters with a strategic and result-oriented approach.\n\nHe specializes in arbitration proceedings under the Arbitration and Conciliation Act, 1996, including matters under Sections 9, 11, 34, and 37, representing clients from the pre-arbitration stage through post-award challenges. His professional expertise also includes drafting pleadings, written submissions, affidavits, legal opinions, case strategy, evidence structuring, and cross-examination preparation.\n\nAs a Legal Advisor at TaxLegal, he provides strategic legal advisory and dispute resolution services in commercial litigation, arbitration, contractual disputes, civil matters, and transaction advisory. His practice also extends to drafting and reviewing commercial agreements, transactional documentation, and advisory on regulatory matters under the Foreign Exchange Management Act (FEMA), enabling businesses and individuals to effectively manage legal risks and commercial disputes.",
     expertise: [
       "Commercial Litigation",
@@ -349,7 +352,7 @@ export const teamData = [
     name: 'Karthikeyan T.C.',
     role: 'Practice Domain',
     shortDescription: 'Regulatory Advisory |  Arbitration & Mediation    ',
-    image: "/assets/team/Karthikeyan.png",
+    image: "/assets/our team/Karthikeyan.png",
     detailedBio: "Karthikeyan T.C. is a Legal Advisor with a strong academic foundation and practical experience in regulatory advisory, legal research, and dispute resolution. He specializes in providing strategic legal support across regulatory, corporate, and commercial matters, combining analytical precision with a solution-oriented approach.\n\nHe holds a BBA LL.B. (Hons.) and an LL.M., with a specialization in Intellectual Property Rights and Technology Law. His professional experience includes legal research, drafting, policy analysis, regulatory advisory, and litigation support through internships with leading law firms, senior law officers, and the Supreme Court of India. His areas of exposure include intellectual property law, technology law, arbitration, mediation, constitutional law, banking law, civil and criminal litigation, and regulatory compliance.\n\nAs a Legal Advisor at TaxLegal, he provides legal and regulatory advisory services, assisting clients with legal research, regulatory compliance, tax assessments, drafting of legal documents, case analysis, and strategic legal support. His research-driven approach enables businesses and individuals to navigate evolving legal and regulatory frameworks while effectively managing legal risks.",
     expertise: [
       "Regulatory Advisory",
