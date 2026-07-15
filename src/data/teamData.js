@@ -4,7 +4,7 @@ export const teamData = [
     slug: 'adv-suresh-sharma',
     name: 'Adv. Suresh Sharma',
     role: 'Practice Domain',
-    shortDescription: 'Tax Advisory Consultant -\n IT & GST Litigation | Enforcement | Compliance Strategy',
+    shortDescription: 'Hiigh Cuort and Supreme Court | Tax Advisory Consultant -\n IT & GST Litigation | Enforcement | Compliance Strategy',
     image: "/assets/our team/suresh-sir.png",
     detailedBio: "With over three decades of distinguished practice in taxation and allied laws, Adv. Suresh Sharma is a trusted advisor to businesses operating within India’s evolving and enforcement-intensive tax regime.\n\nHis expertise spans Goods and Services Tax (GST), Income Tax, and tax litigation, with a strong focus on statutory compliance, due process, legal defensibility, and strategic risk mitigation in regulatory proceedings.\n\nOver the years, Adv. Suresh Sharma has closely partnered with business leaders and management teams, advising on complex tax matters involving significant financial and regulatory implications, litigation strategy, and compliance positioning, while guiding organizations through GST and Income Tax proceedings with clarity and precision.",
     publications: [
