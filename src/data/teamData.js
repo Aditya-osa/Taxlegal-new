@@ -11,7 +11,7 @@ export const teamData = [
       "GST Search, Seizure, Summons and Arrest",
       "GST Litigation – A Practical Guide"
     ],
-    publicationsNote: "Adv. Suresh Sharma and Adv. Varun Sharma are the authors of two reputed publications on GST, published by Bharat Law House. These publications provide practical perspectives on GST procedures, enforcement actions, and litigation, reflecting a deep understanding of evolving tax jurisprudence and regulatory frameworks.",
+    publicationsNote: "Adv. Suresh Sharma and Adv. Varun Sharma are the authors of two reputed publications on GST, published by \nBharat Law House. These publications provide practical perspectives on GST procedures, enforcement actions, and litigation, \nreflecting a deep understanding of evolving tax jurisprudence and regulatory frameworks.",
     expertise: [
       "GST audits, inspections, and investigations",
       "Search, seizure, and arrest-related proceedings",
@@ -77,7 +77,7 @@ export const teamData = [
     slug: 'ashutosh-agrawal',
     name: 'CA Ashutosh Agrawal',
     role: 'Practice Domain',
-    shortDescription: 'Tax Advisor – TaxLegal | Finance, Audit & Assurance',
+    shortDescription: 'Finance, Audit & Assurance',
     image: "/assets/our team/Ashutosh-Agrawal.jpeg",
     detailedBio: "CA Ashutosh Agrawal is a Chartered Accountant with expertise in assurance, auditing, taxation, financial advisory, and regulatory compliance. He has extensive professional experience in strengthening internal controls, enhancing financial governance, and assisting businesses in achieving operational efficiency through a structured and analytical approach.\n\nHe specializes in internal audits, financial reporting, risk assessment, compliance management, and tax advisory, helping organizations establish robust financial systems while ensuring adherence to statutory and regulatory requirements. His professional experience also includes bookkeeping, financial planning, budgeting, financial forecasting, accounts management, and business process optimization.\n\nAs a Tax Advisor at TaxLegal, he provides strategic financial and taxation advisory services, assisting businesses with internal audits, tax planning, regulatory compliance, financial reporting, and business advisory. His practical and solution-oriented approach enables organizations to strengthen internal controls, optimize financial performance, and maintain full compliance with applicable laws and regulations.",
     expertise: [
@@ -328,7 +328,7 @@ export const teamData = [
     slug: 'ajay-mane',
     name: 'Adv. Ajay R. Mane',
     role: 'Practice Domain',
-    shortDescription: 'Legal Advisor – TaxLegal | Commercial Litigation & Arbitration',
+    shortDescription: 'Commercial Litigation & Arbitration',
     image: "/assets/our team/Ajay-mane.png",
     detailedBio: "Adv. Ajay R. Mane is an Advocate with a focused practice in commercial litigation, arbitration, and contractual disputes. He has extensive experience representing clients before the Bombay High Court and arbitral tribunals, handling complex commercial and civil matters with a strategic and result-oriented approach.\n\nHe specializes in arbitration proceedings under the Arbitration and Conciliation Act, 1996, including matters under Sections 9, 11, 34, and 37, representing clients from the pre-arbitration stage through post-award challenges. His professional expertise also includes drafting pleadings, written submissions, affidavits, legal opinions, case strategy, evidence structuring, and cross-examination preparation.\n\nAs a Legal Advisor at TaxLegal, he provides strategic legal advisory and dispute resolution services in commercial litigation, arbitration, contractual disputes, civil matters, and transaction advisory. His practice also extends to drafting and reviewing commercial agreements, transactional documentation, and advisory on regulatory matters under the Foreign Exchange Management Act (FEMA), enabling businesses and individuals to effectively manage legal risks and commercial disputes.",
     expertise: [
@@ -351,9 +351,9 @@ export const teamData = [
   {
     id: 12,
     slug: 'karthikeyan-tc',
-    name: 'Karthikeyan T.C.',
+    name: 'ADV. Karthikeyan T.C.',
     role: 'Practice Domain',
-    shortDescription: 'Regulatory Advisory |  Arbitration & Mediation    ',
+    shortDescription: 'Regulatory Advisory \n  Arbitration & Mediation    ',
     image: "/assets/our team/Karthikeyan.png",
     detailedBio: "Karthikeyan T.C. is a Legal Advisor with a strong academic foundation and practical experience in regulatory advisory, legal research, and dispute resolution. He specializes in providing strategic legal support across regulatory, corporate, and commercial matters, combining analytical precision with a solution-oriented approach.\n\nHe holds a BBA LL.B. (Hons.) and an LL.M., with a specialization in Intellectual Property Rights and Technology Law. His professional experience includes legal research, drafting, policy analysis, regulatory advisory, and litigation support through internships with leading law firms, senior law officers, and the Supreme Court of India. His areas of exposure include intellectual property law, technology law, arbitration, mediation, constitutional law, banking law, civil and criminal litigation, and regulatory compliance.\n\nAs a Legal Advisor at TaxLegal, he provides legal and regulatory advisory services, assisting clients with legal research, regulatory compliance, tax assessments, drafting of legal documents, case analysis, and strategic legal support. His research-driven approach enables businesses and individuals to navigate evolving legal and regulatory frameworks while effectively managing legal risks.",
     expertise: [
