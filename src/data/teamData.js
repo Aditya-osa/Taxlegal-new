@@ -161,7 +161,7 @@ export const teamData = [
     name: 'Adv. Suresh Sharma',
     role: 'Practice Domain',
     shortDescription: 'Tax Advisory Consultant -\n IT & GST Litigation | Enforcement | Compliance Strategy',
-    image: "/assets/team/suresh-sir.png",
+    image: "/assets/our team/suresh-sir.png",
     detailedBio: "With over three decades of distinguished practice in taxation and allied laws, Adv. Suresh Sharma is a trusted advisor to businesses operating within India’s evolving and enforcement-intensive tax regime.\n\nHis expertise spans Goods and Services Tax (GST), Income Tax, and tax litigation, with a strong focus on statutory compliance, due process, legal defensibility, and strategic risk mitigation in regulatory proceedings.\n\nOver the years, Adv. Suresh Sharma has closely partnered with business leaders and management teams, advising on complex tax matters involving significant financial and regulatory implications, litigation strategy, and compliance positioning, while guiding organizations through GST and Income Tax proceedings with clarity and precision.",
     publications: [
       "GST Search, Seizure, Summons and Arrest",
@@ -188,7 +188,7 @@ export const teamData = [
     name: 'Adv. Varun Sharma',
     role: 'Practice Domain',
     shortDescription: 'Tax Litigation | Direct & Indirect Taxation | GST Advisory',
-    image: "/assets/team/varun-sharma.png",
+    image: "/assets/our team/varun-sharma.png",
     detailedBio: "Adv. Varun Sharma is an Advocate, Tax Consultant, and Taxation Law Specialist with expertise in Direct and Indirect Taxation, Tax advisory, and tax litigation.\n\nA second-generation legal professional, he has developed significant experience in handling tax disputes, tax advisory matters, enforcement proceedings, adjudication, and appellate litigation. His practice focuses on providing strategic and practical tax solutions, assisting businesses and individuals with tax compliance, regulatory proceedings, and representation before statutory authorities and appellate forums.\n\nAs Legal Advisor – Tax Litigation at TaxLegal, he advises clients on complex taxation matters involving regulatory compliance, litigation strategy, statutory interpretation, and dispute resolution, delivering practical and commercially sound legal solutions.",
     publications: [
       "GST – Search, Seizure, Summons and Arrest",
@@ -274,7 +274,7 @@ export const teamData = [
     name: 'Adv. Alok Shukla',
     role: 'Practice Domain',
     shortDescription: 'Dispute Resolutions & Litigation Counsel',
-    image: "/assets/team/Adv-Alok-Shukla.png",
+    image: "/assets/our team/Adv-Alok-Shukla.png",
     detailedBio: "Adv. Alok Shukla is a litigation professional with more than three decades of experience, having been in active practice since 1994.\n\nHis practice spans criminal, civil, commercial, banking and insurance litigation, with particular expertise in complex matters involving the Economic Offences Wing (EOW), Central Bureau of Investigation (CBI), MPID matters, Narcotics & NDPS litigation, Banking Recovery Proceedings and Commercial Disputes.\n\nHaving been empanelled with various insurance companies in the past, he has extensively represented insurers in Motor Accident Claims Tribunal (MACT) proceedings, insurer defence matters and insurance claim disputes.\n\nHis practice extends to appearances before the High Courts, Trial Courts, Consumer Forums, MACT Tribunals and various judicial and quasi-judicial forums across India.",
     expertise: [
       "Alternative Dispute Resolution (ADR)",
