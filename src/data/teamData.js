@@ -1,33 +1,33 @@
 export const teamData = [
-    {
-      id: 1,
-      slug: 'adv-suresh-sharma',
-      name: 'Adv. Suresh Sharma',
-      role: 'Practice Domain',
-      shortDescription: 'Tax Advisory Consultant -\n IT & GST Litigation | Enforcement | Compliance Strategy',
-      image: "/assets/our team/suresh-sir.png",
-      detailedBio: "With over three decades of distinguished practice in taxation and allied laws, Adv. Suresh Sharma is a trusted advisor to businesses operating within India’s evolving and enforcement-intensive tax regime.\n\nHis expertise spans Goods and Services Tax (GST), Income Tax, and tax litigation, with a strong focus on statutory compliance, due process, legal defensibility, and strategic risk mitigation in regulatory proceedings.\n\nOver the years, Adv. Suresh Sharma has closely partnered with business leaders and management teams, advising on complex tax matters involving significant financial and regulatory implications, litigation strategy, and compliance positioning, while guiding organizations through GST and Income Tax proceedings with clarity and precision.",
-      publications: [
-        "GST Search, Seizure, Summons and Arrest",
-        "GST Litigation – A Practical Guide"
-      ],
-      publicationsNote: "Adv. Suresh Sharma and Adv. Varun Sharma are the authors of two reputed publications on GST, published by Bharat Law House. These publications provide practical perspectives on GST procedures, enforcement actions, and litigation, reflecting a deep understanding of evolving tax jurisprudence and regulatory frameworks.",
-      expertise: [
-        "GST audits, inspections, and investigations",
-        "Search, seizure, and arrest-related proceedings",
-        "Complex tax disputes and appellate representation",
-        "Corporate tax structuring and compliance frameworks",
-        "Income Tax assessments and advisory"
-      ],
-      education: [
-        "B.Com",
-        "M.Com",
-        "LL.B."
-      ],
-      linkedin: "https://www.linkedin.com/in/adv-suresh-sharma/",
-      isMainTeam: true
-    }, 
-    {
+  {
+    id: 1,
+    slug: 'adv-suresh-sharma',
+    name: 'Adv. Suresh Sharma',
+    role: 'Practice Domain',
+    shortDescription: 'Tax Advisory Consultant -\n IT & GST Litigation | Enforcement | Compliance Strategy',
+    image: "/assets/our team/suresh-sir.png",
+    detailedBio: "With over three decades of distinguished practice in taxation and allied laws, Adv. Suresh Sharma is a trusted advisor to businesses operating within India’s evolving and enforcement-intensive tax regime.\n\nHis expertise spans Goods and Services Tax (GST), Income Tax, and tax litigation, with a strong focus on statutory compliance, due process, legal defensibility, and strategic risk mitigation in regulatory proceedings.\n\nOver the years, Adv. Suresh Sharma has closely partnered with business leaders and management teams, advising on complex tax matters involving significant financial and regulatory implications, litigation strategy, and compliance positioning, while guiding organizations through GST and Income Tax proceedings with clarity and precision.",
+    publications: [
+      "GST Search, Seizure, Summons and Arrest",
+      "GST Litigation – A Practical Guide"
+    ],
+    publicationsNote: "Adv. Suresh Sharma and Adv. Varun Sharma are the authors of two reputed publications on GST, published by Bharat Law House. These publications provide practical perspectives on GST procedures, enforcement actions, and litigation, reflecting a deep understanding of evolving tax jurisprudence and regulatory frameworks.",
+    expertise: [
+      "GST audits, inspections, and investigations",
+      "Search, seizure, and arrest-related proceedings",
+      "Complex tax disputes and appellate representation",
+      "Corporate tax structuring and compliance frameworks",
+      "Income Tax assessments and advisory"
+    ],
+    education: [
+      "B.Com",
+      "M.Com",
+      "LL.B."
+    ],
+    linkedin: "https://www.linkedin.com/in/adv-suresh-sharma/",
+    isMainTeam: true
+  },
+  {
     id: 7,
     slug: 'ca-narendra-rajput',
     name: 'CA Narendra Rajput',
@@ -62,11 +62,9 @@ export const teamData = [
     detailedBio: "CA Mohan Kumar is a Chartered Accountant with expertise in auditing, financial compliance, accounting, and regulatory advisory. With extensive professional experience in assurance and financial reporting, he assists businesses in maintaining financial integrity, strengthening internal controls, and ensuring compliance with statutory and regulatory requirements.\n\nHe specializes in statutory audits, financial reporting, accounting standards, compliance management, and financial advisory. His professional approach focuses on enhancing transparency, improving financial governance, and helping organizations establish robust accounting and compliance frameworks.\n\nAs a Legal Advisor at TaxLegal, he provides strategic financial and compliance advisory services, assisting businesses with statutory audits, financial reporting, accounting practices, regulatory compliance, and corporate financial governance. His practical and analytical approach enables organizations to meet evolving statutory requirements while maintaining sound financial management and operational efficiency.",
     expertise: [
       "Statutory Audit",
-      "Financial Compliance",
       "Accounting & Financial Reporting",
-      "Assurance Services",
       "Regulatory Compliance",
-      "Internal Financial Controls",
+      "Financial Compliance",
       "Corporate Financial Governance",
       "Accounting Standards & Advisory"
     ],
@@ -77,7 +75,7 @@ export const teamData = [
   {
     id: 9,
     slug: 'ashutosh-agrawal',
-    name: 'CA ASHUTOSH AGRAWAL',
+    name: 'CA Ashutosh Agrawal',
     role: 'Practice Domain',
     shortDescription: 'Tax Advisor – TaxLegal | Finance, Audit & Assurance',
     image: "/assets/our team/Ashutosh-Agrawal.jpeg",
@@ -109,14 +107,10 @@ export const teamData = [
     expertise: [
       "Statutory Audit & Assurance",
       "Direct & Indirect Tax Advisory",
-      "Financial Consulting",
-      "Regulatory & Compliance Advisory",
       "Financial Reporting & Accounting",
-      "Risk Assessment & Internal Controls",
+      "Regulatory & Compliance Advisory",
       "Business Advisory & Strategic Planning",
-      "Audit Research & Financial Analysis",
-      "Client Advisory & Corporate Governance",
-      "Financial Process Optimization"
+      "Audit Research & Financial Analysis"
     ],
     education: [
       "FCA",
@@ -159,16 +153,35 @@ export const teamData = [
     role: 'Practice Domain',
     shortDescription: 'Corporate & Secretarial  \n Regulatory Compliance ',
     image: "/assets/our team/Bipin-Singh.png",
-    detailedBio: "CS Bipin Singh is a Practising Company Secretary and Legal Professional with expertise in Corporate Law, Civil Law, and Regulatory Compliance. An Associate Member of the Institute of Company Secretaries of India (ICSI) and a qualified law graduate, he advises businesses and individuals on corporate governance, legal documentation, and statutory compliance with a practical and solution-oriented approach.\n\nHe specializes in corporate legal advisory, civil litigation support, contract drafting and vetting, company law compliances, and regulatory matters. His professional experience includes assisting organizations in managing legal risks, preparing and reviewing commercial documents, ensuring statutory compliance, and providing strategic legal solutions for business operations.\n\nAs a Legal Advisor at TaxLegal, he provides comprehensive legal and corporate advisory services, assisting clients with company law matters, corporate governance, civil legal issues, drafting and vetting of legal documents, regulatory compliance, and business advisory. His analytical approach enables businesses to operate efficiently while maintaining compliance with evolving legal and regulatory requirements.",
+    detailedBio: `CS Bipin Singh is a Practising Company Secretary and Legal
+                  Professional with expertise in Corporate Law, Civil Law, and
+                  of Company Secretaries of India (ICSI) and a qualified law
+                  graduate, he advises businesses and individuals on corporate
+                  governance, legal documentation, and statutory compliance
+                  with a practical and solution-oriented approach.
+                  
+                  He specializes in corporate legal advisory, civil litigation support,
+                  contract drafting and vetting, company law compliances, and
+                  regulatory matters. His professional experience includes assisting
+                  organizations in managing legal risks, preparing and reviewing
+                  commercial documents, ensuring statutory compliance, and
+                  providing strategic legal solutions for business operations.
+                  
+                  As a Legal Advisor at TaxLegal, he provides comprehensive
+                  legal and corporate advisory services, assisting clients with
+                  company law matters, corporate governance, civil legal issues,
+                  drafting and vetting of legal documents, regulatory compliance,
+                  and business advisory. His analytical approach enables businesses
+                  to operate efficiently while maintaining compliance with evolving
+                  Regulatory Compliance. An Associate Member of the Institute
+                  legal and regulatory requirements.`,
     expertise: [
       "Corporate Law",
       "Civil Law Advisory",
       "Corporate Governance & Compliance",
       "Company Law Compliance",
       "Drafting & Vetting of Legal Documents",
-      "Commercial Agreements & Documentation",
-      "Regulatory & Legal Advisory",
-      "Business Legal Risk Management"
+      "Commercial Agreements & Documentation"
     ],
     education: [
       "Associate Company Secretary (ACS)",
@@ -176,7 +189,7 @@ export const teamData = [
     ],
     linkedin: "https://www.linkedin.com/in/cs-bipin-singh-22ab70a8/",
     isMainTeam: false
-  },{
+  }, {
     id: 4,
     slug: 'adv-varun-sharma',
     name: 'Adv. Varun Sharma',
@@ -256,7 +269,7 @@ export const teamData = [
       "Recovery Proceedings & Negotiable Instruments Act Matters"
     ],
     education: [
-      "BLS,LL.B.",
+      "BLS, LL.B.",
       "Master's in Business Law",
       "PGDM – Human Resource Management"
     ],
@@ -300,24 +313,20 @@ export const teamData = [
       "Commercial Litigation",
       "Arbitration & Dispute Resolution",
       "Criminal Litigation & Bail Matters",
-      "Insurance & Consumer Disputes",
-      "Property & Trust Matters",
       "Contract Drafting & Contractual Disputes",
-      "Legal Research & Case Strategy",
-      "Courtroom Advocacy & Legal Drafting",
-      "Dispute Resolution & Litigation Advisory"
+      "Legal Research & Case Strategy"
     ],
     education: [
       "LL.B.",
       "LL.M. (Corporate & Financial Law & Policy)"
     ],
-    linkedin: "https://www.linkedin.com/in/adv-sahil-kumar-6315b7129?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    linkedin: "https://www.linkedin.com/in/adv-sahil-kumar-6315b7129/",
     isMainTeam: false
   },
   {
     id: 8,
     slug: 'ajay-mane',
-    name: 'ADV. AJAY R. MANE',
+    name: 'Adv. Ajay R. Mane',
     role: 'Practice Domain',
     shortDescription: 'Legal Advisor – TaxLegal | Commercial Litigation & Arbitration',
     image: "/assets/our team/Ajay-mane.png",
@@ -336,7 +345,7 @@ export const teamData = [
       "LL.M. (Alternative Dispute Resolution)",
       "Advanced Diploma in ADR"
     ],
-    linkedin: "https://www.linkedin.com/in/ajay-mane07?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    linkedin: "https://www.linkedin.com/in/ajay-mane07/",
     isMainTeam: false
   },
   {
@@ -353,14 +362,10 @@ export const teamData = [
       "Tax Assessments & Regulatory Compliance",
       "Legal Drafting & Documentation",
       "Intellectual Property Law",
-      "Technology Law & Data Protection",
-      "Arbitration & Mediation",
-      "Civil & Commercial Litigation Support",
-      "Constitutional & Banking Law",
-      "Policy Research & Case Analysis"
+      "Technology Law & Data Protection"
     ],
     education: ["BBA LL.B. (Hons.)", "LL.M."],
-    linkedin: "https://www.linkedin.com/in/karthikeyan-tc?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    linkedin: "https://www.linkedin.com/in/karthikeyan-tc/",
     isMainTeam: false
   }
 ];

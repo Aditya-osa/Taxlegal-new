@@ -4,7 +4,7 @@ import { teamData } from '../../data/teamData';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import LeadershipCard from '../../components/AboutPage/LeadershipCard';
-import { Gavel, Landmark, FileText, Users, User, GraduationCap, ExternalLink, Handshake, ShieldCheck, Shield, Scale, Phone, ArrowRight, ShieldAlert, BriefcaseBusiness, Car, Building2, Lock, IndianRupee, HandCoins, Monitor, Book, Target, FileSearch, FileCheck, BookOpen, Globe, TrendingUp, FileSignature, CircleDollarSign, Search, ClipboardCheck, Award, PieChart } from 'lucide-react';
+import { Gavel, Landmark, FileText, Users, User, GraduationCap, ExternalLink, Handshake, ShieldCheck, Shield, Scale, Phone, ArrowRight, ShieldAlert, BriefcaseBusiness, Car, Building2, Lock, IndianRupee, HandCoins, Monitor, Book, Target, FileSearch, FileCheck, BookOpen, Globe, TrendingUp, FileSignature, CircleDollarSign, Search, ClipboardCheck, Award, PieChart, Briefcase, Calculator, ClipboardList, BarChart } from 'lucide-react';
 import './TeamMemberProfile.css';
 
 
@@ -53,11 +53,7 @@ const TeamMemberProfile = () => {
             
             <div className="ppt-right">
               <h1 className="ppt-name">{member.name}</h1>
-              {(member.slug === 'ajay-mane' || member.slug === 'ashutosh-agrawal') && (
-                <h4 style={{ color: 'var(--red)', fontSize: '18px', fontWeight: '500', margin: '10px 0 10px 0' }}>
-                  {member.education.join(' | ')}
-                </h4>
-              )}
+
               <h3 className="ppt-role">{member.shortDescription || member.role}</h3>
               <div className="ppt-divider"></div>
               
@@ -127,6 +123,16 @@ const TeamMemberProfile = () => {
                   ))}
                 </div>
               </div>
+            ) : member.slug === 'adv-sahil-kumar' || member.slug === 'ca-lokesh-rana' || member.slug === 'karthikeyan-tc' || member.slug === 'ca-mohan-kumar' ? (
+              <div className="ppb-left">
+                <h2 className="ppb-heading">PROFESSIONAL PROFILE</h2>
+                <div className="ppb-underline"></div>
+                <div className="ppb-content">
+                  {bioParagraphs.map((para, idx) => (
+                    <p key={idx}>{para}</p>
+                  ))}
+                </div>
+              </div>
             ) : (
               <div className="ppb-left">
                 <h2 className="ppb-heading">Bio</h2>
@@ -140,7 +146,165 @@ const TeamMemberProfile = () => {
             )}
             
             <div className="ppb-right">
-              {member.slug === 'ajay-mane' ? (
+              {member.slug === 'adv-sahil-kumar' ? (
+                <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Scale size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Litigation & Representation</h4>
+                      <p className="ppb-right-desc">Representing clients in civil, commercial, and criminal matters before the Supreme Court of India, High Courts, and other judicial forums.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Handshake size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Dispute Resolution</h4>
+                      <p className="ppb-right-desc">Providing effective solutions through arbitration, mediation, and alternative dispute resolution mechanisms.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><FileSignature size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Legal Drafting & Advisory</h4>
+                      <p className="ppb-right-desc">Drafting pleadings, legal opinions, agreements, and providing strategic advisory on legal and contractual matters.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><ShieldCheck size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Client-Centric Approach</h4>
+                      <p className="ppb-right-desc">Delivering personalized legal solutions with a focus on protecting client interests and achieving optimal outcomes.</p>
+                    </div>
+                  </div>
+                </>
+              ) : member.slug === 'ca-lokesh-rana' ? (
+                <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><ClipboardCheck size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Audit & Assurance</h4>
+                      <p className="ppb-right-desc">Conducting statutory audits and assurance engagements to ensure financial accuracy, internal control effectiveness, and compliance.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><TrendingUp size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Taxation & Advisory</h4>
+                      <p className="ppb-right-desc">Advising on direct and indirect tax matters, tax planning strategies, and compliance to optimize tax efficiency and mitigate risks.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><PieChart size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Financial Reporting & Analysis</h4>
+                      <p className="ppb-right-desc">Preparing and reviewing financial statements, conducting analysis, and providing insights to support informed business decisions.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Users size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Business Advisory & Compliance</h4>
+                      <p className="ppb-right-desc">Providing business advisory, regulatory compliance support, and governance solutions to drive sustainable growth and operational efficiency.</p>
+                    </div>
+                  </div>
+                </>
+              ) : member.slug === 'karthikeyan-tc' ? (
+                <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Scale size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Regulatory Advisory</h4>
+                      <p className="ppb-right-desc">Providing strategic advisory on regulatory matters, compliance requirements, and legal risk management.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Search size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Legal Research & Analysis</h4>
+                      <p className="ppb-right-desc">Conducting in-depth legal research, policy analysis, and case studies to deliver practical legal solutions.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><FileSignature size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Legal Drafting & Compliance</h4>
+                      <p className="ppb-right-desc">Drafting, vetting, and reviewing legal documents, agreements, and ensuring regulatory compliance.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Users size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Litigation & Dispute Support</h4>
+                      <p className="ppb-right-desc">Assisting in dispute resolution through litigation support, arbitration, and mediation.</p>
+                    </div>
+                  </div>
+                </>
+              ) : member.slug === 'ca-mohan-kumar' ? (
+                <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><ClipboardCheck size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Statutory Audit & Assurance</h4>
+                      <p className="ppb-right-desc">Conducting statutory audits and assurance engagements in accordance with applicable laws and auditing standards.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><TrendingUp size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Financial Reporting & Compliance</h4>
+                      <p className="ppb-right-desc">Preparing accurate financial statements and ensuring compliance with accounting standards and regulatory requirements.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><ShieldCheck size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Financial Advisory & Planning</h4>
+                      <p className="ppb-right-desc">Providing financial advisory and planning support to enhance financial health, profitability, and operational efficiency.</p>
+                    </div>
+                  </div>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Users size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Corporate Governance & Controls</h4>
+                      <p className="ppb-right-desc">Strengthening internal controls, corporate governance practices, and compliance frameworks to ensure transparency and accountability.</p>
+                    </div>
+                  </div>
+                </>
+              ) : member.slug === 'bipin-singh' ? (
+                <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Landmark size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Corporate Legal Advisory</h4>
+                      <p className="ppb-right-desc">Advising businesses on corporate structuring, governance, statutory compliances, and corporate legal matters.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Scale size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Civil Law Advisory</h4>
+                      <p className="ppb-right-desc">Providing legal guidance and support in civil matters, disputes, and litigation-related advisory.</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><FileSignature size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Drafting & Documentation</h4>
+                      <p className="ppb-right-desc">Drafting, vetting, and reviewing agreements, commercial documents, notices, and other legal documents.</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><ShieldCheck size={26} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Regulatory Compliance</h4>
+                      <p className="ppb-right-desc">Ensuring compliance with applicable laws and regulations and advising on legal risk management.</p>
+                    </div>
+                  </div>
+                </>
+              ) : member.slug === 'ajay-mane' ? (
                 <>
                   <div className="ppb-right-item">
                     <div className="ppb-right-icon"><Scale size={26} strokeWidth={1.5} /></div>
@@ -476,6 +640,141 @@ const TeamMemberProfile = () => {
                   <div className="premium-expertise-item">
                     <Landmark className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
                     <h4 className="premium-expertise-item-title">RERA & Real Estate Litigation</h4>
+                  </div>
+                </>
+              ) : member.slug === 'adv-sahil-kumar' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <Landmark className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Civil Litigation</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Briefcase className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Commercial<br/>Litigation</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Users className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Arbitration & Dispute<br/>Resolution</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <ShieldCheck className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Criminal Litigation &<br/>Bail Matters</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileSignature className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Contract Drafting &<br/>Contractual Disputes</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Search className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Legal Research &<br/>Case Strategy</h4>
+                  </div>
+                </>
+              ) : member.slug === 'ca-lokesh-rana' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <Landmark className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Statutory Audit &<br/>Assurance</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Calculator className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Direct & Indirect<br/>Tax Advisory</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Financial Reporting &<br/>Accounting</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <ShieldCheck className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Regulatory & Compliance<br/>Advisory</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Users className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Business Advisory &<br/>Strategic Planning</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <BarChart className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Audit Research &<br/>Financial Analysis</h4>
+                  </div>
+                </>
+              ) : member.slug === 'karthikeyan-tc' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <Landmark className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Regulatory<br/>Advisory</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Search className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Legal Research &<br/>Legal Opinions</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Tax Assessments &<br/>Regulatory Compliance</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileSignature className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Legal Drafting &<br/>Documentation</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Lock className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Intellectual Property<br/>Law</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Globe className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Technology Law &<br/>Data Protection</h4>
+                  </div>
+                </>
+              ) : member.slug === 'ca-mohan-kumar' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <ClipboardList className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Statutory Audit</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Accounting &<br/>Financial Reporting</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <ShieldCheck className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Regulatory<br/>Compliance</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <TrendingUp className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Financial<br/>Compliance</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Users className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Corporate Financial<br/>Governance</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Award className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Accounting Standards<br/>& Advisory</h4>
+                  </div>
+                </>
+              ) : member.slug === 'bipin-singh' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <Landmark className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Corporate Law</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Scale className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Civil Law<br/>Advisory</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Users className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Corporate<br/>Governance &<br/>Compliance</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <ClipboardCheck className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Company Law<br/>Compliance</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileSignature className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Drafting & Vetting<br/>of Legal Documents</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Handshake className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Commercial<br/>Agreements &<br/>Documentation</h4>
                   </div>
                 </>
               ) : member.slug === 'cs-sanjay-dhadich' ? (
