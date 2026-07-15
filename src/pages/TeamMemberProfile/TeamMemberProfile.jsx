@@ -48,7 +48,7 @@ const TeamMemberProfile = () => {
           {/* Top Section */}
           <div className="premium-profile-top">
             <div className="ppt-left">
-              <img src={member.image} alt={member.name} className={member.flipImage ? 'flipped-image' : ''} />
+              <img src={member.image} alt={member.name} />
             </div>
             
             <div className="ppt-right">

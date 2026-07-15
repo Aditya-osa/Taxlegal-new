@@ -56,10 +56,6 @@
   object-fit: cover;
 }
 
-.ppt-left img.flipped-image {
-  transform: scaleX(-1);
-}
-
 .ppt-right {
   display: flex;
   flex-direction: column;

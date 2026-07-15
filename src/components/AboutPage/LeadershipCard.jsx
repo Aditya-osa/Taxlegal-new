@@ -12,7 +12,7 @@ const LeadershipCard = ({ member }) => {
       style={{ cursor: 'pointer' }}
     >
       <div className="team-img-wrapper">
-        <img src={member.image} alt={member.name} className={member.flipImage ? 'flipped-image' : ''} />
+        <img src={member.image} alt={member.name} />
       </div>
       <div className="team-info">
         <h3 className="team-name">
