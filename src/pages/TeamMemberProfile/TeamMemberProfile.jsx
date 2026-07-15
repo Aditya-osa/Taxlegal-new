@@ -4,7 +4,7 @@ import { teamData } from '../../data/teamData';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import LeadershipCard from '../../components/AboutPage/LeadershipCard';
-import { Gavel, Landmark, FileText, Users, GraduationCap, ExternalLink, Handshake, ShieldCheck, Scale, Phone, ArrowRight, ShieldAlert, BriefcaseBusiness, Car, Building2, Lock, IndianRupee, HandCoins } from 'lucide-react';
+import { Gavel, Landmark, FileText, Users, User, GraduationCap, ExternalLink, Handshake, ShieldCheck, Shield, Scale, Phone, ArrowRight, ShieldAlert, BriefcaseBusiness, Car, Building2, Lock, IndianRupee, HandCoins, Monitor, Book, Target, FileSearch, FileCheck, BookOpen, Globe, TrendingUp, FileSignature, CircleDollarSign, Search } from 'lucide-react';
 import './TeamMemberProfile.css';
 
 
@@ -91,21 +91,44 @@ const TeamMemberProfile = () => {
 
           {/* Bottom Section */}
           <div className="premium-profile-bottom">
-            <div className="ppb-left">
-              <h2 className="ppb-heading">Bio</h2>
-              <div className="ppb-underline"></div>
-              <div className="ppb-content">
-                {bioParagraphs.map((para, idx) => (
-                  <p key={idx}>{para}</p>
-                ))}
+            {member.slug === 'adv-suresh-sharma' ? (
+              <div className="ppb-left">
+                <h2 className="ppb-heading">Bio</h2>
+                <div className="ppb-underline"></div>
+                <div className="ppb-content">
+                  <p>{bioParagraphs[0]}</p>
+                  <p>{bioParagraphs[1]}</p>
+                  
+                  <p><strong>ADVISORY STRENGTH</strong><br/>
+                  Specializes in strategic GST advisory and litigation support, particularly in matters involving:</p>
+                  <ul className="suresh-expertise-list" style={{ listStyleType: 'disc', paddingLeft: '20px', marginBottom: '20px' }}>
+                    {member.expertise.map((item, idx) => (
+                      <li key={idx} style={{ marginBottom: '8px', color: 'var(--text-light)', lineHeight: '1.6' }}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <p>{bioParagraphs[2]}</p>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="ppb-left">
+                <h2 className="ppb-heading">Bio</h2>
+                <div className="ppb-underline"></div>
+                <div className="ppb-content">
+                  {bioParagraphs.map((para, idx) => (
+                    <p key={idx}>{para}</p>
+                  ))}
+                </div>
+              </div>
+            )}
             
             <div className="ppb-right">
               {member.slug === 'adv-vivek-sharma' ? (
                 <>
                   <div className="ppb-right-item">
-                    <div className="ppb-right-icon"><Lock size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-icon"><Monitor size={26} strokeWidth={1.5} /></div>
                     <div className="ppb-right-text">
                       <h4 className="ppb-right-title">Financial Fraud & Cyber Crime</h4>
                       <p className="ppb-right-desc">Handling complex cyber crime investigations, digital fraud and financial crime litigation.</p>
@@ -113,7 +136,7 @@ const TeamMemberProfile = () => {
                   </div>
                   
                   <div className="ppb-right-item">
-                    <div className="ppb-right-icon"><Scale size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-icon"><Scale size={26} strokeWidth={1.5} /></div>
                     <div className="ppb-right-text">
                       <h4 className="ppb-right-title">Dispute Resolution & Litigation</h4>
                       <p className="ppb-right-desc">Representation across civil, criminal, commercial, matrimonial and banking disputes.</p>
@@ -121,7 +144,7 @@ const TeamMemberProfile = () => {
                   </div>
 
                   <div className="ppb-right-item">
-                    <div className="ppb-right-icon"><IndianRupee size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-icon"><IndianRupee size={26} strokeWidth={1.5} /></div>
                     <div className="ppb-right-text">
                       <h4 className="ppb-right-title">Recovery & Commercial Matters</h4>
                       <p className="ppb-right-desc">Expertise in recovery proceedings, Negotiable Instruments Act matters and commercial litigation.</p>
@@ -129,44 +152,147 @@ const TeamMemberProfile = () => {
                   </div>
 
                   <div className="ppb-right-item">
-                    <div className="ppb-right-icon"><Landmark size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-icon"><Landmark size={26} strokeWidth={1.5} /></div>
                     <div className="ppb-right-text">
                       <h4 className="ppb-right-title">Court Representation</h4>
                       <p className="ppb-right-desc">Appearances before High Courts, Trial Courts, Consumer Forums, MACT Tribunals and other judicial & quasi-judicial forums across India.</p>
                     </div>
                   </div>
                 </>
-              ) : member.slug === 'adv-alok-shukla' ? (
+              ) : member.slug === 'adv-suresh-sharma' ? (
                 <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Gavel size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Tax Advisory & Litigation</h4>
+                      <p className="ppb-right-desc">Strategic advisory and litigation support in Goods and Services Tax (GST) and Income Tax matters.</p>
+                    </div>
+                  </div>
+
                   <div className="ppb-right-item">
                     <div className="ppb-right-icon"><ShieldAlert size={24} strokeWidth={1.5} /></div>
                     <div className="ppb-right-text">
-                      <h4 className="ppb-right-title">Criminal & EOW Matters</h4>
-                      <p className="ppb-right-desc">Expertise in complex matters involving the EOW, CBI, MPID, and NDPS litigation.</p>
+                      <h4 className="ppb-right-title">Enforcement Proceedings</h4>
+                      <p className="ppb-right-desc">Representation in GST audits, inspections, investigations, search, seizure, and arrest-related matters.</p>
                     </div>
                   </div>
-                  
+
                   <div className="ppb-right-item">
-                    <div className="ppb-right-icon"><ShieldCheck size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-icon"><FileText size={24} strokeWidth={1.5} /></div>
                     <div className="ppb-right-text">
-                      <h4 className="ppb-right-title">Insurance & MACT</h4>
-                      <p className="ppb-right-desc">Extensively represented insurers in MACT proceedings, insurer defence and claim disputes.</p>
+                      <h4 className="ppb-right-title">Tax Dispute & Appellate Representation</h4>
+                      <p className="ppb-right-desc">Handling complex tax disputes with strong focus on appellate remedies and due process.</p>
                     </div>
                   </div>
 
                   <div className="ppb-right-item">
                     <div className="ppb-right-icon"><Landmark size={24} strokeWidth={1.5} /></div>
                     <div className="ppb-right-text">
-                      <h4 className="ppb-right-title">Commercial & Banking</h4>
-                      <p className="ppb-right-desc">Three decades of experience spanning civil, commercial, and banking recovery proceedings.</p>
+                      <h4 className="ppb-right-title">Corporate Tax & Compliance Strategy</h4>
+                      <p className="ppb-right-desc">Corporate tax structuring, compliance frameworks, and risk mitigation through practical and defensible strategies.</p>
+                    </div>
+                  </div>
+
+                </>
+              ) : member.slug === 'adv-varun-sharma' ? (
+                <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Gavel size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Tax Advisory</h4>
+                      <p className="ppb-right-desc">Providing strategic tax advisory on Direct and Indirect Taxation, tax planning, compliance, and structuring for businesses and individuals.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Shield size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Tax Litigation & Representation</h4>
+                      <p className="ppb-right-desc">Representing clients in tax disputes, adjudication, and appellate proceedings before statutory authorities, tribunals, and higher courts.</p>
                     </div>
                   </div>
 
                   <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><FileCheck size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Tax Compliance & Risk Management</h4>
+                      <p className="ppb-right-desc">Advising on tax compliance, returns, assessments, and regulatory filings, ensuring adherence to statutory requirements and risk mitigation.</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Landmark size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Corporate & Commercial Advisory</h4>
+                      <p className="ppb-right-desc">Advising on corporate tax matters, commercial transactions, regulatory compliance, and civil & commercial legal issues with a practical and business-oriented approach.</p>
+                    </div>
+                  </div>
+                </>
+              ) : member.slug === 'adv-alok-shukla' ? (
+                <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Lock size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Criminal & Economic Offences</h4>
+                      <p className="ppb-right-desc">Expertise in EOW, CBI, MPID matters, Narcotics & NDPS litigation and other criminal proceedings.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="ppb-right-item">
                     <div className="ppb-right-icon"><Scale size={24} strokeWidth={1.5} /></div>
                     <div className="ppb-right-text">
-                      <h4 className="ppb-right-title">Court Representation</h4>
-                      <p className="ppb-right-desc">Appearances before the High Courts, Trial Courts, Consumer Forums, and MACT Tribunals.</p>
+                      <h4 className="ppb-right-title">Civil, Commercial & Banking Litigation</h4>
+                      <p className="ppb-right-desc">Representation in civil, commercial, banking and insurance disputes including recovery proceedings.</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Shield size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Insurance & MACT Matters</h4>
+                      <p className="ppb-right-desc">Empanelled with insurance companies; expert in MACT proceedings, insurer defence and insurance claim disputes.</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Landmark size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Court & Tribunal Representation</h4>
+                      <p className="ppb-right-desc">Appearances before High Courts, Trial Courts, Consumer Forums, MACT Tribunals and judicial & quasi-judicial forums across India.</p>
+                    </div>
+                  </div>
+                </>
+              ) : member.slug === 'cs-sanjay-dhadich' ? (
+                <>
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><BookOpen size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Corporate Structuring & Advisory</h4>
+                      <p className="ppb-right-desc">Expertise in corporate structuring, company law advisory, foreign investment regulations and strategic business consulting.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Globe size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Foreign Investment Advisory</h4>
+                      <p className="ppb-right-desc">Advisory on Foreign Direct Investment (FDI), Overseas Direct Investment (ODI), incorporation of foreign subsidiaries, companies with foreign promoters and Section 8 Companies.</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><ShieldCheck size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Regulatory Compliance</h4>
+                      <p className="ppb-right-desc">Comprehensive advisory on compliance and regulatory approvals under the Companies Act, 2013 and the Foreign Exchange Management Act (FEMA).</p>
+                    </div>
+                  </div>
+
+                  <div className="ppb-right-item">
+                    <div className="ppb-right-icon"><Landmark size={24} strokeWidth={1.5} /></div>
+                    <div className="ppb-right-text">
+                      <h4 className="ppb-right-title">Legal Advisory & Documentation</h4>
+                      <p className="ppb-right-desc">Assisting businesses with corporate governance, regulatory filings, drafting and review of commercial agreements, compounding of offences and legal documentation.</p>
                     </div>
                   </div>
                 </>
@@ -215,91 +341,173 @@ const TeamMemberProfile = () => {
             <div className="premium-expertise-divider"></div>
             
             <div className="premium-expertise-grid">
-              {member.slug === 'adv-vivek-sharma' ? (
+              {member.slug === 'adv-suresh-sharma' ? (
                 <>
                   <div className="premium-expertise-item">
-                    <Lock className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">Financial Fraud &</h4>
-                    <p className="premium-expertise-item-subtitle">Cyber Crime</p>
+                    <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>GST Advisory<br/>& Litigation</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <IndianRupee className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Income Tax Advisory<br/>& Litigation</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Gavel className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Enforcement &<br/>Investigations</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileCheck className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Tax Compliance &<br/>Strategy</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Users className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Corporate Tax Structuring<br/>& Advisory</h4>
                   </div>
                   <div className="premium-expertise-item">
                     <Scale className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">Civil, Criminal &</h4>
-                    <p className="premium-expertise-item-subtitle">Commercial Litigation</p>
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Appeals & Dispute<br/>Resolution</h4>
+                  </div>
+                </>
+              ) : member.slug === 'adv-vivek-sharma' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <Monitor className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title">Financial Fraud & Cyber Crime</h4>
                   </div>
                   <div className="premium-expertise-item">
-                    <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">Recovery &</h4>
-                    <p className="premium-expertise-item-subtitle">Negotiable Instruments Act</p>
+                    <Scale className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title">Civil, Criminal & Commercial Litigation</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <IndianRupee className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title">Recovery & Negotiable Instruments Act</h4>
                   </div>
                   <div className="premium-expertise-item">
                     <Users className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">Consumer &</h4>
-                    <p className="premium-expertise-item-subtitle">MACT Matters</p>
+                    <h4 className="premium-expertise-item-title">Consumer & MACT Matters</h4>
                   </div>
                   <div className="premium-expertise-item">
                     <Users className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">Matrimonial</h4>
-                    <p className="premium-expertise-item-subtitle">Disputes</p>
+                    <h4 className="premium-expertise-item-title">Matrimonial Disputes</h4>
                   </div>
                   <div className="premium-expertise-item">
                     <Landmark className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">RERA & Real Estate</h4>
-                    <p className="premium-expertise-item-subtitle">Litigation</p>
+                    <h4 className="premium-expertise-item-title">RERA & Real Estate Litigation</h4>
+                  </div>
+                </>
+              ) : member.slug === 'cs-sanjay-dhadich' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <Users className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Corporate Legal<br/>Consulting</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <TrendingUp className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Business Advisory &<br/>Strategic Consulting</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileCheck className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Company Law<br/>Compliance</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileSignature className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Drafting & Review of<br/>Commercial Agreements</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <CircleDollarSign className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Foreign Direct Investment (FDI) &<br/>Overseas Direct Investment (ODI)</h4>
+                  </div>
+                </>
+              ) : member.slug === 'adv-alok-shukla' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <Lock className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Criminal &<br/>Economic Offences</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Scale className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Civil, Commercial &<br/>Banking Litigation</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Shield className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Insurance &<br/>MACT Matters</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Recovery<br/>Proceedings</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <User className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Consumer<br/>Disputes</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Landmark className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Court & Tribunal<br/>Representation</h4>
+                  </div>
+                </>
+              ) : member.slug === 'adv-varun-sharma' ? (
+                <>
+                  <div className="premium-expertise-item">
+                    <Shield className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Tax<br/>Advisory</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Scale className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Tax<br/>Litigation</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Income<br/>Tax</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Direct<br/>Tax</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Indirect<br/>Tax</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Search className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Tax Search,<br/>Seizure & Arrest</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Landmark className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>Tax Appeals &<br/>Tribunal Matters</h4>
+                  </div>
+                  <div className="premium-expertise-item">
+                    <Shield className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
+                    <h4 className="premium-expertise-item-title" style={{ textAlign: 'center' }}>ED & PMLA<br/>Matters</h4>
                   </div>
                 </>
               ) : (
                 <>
                   <div className="premium-expertise-item">
                     <FileText className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">Contract Drafting,</h4>
-                    <p className="premium-expertise-item-subtitle">Vetting & Negotiation</p>
+                    <h4 className="premium-expertise-item-title">Contract Drafting, Vetting & Negotiation</h4>
                   </div>
                   <div className="premium-expertise-item">
                     <Handshake className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">Commercial & Corporate</h4>
-                    <p className="premium-expertise-item-subtitle">Advisory</p>
+                    <h4 className="premium-expertise-item-title">Commercial & Corporate Advisory</h4>
                   </div>
                   <div className="premium-expertise-item">
                     <Landmark className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">Banking & Recovery</h4>
-                    <p className="premium-expertise-item-subtitle">Matters</p>
+                    <h4 className="premium-expertise-item-title">Banking & Recovery Matters</h4>
                   </div>
                   <div className="premium-expertise-item">
                     <Users className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">Employment &</h4>
-                    <p className="premium-expertise-item-subtitle">Labour Laws</p>
+                    <h4 className="premium-expertise-item-title">Employment & Labour Laws</h4>
                   </div>
                   <div className="premium-expertise-item">
                     <ShieldCheck className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">IP & Regulatory</h4>
-                    <p className="premium-expertise-item-subtitle">Compliance</p>
+                    <h4 className="premium-expertise-item-title">IP & Regulatory Compliance</h4>
                   </div>
                   <div className="premium-expertise-item">
                     <Scale className="premium-expertise-icon" size={34} color="#c42a2f" strokeWidth={1.5} />
-                    <h4 className="premium-expertise-item-title">Dispute Resolution</h4>
-                    <p className="premium-expertise-item-subtitle">& Arbitration</p>
+                    <h4 className="premium-expertise-item-title">Dispute Resolution & Arbitration</h4>
                   </div>
                 </>
               )}
-            </div>
-          </div>
-
-          {/* New Call-to-Action Banner */}
-          <div className="premium-cta-banner">
-            <div className="premium-cta-left">
-              <div className="premium-cta-circle">
-                <Phone size={22} color="white" strokeWidth={1.5} />
-              </div>
-              <div className="premium-cta-text">
-                <h3 className="premium-cta-heading">Need Legal Assistance?</h3>
-                <p className="premium-cta-desc">Let's discuss how I can help you and your business.</p>
-              </div>
-            </div>
-            <div className="premium-cta-right">
-              <button className="premium-cta-btn">
-                Get in Touch <ArrowRight size={18} strokeWidth={2} />
-              </button>
             </div>
           </div>
 
@@ -320,21 +528,73 @@ const TeamMemberProfile = () => {
               <div className="premium-books-container">
                 <div className="premium-books-inner">
                   <h3 className="premium-books-title">Books</h3>
-                  <ul className="premium-books-list">
-                    {member.publications.map((pub, idx) => (
-                      <li key={idx}>
-                        <svg className="pub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                        </svg>
-                        <span>{pub}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {member.slug === 'adv-suresh-sharma' ? (
+                    <div className="book-grid">
+                      {/* Book 1 */}
+                      <div className="book-container">
+                        <div className="book-wrapper">
+                          <div className="book-static-page">
+                            <img src="/assets/Books/backpage.png" alt="Inner Page Image" />
+                          </div>
+                          <div className="book-hinge">
+                            <div className="book-cover-front">
+                              <img src="/assets/Books/gst.jpg.jpeg" alt="Front Cover" />
+                            </div>
+                            <div className="book-cover-back-face"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Book 2 */}
+                      <div className="book-container">
+                        <div className="book-wrapper">
+                          <div className="book-static-page">
+                            <img src="/assets/Books/backpage3.jpeg" alt="Inner Page Image" />
+                          </div>
+                          <div className="book-hinge">
+                            <div className="book-cover-front">
+                              <img src="/assets/Books/book1.jpeg" alt="Front Cover" />
+                            </div>
+                            <div className="book-cover-back-face"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <ul className="premium-books-list">
+                      {member.publications.map((pub, idx) => (
+                        <li key={idx}>
+                          <svg className="pub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                          </svg>
+                          <span>{pub}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             </div>
           )}
+
+          {/* New Call-to-Action Banner */}
+          <div className="premium-cta-banner">
+            <div className="premium-cta-left">
+              <div className="premium-cta-circle">
+                <Phone size={22} color="white" strokeWidth={1.5} />
+              </div>
+              <div className="premium-cta-text">
+                <h3 className="premium-cta-heading">Need Legal Assistance?</h3>
+                <p className="premium-cta-desc">Let's discuss how I can help you and your business.</p>
+              </div>
+            </div>
+            <div className="premium-cta-right">
+              <button className="premium-cta-btn">
+                Get in Touch <ArrowRight size={18} strokeWidth={2} />
+              </button>
+            </div>
+          </div>
         </div>
 
         <div className="container other-members-section">

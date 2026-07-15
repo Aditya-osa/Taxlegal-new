@@ -127,7 +127,7 @@ export const teamData = [
       "Associate Company Secretary (ACS)",
       "B.Com"
     ],
-    linkedin: "https://www.linkedin.com/in/sanjay-dadhich-91743a286?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    linkedin: "https://www.linkedin.com/in/sanjay-dadhich-91743a286/",
     isMainTeam: false
   },
   {
@@ -160,31 +160,26 @@ export const teamData = [
     slug: 'adv-suresh-sharma',
     name: 'Adv. Suresh Sharma',
     role: 'Practice Domain',
-    shortDescription: 'Tax Litigation  IT -  GST \nTribunals | Courts | Appeals',
+    shortDescription: 'Tax Advisory Consultant -\n IT & GST Litigation | Enforcement | Compliance Strategy',
     image: "/assets/team/suresh-sir.png",
-    detailedBio: "Adv. Suresh Sharma is an Advocate, GST Practitioner, Tax Consultant, and Author with over 30 years of professional experience in Direct & Indirect Taxation, Tax Advisory, and Litigation.\n\nRegistered with the Bar Council and practicing in accordance with professional legal standards, he advises businesses, MSMEs, professionals, and corporate organizations on various taxation, compliance, tax planning, assessments, audits, departmental proceedings, appeals, and dispute resolution.\n\nAs Principal Consultant – Tax Advocate at TaxLegal, he provides strategic and practical legal-tax solutions, helping clients navigate complex tax matters, optimize tax structures, and ensure regulatory compliance across diverse industries.",
+    detailedBio: "With over three decades of distinguished practice in taxation and allied laws, Adv. Suresh Sharma is a trusted advisor to businesses operating within India’s evolving and enforcement-intensive tax regime.\n\nHis expertise spans Goods and Services Tax (GST), Income Tax, and tax litigation, with a strong focus on statutory compliance, due process, legal defensibility, and strategic risk mitigation in regulatory proceedings.\n\nOver the years, Adv. Suresh Sharma has closely partnered with business leaders and management teams, advising on complex tax matters involving significant financial and regulatory implications, litigation strategy, and compliance positioning, while guiding organizations through GST and Income Tax proceedings with clarity and precision.",
     publications: [
-      "GST – Search, Seizure, Summons and Arrest (Turning GST Fear into Foresight)",
-      "GST – Litigation: A Practical Guide"
+      "GST Search, Seizure, Summons and Arrest",
+      "GST Litigation – A Practical Guide"
     ],
-    publicationsNote: "Adv. Suresh Sharma, along with Adv. Varun Sharma, is the co-author of two GST publications\npublished by Bharat Law House Pvt. Ltd.",
+    publicationsNote: "Adv. Suresh Sharma and Adv. Varun Sharma are the authors of two reputed publications on GST, published by Bharat Law House. These publications provide practical perspectives on GST procedures, enforcement actions, and litigation, reflecting a deep understanding of evolving tax jurisprudence and regulatory frameworks.",
     expertise: [
-      "Direct Tax",
-      "Income Tax",
-      "Indirect Tax GST",
-      "GST Arrest",
-      "GST Summon",
-      "GST Litigation",
-      "GST Tribunal",
-      "GST Court Matters"
+      "GST audits, inspections, and investigations",
+      "Search, seizure, and arrest-related proceedings",
+      "Complex tax disputes and appellate representation",
+      "Corporate tax structuring and compliance frameworks",
+      "Income Tax assessments and advisory"
     ],
     education: [
       "B.Com",
       "M.Com",
-      "D.F.M.",
       "LL.B."
     ],
-
     linkedin: "https://www.linkedin.com/in/adv-suresh-sharma/",
     isMainTeam: true
   }, {
@@ -194,7 +189,7 @@ export const teamData = [
     role: 'Practice Domain',
     shortDescription: 'Tax Litigation | Direct & Indirect Taxation | GST Advisory',
     image: "/assets/team/varun-sharma.png",
-    detailedBio: "Adv. Varun Sharma is an Advocate, Tax Consultant, and Taxation Law Specialist with expertise in Direct & Indirect Taxation, GST advisory, and litigation.\n\nA second-generation legal professional, he specializes in taxation laws and has developed extensive experience in handling GST disputes, tax advisory matters, enforcement proceedings, adjudication, and appellate matters.\n\nHe holds a Master's degree in Taxation Laws from O.P. Jindal Global Law School, with strong expertise in statutory interpretation, tax jurisprudence, litigation strategy, and regulatory compliance.\n\nAs Legal Advisor – Tax Litigation – Advocate at TaxLegal, he provides strategic and practical legal-tax solutions, assisting clients with GST matters, tax disputes, compliance requirements, and representation before various authorities and appellate forums.",
+    detailedBio: "Adv. Varun Sharma is an Advocate, Tax Consultant, and Taxation Law Specialist with expertise in Direct and Indirect Taxation, Tax advisory, and tax litigation.\n\nA second-generation legal professional, he has developed significant experience in handling tax disputes, tax advisory matters, enforcement proceedings, adjudication, and appellate litigation. His practice focuses on providing strategic and practical tax solutions, assisting businesses and individuals with tax compliance, regulatory proceedings, and representation before statutory authorities and appellate forums.\n\nAs Legal Advisor – Tax Litigation at TaxLegal, he advises clients on complex taxation matters involving regulatory compliance, litigation strategy, statutory interpretation, and dispute resolution, delivering practical and commercially sound legal solutions.",
     publications: [
       "GST – Search, Seizure, Summons and Arrest",
       "GST Litigation: A Practical Guide",
@@ -264,7 +259,7 @@ export const teamData = [
       "Recovery Proceedings & Negotiable Instruments Act Matters"
     ],
     education: [
-      "BLS/LL.B.",
+      "BLS,LL.B.",
       "Master's in Business Law",
       "PGDM – Human Resource Management"
     ],
@@ -277,7 +272,7 @@ export const teamData = [
     role: 'Practice Domain',
     shortDescription: 'Dispute Resolutions & Litigation Counsel',
     image: "/assets/team/Adv-Alok-Shukla.png",
-    detailedBio: "Adv. Alok Shukla is a litigation professional with more than three decades of experience, having been in active practice since 1994. His practice spans criminal, civil, commercial, banking and insurance litigation, with particular expertise in complex matters involving the Economic Offences Wing (EOW), Central Bureau of Investigation (CBI), MPID matters, Narcotics & NDPS litigation, Banking Recovery Proceedings and Commercial Disputes. Having been empanelled with various insurance companies in the past, he has extensively represented insurers in Motor Accident Claims Tribunal (MACT) proceedings, insurer defence matters and insurance claim disputes. His practice extends to appearances before the High Courts, Trial Courts, Consumer Forums, MACT Tribunals and various judicial and quasi-judicial forums across India.",
+    detailedBio: "Adv. Alok Shukla is a litigation professional with more than three decades of experience, having been in active practice since 1994.\n\nHis practice spans criminal, civil, commercial, banking and insurance litigation, with particular expertise in complex matters involving the Economic Offences Wing (EOW), Central Bureau of Investigation (CBI), MPID matters, Narcotics & NDPS litigation, Banking Recovery Proceedings and Commercial Disputes.\n\nHaving been empanelled with various insurance companies in the past, he has extensively represented insurers in Motor Accident Claims Tribunal (MACT) proceedings, insurer defence matters and insurance claim disputes.\n\nHis practice extends to appearances before the High Courts, Trial Courts, Consumer Forums, MACT Tribunals and various judicial and quasi-judicial forums across India.",
     expertise: [
       "Alternative Dispute Resolution (ADR)",
       "Maritime & Shipping Law",
@@ -288,7 +283,7 @@ export const teamData = [
       "Negotiation & Dispute Resolution"
     ],
     education: [
-      "BCom/LLB"
+      "BCOM-LLB-Mumbai University"
     ],
     linkedin: "https://www.linkedin.com/in/alok-shukla-40a296a7/",
     isMainTeam: false

@@ -83,6 +83,7 @@
   font-weight: 500;
   margin-top: 8px;
   margin-bottom: 0;
+  white-space: pre-wrap;
 }
 
 .ppt-divider {
@@ -562,7 +563,7 @@
   font-weight: 700;
   color: #3A85C8;
   margin: 0 0 16px 0;
-  text-align: left;
+  text-align: center;
 }
 
 .premium-books-list {
@@ -632,4 +633,110 @@
   .other-members-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ================= BOOK ANIMATION ================= */
+.book-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  perspective: 2500px;
+}
+
+.book-container {
+  width: 210px;
+  height: 310px;
+  position: relative;
+  cursor: pointer;
+}
+
+.book-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-15deg) rotateX(5deg);
+  transition: transform 0.6s ease;
+}
+
+.book-static-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 2px 4px 4px 2px;
+  box-shadow: inset 10px 0 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  z-index: 0;
+}
+
+.book-static-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-hinge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.book-cover-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  z-index: 2;
+  border-radius: 2px 4px 4px 2px;
+}
+
+.book-cover-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px 4px 4px 2px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.book-cover-back-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  border-left: 5px solid #c4a059;
+  box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-container:hover {
+  z-index: 50;
+}
+
+.book-container:hover .book-hinge {
+  transform: rotateY(-105deg);
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.book-container:hover .book-wrapper {
+  transform: rotateY(-10deg) rotateX(5deg);
 }

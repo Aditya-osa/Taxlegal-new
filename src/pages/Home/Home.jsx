@@ -37,11 +37,13 @@ const Home = () => {
           <HeroSection />
           <LogosSection />
           <AboutSection />
-          <ServicesSection />
-          <WhyChooseUsSection />
           <TeamSection />
+          <ServicesSection />
+
           <TestimonialsSection />
+          <WhyChooseUsSection />
           <CareerSection />
+
         </main>
       </div>
       <Footer />
