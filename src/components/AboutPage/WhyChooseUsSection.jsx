@@ -16,17 +16,22 @@ import "./WhyChooseUsSection.css";
 const whyChooseItems = [
   {
     id: 1,
-    title: "Multidisciplinary Expertise",
+    title: "Pan-India Capability",
     description:
-      "Chartered Accountants, Company Secretaries and Legal Professionals delivering integrated professional services.",
-    icon: Building2,
-    image: "/assets/Services/end_to_end_support.jpg",
+      "Consistent support across pan India jurisdictions and industries through a collaborative multidisciplinary team.",
+    icon: Globe,
+    image: "/assets/Services/pan_india_presence.jpg",
   },
   {
     id: 2,
     title: "Commercial Perspective",
-    description:
-      "Advice aligned with business objectives, governance requirements and regulatory expectations.",
+    description: (
+      <>
+        Advice aligned with business objectives, governance requirements
+        <br />
+        and regulatory expectations.
+      </>
+    ),
     icon: Scale,
     image: "/assets/Services/Regulatory-compilance.png",
   },
@@ -48,12 +53,12 @@ const whyChooseItems = [
   },
   {
     id: 5,
-    title: "Pan-India Capability",
+    title: "Multidisciplinary Expertise",
     description:
-      "Consistent support across pan India jurisdictions and industries through a collaborative multidisciplinary team.",
-    icon: Globe,
-    image: "/assets/Services/pan_india_presence.jpg",
-  }
+      "Chartered Accountants, Company Secretaries and Legal Professionals delivering integrated professional services.",
+    icon: Building2,
+    image: "/assets/Services/end_to_end_support.jpg",
+  },
 ];
 
 const WhyChooseCarousel = ({ items }) => {
