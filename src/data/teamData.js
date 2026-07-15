@@ -225,9 +225,9 @@ export const teamData = [
     slug: 'adv-vivek-sharma',
     name: 'Adv. Vivek Sharma',
     role: 'Practice Domain',
-    shortDescription: 'Dispute Resolution & Litigation Counsel \n Civil & Commercial | RERA | Family Law',
+    shortDescription: 'Dispute Resolution & Litigation Counsel',
     image: "/assets/team/vivek-sharma.png",
-    detailedBio: "Adv. Vivek Sharma is an Advocate with a litigation-focused practice and extensive courtroom experience across Mumbai, Pune, Ahmedabad, and Vadodara. He specializes in criminal, civil, and commercial litigation, with particular expertise in complex dispute resolution and courtroom advocacy.\n\nHis criminal law practice encompasses cyber crime, financial fraud, bail applications, FIR quashing matters, proceedings under the POCSO Act and MCOCA, Economic Offences Wing (EOW) investigations, and offences involving women and children, including sensitive and high-profile matters. In addition to criminal litigation, he has significant experience in consumer disputes, matrimonial matters, and commercial litigation.\n\nAs Legal Advisor at TaxLegal, he provides strategic and practical legal representation in litigation and dispute resolution matters. His professional practice also includes third-party insurance claims before the Motor Accident Claims Tribunal (MACT), advisory and litigation relating to general and marine insurance claims, policy interpretation, claim settlement disputes, contract drafting, commercial advisory, and recovery proceedings.",
+    detailedBio: "Adv. Vivek Sharma is a seasoned litigation professional with a diversified practice spanning criminal, civil, matrimonial, commercial, banking and insurance laws. He has expertise in complex disputes involving Financial Fraud & Cyber Crime, Recovery Matters, Matters pertaining to Negotiable Instruments Act, Consumer Disputes, MACT Claims, Matrimonial Disputes alongwith RERA & Real Estate Litigation. His practice extends to appearances before the High Courts, Trial Courts, Consumer Forums, MACT tribunals, and various judicial and quasi-judicial forums across India.",
     expertise: [
       "Criminal Litigation",
       "Cyber Crime & Financial Fraud",
@@ -240,8 +240,8 @@ export const teamData = [
       "Society & Property-Related Matters"
     ],
     education: [
-      "BLS/LL.B.",
-      "Advance Program in Cyber Law"
+      "BLS/LLB",
+      "Advanced Program in Cyber Law From Asian School of Cyber Laws"
     ],
     linkedin: "https://www.linkedin.com/in/adv-vivek-sharma/",
     isMainTeam: true
@@ -251,7 +251,7 @@ export const teamData = [
     slug: 'adv-vaishnavi-sharma',
     name: 'Adv. Vaishnavi Sharma',
     role: 'Practice Domain',
-    shortDescription: 'Corporate & Commercial Law | Arbitration | ADR',
+    shortDescription: 'Arbitrator & Corporate Legal Advisory',
     image: "/assets/team/vaishnavi ma'am .png",
     detailedBio: "Adv. Vaishnavi Sharma is an advocate with experience spanning litigation, corporate legal advisory and commercial dispute resolution. She has completed her Masters in Business Law & is a certified Arbitrator from Indian Institute of arbitration.\n\nHer practice encompasses civil, commercial and criminal litigation, contract drafting, vetting and negotiation, banking and recovery matters, cheque dishonour proceedings, employment and labour laws, intellectual property, and regulatory compliance required for the corporates.\n\nHaving served as in-house legal counsel for corporate organisations across diverse industries, she possesses extensive experience in advising businesses on commercial transactions, legal risk management, due diligence, corporate governance and contractual matters.\n\nA Certified Arbitrator accredited by the Indian Institute of Arbitration & Mediation (IIAM), she also advises clients on alternative dispute resolution and commercial arbitration. Her practice extends to appearances before the Bombay High Court, Trial Courts, Consumer Forums and other judicial and quasi-judicial forums.",
     expertise: [
@@ -275,9 +275,9 @@ export const teamData = [
     slug: 'adv-alok-shukla',
     name: 'Adv. Alok Shukla',
     role: 'Practice Domain',
-    shortDescription: 'Dispute Resolutions | Litigation Counsel | ADR | Maritime Matters | Insurance',
+    shortDescription: 'Dispute Resolutions & Litigation Counsel',
     image: "/assets/team/Adv-Alok-Shukla.png",
-    detailedBio: "Adv. Alok Shukla is an Advocate with expertise in Alternative Dispute Resolution (ADR), Maritime Law, Insurance Law, Consumer Protection, and Society-related legal matters. He has developed a strong practice in advising and representing clients across diverse legal disputes, with a practical and solution-oriented approach.\n\nHe specializes in resolving commercial and civil disputes through negotiation, mediation, and arbitration, enabling clients to achieve efficient and cost-effective outcomes. His professional experience extends to maritime and shipping law, insurance claims and disputes, consumer litigation, and society-related legal matters.\n\nAs Legal Advisor at TaxLegal, he provides strategic legal advisory and dispute resolution services, assisting individuals, businesses, and organizations in navigating complex legal challenges. His client-centric approach combines legal expertise with practical commercial understanding to deliver effective and sustainable legal solutions.",
+    detailedBio: "Adv. Alok Shukla is a litigation professional with more than three decades of experience, having been in active practice since 1994. His practice spans criminal, civil, commercial, banking and insurance litigation, with particular expertise in complex matters involving the Economic Offences Wing (EOW), Central Bureau of Investigation (CBI), MPID matters, Narcotics & NDPS litigation, Banking Recovery Proceedings and Commercial Disputes. Having been empanelled with various insurance companies in the past, he has extensively represented insurers in Motor Accident Claims Tribunal (MACT) proceedings, insurer defence matters and insurance claim disputes. His practice extends to appearances before the High Courts, Trial Courts, Consumer Forums, MACT Tribunals and various judicial and quasi-judicial forums across India.",
     expertise: [
       "Alternative Dispute Resolution (ADR)",
       "Maritime & Shipping Law",
@@ -288,8 +288,7 @@ export const teamData = [
       "Negotiation & Dispute Resolution"
     ],
     education: [
-      "LL.B.",
-      "LL.M. (Maritime Law)"
+      "BCom/LLB"
     ],
     linkedin: "https://www.linkedin.com/in/alok-shukla-40a296a7/",
     isMainTeam: false

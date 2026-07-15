@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #fafafa;
+  background-color: var(--off-white);
 }
 
 .profile-main-content {
@@ -46,7 +46,7 @@
   flex: 0 0 280px;
   height: 360px;
   border-radius: 12px;
-  border: 1px solid #ECECEC;
+  border: 1px solid var(--border-color);
   overflow: hidden;
 }
 
@@ -71,7 +71,7 @@
   font-family: var(--font-head, Georgia, serif);
   font-size: 48px;
   font-weight: 700;
-  color: var(--navy);
+  color: #3A85C8;
   line-height: 1.1;
   margin: 0;
 }
@@ -103,7 +103,7 @@
   gap: 18px;
   margin-bottom: 26px;
   padding-bottom: 26px;
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .ppt-info-row:last-child {
@@ -116,7 +116,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #F7F4EF;
+  background: var(--bg-section);
   color: var(--red);
   display: flex;
   align-items: center;
@@ -132,14 +132,14 @@
 .ppt-info-title {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  color: #6B7280;
+  color: var(--mid-gray);
   margin-bottom: 4px;
 }
 
 .ppt-info-link {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  color: var(--navy);
+  color: #3A85C8;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -158,24 +158,71 @@
 .ppt-info-desc {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
-  color: #4B5563;
+  color: var(--text-primary);
   line-height: 1.5;
 }
 
 /* --- Bottom Section --- */
 .premium-profile-bottom {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0;
+  align-items: stretch;
 }
 
 .ppb-left {
-  flex: 1;
+  padding-right: 40px;
+}
+
+.ppb-right {
+  border-left: 1px solid #ECECEC;
+  padding-left: 36px;
+  margin-top: 100px;
+}
+
+.ppb-right-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ppb-right-item:last-child {
+  margin-bottom: 0;
+}
+
+.ppb-right-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #F8F5F0;
+  color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.ppb-right-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3A85C8;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.ppb-right-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666666;
+  margin: 0;
 }
 
 .ppb-heading {
   font-family: var(--font-head, Georgia, serif);
   font-size: 34px;
   font-weight: 700;
-  color: var(--navy);
+  color: #3A85C8;
   margin: 0;
 }
 
@@ -190,7 +237,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 2;
-  color: #4B5563;
+  color: var(--text-primary);
   margin-bottom: 24px;
   text-align: left;
 }
@@ -208,26 +255,27 @@
     align-items: center;
     text-align: center;
   }
-  
+
   .ppt-right {
     align-items: center;
   }
-  
+
   .ppt-divider {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .ppt-info-row {
     justify-content: center;
     text-align: center;
   }
-  
+
   .ppt-info-text {
     align-items: center;
   }
 
   .premium-profile-bottom {
+    display: flex;
     flex-direction: column;
     gap: 40px;
   }
@@ -237,28 +285,33 @@
     padding-right: 0;
     border-right: none;
   }
+
+  .ppb-right {
+    border-left: none;
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 768px) {
   .premium-profile-card {
     padding: 24px;
   }
-  
+
   .ppt-left {
     width: 100%;
     flex: auto;
     height: auto;
     aspect-ratio: 3/4;
   }
-  
+
   .ppt-name {
     font-size: 36px;
   }
-  
+
   .ppt-role {
     font-size: 18px;
   }
-  
+
   .ppb-heading {
     font-size: 28px;
   }
@@ -268,7 +321,7 @@
 
 .premium-expertise-section {
   background: #ffffff;
-  border: 1px solid #ECECEC;
+  border: 1px solid var(--border-color);
   border-radius: 14px;
   padding: 30px 35px;
   box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
@@ -281,7 +334,7 @@
   font-family: var(--font-head, Georgia, serif);
   font-size: 34px;
   font-weight: 700;
-  color: var(--navy);
+  color: #3A85C8;
   margin: 0;
 }
 
@@ -315,7 +368,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: var(--navy);
+  color: #3A85C8;
   margin-bottom: 6px;
   line-height: 1.4;
 }
@@ -323,7 +376,7 @@
 .premium-expertise-item-subtitle {
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
-  color: #666;
+  color: var(--mid-gray);
   line-height: 1.6;
   font-weight: 400;
   margin: 0;
@@ -331,7 +384,7 @@
 
 /* Call-to-Action Banner */
 .premium-cta-banner {
-  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+  background: linear-gradient(135deg, var(--navy-dark), #3A85C8);
   border-radius: 12px;
   padding: 28px 36px;
   display: flex;
@@ -405,13 +458,13 @@
   .premium-expertise-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .premium-cta-banner {
     flex-direction: column;
     text-align: center;
     gap: 24px;
   }
-  
+
   .premium-cta-left {
     flex-direction: column;
   }
@@ -425,11 +478,11 @@
   .premium-expertise-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .premium-expertise-title {
     font-size: 28px;
   }
-  
+
   .premium-cta-btn {
     width: 100%;
     justify-content: center;
@@ -467,7 +520,7 @@
   font-family: var(--font-head, Georgia, serif);
   font-size: 34px;
   font-weight: 700;
-  color: var(--navy);
+  color: #3A85C8;
   margin: 0 0 14px 0;
   line-height: 1.2;
 }
@@ -484,7 +537,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #4B5563;
+  color: var(--text-primary);
   text-align: center;
   line-height: 2;
   margin: 24px auto 0 auto;
@@ -507,7 +560,7 @@
   font-family: var(--font-head, Georgia, serif);
   font-size: 22px;
   font-weight: 700;
-  color: var(--navy);
+  color: #3A85C8;
   margin: 0 0 16px 0;
   text-align: left;
 }
@@ -528,7 +581,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #555555;
+  color: var(--body-text);
   line-height: 1.8;
   text-align: left;
 }
