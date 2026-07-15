@@ -156,10 +156,11 @@ button:hover {
     display: none; /* Hide desktop shine effect on mobile FAB */
   }
   
-  /* Expanded state on hover or touch */
+  /* Expanded state on hover, touch, or .expanded class */
   .floating-tax-btn:hover,
   .floating-tax-btn:active,
-  .floating-tax-btn:focus {
+  .floating-tax-btn:focus,
+  .floating-tax-btn.expanded {
     max-width: 200px;
     border-radius: 999px; /* Pill shape when expanded */
     background: linear-gradient(135deg, #df444e 0%, #B2222B 100%);
@@ -168,10 +169,11 @@ button:hover {
     transform: translateY(-4px);
   }
 
-  /* Show text on hover/active */
+  /* Show text on hover/active or .expanded */
   .floating-tax-btn:hover .tax-btn-text,
   .floating-tax-btn:active .tax-btn-text,
-  .floating-tax-btn:focus .tax-btn-text {
+  .floating-tax-btn:focus .tax-btn-text,
+  .floating-tax-btn.expanded .tax-btn-text {
     opacity: 1;
     max-width: 150px;
     margin-left: 8px;
