@@ -33,6 +33,27 @@ class BlogService
         return $query->paginate($perPage);
     }
 
+    public function getTrashedPaginated(?string $search = null, ?string $status = null, int $perPage = 15): LengthAwarePaginator
+    {
+        $query = Blog::onlyTrashed()->latest();
+
+        if ($search !== null && $search !== '') {
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'like', "%{$search}%")
+                  ->orWhere('excerpt', 'like', "%{$search}%")
+                  ->orWhere('content', 'like', "%{$search}%")
+                  ->orWhere('seo_title', 'like', "%{$search}%")
+                  ->orWhere('seo_keywords', 'like', "%{$search}%");
+            });
+        }
+
+        if ($status !== null && $status !== '') {
+            $query->where('status', $status);
+        }
+
+        return $query->paginate($perPage);
+    }
+
     public function find(int $id): Blog
     {
         return Blog::findOrFail($id);
