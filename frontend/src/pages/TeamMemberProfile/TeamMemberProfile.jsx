@@ -1043,7 +1043,7 @@ const TeamMemberProfile = () => {
               </div>
             </div>
             <div className="premium-cta-right">
-              <button className="premium-cta-btn" onClick={() => navigate('/contact')}>
+              <button className="premium-cta-btn">
                 Get in Touch <ArrowRight size={18} strokeWidth={2} />
               </button>
             </div>

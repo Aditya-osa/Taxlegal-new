@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './TestimonialsSection.css';
-import testimonialsData from '../../data/testimonialsData.json';
 import TestimonialModal from '../common/TestimonialModal';
 
 const TestimonialsSection = () => {
+  const [testimonialsData, setTestimonialsData] = useState([]);
   const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+
+  useEffect(() => {
+    fetch('/api/testimonials')
+      .then((res) => res.json())
+      .then(setTestimonialsData)
+      .catch(() => {});
+  }, []);
 
   return (
     <section className="testimonials-section">
@@ -23,8 +30,8 @@ const TestimonialsSection = () => {
 
       <div className="testimonials-carousel-container">
         <div className="testimonials-carousel-track">
-          {testimonialsData.map((testimonial, index) => (
-            <div key={`testimonial-1-${testimonial.id}-${index}`} className="testimonial-card">
+          {testimonialsData.map((testimonial) => (
+            <div key={`t1-${testimonial.id}`} className="testimonial-card">
               <p className="testimonial-text">"{testimonial.excerpt}"</p>
               <div className="testimonial-footer">
                 <div className="testimonial-author">
@@ -48,9 +55,9 @@ const TestimonialsSection = () => {
               </div>
             </div>
           ))}
-          {/* Duplicate set for seamless looping */}
-          {testimonialsData.map((testimonial, index) => (
-            <div key={`testimonial-2-${testimonial.id}-${index}`} className="testimonial-card" aria-hidden="true">
+          {/* Duplicate for seamless loop */}
+          {testimonialsData.map((testimonial) => (
+            <div key={`t2-${testimonial.id}`} className="testimonial-card" aria-hidden="true">
               <p className="testimonial-text">"{testimonial.excerpt}"</p>
               <div className="testimonial-footer">
                 <div className="testimonial-author">
@@ -77,9 +84,9 @@ const TestimonialsSection = () => {
         </div>
       </div>
 
-      <TestimonialModal 
-        testimonial={selectedTestimonial} 
-        onClose={() => setSelectedTestimonial(null)} 
+      <TestimonialModal
+        testimonial={selectedTestimonial}
+        onClose={() => setSelectedTestimonial(null)}
       />
     </section>
   );

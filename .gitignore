@@ -1,0 +1,4 @@
+# Root ignores
+backend.zip
+backend/vendor/
+frontend/node_modules/
