@@ -1,3 +1,4 @@
+import SEO from '../../components/common/SEO';
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import WhyChooseUsSection from '../../components/AboutPage/WhyChooseUsSection';
@@ -489,9 +490,20 @@ const AnimatedCounter = ({ target, duration = 1600, suffix = "", separator = "" 
   );
 };
 
+import './Services.css';
+
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="services-page-wrapper">
+      <SEO 
+        title="Our Services | Tax Legal Synergy"
+        description="Explore our range of expert legal advisory services, including GST consulting, tax litigation, and corporate compliance."
+        url="https://taxlegalsynergy.com/services"
+      />
       <Header />
       <main className="services-main-content">
 
@@ -643,3 +655,5 @@ const Services = () => {
 };
 
 export default Services;
+
+

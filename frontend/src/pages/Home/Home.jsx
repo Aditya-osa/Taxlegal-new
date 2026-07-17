@@ -27,10 +27,15 @@ import CareerSection from '../../components/HomePage/CareerSection';
 import WhyChooseUsSection from '../../components/AboutPage/WhyChooseUsSection';
 import Footer from '../../components/layout/Footer';
 
+import SEO from '../../components/common/SEO';
+
 const Home = () => {
   return (
     <>
-      {/* Replace this with your actual Header component */}
+      <SEO 
+        title="Tax Litigation, GST & Corporate Legal Advisory"
+        url="https://taxlegalsynergy.com"
+      />
       <Header />
       <div className="home-page-container">
         <main>

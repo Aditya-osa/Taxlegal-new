@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SEO from '../../components/common/SEO';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import "./ContactUs.css";
@@ -42,6 +43,12 @@ const ContactUs = () => {
 
   return (
     <div className="contact-page-wrapper">
+      <SEO title="Contact Us | Tax Legal Synergy" description="Get in touch with Tax Legal Synergy for expert tax and legal advisory." url="https://taxlegalsynergy.com/contact" />
+      <SEO 
+        title="Contact Us | Tax Legal Synergy"
+        description="Get in touch with Tax Legal Synergy for expert tax and legal advisory. Contact our team in India today."
+        url="https://taxlegalsynergy.com/contact"
+      />
       <Header />
 
       <main className="contact-main-content">

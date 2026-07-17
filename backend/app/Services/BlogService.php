@@ -25,16 +25,29 @@ class BlogService
         return $this->applyFiltersAndSorting(Blog::onlyTrashed(), $filters)->paginate($perPage);
     }
 
-    public function getPublishedBlogs(int $perPage = 15): LengthAwarePaginator
+    public function getPublishedBlogs(string|array|null $search = null, int $perPage = 9): LengthAwarePaginator
     {
-        return Blog::query()
+        $filters = is_array($search) ? $search : ['search' => $search];
+
+        $query = Blog::query()
             ->where('status', 'published')
             ->where(function ($query) {
                 $query->whereNull('published_at')
                       ->orWhere('published_at', '<=', now());
-            })
-            ->latest()
-            ->paginate($perPage);
+            });
+
+        if (!empty($filters['search'])) {
+            $searchTerm = $filters['search'];
+            $query->where(function ($q) use ($searchTerm) {
+                $q->where('title', 'like', "%{$searchTerm}%")
+                  ->orWhere('excerpt', 'like', "%{$searchTerm}%")
+                  ->orWhere('content', 'like', "%{$searchTerm}%")
+                  ->orWhere('seo_title', 'like', "%{$searchTerm}%")
+                  ->orWhere('seo_keywords', 'like', "%{$searchTerm}%");
+            });
+        }
+
+        return $query->latest('published_at')->paginate($perPage);
     }
 
     public function findPublishedBySlug(string $slug): Blog

@@ -12,9 +12,12 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import InternshipPage from './pages/Internship/InternshipPage';
 import ClientsPage from './pages/Clients/ClientsPage';
 import TeamMemberProfile from './pages/TeamMemberProfile/TeamMemberProfile';
+import Blogs from './pages/Blogs/Blogs';
+import BlogDetail from './pages/Blogs/BlogDetail';
 import DisclaimerModal from './components/common/DisclaimerModal';
 import ScrollToTop from './components/common/ScrollToTop';
 import BackToTopButton from './components/common/BackToTopButton';
+import AnalyticsTracker from './components/common/AnalyticsTracker';
 
 function App() {
   useEffect(() => {
@@ -85,6 +88,7 @@ function App() {
 
   return (
     <>
+      <AnalyticsTracker />
       <ScrollToTop />
       <BackToTopButton />
       <DisclaimerModal />
@@ -106,6 +110,8 @@ function App() {
         <Route path="/internship" element={<InternshipPage />} />
         <Route path="/clients" element={<ClientsPage />} />
         <Route path="/team/:slug" element={<TeamMemberProfile />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:slug" element={<BlogDetail />} />
       </Routes>
     </>
   )

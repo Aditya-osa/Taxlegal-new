@@ -1,0 +1,207 @@
+.blogs-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.blogs-main-content {
+  flex: 1;
+  background-color: #fafbfc; /* Matches global off-white background */
+  padding-bottom: 80px;
+}
+
+.blogs-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Search Section */
+.blogs-search-section {
+  margin: 40px 0 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+}
+
+.blogs-search-input {
+  width: 100%;
+  padding: 16px 16px 16px 48px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.blogs-search-input:focus {
+  border-color: var(--red-accent);
+  box-shadow: 0 4px 20px rgba(211, 44, 54, 0.1);
+}
+
+.blogs-search-input::placeholder {
+  color: #94a3b8;
+}
+
+/* Error State */
+.blogs-error-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid #fecaca;
+  margin-top: 40px;
+}
+
+.blogs-error-state p {
+  color: #ef4444;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.retry-btn {
+  background-color: var(--red-accent);
+  color: var(--white);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.retry-btn:hover {
+  background-color: var(--red-dk);
+}
+
+/* Empty State */
+.blogs-empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px dashed var(--border-color);
+}
+
+.blogs-empty-state img {
+  width: 120px;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.blogs-empty-state h2 {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.blogs-empty-state p {
+  font-family: 'Poppins', sans-serif;
+  color: var(--body-text);
+  margin-bottom: 24px;
+}
+
+.return-home-btn {
+  background-color: var(--red-accent);
+  color: var(--white);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(211, 44, 54, 0.2);
+}
+
+.return-home-btn:hover {
+  background-color: var(--red-dk);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(211, 44, 54, 0.3);
+}
+
+/* Pagination */
+.blogs-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(.disabled) {
+  background: var(--red-accent);
+  color: var(--white);
+  border-color: var(--red-accent);
+}
+
+.pagination-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f1f5f9;
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 8px;
+}
+
+.page-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-number:hover {
+  border-color: var(--red-accent);
+  color: var(--red-accent);
+}
+
+.page-number.active {
+  background: var(--red-accent);
+  color: var(--white);
+  border-color: var(--red-accent);
+}

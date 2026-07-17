@@ -1,0 +1,118 @@
+.featured-blog-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .featured-blog-card {
+    flex-direction: row;
+  }
+}
+
+.featured-blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.featured-blog-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #f1f5f9;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .featured-blog-image {
+    width: 50%;
+    height: auto;
+    aspect-ratio: auto;
+  }
+}
+
+.featured-blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.featured-blog-card:hover .featured-blog-image img {
+  transform: scale(1.05);
+}
+
+.featured-blog-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+@media (min-width: 1024px) {
+  .featured-blog-content {
+    padding: 40px;
+  }
+}
+
+.featured-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.featured-badge {
+  background-color: rgba(211, 44, 54, 0.1);
+  color: var(--red-accent);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.featured-date {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--body-text);
+  text-transform: uppercase;
+}
+
+.featured-title {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .featured-title {
+    font-size: 2.2rem;
+  }
+}
+
+.featured-blog-card:hover .featured-title {
+  color: var(--red-accent);
+}
+
+.featured-excerpt {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--body-text);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}

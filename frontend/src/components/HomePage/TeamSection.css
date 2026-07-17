@@ -252,7 +252,8 @@
 .explore-more-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: -10px;
+  margin-bottom: 60px;
 }
 
 .explore-more-btn {
