@@ -104,7 +104,7 @@ const Blogs = () => {
 
   return (
     <div className="blogs-page-wrapper">
-      <SEO title="Our Blogs | Tax Legal Synergy" description="Latest insights, legal updates, tax strategies and expert articles from Tax Legal Synergy." url="https://taxlegalsynergy.com/blogs" />
+      <SEO title="Our Blogs | Tax Legal Synergy" description="Latest insights, legal updates, tax strategies and expert articles from TaxLegal." url="https://taxlegalsynergy.com/blogs" />
 
       <Header />
 

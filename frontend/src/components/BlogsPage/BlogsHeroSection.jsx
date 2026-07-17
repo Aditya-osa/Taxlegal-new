@@ -11,7 +11,7 @@ const BlogsHeroSection = () => {
 
           <h1 className="hero-title">Blogs</h1>
           <p className="hero-description">
-            Latest insights, legal updates, tax strategies and expert articles from Tax Legal Synergy.
+            Latest insights, legal updates, tax strategies and expert articles from TaxLegal.
           </p>
         </div>
       </div>

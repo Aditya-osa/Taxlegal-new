@@ -129,7 +129,7 @@ const BlogDetail = () => {
                 {/* We don't have author name right now in the public endpoint, but placeholder layout is good */}
                 <div className="meta-item">
                   <User size={16} />
-                  <span>Tax Legal Synergy</span>
+                  <span>TaxLegal </span>
                 </div>
               </div>
             </header>

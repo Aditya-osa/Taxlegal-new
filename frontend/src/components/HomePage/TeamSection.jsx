@@ -1,10 +1,44 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { teamData } from '../../data/teamData';
 import './TeamSection.css';
 
 const TeamSection = () => {
   const navigate = useNavigate();
+  const sectionRef = useRef(null);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    // Check for prefers-reduced-motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      setIsAnimating(false);
+      return; // Do not setup observer if reduced motion is preferred
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Play animation if at least 30% visible, otherwise pause
+          setIsAnimating(entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the section is visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+      observer.disconnect();
+    };
+  }, []);
 
   const renderCard = (member, index) => (
     <div
@@ -42,8 +76,10 @@ const TeamSection = () => {
   
   const row2 = [karthikeyan, sahil, ajay, suresh, alok, ...rest].filter(Boolean);
 
+  const animationStyle = { animationPlayState: isAnimating ? 'running' : 'paused' };
+
   return (
-    <section className="team-section">
+    <section className="team-section" ref={sectionRef}>
       <div className="team-container">
         <div className="team-header" data-aos="fade-up">
           <div className="subtitle-wrapper">
@@ -60,7 +96,7 @@ const TeamSection = () => {
       <div className="tl-marquee-wrapper" data-aos="fade-up" data-aos-duration="600">
         {/* Row 1: Left to Right */}
         <div className="tl-marquee-container">
-          <div className="tl-marquee-content tl-row-1">
+          <div className="tl-marquee-content tl-row-1" style={animationStyle}>
             <div className="tl-marquee-track">
               {row1.map((member, index) => renderCard(member, `track1-${index}`))}
             </div>
@@ -72,7 +108,7 @@ const TeamSection = () => {
 
         {/* Row 2: Right to Left */}
         <div className="tl-marquee-container">
-          <div className="tl-marquee-content tl-row-2">
+          <div className="tl-marquee-content tl-row-2" style={animationStyle}>
             <div className="tl-marquee-track">
               {row2.map((member, index) => renderCard(member, `track1-${index}`))}
             </div>
