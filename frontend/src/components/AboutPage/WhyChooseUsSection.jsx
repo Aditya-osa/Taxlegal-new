@@ -78,7 +78,7 @@ const WhyChooseCarousel = ({ items }) => {
   useEffect(() => {
     if (isHovered) return;
     const interval = setInterval(() => {
-      nextSlide();
+      // nextSlide();
     }, 3500);
     return () => clearInterval(interval);
   }, [isHovered, items.length]);
@@ -195,7 +195,7 @@ const WhyChooseUsSection = () => {
       <WhyChooseCarousel items={whyChooseItems} />
       <div className="legal-bottom-actions">
         <Link to="/contact" className="services-btn legal-btn--primary">
-          BOOK A CONSULTATION &rarr;
+          GET IN TOUCH &rarr;
         </Link>
       </div>
     </div>

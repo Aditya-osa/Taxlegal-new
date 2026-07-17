@@ -113,7 +113,7 @@ const ClientsPage = () => {
               </div>
               <h2 className="clients-section-title">Trusted Voices. Proven Relationships.</h2>
               <p className="clients-section-subtitle">
-                Real experiences from organizations that have partnered with us for strategic advice and lasting value.
+                Real experiences from organizations that have partnered with us for <br /> strategic advice and lasting value.
               </p>
             </div>
 
