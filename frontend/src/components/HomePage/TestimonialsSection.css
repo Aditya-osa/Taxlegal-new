@@ -144,16 +144,18 @@
 /* Responsive */
 @media (max-width: 768px) {
   .testimonial-card {
-    flex: 0 0 340px;
+    flex: 0 0 auto;
     width: 340px;
+    max-width: 85vw;
     padding: 22px;
   }
 }
 
 @media (max-width: 576px) {
   .testimonial-card {
-    flex: 0 0 290px;
+    flex: 0 0 auto;
     width: 290px;
+    max-width: 85vw;
     padding: 18px;
   }
 }
