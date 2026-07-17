@@ -227,10 +227,10 @@ export const teamData = [
     slug: 'adv-vivek-sharma',
     name: 'Adv. Vivek Sharma',
     role: 'Practice Domain',
-    shortDescription: 'Dispute Resolution & Litigation Counsel \n Civil & Commercial | RERA | Family Law',
+
     image: "/assets/our team/vivek-sharma.png",
     detailedBio: "Adv. Vivek Sharma is an Advocate with a litigation-focused practice and extensive courtroom experience across Mumbai, Pune, Ahmedabad, and Vadodara. He specializes in criminal, civil, and commercial litigation, with particular expertise in complex dispute resolution and courtroom advocacy.\n\nHis criminal law practice encompasses cyber crime, financial fraud, bail applications, FIR quashing matters, proceedings under the POCSO Act and MCOCA, Economic Offences Wing (EOW) investigations, and offences involving women and children, including sensitive and high-profile matters. In addition to criminal litigation, he has significant experience in consumer disputes, matrimonial matters, and commercial litigation.\n\nAs Legal Advisor at TaxLegal, he provides strategic and practical legal representation in litigation and dispute resolution matters. His professional practice also includes third-party insurance claims before the Motor Accident Claims Tribunal (MACT), advisory and litigation relating to general and marine insurance claims, policy interpretation, claim settlement disputes, contract drafting, commercial advisory, and recovery proceedings.",
-    shortDescription: 'Bombay High Court - India \nDispute Resolution & Litigation Counsel',
+    shortDescription: 'Dispute Resolution & Litigation Counsel',
     image: "/assets/our team/vivek-sharma.png",
     detailedBio: "Adv. Vivek Sharma is a seasoned litigation professional with a diversified practice spanning criminal, civil, matrimonial, commercial, banking and insurance laws. He has expertise in complex disputes involving Financial Fraud & Cyber Crime, Recovery Matters, Matters pertaining to Negotiable Instruments Act, Consumer Disputes, MACT Claims, Matrimonial Disputes alongwith RERA & Real Estate Litigation. His practice extends to appearances before the High Courts, Trial Courts, Consumer Forums, MACT tribunals, and various judicial and quasi-judicial forums across India.",
     expertise: [
@@ -245,7 +245,7 @@ export const teamData = [
       "Society & Property-Related Matters"
     ],
     education: [
-      "BLS/LLB",
+      "BLS, LLB",
       "Advanced Program in Cyber Law From Asian School of Cyber Laws"
     ],
     linkedin: "https://www.linkedin.com/in/adv-vivek-sharma/",

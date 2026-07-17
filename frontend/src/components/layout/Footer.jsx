@@ -13,8 +13,8 @@ const Footer = () => {
               <img src="/assets/logo.png" alt="TaxLegal Logo" className="footer-logo-img" />
             </Link>
             <p className="footer-desc">
-              Chartered Accountants, Company Secretaries & Advocates,Practicing  Legal and Tax Matters since 1996 from Navi Mumbai.
-            </p><p className="footer-desc">Delivering integrated Tax, Legal, Secretarial, Arbitration and Regulatory Advisory services<br /> across India.</p>
+              Chartered Accountants, Company Secretaries & Advocates,Practicing  Legal and Tax Matters<br /> since 1996 from Navi Mumbai.
+            </p><p className="footer-desc">Delivering integrated Tax, Legal, Secretarial, Arbitration and Regulatory Advisory <br /> services across India.</p>
             <div className="footer-social-icons">
               <a href="https://www.linkedin.com/company/taxlegal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <svg width="18" height="18" viewBox="0 0 448 512" fill="currentColor">
