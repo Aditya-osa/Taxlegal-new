@@ -8,6 +8,7 @@ import BlogsHeroSection from '../../components/BlogsPage/BlogsHeroSection';
 import FeaturedBlog from '../../components/BlogsPage/FeaturedBlog';
 import BlogsGrid from '../../components/BlogsPage/BlogsGrid';
 import { FeaturedSkeleton, GridSkeleton } from '../../components/BlogsPage/BlogSkeletons';
+import WhyChooseUsSection from '../../components/AboutPage/WhyChooseUsSection';
 import './Blogs.css';
 
 const Blogs = () => {
@@ -200,6 +201,8 @@ const Blogs = () => {
           )}
         </div>
       </main>
+
+      <WhyChooseUsSection />
 
       <Footer />
     </div>
