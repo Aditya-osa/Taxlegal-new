@@ -12,9 +12,14 @@ use Illuminate\Support\Str;
 
 class BlogService
 {
-    public function getPaginated(?string $search = null, ?string $status = null, int $perPage = 15): LengthAwarePaginator
+    public function getPaginated(string|array|null $search = null, ?string $status = null, int $perPage = 15): LengthAwarePaginator
     {
-        $query = Blog::query()->latest();
+        $filters = is_array($search) ? $search : ['search' => $search, 'status' => $status];
+        $search = $filters['search'] ?? null;
+        $status = $filters['status'] ?? null;
+        $sort = $filters['sort'] ?? 'newest';
+
+        $query = Blog::query();
 
         if ($search !== null && $search !== '') {
             $query->where(function ($q) use ($search) {
@@ -27,15 +32,48 @@ class BlogService
         }
 
         if ($status !== null && $status !== '') {
-            $query->where('status', $status);
+            if ($status === 'unpublished') {
+                $query->where(function ($q) {
+                    $q->where('status', 'draft')->orWhereNull('published_at');
+                });
+            } else {
+                $query->where('status', $status);
+            }
         }
+
+        if (!empty($filters['created_from'])) {
+            $query->whereDate('created_at', '>=', $filters['created_from']);
+        }
+        if (!empty($filters['created_to'])) {
+            $query->whereDate('created_at', '<=', $filters['created_to']);
+        }
+        if (!empty($filters['published_from'])) {
+            $query->whereDate('published_at', '>=', $filters['published_from']);
+        }
+        if (!empty($filters['published_to'])) {
+            $query->whereDate('published_at', '<=', $filters['published_to']);
+        }
+
+        match ($sort) {
+            'oldest' => $query->oldest(),
+            'title_asc' => $query->orderBy('title', 'asc'),
+            'title_desc' => $query->orderBy('title', 'desc'),
+            'published_at' => $query->orderBy('published_at', 'desc'),
+            'updated_at' => $query->orderBy('updated_at', 'desc'),
+            default => $query->latest(),
+        };
 
         return $query->paginate($perPage);
     }
 
-    public function getTrashedPaginated(?string $search = null, ?string $status = null, int $perPage = 15): LengthAwarePaginator
+    public function getTrashedPaginated(string|array|null $search = null, ?string $status = null, int $perPage = 15): LengthAwarePaginator
     {
-        $query = Blog::onlyTrashed()->latest();
+        $filters = is_array($search) ? $search : ['search' => $search, 'status' => $status];
+        $search = $filters['search'] ?? null;
+        $status = $filters['status'] ?? null;
+        $sort = $filters['sort'] ?? 'newest';
+
+        $query = Blog::onlyTrashed();
 
         if ($search !== null && $search !== '') {
             $query->where(function ($q) use ($search) {
@@ -48,8 +86,36 @@ class BlogService
         }
 
         if ($status !== null && $status !== '') {
-            $query->where('status', $status);
+            if ($status === 'unpublished') {
+                $query->where(function ($q) {
+                    $q->where('status', 'draft')->orWhereNull('published_at');
+                });
+            } else {
+                $query->where('status', $status);
+            }
         }
+
+        if (!empty($filters['created_from'])) {
+            $query->whereDate('created_at', '>=', $filters['created_from']);
+        }
+        if (!empty($filters['created_to'])) {
+            $query->whereDate('created_at', '<=', $filters['created_to']);
+        }
+        if (!empty($filters['published_from'])) {
+            $query->whereDate('published_at', '>=', $filters['published_from']);
+        }
+        if (!empty($filters['published_to'])) {
+            $query->whereDate('published_at', '<=', $filters['published_to']);
+        }
+
+        match ($sort) {
+            'oldest' => $query->oldest(),
+            'title_asc' => $query->orderBy('title', 'asc'),
+            'title_desc' => $query->orderBy('title', 'desc'),
+            'published_at' => $query->orderBy('published_at', 'desc'),
+            'updated_at' => $query->orderBy('updated_at', 'desc'),
+            default => $query->latest(),
+        };
 
         return $query->paginate($perPage);
     }
@@ -108,6 +174,11 @@ class BlogService
 
             return $blog;
         });
+    }
+
+    public function updateStatus(Blog $blog, string $status): Blog
+    {
+        return $this->update($blog, ['status' => $status]);
     }
 
     public function delete(Blog $blog): bool

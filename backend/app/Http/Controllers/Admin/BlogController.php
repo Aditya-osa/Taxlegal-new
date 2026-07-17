@@ -21,8 +21,7 @@ class BlogController extends Controller
     {
         try {
             $blogs = $this->blogService->getPaginated(
-                $request->input('search'),
-                $request->input('status')
+                $request->only(['search', 'status', 'sort', 'created_from', 'created_to', 'published_from', 'published_to'])
             );
 
             return view('admin.blogs.index', compact('blogs'));
@@ -87,8 +86,7 @@ class BlogController extends Controller
     {
         try {
             $blogs = $this->blogService->getTrashedPaginated(
-                $request->input('search'),
-                $request->input('status')
+                $request->only(['search', 'status', 'sort', 'created_from', 'created_to', 'published_from', 'published_to'])
             );
 
             return view('admin.blogs.trash', compact('blogs'));
@@ -117,5 +115,22 @@ class BlogController extends Controller
         } catch (\Throwable $e) {
             return back()->with('error', 'Failed to permanently delete blog.');
         }
+    }
+
+    public function updateStatus(Request $request, Blog $blog): RedirectResponse
+    {
+        $request->validate(['status' => 'required|in:draft,published']);
+        try {
+            $this->blogService->updateStatus($blog, $request->input('status'));
+            $msg = $request->input('status') === 'published' ? 'Blog published successfully.' : 'Blog moved to draft.';
+            return back()->with('success', $msg);
+        } catch (\Throwable $e) {
+            return back()->with('error', 'Failed to update blog status.');
+        }
+    }
+
+    public function preview(Blog $blog): View
+    {
+        return view('admin.blogs.preview', compact('blog'));
     }
 }
