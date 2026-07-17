@@ -61,7 +61,8 @@
                     <td style="font-size:13px;color:#7f8c8d;">{{ $blog->deleted_at ? $blog->deleted_at->format('M d, Y H:i') : '—' }}</td>
                     <td>
                         <div style="display:flex;gap:6px;">
-                            <form method="POST" action="{{ route('admin.blogs.restore', $blog) }}">
+                            <form method="POST" action="{{ route('admin.blogs.restore', $blog) }}"
+                                  onsubmit="return confirm('Restore this blog post to active status?')">
                                 @csrf
                                 <button type="submit" class="btn btn-sm btn-primary" style="background:#27ae60;">Restore</button>
                             </form>

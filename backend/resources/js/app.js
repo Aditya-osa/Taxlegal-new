@@ -56,8 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             licenseKey: 'GPL'
         }).then(editor => {
+            window.ckEditorInstance = editor;
+            contentEl.ckEditorInstance = editor;
             editor.model.document.on('change:data', () => {
                 contentEl.value = editor.getData();
+                contentEl.dispatchEvent(new Event('input', { bubbles: true }));
             });
         }).catch(error => {
             console.error('CKEditor initialization error:', error);
