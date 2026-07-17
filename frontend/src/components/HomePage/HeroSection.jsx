@@ -41,7 +41,7 @@ const HeroSection = () => {
           </p>
           <br />
           <div className="hero-buttons">
-            <button className="btn-primary" onClick={() => navigate('/contact')}>Contact Us Now</button>
+            <button className="btn-primary" onClick={() => navigate('/contact')}>Get in Touch</button>
             <button className="btn-secondary" onClick={() => navigate('/services')}>Our Practice Areas</button>
           </div>
 

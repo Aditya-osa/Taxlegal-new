@@ -13,10 +13,11 @@ const Disciplines = () => {
           <h2 className="section-title">
             Three Professional Disciplines. One Integrated Practice.
           </h2>
+          <p>Delivering integrated Tax, Legal, Secretarial, Arbitration and Regulatory Advisory services across India.</p>
         </div>
 
         <div className="disciplines-grid">
-          
+
           <div className="discipline-card service-card">
             <div className="service-icon ca-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none">
@@ -62,7 +63,7 @@ const Disciplines = () => {
             </div>
             <h3>Advocates</h3>
             <p>
-               Representing clients in taxation, regulatory matters, dispute resolution, and legal advisory across diverse sectors.
+              Representing clients in taxation, regulatory matters, dispute resolution, and legal advisory across diverse sectors.
             </p>
           </div>
 
