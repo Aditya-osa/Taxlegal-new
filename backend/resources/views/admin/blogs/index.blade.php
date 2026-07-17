@@ -7,22 +7,22 @@
 <div class="stats-grid">
     <div class="stat-card">
         <div class="stat-label">Total Blogs</div>
-        <div class="stat-value">{{ \App\Models\Blog::count() }}</div>
+        <div class="stat-value">{{ $stats['total'] ?? \App\Models\Blog::count() }}</div>
         <div class="stat-sub">all posts</div>
     </div>
     <div class="stat-card">
         <div class="stat-label">Published</div>
-        <div class="stat-value">{{ \App\Models\Blog::where('status', 'published')->count() }}</div>
+        <div class="stat-value">{{ $stats['published'] ?? \App\Models\Blog::where('status', 'published')->count() }}</div>
         <div class="stat-sub">live posts</div>
     </div>
     <div class="stat-card">
         <div class="stat-label">Drafts</div>
-        <div class="stat-value">{{ \App\Models\Blog::where('status', 'draft')->count() }}</div>
+        <div class="stat-value">{{ $stats['draft'] ?? \App\Models\Blog::where('status', 'draft')->count() }}</div>
         <div class="stat-sub">unpublished</div>
     </div>
     <div class="stat-card">
         <div class="stat-label">Recycle Bin</div>
-        <div class="stat-value">{{ \App\Models\Blog::onlyTrashed()->count() }}</div>
+        <div class="stat-value">{{ $stats['trashed'] ?? \App\Models\Blog::onlyTrashed()->count() }}</div>
         <div class="stat-sub">trashed posts</div>
     </div>
 </div>
@@ -31,19 +31,6 @@
     <div class="card-header" style="flex-wrap: wrap; gap: 16px;">
         <h2>All Blogs</h2>
         <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-left: auto;">
-            <form method="GET" action="{{ route('admin.blogs.index') }}" style="display: flex; gap: 8px; align-items: center;">
-                <input type="text" name="search" class="form-control" style="padding: 6px 12px; width: 200px;" placeholder="Search blogs..." value="{{ request('search') }}">
-                <select name="status" class="form-control" style="padding: 6px 12px; width: auto;" onchange="this.form.submit()">
-                    <option value="">All Status</option>
-                    <option value="draft" {{ request('status') === 'draft' ? 'selected' : '' }}>Draft</option>
-                    <option value="published" {{ request('status') === 'published' ? 'selected' : '' }}>Published</option>
-                </select>
-                @if(request('search') || request('status'))
-                    <a href="{{ route('admin.blogs.index') }}" class="btn btn-secondary btn-sm">Reset</a>
-                @else
-                    <button type="submit" class="btn btn-secondary btn-sm">Filter</button>
-                @endif
-            </form>
             <a href="{{ route('admin.blogs.trash') }}" class="btn btn-warning btn-sm">
                 🗑 Recycle Bin
             </a>
@@ -54,43 +41,79 @@
         </div>
     </div>
 
+    <!-- Filters and Sorting Bar -->
+    @include('admin.blogs._filters', ['actionRoute' => route('admin.blogs.index')])
+
     <div class="table-wrap">
         <table>
             <thead>
                 <tr>
                     <th>Image</th>
                     <th>Title</th>
-                    <th>Slug</th>
+                    <th>Slug & Quick Copy</th>
                     <th>Status</th>
                     <th>Published Date</th>
                     <th>Updated</th>
-                    <th>Actions</th>
+                    <th>Actions & Quick Status</th>
                 </tr>
             </thead>
             <tbody>
                 @forelse($blogs as $blog)
-                <tr>
+                <tr class="clickable-row" data-edit-url="{{ route('admin.blogs.edit', $blog) }}" style="transition: background 0.15s; cursor: pointer;">
                     <td>
                         @if($blog->image)
-                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" style="width: 48px; height: 36px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border);">
+                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" loading="lazy" decoding="async" style="width: 48px; height: 36px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border);">
                         @else
-                            <span class="text-muted" style="font-size:12px;">No image</span>
+                            <div style="width: 48px; height: 36px; border-radius: 4px; background: #f0f2f5; border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; color: #94a3b8;" title="No thumbnail">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            </div>
                         @endif
                     </td>
-                    <td style="font-weight:600;">{{ $blog->title }}</td>
-                    <td><code style="font-size:12px;color:#7f8c8d;">{{ $blog->slug }}</code></td>
+                    <td style="font-weight:600;" title="{{ $blog->title }}">
+                        <div class="text-truncate" style="max-width: 240px;">{!! $highlight($blog->title) !!}</div>
+                    </td>
+                    <td>
+                        <div style="display: flex; flex-direction: column; gap: 5px;">
+                            <code style="font-size:12px; color:#7f8c8d; display: block;">{!! $highlight($blog->slug) !!}</code>
+                            <div style="display: flex; gap: 4px; flex-wrap: wrap;">
+                                <button type="button" class="btn btn-sm btn-secondary copy-btn" data-copy="{{ $blog->slug }}" style="padding: 1px 6px; font-size: 10px;" title="Copy Slug">📋 Slug</button>
+                                <button type="button" class="btn btn-sm btn-secondary copy-btn" data-copy="{{ $blog->seo_title ?? $blog->title }}" style="padding: 1px 6px; font-size: 10px;" title="Copy SEO Title">📋 SEO Title</button>
+                                <button type="button" class="btn btn-sm btn-secondary copy-btn" data-copy="{{ $blog->seo_description ?? $blog->excerpt }}" style="padding: 1px 6px; font-size: 10px;" title="Copy SEO Description">📋 SEO Desc</button>
+                            </div>
+                        </div>
+                    </td>
                     <td>
                         @if($blog->status === 'published')
-                            <span class="badge badge-success">Published</span>
+                            <span class="badge badge-success" style="display: inline-flex; align-items: center; gap: 5px;">
+                                <span style="color: #2ecc71; font-size: 10px;">●</span> Published
+                            </span>
                         @else
-                            <span class="badge badge-secondary">Draft</span>
+                            <span class="badge badge-secondary" style="display: inline-flex; align-items: center; gap: 5px;">
+                                <span style="color: #95a5a6; font-size: 10px;">●</span> Draft
+                            </span>
                         @endif
                     </td>
                     <td style="font-size:13px;">{{ $blog->published_at ? $blog->published_at->format('M d, Y H:i') : '—' }}</td>
                     <td style="font-size:13px;color:#7f8c8d;">{{ $blog->updated_at ? $blog->updated_at->format('M d, Y H:i') : '—' }}</td>
                     <td>
-                        <div style="display:flex;gap:6px;">
+                        <div style="display:flex; gap:6px; align-items: center; flex-wrap: wrap;">
+                            <a href="{{ route('admin.blogs.preview', $blog) }}" class="btn btn-sm btn-secondary" style="border-color: #d6eaf8; color: #1a5276; background: #f4fafe;" title="Admin Preview">Preview</a>
                             <a href="{{ route('admin.blogs.edit', $blog) }}" class="btn btn-sm btn-warning">Edit</a>
+                            
+                            @if($blog->status === 'draft')
+                                <form method="POST" action="{{ route('admin.blogs.updateStatus', $blog) }}" style="display:inline;">
+                                    @csrf @method('PATCH')
+                                    <input type="hidden" name="status" value="published">
+                                    <button type="submit" class="btn btn-sm btn-primary" style="background:#27ae60;border-color:#27ae60;" title="Quick Publish">Publish</button>
+                                </form>
+                            @else
+                                <form method="POST" action="{{ route('admin.blogs.updateStatus', $blog) }}" style="display:inline;">
+                                    @csrf @method('PATCH')
+                                    <input type="hidden" name="status" value="draft">
+                                    <button type="submit" class="btn btn-sm btn-secondary" style="color: #b7770d; border-color: #f9e4b7; background: #fef9e7;" title="Move to Draft">Draft</button>
+                                </form>
+                            @endif
+
                             <form method="POST" action="{{ route('admin.blogs.destroy', $blog) }}"
                                   onsubmit="return confirm('Move this blog to recycle bin?')">
                                 @csrf @method('DELETE')
@@ -120,5 +143,4 @@
             {{ $blogs->withQueryString()->links('admin.pagination') }}
         </div>
     @endif
-</div>
 @endsection

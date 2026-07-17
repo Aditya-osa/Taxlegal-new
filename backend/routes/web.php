@@ -4,7 +4,12 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\InternshipReviewController;
+use App\Http\Controllers\PublicBlogController;
 use Illuminate\Support\Facades\Route;
+
+// Public blog routes
+Route::get('/blogs', [PublicBlogController::class, 'index'])->name('blogs.index');
+Route::get('/blogs/{slug}', [PublicBlogController::class, 'show'])->name('blogs.show');
 
 // Redirect root to admin
 Route::get('/', fn() => redirect()->route('admin.dashboard'));
@@ -22,6 +27,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/blogs/trash', [BlogController::class, 'trash'])->name('blogs.trash');
         Route::post('/blogs/{blog}/restore', [BlogController::class, 'restore'])->name('blogs.restore')->withTrashed();
         Route::delete('/blogs/{blog}/force-delete', [BlogController::class, 'forceDelete'])->name('blogs.forceDelete')->withTrashed();
+        Route::get('/blogs/{blog}/preview', [BlogController::class, 'preview'])->name('blogs.preview');
+        Route::patch('/blogs/{blog}/status', [BlogController::class, 'updateStatus'])->name('blogs.updateStatus');
         Route::resource('blogs', BlogController::class);
 
         Route::resource('testimonials', TestimonialController::class);

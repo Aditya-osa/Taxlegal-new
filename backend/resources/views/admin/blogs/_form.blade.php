@@ -71,7 +71,7 @@
     @if(isset($blog) && $blog->image)
         <div id="currentImageWrapper" style="margin-bottom: 12px;">
             <div style="font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 4px; text-transform: uppercase;">Current Image</div>
-            <img src="{{ asset('storage/' . $blog->image) }}" alt="Featured Image" style="max-height: 140px; border-radius: 6px; border: 1px solid var(--border); object-fit: contain;">
+            <img src="{{ asset('storage/' . $blog->image) }}" alt="Featured Image" loading="lazy" decoding="async" style="max-height: 140px; border-radius: 6px; border: 1px solid var(--border); object-fit: contain;">
         </div>
     @endif
     <div id="imagePreviewWrapper" style="margin-bottom: 12px; display: none;">

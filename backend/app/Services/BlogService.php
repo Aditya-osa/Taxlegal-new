@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Blog;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -12,30 +13,66 @@ use Illuminate\Support\Str;
 
 class BlogService
 {
-    public function getPaginated(?string $search = null, ?string $status = null, int $perPage = 15): LengthAwarePaginator
+    public function getPaginated(string|array|null $search = null, ?string $status = null, int $perPage = 15): LengthAwarePaginator
     {
-        $query = Blog::query()->latest();
-
-        if ($search !== null && $search !== '') {
-            $query->where(function ($q) use ($search) {
-                $q->where('title', 'like', "%{$search}%")
-                  ->orWhere('excerpt', 'like', "%{$search}%")
-                  ->orWhere('content', 'like', "%{$search}%")
-                  ->orWhere('seo_title', 'like', "%{$search}%")
-                  ->orWhere('seo_keywords', 'like', "%{$search}%");
-            });
-        }
-
-        if ($status !== null && $status !== '') {
-            $query->where('status', $status);
-        }
-
-        return $query->paginate($perPage);
+        $filters = is_array($search) ? $search : ['search' => $search, 'status' => $status];
+        return $this->applyFiltersAndSorting(Blog::query(), $filters)->paginate($perPage);
     }
 
-    public function getTrashedPaginated(?string $search = null, ?string $status = null, int $perPage = 15): LengthAwarePaginator
+    public function getTrashedPaginated(string|array|null $search = null, ?string $status = null, int $perPage = 15): LengthAwarePaginator
     {
-        $query = Blog::onlyTrashed()->latest();
+        $filters = is_array($search) ? $search : ['search' => $search, 'status' => $status];
+        return $this->applyFiltersAndSorting(Blog::onlyTrashed(), $filters)->paginate($perPage);
+    }
+
+    public function getPublishedBlogs(int $perPage = 15): LengthAwarePaginator
+    {
+        return Blog::query()
+            ->where('status', 'published')
+            ->where(function ($query) {
+                $query->whereNull('published_at')
+                      ->orWhere('published_at', '<=', now());
+            })
+            ->latest()
+            ->paginate($perPage);
+    }
+
+    public function findPublishedBySlug(string $slug): Blog
+    {
+        return Blog::query()
+            ->where('slug', $slug)
+            ->where('status', 'published')
+            ->where(function ($query) {
+                $query->whereNull('published_at')
+                      ->orWhere('published_at', '<=', now());
+            })
+            ->firstOrFail();
+    }
+
+    public function getStats(): array
+    {
+        $stats = Blog::withTrashed()
+            ->selectRaw("
+                SUM(CASE WHEN deleted_at IS NULL THEN 1 ELSE 0 END) as total,
+                SUM(CASE WHEN deleted_at IS NULL AND status = 'published' THEN 1 ELSE 0 END) as published,
+                SUM(CASE WHEN deleted_at IS NULL AND status = 'draft' THEN 1 ELSE 0 END) as draft,
+                SUM(CASE WHEN deleted_at IS NOT NULL THEN 1 ELSE 0 END) as trashed
+            ")
+            ->first();
+
+        return [
+            'total' => (int) ($stats?->total ?? 0),
+            'published' => (int) ($stats?->published ?? 0),
+            'draft' => (int) ($stats?->draft ?? 0),
+            'trashed' => (int) ($stats?->trashed ?? 0),
+        ];
+    }
+
+    protected function applyFiltersAndSorting(Builder $query, array $filters): Builder
+    {
+        $search = $filters['search'] ?? null;
+        $status = $filters['status'] ?? null;
+        $sort = $filters['sort'] ?? 'newest';
 
         if ($search !== null && $search !== '') {
             $query->where(function ($q) use ($search) {
@@ -48,10 +85,36 @@ class BlogService
         }
 
         if ($status !== null && $status !== '') {
-            $query->where('status', $status);
+            if ($status === 'unpublished') {
+                $query->where(function ($q) {
+                    $q->where('status', 'draft')->orWhereNull('published_at');
+                });
+            } else {
+                $query->where('status', $status);
+            }
         }
 
-        return $query->paginate($perPage);
+        if (!empty($filters['created_from'])) {
+            $query->whereDate('created_at', '>=', $filters['created_from']);
+        }
+        if (!empty($filters['created_to'])) {
+            $query->whereDate('created_at', '<=', $filters['created_to']);
+        }
+        if (!empty($filters['published_from'])) {
+            $query->whereDate('published_at', '>=', $filters['published_from']);
+        }
+        if (!empty($filters['published_to'])) {
+            $query->whereDate('published_at', '<=', $filters['published_to']);
+        }
+
+        return match ($sort) {
+            'oldest' => $query->oldest(),
+            'title_asc' => $query->orderBy('title', 'asc'),
+            'title_desc' => $query->orderBy('title', 'desc'),
+            'published_at' => $query->orderBy('published_at', 'desc'),
+            'updated_at' => $query->orderBy('updated_at', 'desc'),
+            default => $query->latest(),
+        };
     }
 
     public function find(int $id): Blog
@@ -108,6 +171,11 @@ class BlogService
 
             return $blog;
         });
+    }
+
+    public function updateStatus(Blog $blog, string $status): Blog
+    {
+        return $this->update($blog, ['status' => $status]);
     }
 
     public function delete(Blog $blog): bool

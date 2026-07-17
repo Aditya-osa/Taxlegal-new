@@ -20,12 +20,10 @@ class BlogController extends Controller
     public function index(Request $request): View|RedirectResponse
     {
         try {
-            $blogs = $this->blogService->getPaginated(
-                $request->input('search'),
-                $request->input('status')
-            );
+            $blogs = $this->blogService->getPaginated($this->getFilterParams($request));
+            $stats = $this->blogService->getStats();
 
-            return view('admin.blogs.index', compact('blogs'));
+            return view('admin.blogs.index', compact('blogs', 'stats'));
         } catch (\Throwable $e) {
             return back()->with('error', 'Failed to retrieve blogs.');
         }
@@ -86,10 +84,7 @@ class BlogController extends Controller
     public function trash(Request $request): View|RedirectResponse
     {
         try {
-            $blogs = $this->blogService->getTrashedPaginated(
-                $request->input('search'),
-                $request->input('status')
-            );
+            $blogs = $this->blogService->getTrashedPaginated($this->getFilterParams($request));
 
             return view('admin.blogs.trash', compact('blogs'));
         } catch (\Throwable $e) {
@@ -117,5 +112,27 @@ class BlogController extends Controller
         } catch (\Throwable $e) {
             return back()->with('error', 'Failed to permanently delete blog.');
         }
+    }
+
+    public function updateStatus(Request $request, Blog $blog): RedirectResponse
+    {
+        $request->validate(['status' => 'required|in:draft,published']);
+        try {
+            $this->blogService->updateStatus($blog, $request->input('status'));
+            $msg = $request->input('status') === 'published' ? 'Blog published successfully.' : 'Blog moved to draft.';
+            return back()->with('success', $msg);
+        } catch (\Throwable $e) {
+            return back()->with('error', 'Failed to update blog status.');
+        }
+    }
+
+    public function preview(Blog $blog): View
+    {
+        return view('admin.blogs.preview', compact('blog'));
+    }
+
+    protected function getFilterParams(Request $request): array
+    {
+        return $request->only(['search', 'status', 'sort', 'created_from', 'created_to', 'published_from', 'published_to']);
     }
 }

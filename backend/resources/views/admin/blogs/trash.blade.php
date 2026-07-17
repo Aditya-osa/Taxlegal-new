@@ -4,26 +4,7 @@
 @section('page-title', 'Recycle Bin')
 
 @section('content')
-<div class="card">
-    <div class="card-header" style="flex-wrap: wrap; gap: 16px;">
-        <h2>Trashed Blogs</h2>
-        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-left: auto;">
-            <form method="GET" action="{{ route('admin.blogs.trash') }}" style="display: flex; gap: 8px; align-items: center;">
-                <input type="text" name="search" class="form-control" style="padding: 6px 12px; width: 200px;" placeholder="Search trashed blogs..." value="{{ request('search') }}">
-                <select name="status" class="form-control" style="padding: 6px 12px; width: auto;" onchange="this.form.submit()">
-                    <option value="">All Status</option>
-                    <option value="draft" {{ request('status') === 'draft' ? 'selected' : '' }}>Draft</option>
-                    <option value="published" {{ request('status') === 'published' ? 'selected' : '' }}>Published</option>
-                </select>
-                @if(request('search') || request('status'))
-                    <a href="{{ route('admin.blogs.trash') }}" class="btn btn-secondary btn-sm">Reset</a>
-                @else
-                    <button type="submit" class="btn btn-secondary btn-sm">Filter</button>
-                @endif
-            </form>
-            <a href="{{ route('admin.blogs.index') }}" class="btn btn-secondary btn-sm">← Back to Blogs</a>
-        </div>
-    </div>
+    @include('admin.blogs._filters', ['actionRoute' => route('admin.blogs.trash')])
 
     <div class="table-wrap">
         <table>
@@ -31,7 +12,7 @@
                 <tr>
                     <th>Image</th>
                     <th>Title</th>
-                    <th>Slug</th>
+                    <th>Slug & Quick Copy</th>
                     <th>Status</th>
                     <th>Published Date</th>
                     <th>Deleted At</th>
@@ -43,18 +24,35 @@
                 <tr>
                     <td>
                         @if($blog->image)
-                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" style="width: 48px; height: 36px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border);">
+                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" loading="lazy" decoding="async" style="width: 48px; height: 36px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border);">
                         @else
-                            <span class="text-muted" style="font-size:12px;">No image</span>
+                            <div style="width: 48px; height: 36px; border-radius: 4px; background: #f0f2f5; border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; color: #94a3b8;" title="No thumbnail">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            </div>
                         @endif
                     </td>
-                    <td style="font-weight:600;">{{ $blog->title }}</td>
-                    <td><code style="font-size:12px;color:#7f8c8d;">{{ $blog->slug }}</code></td>
+                    <td style="font-weight:600;" title="{{ $blog->title }}">
+                        <div class="text-truncate" style="max-width: 240px;">{!! $highlight($blog->title) !!}</div>
+                    </td>
+                    <td>
+                        <div style="display: flex; flex-direction: column; gap: 5px;">
+                            <code style="font-size:12px; color:#7f8c8d; display: block;">{!! $highlight($blog->slug) !!}</code>
+                            <div style="display: flex; gap: 4px; flex-wrap: wrap;">
+                                <button type="button" class="btn btn-sm btn-secondary copy-btn" data-copy="{{ $blog->slug }}" style="padding: 1px 6px; font-size: 10px;" title="Copy Slug">📋 Slug</button>
+                                <button type="button" class="btn btn-sm btn-secondary copy-btn" data-copy="{{ $blog->seo_title ?? $blog->title }}" style="padding: 1px 6px; font-size: 10px;" title="Copy SEO Title">📋 SEO Title</button>
+                                <button type="button" class="btn btn-sm btn-secondary copy-btn" data-copy="{{ $blog->seo_description ?? $blog->excerpt }}" style="padding: 1px 6px; font-size: 10px;" title="Copy SEO Description">📋 SEO Desc</button>
+                            </div>
+                        </div>
+                    </td>
                     <td>
                         @if($blog->status === 'published')
-                            <span class="badge badge-success">Published</span>
+                            <span class="badge badge-success" style="display: inline-flex; align-items: center; gap: 5px;">
+                                <span style="color: #2ecc71; font-size: 10px;">●</span> Published
+                            </span>
                         @else
-                            <span class="badge badge-secondary">Draft</span>
+                            <span class="badge badge-secondary" style="display: inline-flex; align-items: center; gap: 5px;">
+                                <span style="color: #95a5a6; font-size: 10px;">●</span> Draft
+                            </span>
                         @endif
                     </td>
                     <td style="font-size:13px;">{{ $blog->published_at ? $blog->published_at->format('M d, Y H:i') : '—' }}</td>
@@ -94,5 +92,4 @@
             {{ $blogs->withQueryString()->links('admin.pagination') }}
         </div>
     @endif
-</div>
 @endsection
