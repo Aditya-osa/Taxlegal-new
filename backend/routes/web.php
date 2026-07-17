@@ -20,8 +20,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', fn() => redirect()->route('admin.testimonials.index'))->name('dashboard');
 
         Route::get('/blogs/trash', [BlogController::class, 'trash'])->name('blogs.trash');
-        Route::post('/blogs/{id}/restore', [BlogController::class, 'restore'])->name('blogs.restore');
-        Route::delete('/blogs/{id}/force-delete', [BlogController::class, 'forceDelete'])->name('blogs.forceDelete');
+        Route::post('/blogs/{blog}/restore', [BlogController::class, 'restore'])->name('blogs.restore')->withTrashed();
+        Route::delete('/blogs/{blog}/force-delete', [BlogController::class, 'forceDelete'])->name('blogs.forceDelete')->withTrashed();
         Route::resource('blogs', BlogController::class);
 
         Route::resource('testimonials', TestimonialController::class);

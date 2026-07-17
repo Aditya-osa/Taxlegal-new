@@ -48,6 +48,12 @@ class BlogController extends Controller
         }
     }
 
+    public function show(Blog $blog): RedirectResponse
+    {
+        // ponytail: redirect show to edit in admin-only CMS
+        return redirect()->route('admin.blogs.edit', $blog);
+    }
+
     public function edit(Blog $blog): View
     {
         return view('admin.blogs.edit', compact('blog'));
@@ -91,10 +97,10 @@ class BlogController extends Controller
         }
     }
 
-    public function restore($id): RedirectResponse
+    public function restore(int|Blog $blog): RedirectResponse
     {
         try {
-            $this->blogService->restore($id);
+            $this->blogService->restore($blog);
 
             return back()->with('success', 'Blog restored successfully.');
         } catch (\Throwable $e) {
@@ -102,10 +108,10 @@ class BlogController extends Controller
         }
     }
 
-    public function forceDelete($id): RedirectResponse
+    public function forceDelete(int|Blog $blog): RedirectResponse
     {
         try {
-            $this->blogService->forceDelete($id);
+            $this->blogService->forceDelete($blog);
 
             return back()->with('success', 'Blog permanently deleted.');
         } catch (\Throwable $e) {

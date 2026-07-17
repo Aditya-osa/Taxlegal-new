@@ -4,6 +4,29 @@
 @section('page-title', 'Blog Management')
 
 @section('content')
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-label">Total Blogs</div>
+        <div class="stat-value">{{ \App\Models\Blog::count() }}</div>
+        <div class="stat-sub">all posts</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Published</div>
+        <div class="stat-value">{{ \App\Models\Blog::where('status', 'published')->count() }}</div>
+        <div class="stat-sub">live posts</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Drafts</div>
+        <div class="stat-value">{{ \App\Models\Blog::where('status', 'draft')->count() }}</div>
+        <div class="stat-sub">unpublished</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Recycle Bin</div>
+        <div class="stat-value">{{ \App\Models\Blog::onlyTrashed()->count() }}</div>
+        <div class="stat-sub">trashed posts</div>
+    </div>
+</div>
+
 <div class="card">
     <div class="card-header" style="flex-wrap: wrap; gap: 16px;">
         <h2>All Blogs</h2>
@@ -78,8 +101,13 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="7" style="text-align:center;color:#7f8c8d;padding:40px;">
-                        No blogs exist. <a href="{{ route('admin.blogs.create') }}">Create one →</a>
+                    <td colspan="7" style="text-align:center;padding:48px 20px;">
+                        <div style="color:var(--text-muted);margin-bottom:12px;">
+                            <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin:0 auto;opacity:.5;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                        </div>
+                        <div style="font-weight:600;color:#2c3e50;margin-bottom:6px;">No blog posts found</div>
+                        <div style="color:var(--text-muted);font-size:13px;margin-bottom:16px;">Create your first blog post or adjust search and filter criteria.</div>
+                        <a href="{{ route('admin.blogs.create') }}" class="btn btn-primary btn-sm">Create New Blog →</a>
                     </td>
                 </tr>
                 @endforelse

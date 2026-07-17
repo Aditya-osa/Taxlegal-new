@@ -6,7 +6,22 @@
     <title>@yield('title', 'Admin') — TaxLegal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    @vite(['resources/js/app.js'])
     <style>
+        /* CKEditor overrides */
+        .ck-editor__editable_inline { min-height: 280px; color: #2c3e50; }
+        .ck-content p { margin-bottom: 1em; }
+        .ck-content h1 { font-size: 2em; margin: 0.67em 0; font-weight: bold; }
+        .ck-content h2 { font-size: 1.5em; margin: 0.75em 0; font-weight: bold; }
+        .ck-content h3 { font-size: 1.17em; margin: 0.83em 0; font-weight: bold; }
+        .ck-content h4 { font-size: 1em; margin: 1.12em 0; font-weight: bold; }
+        .ck-content ul, .ck-content ol { padding-left: 2em; margin-bottom: 1em; }
+        .ck-content ul { list-style-type: disc; }
+        .ck-content ol { list-style-type: decimal; }
+        .ck-content blockquote { padding-left: 1em; border-left: 4px solid var(--border); font-style: italic; margin-bottom: 1em; color: var(--text-muted); }
+        .ck-content table { border-collapse: collapse; margin-bottom: 1em; }
+        .ck-content table td, .ck-content table th { border: 1px solid var(--border); padding: 6px 12px; }
+
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
@@ -255,7 +270,8 @@
         }
         .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(192,57,43,.08); }
         textarea.form-control { resize: vertical; min-height: 100px; }
-        .form-error { color: var(--danger); font-size: 12px; margin-top: 4px; }
+        .form-error { color: var(--danger); font-size: 12px; margin-top: 4px; font-weight: 500; }
+        .form-control.is-invalid, .form-control.form-control-error { border-color: var(--danger) !important; background: #fff8f8; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
 
