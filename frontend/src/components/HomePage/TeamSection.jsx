@@ -33,10 +33,14 @@ const TeamSection = () => {
 
   const row1 = teamData.filter(member => member.name.startsWith('CA') || member.name.startsWith('CS'));
   const row2Unsorted = teamData.filter(member => !member.name.startsWith('CA') && !member.name.startsWith('CS'));
-  const row2 = [
-    ...row2Unsorted.filter(m => m.slug === 'adv-suresh-sharma' || m.slug === 'adv-alok-shukla'),
-    ...row2Unsorted.filter(m => m.slug !== 'adv-suresh-sharma' && m.slug !== 'adv-alok-shukla')
-  ];
+  const karthikeyan = row2Unsorted.find(m => m.slug === 'karthikeyan-tc');
+  const sahil = row2Unsorted.find(m => m.slug === 'adv-sahil-kumar');
+  const ajay = row2Unsorted.find(m => m.slug === 'ajay-mane');
+  const suresh = row2Unsorted.find(m => m.slug === 'adv-suresh-sharma');
+  const alok = row2Unsorted.find(m => m.slug === 'adv-alok-shukla');
+  const rest = row2Unsorted.filter(m => !['karthikeyan-tc', 'adv-sahil-kumar', 'ajay-mane', 'adv-suresh-sharma', 'adv-alok-shukla'].includes(m.slug));
+  
+  const row2 = [karthikeyan, sahil, ajay, suresh, alok, ...rest].filter(Boolean);
 
   return (
     <section className="team-section">
