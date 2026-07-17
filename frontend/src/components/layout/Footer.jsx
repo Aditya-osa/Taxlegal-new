@@ -73,6 +73,7 @@ const Footer = () => {
               <li><Link to="/about">Our Team</Link></li>
               <li><Link to="/clients">Clients</Link></li>
               <li><Link to="/internship">Internship</Link></li>
+              <li><Link to="/blogs">Blogs</Link></li>
               <li><a href="https://www.incometaxindia.gov.in/income-tax-calculator" target="_blank" rel="noopener noreferrer">Tax Calculator</a></li>
               <li><Link to="/contact">Contact Us</Link></li>
             </ul>
