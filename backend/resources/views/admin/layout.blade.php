@@ -6,7 +6,22 @@
     <title>@yield('title', 'Admin') — TaxLegal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    @vite(['resources/js/app.js'])
     <style>
+        /* CKEditor overrides */
+        .ck-editor__editable_inline { min-height: 280px; color: #2c3e50; }
+        .ck-content p { margin-bottom: 1em; }
+        .ck-content h1 { font-size: 2em; margin: 0.67em 0; font-weight: bold; }
+        .ck-content h2 { font-size: 1.5em; margin: 0.75em 0; font-weight: bold; }
+        .ck-content h3 { font-size: 1.17em; margin: 0.83em 0; font-weight: bold; }
+        .ck-content h4 { font-size: 1em; margin: 1.12em 0; font-weight: bold; }
+        .ck-content ul, .ck-content ol { padding-left: 2em; margin-bottom: 1em; }
+        .ck-content ul { list-style-type: disc; }
+        .ck-content ol { list-style-type: decimal; }
+        .ck-content blockquote { padding-left: 1em; border-left: 4px solid var(--border); font-style: italic; margin-bottom: 1em; color: var(--text-muted); }
+        .ck-content table { border-collapse: collapse; margin-bottom: 1em; }
+        .ck-content table td, .ck-content table th { border: 1px solid var(--border); padding: 6px 12px; }
+
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
