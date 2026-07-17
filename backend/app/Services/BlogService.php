@@ -25,6 +25,30 @@ class BlogService
         return $this->applyFiltersAndSorting(Blog::onlyTrashed(), $filters)->paginate($perPage);
     }
 
+    public function getPublishedBlogs(int $perPage = 15): LengthAwarePaginator
+    {
+        return Blog::query()
+            ->where('status', 'published')
+            ->where(function ($query) {
+                $query->whereNull('published_at')
+                      ->orWhere('published_at', '<=', now());
+            })
+            ->latest()
+            ->paginate($perPage);
+    }
+
+    public function findPublishedBySlug(string $slug): Blog
+    {
+        return Blog::query()
+            ->where('slug', $slug)
+            ->where('status', 'published')
+            ->where(function ($query) {
+                $query->whereNull('published_at')
+                      ->orWhere('published_at', '<=', now());
+            })
+            ->firstOrFail();
+    }
+
     public function getStats(): array
     {
         $stats = Blog::withTrashed()

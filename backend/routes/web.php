@@ -4,7 +4,12 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\InternshipReviewController;
+use App\Http\Controllers\PublicBlogController;
 use Illuminate\Support\Facades\Route;
+
+// Public blog routes
+Route::get('/blogs', [PublicBlogController::class, 'index'])->name('blogs.index');
+Route::get('/blogs/{slug}', [PublicBlogController::class, 'show'])->name('blogs.show');
 
 // Redirect root to admin
 Route::get('/', fn() => redirect()->route('admin.dashboard'));
