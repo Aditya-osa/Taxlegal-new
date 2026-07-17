@@ -36,7 +36,7 @@
         <div class="card-body">
             @if($blog->image)
                 <div style="margin-bottom: 24px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border);">
-                    <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" style="width: 100%; max-height: 400px; object-fit: cover; display: block;">
+                    <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" loading="lazy" decoding="async" style="width: 100%; max-height: 400px; object-fit: cover; display: block;">
                 </div>
             @endif
 
@@ -131,29 +131,4 @@
     </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.copy-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const textToCopy = this.getAttribute('data-copy') || '';
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                const origText = this.textContent;
-                this.textContent = '✓ Copied';
-                this.style.background = '#d5f5e3';
-                this.style.color = '#1e8449';
-                this.style.borderColor = '#a9dfbf';
-                setTimeout(() => {
-                    this.textContent = origText;
-                    this.style.background = '';
-                    this.style.color = '';
-                    this.style.borderColor = '';
-                }, 1500);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-                alert('Could not copy to clipboard.');
-            });
-        });
-    });
-});
-</script>
 @endsection

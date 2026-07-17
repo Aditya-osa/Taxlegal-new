@@ -20,11 +20,10 @@ class BlogController extends Controller
     public function index(Request $request): View|RedirectResponse
     {
         try {
-            $blogs = $this->blogService->getPaginated(
-                $request->only(['search', 'status', 'sort', 'created_from', 'created_to', 'published_from', 'published_to'])
-            );
+            $blogs = $this->blogService->getPaginated($this->getFilterParams($request));
+            $stats = $this->blogService->getStats();
 
-            return view('admin.blogs.index', compact('blogs'));
+            return view('admin.blogs.index', compact('blogs', 'stats'));
         } catch (\Throwable $e) {
             return back()->with('error', 'Failed to retrieve blogs.');
         }
@@ -85,9 +84,7 @@ class BlogController extends Controller
     public function trash(Request $request): View|RedirectResponse
     {
         try {
-            $blogs = $this->blogService->getTrashedPaginated(
-                $request->only(['search', 'status', 'sort', 'created_from', 'created_to', 'published_from', 'published_to'])
-            );
+            $blogs = $this->blogService->getTrashedPaginated($this->getFilterParams($request));
 
             return view('admin.blogs.trash', compact('blogs'));
         } catch (\Throwable $e) {
@@ -132,5 +129,10 @@ class BlogController extends Controller
     public function preview(Blog $blog): View
     {
         return view('admin.blogs.preview', compact('blog'));
+    }
+
+    protected function getFilterParams(Request $request): array
+    {
+        return $request->only(['search', 'status', 'sort', 'created_from', 'created_to', 'published_from', 'published_to']);
     }
 }

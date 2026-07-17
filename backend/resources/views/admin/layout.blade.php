@@ -387,5 +387,38 @@
     </main>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.clickable-row').forEach(row => {
+        row.addEventListener('click', function(e) {
+            if (!e.target.closest('a, button, form, input, select, textarea, code')) {
+                const url = this.getAttribute('data-edit-url');
+                if (url) window.location.href = url;
+            }
+        });
+    });
+
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const textToCopy = this.getAttribute('data-copy') || '';
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const origText = this.innerHTML;
+                this.innerHTML = '✓ Copied';
+                this.style.background = '#d5f5e3';
+                this.style.color = '#1e8449';
+                setTimeout(() => {
+                    this.innerHTML = origText;
+                    this.style.background = '';
+                    this.style.color = '';
+                }, 1500);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Could not copy to clipboard.');
+            });
+        });
+    });
+});
+</script>
 </body>
 </html>

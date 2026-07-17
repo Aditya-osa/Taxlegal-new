@@ -2,10 +2,13 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Requests\Concerns\BlogValidationRules;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreBlogRequest extends FormRequest
 {
+    use BlogValidationRules;
+
     /**
      * Determine if the user is authorized to make this request.
      */
@@ -21,18 +24,9 @@ class StoreBlogRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'title'           => ['required', 'string', 'max:255'],
-            'slug'            => ['nullable', 'string', 'max:255', 'unique:blogs,slug'],
-            'excerpt'         => ['nullable', 'string', 'max:500'],
-            'content'         => ['required', 'string'],
-            'image'           => ['nullable', 'image', 'mimes:jpeg,jpg,png,webp', 'max:2048'],
-            'status'          => ['required', 'in:draft,published'],
-            'published_at'    => ['nullable', 'date'],
-            'seo_title'       => ['nullable', 'string', 'max:255'],
-            'seo_description' => ['nullable', 'string'],
-            'seo_keywords'    => ['nullable', 'string', 'max:255'],
-        ];
+        return array_merge($this->commonRules(), [
+            'slug' => ['nullable', 'string', 'max:255', 'unique:blogs,slug'],
+        ]);
     }
 
     /**
@@ -42,15 +36,6 @@ class StoreBlogRequest extends FormRequest
      */
     public function messages(): array
     {
-        return [
-            'title.required'   => 'The blog title is required.',
-            'slug.unique'      => 'This blog slug is already taken. Please choose a different slug.',
-            'content.required' => 'The blog content is required.',
-            'image.image'      => 'The uploaded file must be a valid image.',
-            'image.mimes'      => 'The blog image must be a file of type: jpeg, jpg, png, webp.',
-            'image.max'        => 'The blog image size must not exceed 2MB.',
-            'status.required'  => 'The blog status is required.',
-            'status.in'        => 'The selected blog status must be either draft or published.',
-        ];
+        return $this->commonMessages();
     }
 }
