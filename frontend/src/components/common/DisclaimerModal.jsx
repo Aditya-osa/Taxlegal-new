@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './DisclaimerModal.css';
 
 const DisclaimerModal = () => {
@@ -11,6 +11,21 @@ const DisclaimerModal = () => {
       setIsOpen(true);
     }
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
+    return () => {
+        document.body.style.overflow = previousBodyOverflow;
+        document.documentElement.style.overflow = previousHtmlOverflow;
+    };
+  }, [isOpen]);
 
   const handleAgree = () => {
     sessionStorage.setItem('taxlegal_disclaimer_agreed', 'true');
@@ -25,7 +40,7 @@ const DisclaimerModal = () => {
   if (!isOpen) return null;
 
   return (
-    <div className="disclaimer-modal-overlay">
+    <div className="disclaimer-modal-overlay" data-lenis-prevent="true">
       <div className="disclaimer-modal-card">
         {/* Banner Section */}
         <div className="disclaimer-banner">

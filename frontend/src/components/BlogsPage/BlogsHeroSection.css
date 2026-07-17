@@ -118,3 +118,39 @@
     font-size: 2.2rem;
   }
 }
+.hero-eyebrow {
+  display: inline-block;
+  color: #60a5fa;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-actions {
+  margin-top: 36px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3A85C8;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: #2D6EA5;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}

@@ -2,14 +2,17 @@
 .disclaimer-modal-overlay {
   position: fixed;
   inset: 0;
+  width: 100vw;
+  height: 100dvh;
   z-index: 99999;
   background: rgba(15, 23, 42, 0.90);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  padding: 40px 20px;
   animation: disclaimerFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -17,6 +20,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -28,11 +32,10 @@
   max-width: 680px;
   background: #ffffff;
   border-radius: 18px;
+  margin: auto;
+  flex-shrink: 0;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  max-height: 92vh;
   animation: disclaimerScaleUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -41,6 +44,7 @@
     transform: scale(0.94);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -86,7 +90,6 @@
 /* Body Content */
 .disclaimer-body {
   padding: 32px 36px 24px;
-  overflow-y: auto;
   color: #334155;
   font-size: 0.95rem;
   line-height: 1.65;
@@ -205,7 +208,6 @@
 @media (max-width: 640px) {
   .disclaimer-modal-card {
     border-radius: 14px;
-    max-height: 95vh;
   }
 
   .disclaimer-banner {
