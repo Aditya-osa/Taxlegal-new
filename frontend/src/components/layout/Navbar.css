@@ -108,7 +108,7 @@
     transform: translateX(-50%);
     width: auto;
     justify-content: center;
-    gap: 62px;
+    gap: clamp(15px, 3vw, 62px);
   }
 }
 

@@ -46,8 +46,8 @@ export const teamData = [
       "Accounting & Assurance Services"
     ],
     education: [
-      "Chartered Accountant (FCA)",
-      "B.Com"
+
+      "B.Com", "Chartered Accountant (FCA)"
     ],
     linkedin: "https://www.linkedin.com/in/narendra-kumar-rajput-b170681/",
     isMainTeam: false
