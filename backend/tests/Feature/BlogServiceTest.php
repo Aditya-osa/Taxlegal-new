@@ -4,14 +4,14 @@ namespace Tests\Feature;
 
 use App\Models\Blog;
 use App\Services\BlogService;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class BlogServiceTest extends TestCase
 {
-    use DatabaseTransactions;
+    use RefreshDatabase;
 
     protected BlogService $service;
 
@@ -140,6 +140,59 @@ class BlogServiceTest extends TestCase
         $this->assertNotEquals($oldImage, $updated->image);
         Storage::disk('public')->assertExists($updated->image);
         Storage::disk('public')->assertMissing($oldImage);
+    }
+
+    public function test_search_across_all_fields(): void
+    {
+        $bTitle = $this->service->create(['title' => 'Alpha Match', 'content' => 'c', 'status' => 'draft']);
+        $bExcerpt = $this->service->create(['title' => 't2', 'excerpt' => 'Beta Match', 'content' => 'c', 'status' => 'draft']);
+        $bContent = $this->service->create(['title' => 't3', 'content' => 'Gamma Match inside', 'status' => 'draft']);
+        $bSeoTitle = $this->service->create(['title' => 't4', 'content' => 'c', 'status' => 'draft', 'seo_title' => 'Delta Match']);
+        $bSeoKeywords = $this->service->create(['title' => 't5', 'content' => 'c', 'status' => 'draft', 'seo_keywords' => 'Epsilon Match']);
+
+        $this->assertEquals(1, $this->service->getPaginated('Alpha')->total());
+        $this->assertEquals(1, $this->service->getPaginated('Beta')->total());
+        $this->assertEquals(1, $this->service->getPaginated('Gamma')->total());
+        $this->assertEquals(1, $this->service->getPaginated('Delta')->total());
+        $this->assertEquals(1, $this->service->getPaginated('Epsilon')->total());
+    }
+
+    public function test_status_filter_on_active_and_trashed(): void
+    {
+        $b1 = $this->service->create(['title' => 'Active Draft', 'content' => 'c', 'status' => 'draft']);
+        $b2 = $this->service->create(['title' => 'Active Pub', 'content' => 'c', 'status' => 'published']);
+        $b3 = $this->service->create(['title' => 'Trashed Draft', 'content' => 'c', 'status' => 'draft']);
+        $b4 = $this->service->create(['title' => 'Trashed Pub', 'content' => 'c', 'status' => 'published']);
+
+        $this->service->delete($b3);
+        $this->service->delete($b4);
+
+        $this->assertEquals(1, $this->service->getPaginated(null, 'draft')->total());
+        $this->assertEquals(1, $this->service->getPaginated(null, 'published')->total());
+        $this->assertEquals(1, $this->service->getTrashedPaginated(null, 'draft')->total());
+        $this->assertEquals(1, $this->service->getTrashedPaginated(null, 'published')->total());
+    }
+
+    public function test_admin_relationships(): void
+    {
+        $admin = \App\Models\Admin::create([
+            'name' => 'Admin Tester',
+            'email' => 'admin@test.local',
+            'password' => bcrypt('password'),
+        ]);
+
+        $blog = $this->service->create([
+            'title' => 'Rel Test',
+            'content' => 'c',
+            'status' => 'draft',
+            'created_by' => $admin->id,
+            'updated_by' => $admin->id,
+        ]);
+
+        $this->assertEquals($admin->id, $blog->createdBy->id);
+        $this->assertEquals($admin->id, $blog->updatedBy->id);
+        $this->assertTrue($admin->blogsCreated->contains($blog));
+        $this->assertTrue($admin->blogsUpdated->contains($blog));
     }
 }
 

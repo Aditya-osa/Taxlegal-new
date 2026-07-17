@@ -19,4 +19,16 @@ class Admin extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function blogsCreated(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        // ponytail: bidirectionality for created_by
+        return $this->hasMany(Blog::class, 'created_by');
+    }
+
+    public function blogsUpdated(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        // ponytail: bidirectionality for updated_by
+        return $this->hasMany(Blog::class, 'updated_by');
+    }
 }

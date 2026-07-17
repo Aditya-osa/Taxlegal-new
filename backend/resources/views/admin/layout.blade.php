@@ -255,7 +255,8 @@
         }
         .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(192,57,43,.08); }
         textarea.form-control { resize: vertical; min-height: 100px; }
-        .form-error { color: var(--danger); font-size: 12px; margin-top: 4px; }
+        .form-error { color: var(--danger); font-size: 12px; margin-top: 4px; font-weight: 500; }
+        .form-control.is-invalid, .form-control.form-control-error { border-color: var(--danger) !important; background: #fff8f8; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
 
