@@ -52,14 +52,10 @@ const HeroSection = () => {
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <h3><AnimatedNumber end={150} />+</h3>
+              <h3><AnimatedNumber end={250} />+</h3>
               <p>Years Collective Experience</p>
             </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <h3><AnimatedNumber end={10000} />+</h3>
-              <p>Customers Served</p>
-            </div>
+
           </div>
         </div>
 

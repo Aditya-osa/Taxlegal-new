@@ -499,7 +499,7 @@ const Services = () => {
 
   return (
     <div className="services-page-wrapper">
-      <SEO 
+      <SEO
         title="Our Services | Tax Legal Synergy"
         description="Explore our range of expert legal advisory services, including GST consulting, tax litigation, and corporate compliance."
         url="https://taxlegalsynergy.com/services"
@@ -535,9 +535,9 @@ const Services = () => {
               <div className="meta-card-divider"></div>
               <div className="meta-card-stat">
                 <span className="meta-stat-num">
-                  <AnimatedCounter target={10000} separator="," suffix="+" />
+                  <AnimatedCounter target={250} separator="," suffix="+" />
                 </span>
-                <span className="meta-stat-label">Customers Served</span>
+                <span className="meta-stat-label">Years Collective Experience</span>
               </div>
             </div>
           </div>
